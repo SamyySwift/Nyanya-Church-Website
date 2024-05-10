@@ -11,12 +11,15 @@ import WordAnimation from "../components/WordAnimation";
 function HomeScreen() {
   return (
     <>
-      <Hero
-        text="Welcome to Nyanya Assembly"
-        background="video"
-        src="/bg.mp4"
-        mainHero={true}
-      />
+      <section className="overflow-hidden">
+        <Hero
+          text="Welcome to Nyanya Assembly"
+          background="video"
+          src="/bg.mp4"
+          mainHero={true}
+        />
+      </section>
+
       <Welcome
         title="Welcome Home"
         text="Nyanya Assembly is a vibrant and friendly church in the beautiful city
