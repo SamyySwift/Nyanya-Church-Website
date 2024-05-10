@@ -1,7 +1,6 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import InfiniteMovingCards from "../components/ui/infinite-moving-cards";
 
@@ -19,13 +18,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
       <ParallaxBanner className="h-screen relative">
         <ParallaxBannerLayer speed={-20}>
           {background === "video" ? (
-            <video
-              className="w-full h-full object-cover"
-              loop
-              muted
-              autoPlay
-              playsinline
-            >
+            <video className="w-full h-full object-cover" loop muted autoPlay>
               <source src={src} type="video/mp4" />
             </video>
           ) : (
