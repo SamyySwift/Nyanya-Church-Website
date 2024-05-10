@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
 import ChurchServices from "../components/ChurchServices";
 import WorshipTime from "../components/WorshipTime";
-import ExtraSection from "../components/ExtraSection";
+// import ExtraSection from "../components/ExtraSection";
 import { Welcome } from "../components/Welcome";
 import "../App.css";
 import Explore from "../components/Explore";
