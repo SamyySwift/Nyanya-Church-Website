@@ -5,12 +5,13 @@ import { useLocation, Route, Routes } from "react-router-dom";
 import HomeScreen from "./pages/HomeScreen.jsx";
 import Events from "./pages/Events.jsx";
 import PraiseTeam from "./pages/PraiseTeam.jsx";
-import TechTeam from "./pages/TechTeam.jsx";
+import MediaTeam from "./pages/MediaTeam.jsx";
 import PlanVisit from "./pages/PlanVisit.jsx";
 import JoinAGroup from "./pages/JoinAGroup.jsx";
 import YouthFellowship from "./pages/YouthFellowship.jsx";
 import { AnimatePresence } from "framer-motion";
 import AboutPage from "./pages/AboutPage.jsx";
+import TechTeam from "./pages/TechTeam.jsx";
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/praise-team" element={<PraiseTeam />} />
+          <Route path="/media-team" element={<MediaTeam />} />
           <Route path="/tech-team" element={<TechTeam />} />
           <Route path="/plan-your-visit" element={<PlanVisit />} />
           <Route path="/join-a-group" element={<JoinAGroup />} />

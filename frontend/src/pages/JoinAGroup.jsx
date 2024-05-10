@@ -19,7 +19,7 @@ const JoinAGroup = () => {
           <h1 className=" font-vibes text-5xl md:text-8xl">
             Discover Various Groups
           </h1>
-          <p className="font-poppins font-extralight text-xl md:text-2xl max-w-xl mx-auto mt-5 px-5 md:px-0">
+          <p className="font-poppins font-extralight text-xl md:text-2xl max-w-3xl mx-auto mt-5 px-5 md:px-0">
             Discover exciting groups and teams in nyanya to join that will
             uplift your spirit and enrich your journey. Get connected and stay
             motivated!
@@ -41,37 +41,39 @@ const events = [
     description:
       "Join us for an unforgettable youth rally filled with exciting activities, inspiring talks, and meaningful interactions. This event is designed to empower and uplift the youth of Nyanya, providing them with the tools",
     color: "#BBACAF",
-    src: "src/assets/images/youth.jpg",
+    src: "images/youth.jpg",
     link: "/youth-fellowship",
   },
   {
-    title: "Praise & Worship Team",
+    title: "Praise&Worship Team",
     description:
       "Let's come together to make a positive impact on our community by participating in a community cleanup event. By joining forces, we can make Nyanya a cleaner and more beautiful place for everyone to enjoy.",
     color: "#B0A695",
-    src: "src/assets/images/praise.jpg",
+    src: "images/praise.jpg",
     link: "/praise-team",
   },
   {
-    title: "Media & Tech Team",
+    title: "Media Team",
     description:
       "Raise awareness about important health issues and promote healthy living habits in Nyanya. Our health awareness campaign aims to educate residents about preventive measures, disease management, and the importance of leading a healthy lifestyle.",
     color: "#A9B388",
-    src: "src/assets/images/media2.jpg",
-    link: "/tech-team",
+    src: "images/media2.jpg",
+    link: "/media-team",
   },
   {
-    title: "Men&Women Fellowship",
+    title: "Classical Choir",
     description:
       "Support a worthy cause and make a positive impact on the lives of those in need by attending our charity fundraiser event. Your generosity will help provide essential.",
     color: "#B4B4B8",
-    src: "src/assets/images/help.jpg",
+    src: "images/help.jpg",
+    link: "/classical-choir",
   },
   {
-    title: "Cultural Festival",
+    title: "Tech Team",
     description:
       "Experience the vibrant culture and rich heritage of Nyanya at our annual cultural festival. Celebrate diversity through music, dance, food, and traditional performances showcasing the unique traditions of our community.",
     color: "#8BA28D",
-    src: "src/assets/images/help.jpg",
+    src: "images/tech-team.jpeg",
+    link: "/tech-team",
   },
 ];

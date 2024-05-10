@@ -24,14 +24,14 @@ const TechTeam = () => {
   return (
     <>
       <Ministries
-        bgImg="images/media1.jpg"
+        bgImg="images/tech.jpg"
         bgText={"Tech Team"}
         msgBody={msgBody}
         msgTitle={msgTitle}
         biblePortion={biblePortion}
-        team="Tech Team"
-        title="Radiance: Illuminating the World Through Tech"
-        images={["media3.jpg", "media1.jpg", "media4.jpg", "media3.jpg"]}
+        team="Techinal Team"
+        title="Radiance: Illuminating the World Through Media Tech"
+        images={["tech.jpg", "tech.jpg", "media3.jpg", "tech.jpg"]}
       />
     </>
   );

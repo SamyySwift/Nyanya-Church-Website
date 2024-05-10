@@ -37,7 +37,7 @@ const Ministries = ({
       </section>
       {/* Spotlight */}
       <section>
-        <div className="h-screen  w-full pt-10 md:pt-20 flex flex-col items-center md:items-start md:flex-row  justify-center gap-10 bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden px-5  ">
+        <div className="h-[800px] w-full pt-10 md:pt-20 flex flex-col items-center md:items-start md:flex-row  justify-center gap-10 bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden px-5  ">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
             fill="white"
