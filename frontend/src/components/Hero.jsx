@@ -17,7 +17,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
   return (
     <>
       <ParallaxBanner className="h-screen relative">
-        <ParallaxBannerLayer speed={-30}>
+        <ParallaxBannerLayer speed={-20}>
           {background === "video" ? (
             <video className="w-full h-full object-cover" autoPlay loop muted>
               <source src={src} type="video/mp4" />
@@ -52,12 +52,13 @@ const Hero = ({ text, background, src, mainHero = false }) => {
             //   </motion.div>
             // </div>
             <div className="absolute bottom-[200px]">
-              <InfiniteMovingCards
+              {/* <InfiniteMovingCards
                 direction="left"
                 speed="slow"
                 type="text"
                 textContent="WELCOME TO THE APOSTOLIC CHURCH - NYANYA ASSEMBLY - "
-              />
+              /> */}
+              HEY
             </div>
           ) : (
             <div className="flex justify-center">
