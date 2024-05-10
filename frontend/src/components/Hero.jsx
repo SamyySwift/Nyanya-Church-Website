@@ -24,7 +24,6 @@ const Hero = ({ text, background, src, mainHero = false }) => {
               loop={true}
               muted={true}
               autoplay={true}
-              playsinline={true}
             >
               <source src={src} type="video/mp4" />
             </video>
