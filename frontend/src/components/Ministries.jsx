@@ -44,7 +44,7 @@ const Ministries = ({
           />
           <div>
             <img
-              src="src/assets/images/media3.jpg"
+              src="images/media3.jpg"
               className="w-[300px] h-[300px] object-cover"
             />
           </div>
@@ -86,7 +86,7 @@ const Ministries = ({
               <div className=" grid grid-col-1 justify-items-center md:grid-cols-2 gap-10  w-[800px] md:w-[1000px] md:mx-5">
                 {images.map((img, idx) => (
                   <img
-                    src={`src/assets/images/${img}`}
+                    src={`images/${img}`}
                     className="w-[360px] md:w-[400px]  object-cover"
                     key={idx}
                   />
