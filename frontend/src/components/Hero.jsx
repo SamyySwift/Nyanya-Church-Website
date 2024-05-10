@@ -57,13 +57,12 @@ const Hero = ({ text, background, src, mainHero = false }) => {
             //   </motion.div>
             // </div>
             <div className="absolute bottom-[200px]">
-              {/* <InfiniteMovingCards
+              <InfiniteMovingCards
                 direction="left"
                 speed="slow"
                 type="text"
                 textContent="WELCOME TO THE APOSTOLIC CHURCH - NYANYA ASSEMBLY - "
-              /> */}
-              HEY
+              />
             </div>
           ) : (
             <div className="flex justify-center">

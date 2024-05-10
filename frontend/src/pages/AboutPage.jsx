@@ -12,7 +12,7 @@ const AboutPage = () => {
         <Welcome
           title="Our Pastors"
           text="Apostle and Deaconness I.O Udofia currently serve as Pastors of The Apostoliic Church Nigeria Nyanya Assembly."
-          imgSrc="images/pastor2.jpg"
+          imgSrc="pastor2.jpg"
         />
       </section>
       <WordAnimation />
