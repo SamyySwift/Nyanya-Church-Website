@@ -10,11 +10,7 @@ const Events = () => {
 
   return (
     <div>
-      <Hero
-        text="UPCOMING EVENTS"
-        src="src/assets/images/help.jpg"
-        mainHero={false}
-      />
+      <Hero text="UPCOMING EVENTS" src="/images/help.jpg" mainHero={false} />
 
       <section className="" style={{ backgroundColor: "#FEF5E7" }}>
         <div className="text-center pt-20">

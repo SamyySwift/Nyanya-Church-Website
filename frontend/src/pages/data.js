@@ -4,7 +4,7 @@ const events = [
     description:
       "Join us for an unforgettable youth rally filled with exciting activities, inspiring talks, and meaningful interactions. This event is designed to empower and uplift the youth of Nyanya, providing them with the tools and support they need to thrive in today's world.",
     color: "#BBACAF",
-    src: "src/assets/images/help.jpg",
+    src: "/images/youth.jpg",
     date: "20th March 2024",
   },
   {
@@ -12,7 +12,7 @@ const events = [
     description:
       "Let's come together to make a positive impact on our community by participating in a community cleanup event. By joining forces, we can make Nyanya a cleaner and more beautiful place for everyone to enjoy. Together, we can make a difference!",
     color: "#977F6D",
-    src: "src/assets/images/help.jpg",
+    src: "/images/help.jpg",
     date: "22nd April 2024",
   },
   {
@@ -20,7 +20,7 @@ const events = [
     description:
       "Raise awareness about important health issues and promote healthy living habits in Nyanya. Our health awareness campaign aims to educate residents about preventive measures, disease management, and the importance of leading a healthy lifestyle.",
     color: "#C2491D",
-    src: "src/assets/images/help.jpg",
+    src: "/images/help.jpg",
     date: "19th Aughust 2024",
   },
   {
@@ -28,7 +28,7 @@ const events = [
     description:
       "Support a worthy cause and make a positive impact on the lives of those in need by attending our charity fundraiser event. Your generosity will help provide essential resources and support to vulnerable individuals and families in Nyanya.",
     color: "#566573",
-    src: "src/assets/images/help.jpg",
+    src: "/images/help.jpg",
     date: "20th Febuary 2024",
   },
   {

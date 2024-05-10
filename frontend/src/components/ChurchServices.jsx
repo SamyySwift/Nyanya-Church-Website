@@ -14,10 +14,7 @@ const ChurchServices = () => {
   };
   return (
     <ParallaxBanner
-      layers={[
-        { image: "src/assets/images/worship.jpg", speed: -20 },
-        gradientOverlay,
-      ]}
+      layers={[{ image: "/images/worship.jpg", speed: -20 }, gradientOverlay]}
       className="h-screen"
     >
       {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
