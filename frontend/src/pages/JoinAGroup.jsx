@@ -6,16 +6,12 @@ import transition from "../utils/transition";
 const JoinAGroup = () => {
   return (
     <>
-      <Hero
-        text="JOIN A GROUP"
-        src="src/assets/images/group.jpg"
-        mainHero={false}
-      />
+      <Hero text="JOIN A GROUP" src="images/group.jpg" mainHero={false} />
       <section style={{ backgroundColor: "#EBE3D5" }}>
         <Welcome
           title="JOIN A GROUP"
           text="Life is better when you go through it together – join a group and team and get connected today."
-          imgSrc="group3.jpg"
+          imgSrc="/images/group3.jpg"
         />
       </section>
       <section>

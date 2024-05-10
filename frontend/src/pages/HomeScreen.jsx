@@ -14,9 +14,9 @@ function HomeScreen() {
       <section className="overflow-hidden">
         <Hero
           text="Welcome to Nyanya Assembly"
-          background="video"
-          src="/bg2.mp4"
-          mainHero={true}
+          // background="video"
+          src="/images/group3.jpg"
+          mainHero={false}
         />
       </section>
 
