@@ -1,6 +1,5 @@
 import React from "react";
 import Ministries from "../components/Ministries";
-import techTeamImg from "../assets/images/media1.jpg";
 
 const msgBody = `
 
@@ -25,7 +24,7 @@ const TechTeam = () => {
   return (
     <>
       <Ministries
-        bgImg={techTeamImg}
+        bgImg="images/media1.jpg"
         bgText={"Tech Team"}
         msgBody={msgBody}
         msgTitle={msgTitle}

@@ -1,6 +1,5 @@
 import React from "react";
 import Ministries from "../components/Ministries";
-import praiseTeam from "../assets/images/praise.jpg";
 
 const msgBody = `
 We firmly believe that the musical aspect of our worship and
@@ -24,7 +23,7 @@ const PraiseTeam = () => {
   return (
     <>
       <Ministries
-        bgImg={praiseTeam}
+        bgImg="images/praise.jpg"
         bgText={"Praise Team"}
         msgBody={msgBody}
         msgTitle={msgTitle}

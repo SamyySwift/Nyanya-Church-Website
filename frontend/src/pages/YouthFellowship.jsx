@@ -1,6 +1,5 @@
 import React from "react";
 import Ministries from "../components/Ministries";
-import youthImg from "../assets/images/youth.jpg";
 
 const msgBody = `
 The importance of remembering your creator in the days of your youth, as highlighted in Ecclesiastes 12:1,
@@ -19,7 +18,7 @@ const YouthFellowship = () => {
   return (
     <>
       <Ministries
-        bgImg={youthImg}
+        bgImg="images/youth.jpg"
         bgText={"YOUTH FELLOWSHIP"}
         msgBody={msgBody}
         msgTitle={msgTitle}

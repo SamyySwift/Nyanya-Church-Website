@@ -1,17 +1,11 @@
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaPhone,
-  FaLocationDot,
-} from "react-icons/fa6";
+import { FaPhone, FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer
-      className="bg-black text-black h-screen md:h-[700px] flex flex-col pl-10 md:pl-0 md:px-10  md:flex-row justify-center gap-10 pt-20"
+      className="bg-black text-black h-screen flex flex-col pl-10 md:pl-0 md:px-10  md:flex-row justify-center gap-10 pt-20"
       style={{ backgroundColor: "#F7EEDD" }}
     >
       <div className="mr-10">
