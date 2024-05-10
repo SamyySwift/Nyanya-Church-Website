@@ -16,7 +16,7 @@ function HomeScreen() {
           text="Welcome to Nyanya Assembly"
           background="video"
           src="/bg2.mp4"
-          mainHero={false}
+          mainHero={true}
         />
       </section>
 
