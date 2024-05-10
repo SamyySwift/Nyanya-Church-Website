@@ -25,7 +25,7 @@ function HomeScreen() {
         text="Nyanya Assembly is a vibrant and friendly church in the beautiful city
             of Abuja. We love Jesus and we love people. We'd love to see you
             here soon!"
-        imgSrc=""
+        imgSrc="welcome.webp"
       />
 
       <section className="overflow-hidden">

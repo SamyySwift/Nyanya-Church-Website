@@ -6,7 +6,7 @@ export function Welcome({ title, text, imgSrc }) {
     scale: [0.8, 1, "easeInQuad"],
   });
   return (
-    <div className="h-[760px] sm:h-screen md:h-[500px] lg:h-[700px] xl:h-screen flex flex-col md:flex-row justify-around md:justify-between items-center gap-5  md:mx-5 lg:mx-10">
+    <div className="h-[760px] sm:h-screen md:h-[500px] lg:h-[700px] xl:h-screen flex flex-col md:flex-row justify-around md:justify-between items-center gap-5 md:mx-5 lg:mx-10">
       <motion.div
         initial={{ opacity: 0.0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export function Welcome({ title, text, imgSrc }) {
       </motion.div>
 
       {/* Image  */}
-      <div className="sm:max-w-2xl md:max-w-xl md:max-h-xl mx-3">
+      <div className="max-w-2xl md:max-w-xl md:max-h-xl mx-3">
         <motion.img
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
