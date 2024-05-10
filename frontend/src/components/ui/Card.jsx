@@ -23,7 +23,7 @@ const Card = ({ i, title, description, src, color, date, link }) => {
     >
       <div
         style={{ backgroundColor: color }}
-        className="flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between  mx-10 h-[700px] sm:w-[1200px] sm:h-[800px] md:w-[1200px] md:h-[550px] rounded-[40px] p-5"
+        className="flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-10 h-[700px] sm:w-[1200px] sm:h-[800px] md:w-[1200px] md:h-[550px] rounded-[40px] p-5"
       >
         {/* Column 1: Title, Description, and Button*/}
         <div className="flex flex-col justify-between max-w-2xl md:max-w-sm lg:max-w-xl">

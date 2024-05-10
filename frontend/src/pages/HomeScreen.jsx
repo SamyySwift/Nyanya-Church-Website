@@ -14,7 +14,7 @@ function HomeScreen() {
       <Hero
         text="Welcome to Nyanya Assembly"
         background="video"
-        src="src/assets/bg2.mp4"
+        src="/bg2.mp4"
         mainHero={true}
       />
       <Welcome

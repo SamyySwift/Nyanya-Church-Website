@@ -37,7 +37,7 @@ export function Welcome({ title, text, imgSrc }) {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
-          src={`/${imgSrc}`}
+          src={`/images/${imgSrc}`}
           className="h-full sm:h-full md:h-[400px] lg:h-full lg:w-full object-cover rounded-tl-[350px] rounded-br-[60px] md:rounded-bl-none rounded-bl-[50px]"
         />
       </div>
