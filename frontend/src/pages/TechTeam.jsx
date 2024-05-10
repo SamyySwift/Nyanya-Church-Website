@@ -29,7 +29,7 @@ const TechTeam = () => {
         msgBody={msgBody}
         msgTitle={msgTitle}
         biblePortion={biblePortion}
-        team="Techinal Team"
+        team="Tech Team"
         title="Radiance: Illuminating the World Through Media Tech"
         images={["tech.jpg", "tech.jpg", "media3.jpg", "tech.jpg"]}
       />
