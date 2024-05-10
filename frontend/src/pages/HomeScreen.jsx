@@ -19,15 +19,14 @@ function HomeScreen() {
           mainHero={true}
         />
       </section>
-      <section className="overflow-hidden">
-        <Welcome
-          title="Welcome Home"
-          text="Nyanya Assembly is a vibrant and friendly church in the beautiful city
+
+      <Welcome
+        title="Welcome Home"
+        text="Nyanya Assembly is a vibrant and friendly church in the beautiful city
             of Abuja. We love Jesus and we love people. We'd love to see you
             here soon!"
-          imgSrc="welcome.webp"
-        />
-      </section>
+        imgSrc="welcome.webp"
+      />
 
       <section className="overflow-hidden">
         <Explore />
