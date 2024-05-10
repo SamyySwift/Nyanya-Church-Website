@@ -19,7 +19,13 @@ const Hero = ({ text, background, src, mainHero = false }) => {
       <ParallaxBanner className="h-screen relative">
         <ParallaxBannerLayer speed={-20}>
           {background === "video" ? (
-            <video className="w-full h-full object-cover" autoPlay loop muted>
+            <video
+              className="w-full h-full object-cover"
+              loop={true}
+              muted={true}
+              autoplay={true}
+              playsinline={true}
+            >
               <source src={src} type="video/mp4" />
             </video>
           ) : (
