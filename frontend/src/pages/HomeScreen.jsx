@@ -15,18 +15,20 @@ function HomeScreen() {
         <Hero
           text="Welcome to Nyanya Assembly"
           background="video"
-          src="/bg.mp4"
+          src="/bg2.mp4"
           mainHero={true}
         />
       </section>
-
-      <Welcome
-        title="Welcome Home"
-        text="Nyanya Assembly is a vibrant and friendly church in the beautiful city
+      <section className="overflow-hidden">
+        <Welcome
+          title="Welcome Home"
+          text="Nyanya Assembly is a vibrant and friendly church in the beautiful city
             of Abuja. We love Jesus and we love people. We'd love to see you
             here soon!"
-        imgSrc="welcome.webp"
-      />
+          imgSrc="welcome.webp"
+        />
+      </section>
+
       <section className="overflow-hidden">
         <Explore />
       </section>
