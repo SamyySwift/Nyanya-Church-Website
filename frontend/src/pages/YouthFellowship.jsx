@@ -18,7 +18,7 @@ const YouthFellowship = () => {
   return (
     <>
       <Ministries
-        bgImg="images/youth.jpg"
+        bgImg="youth.jpg"
         bgText={"YOUTH FELLOWSHIP"}
         msgBody={msgBody}
         msgTitle={msgTitle}

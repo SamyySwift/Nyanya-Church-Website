@@ -17,7 +17,7 @@ const Events = () => {
           <h1 className=" font-vibes text-5xl md:text-8xl">
             Discover Upcoming Events
           </h1>
-          <p className="font-poppins font-extralight text-xl md:text-2xl max-w-xl mx-auto mt-5 px-5 md:px-0">
+          <p className="font-poppins font-extralight text-xl md:text-2xl max-w-3xl mx-auto mt-5 px-5 md:px-0">
             Discover exciting events that will uplift your spirit and enrich
             your journey. Don't miss out on our latest upcoming experiences!
           </p>

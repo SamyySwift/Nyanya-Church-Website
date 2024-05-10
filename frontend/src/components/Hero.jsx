@@ -67,7 +67,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
           ) : (
             <div className="flex justify-center">
               <motion.h1
-                className={`absolute bottom-[220px] font-poppins font-bold text-white text-5xl md:text-7xl lg:text-[149px]`}
+                className={`absolute bottom-[250px] font-poppins font-bold text-white text-4xl md:text-7xl lg:text-[149px]`}
               >
                 {text}
               </motion.h1>

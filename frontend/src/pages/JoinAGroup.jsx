@@ -11,7 +11,7 @@ const JoinAGroup = () => {
         <Welcome
           title="JOIN A GROUP"
           text="Life is better when you go through it together – join a group and team and get connected today."
-          imgSrc="images/group3.jpg"
+          imgSrc="group3.jpg"
         />
       </section>
       <section>

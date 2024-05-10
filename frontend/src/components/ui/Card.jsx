@@ -17,17 +17,17 @@ const Card = ({ i, title, description, src, color, date, link }) => {
 
   return (
     <motion.div
-      className="h-[1000px] md:h-screen flex justify-center items-center sticky top-0"
+      className="h-[900px] md:h-screen flex justify-center items-center sticky top-0"
       ref={container}
       style={{ top: dynamicTop }}
     >
       <div
         style={{ backgroundColor: color }}
-        className="flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-10 h-[700px] sm:w-[1200px] sm:h-[800px] md:w-[1200px] md:h-[550px] rounded-[40px] p-5"
+        className="flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-10 h-[650px] sm:w-[1200px] sm:h-[800px] md:w-[1200px] md:h-[550px] rounded-[40px] p-5"
       >
         {/* Column 1: Title, Description, and Button*/}
         <div className="flex flex-col justify-between max-w-2xl md:max-w-sm lg:max-w-xl">
-          <h2 className="text-4xl md:text-5xl font-bold md:mb-20 mb-5 mt-5 font-grotesque">
+          <h2 className="text-3xl md:text-5xl font-bold md:mb-20 mb-5 mt-5 font-grotesque">
             {title}
           </h2>
           <p className="text-sm sm:text-md md:text-lg font-poppins font-light">
