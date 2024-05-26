@@ -22,7 +22,7 @@ const Navbar = () => {
       width: "100vw",
       height: "100vh",
       top: "-24px",
-      right: "-40px",
+      right: "-12px",
       transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
     },
     closed: {
@@ -100,7 +100,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* Button nav */}
-        <div className="fixed top-6 right-10">
+        <div className="fixed top-6 right-3">
           <motion.div
             className={`relative ${!isOpen && "rounded-xl"}`}
             variants={variants}
@@ -108,7 +108,7 @@ const Navbar = () => {
             initial="closed"
             style={{ backgroundColor: "#EADBC8" }}
           >
-            <div className="h-full pt-[150px] md:pt-[70px] pb-[40px] md:pl-[80px] pl-[40px] flex flex-col justify-between max-w-3xl">
+            <div className="h-full pt-[150px] md:pt-[70px] pb-[40px] md:pl-[80px] pl-[40px] flex flex-col space-y-[50px] md:space-y-[80px] max-w-3xl">
               <AnimatePresence>
                 {isOpen && (
                   <>
@@ -208,7 +208,7 @@ const links = [
 const socials = [
   {
     title: "Facebook",
-    link: "/",
+    link: "",
     icon: <FaFacebook size={30} className="hover:text-sky-500 rounded-full" />,
   },
   {

@@ -30,12 +30,7 @@ const PraiseTeam = () => {
         biblePortion="Psalm 99:9"
         team="Praise & Worship Team"
         title="Praise & Worship moves God"
-        images={[
-          "keyboard.jpg",
-          "keyboard.jpg",
-          "keyboard.jpg",
-          "keyboard.jpg",
-        ]}
+        images={["praise.jpg", "praise.jpg", "praise.jpg", "praise.jpg"]}
       />
     </>
   );

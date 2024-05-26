@@ -3,6 +3,7 @@ import React from "react";
 import Spotlight from "./ui/spotlight.jsx";
 import Hero from "./Hero.jsx";
 import ContactForm from "./ContactForm.jsx";
+import AuroraBackground from "./ui/aurora-background.jsx";
 
 const Ministries = ({
   bgImg,
@@ -19,25 +20,23 @@ const Ministries = ({
     <>
       <Hero text={bgText} src={bgImg} />
       {/* Introduction */}
-      <section
-        className="h-[1500px] md:h-[1000px] flex flex-col items-center justify-center px-2 md:px-0"
-        style={{ backgroundColor: "#F5EFE6" }}
-      >
+
+      {/* Spotlight */}
+      {/* <AuroraBackground className="text-white flex flex-col items-center justify-center px-2 md:px-0">
         <h1 className="text-4xl md:text-6xl font-grotesque font-bold text-center">
           {title}
         </h1>
-        <h2 className="text-xl md:text-2xl mt-3 font-light text-black max-w-2xl italic text-center mx-auto">
+        <h2 className="text-xl md:text-2xl mt-3 font-light text-white max-w-2xl italic text-center mx-auto">
           {msgTitle}
           <span className="underline font-semibold">{biblePortion}</span>
         </h2>
 
-        <p className="mt-12 text-justify  text-md md:text-xl  max-w-7xl font-poppins leading-[40px] md:leading-[50px] mx-5 lg:mx-0">
+        <p className="mt-12 text-justify  text-md md:text-xl  max-w-7xl font-poppins font-light leading-[40px] md:leading-[50px] mx-5 lg:mx-0">
           {msgBody}
         </p>
-      </section>
-      {/* Spotlight */}
+      </AuroraBackground> */}
       <section>
-        <div className="h-[800px] w-full pt-10 md:pt-20 flex flex-col items-center md:items-start md:flex-row  justify-center gap-10 bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden px-5  ">
+        <div className="h-[1000px] md:h-[800px] w-full pt-10 md:pt-20 flex flex-col items-center md:items-start md:flex-row  justify-center gap-10 bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden px-5  ">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
             fill="white"
@@ -45,7 +44,7 @@ const Ministries = ({
           <div>
             <img
               src="images/media3.jpg"
-              className="w-[300px] h-[300px] object-cover"
+              className="w-[300px] h-[300px] object-cover rounded-xl"
             />
           </div>
           <div className="max-w-lg font-poppins">
@@ -57,7 +56,7 @@ const Ministries = ({
                 {leaderName}
               </span>
             </h1>
-            <p className="text-white  font-light text-md md:text-lg lg:text-xl">
+            <p className="text-white  font-extralight text-md md:text-lg lg:text-xl">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Voluptatibus totam nobis nam placeat ab libero repellendus
               perspiciatis, reiciendis eaque necessitatibus quibusdam quas
@@ -77,7 +76,7 @@ const Ministries = ({
       {/* Images */}
       <section>
         <ParallaxBanner
-          className="h-[1800px] md:h-[900px] relative"
+          className="h-[1500px] md:h-[900px] relative"
           style={{ backgroundColor: "#E2DFD0" }}
         >
           <ParallaxBannerLayer speed={-20}>
@@ -87,7 +86,7 @@ const Ministries = ({
                 {images.map((img, idx) => (
                   <img
                     src={`images/${img}`}
-                    className="w-[360px] md:w-[400px]  object-cover"
+                    className="w-[360px] md:w-[400px]  object-cover rounded-xl"
                     key={idx}
                   />
                 ))}
@@ -97,16 +96,23 @@ const Ministries = ({
         </ParallaxBanner>
       </section>
       {/* Form */}
-      <section className="h-[1000px] flex flex-col items-center justify-center">
-        <h1 className="font-bold text-4xl md:text-7xl font-grotesque text-center">
-          Join the {team}
-        </h1>
-        <p className="font-poppins font-light text-md md:text-xl max-w-2xl text-center mb-8 px-4 md:p-0">
-          If you are interested in joining the {team} or talking with someone
-          about it, feel free to reach out to the team leader using the form
-          below.
-        </p>
-        <ContactForm team={team} />
+      <section
+        className="h-[1000px]  bg-cover bg-center relative"
+        style={{ backgroundImage: "url('images/welcome2.jpg')" }}
+      >
+        <div className="absolute bg-gray-500 bg-opacity-30 backdrop-blur-md backdrop-filter w-full h-full flex flex-col items-center justify-center space-y-4">
+          <h1 className="text-center">
+            <span className="font-bold text-4xl md:text-7xl font-grotesque ">
+              Join the {team}
+            </span>
+          </h1>
+          <p className="font-poppins font-light text-md md:text-xl mb-8 px-4 md:px-0 max-w-3xl text-center">
+            If you are interested in joining the {team} or talking with someone
+            about it, feel free to reach out to the team leader using the form
+            below.
+          </p>
+          <ContactForm team={team} />
+        </div>
       </section>
     </>
   );

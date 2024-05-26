@@ -1,14 +1,16 @@
 import Hero from "../components/Hero";
+import WorshipWithUs from "../components/WorshipWithUs";
 import ChurchServices from "../components/ChurchServices";
-import WorshipTime from "../components/WorshipTime";
 // import ExtraSection from "../components/ExtraSection";
 import { Welcome } from "../components/Welcome";
 import "../App.css";
 import Explore from "../components/Explore";
 import transition from "../utils/transition";
 import WordAnimation from "../components/WordAnimation";
+import { FlipWords } from "../components/ui/flip-words";
 
 function HomeScreen() {
+  const words = ["vibrant", "friendly", "beautiful", "modern", "lovable"];
   return (
     <>
       <section className="overflow-hidden">
@@ -21,9 +23,13 @@ function HomeScreen() {
       </section>
       <Welcome
         title="Welcome Home"
-        text="Nyanya Assembly is a vibrant and friendly church in the beautiful city
-            of Abuja. We love Jesus and we love people. We'd love to see you
-            here soon!"
+        text={
+          <>
+            Nyanya Assembly is a {""}
+            <FlipWords words={words} /> church in the beautiful city of Abuja.
+            We love Jesus and we love people. We'd love to see you here soon
+          </>
+        }
         imgSrc="welcome.webp"
       />
       <section className="overflow-hidden">
@@ -31,13 +37,13 @@ function HomeScreen() {
       </section>
       <WordAnimation />
       <section className=" overflow-hidden">
-        <ChurchServices />
+        <WorshipWithUs />
       </section>
       {/* <section className=" overflow-hidden">
         <ExtraSection />
       </section> */}
       <section className=" overflow-hidden">
-        <WorshipTime />
+        <ChurchServices />
       </section>
     </>
   );

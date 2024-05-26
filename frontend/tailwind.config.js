@@ -27,6 +27,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         vibes: ["Great Vibes"],
         grotesque: ["Bricolage Grotesque", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
       animation: {
         aurora: "aurora 60s linear infinite",

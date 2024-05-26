@@ -40,8 +40,8 @@ const WordAnimation = () => {
       </h1>
 
       <motion.div
-        className="absolute circle top-1/2 left-1/2"
-        style={{ scaleX: scale, scaleY: scale, transitionDuration: "0.7s" }}
+        className="absolute circle top-1/2  left-[160px] lg:left-[700px]"
+        style={{ scaleX: scale, scaleY: scale, transitionDuration: "1s" }}
       ></motion.div>
     </section>
   );
@@ -66,7 +66,7 @@ const Animate = ({ children, range, progress }) => {
   return (
     <motion.span
       style={{ y: translateY, opacity, transitionDuration: "1s" }}
-      className="font-bold text-7xl md:text-9xl lg:text-[160px] font-grotesque   tracking-tighter text-black"
+      className="font-bold text-7xl md:text-9xl lg:text-[160px] font-grotesque tracking-tighter text-black"
     >
       {children}
     </motion.span>

@@ -32,10 +32,10 @@ const Footer = () => {
           </p>
           <p className="flex font-light">
             <FaLocationDot className="mr-3 w-5 mt-1" />
-            <sapn>
+            <span>
               NO. 2, Avenue Nyanya Karu Road Opposite A.A. Rano Filling Station,
               Nyanya, Abuja, FCT
-            </sapn>
+            </span>
           </p>
         </div>
       </div>
@@ -43,9 +43,9 @@ const Footer = () => {
       <div className="flex flex-col">
         <h1 className="mb-5 font-grotesque text-md md:text-xl">LINKS</h1>
         <div className="flex flex-col gap-2 font-light font-poppins text-md md:text-lg">
-          {links.map((link, i) => (
+          {links.map((link) => (
             <Link to={link.href}>
-              <p key={i} className="hover:underline">
+              <p key={link.name} className="hover:underline">
                 {link.name}
               </p>
             </Link>
@@ -56,9 +56,9 @@ const Footer = () => {
       <div className="flex flex-col">
         <h1 className="mb-5 font-grotesque text-xl md:text-xl">SOCIALS</h1>
         <div className="flex flex-col gap-2 font-light font-poppins text-md md:text-lg">
-          {socials.map((social, i) => (
+          {socials.map((social) => (
             <Link to={social.href}>
-              <p key={i} className="hover:underline">
+              <p key={social.name} className="hover:underline">
                 {social.name}
               </p>
             </Link>

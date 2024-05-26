@@ -2,11 +2,47 @@ import React from "react";
 import Label from "./ui/label";
 import Input from "./ui/input";
 import { cn } from "../utils/cn";
+import { useState } from "react";
 
 export function ContactForm({ team }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted");
+  const [result, setResult] = React.useState("");
+  const [techAreas, setTechAreas] = useState({
+    sound: false,
+    lighting: false,
+    media: false,
+  });
+
+  const handleTechAreaChange = (e) => {
+    const { name, checked } = e.target;
+    setTechAreas((prevTechAreas) => ({
+      ...prevTechAreas,
+      [name]: checked,
+    }));
+  };
+
+  const accessKey = "2fe1f226-b3df-4223-b2ae-01222c28aabb";
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending your request...");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", accessKey);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Your request has been submitted successfully!");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
   };
 
   return (
@@ -22,20 +58,42 @@ export function ContactForm({ team }) {
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Input
+              id="firstname"
+              placeholder="Tyler"
+              type="text"
+              // value={firstName}
+              name="firstname"
+              // onChange={(e) => setFirstName(e.target.value)}
+            />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Input
+              id="lastname"
+              placeholder="Durden"
+              type="text"
+              name="lastname"
+            />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="phone">Phone number</Label>
-          <Input id="phone" placeholder="08023354663" type="number" />
+          <Input
+            id="phone"
+            placeholder="08023354663"
+            type="number"
+            name="Phone Number"
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            placeholder="projectmayhem@fc.com"
+            type="email"
+            name="Email Address"
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="message">Message</Label>
@@ -43,9 +101,10 @@ export function ContactForm({ team }) {
             id="message"
             placeholder="I would like to join the team..."
             type="text"
+            name="message"
           />
         </LabelInputContainer>
-        {team === "Tech Team" && (
+        {/* {team === "Tech Team" && (
           <LabelInputContainer className="mb-8">
             <Label htmlFor="choice">
               In which area of tech would you like to volunteer? (Check all that
@@ -53,7 +112,13 @@ export function ContactForm({ team }) {
             </Label>
             <div className="flex space-x-5 ">
               <div className="space-x-2">
-                <input type="checkbox" id="sound" name="sound" value="sound" />
+                <input
+                  type="checkbox"
+                  id="sound"
+                  name="sound"
+                  checked={techAreas.sound}
+                  onChange={handleTechAreaChange}
+                />
                 <Label htmlFor="sound">Sound</Label>
               </div>
               <div>
@@ -61,17 +126,24 @@ export function ContactForm({ team }) {
                   type="checkbox"
                   id="lighting"
                   name="lighting"
-                  value="lighting"
+                  checked={techAreas.lighting}
+                  onChange={handleTechAreaChange}
                 />
                 <Label htmlFor="lighting">Lighting</Label>
               </div>
               <div>
-                <input type="checkbox" id="media" name="media" value="media" />
+                <input
+                  type="checkbox"
+                  id="media"
+                  name="media"
+                  checked={techAreas.media}
+                  onChange={handleTechAreaChange}
+                />
                 <Label htmlFor="media">Media</Label>
               </div>
             </div>
           </LabelInputContainer>
-        )}
+        )} */}
 
         <button
           className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
@@ -80,40 +152,10 @@ export function ContactForm({ team }) {
           Submit &rarr;
           <BottomGradient />
         </button>
-        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-        {/* <div className="flex flex-col space-y-4">
-          <button
-            className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-            type="submit"
-          >
-            <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-              GitHub
-            </span>
-            <BottomGradient />
-          </button>
-          <button
-            className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-            type="submit"
-          >
-            <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-              Google
-            </span>
-            <BottomGradient />
-          </button>
-          <button
-            className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-            type="submit"
-          >
-            <IconBrandOnlyfans className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-              OnlyFans
-            </span>
-            <BottomGradient />
-          </button>
-        </div> */}
       </form>
+      <h1 className="text-white font-thin font-grotesque text-sm md:text-lg">
+        {result}
+      </h1>
     </div>
   );
 }

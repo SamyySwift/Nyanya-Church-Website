@@ -45,7 +45,7 @@ const events = [
     link: "/youth-fellowship",
   },
   {
-    title: "Praise&Worship Team",
+    title: "Praise Team",
     description:
       "Let's come together to make a positive impact on our community by participating in a community cleanup event. By joining forces, we can make Nyanya a cleaner and more beautiful place for everyone to enjoy.",
     color: "#B0A695",

@@ -58,12 +58,12 @@ export default Explore;
 
 const exploreNav = [
   {
-    title: "Plan Your Visit",
+    title: "Upcoming Events",
     bodyText:
-      "We are very welcoming. we cant wait to have you worship with us this sunday. We are very welcoming. we cant wait to have you worship with us this sunday",
-    btnText: "Plan Visit",
-    link: "/plan-your-visit",
-    color: "#524C42",
+      "Discover exciting events that will uplift your spirit and enrich your journey. Don't miss out on our latest upcoming experiences!",
+    btnText: "Learn More",
+    link: "/events",
+    color: "#75A47F",
   },
   {
     title: "Join a Group",
@@ -74,18 +74,20 @@ const exploreNav = [
     color: "#D8AE7E",
   },
   {
-    title: "Upcoming Events",
+    title: "Plan Your Visit",
     bodyText:
-      "Discover exciting events that will uplift your spirit and enrich your journey. Don't miss out on our latest upcoming experiences!",
-    btnText: "Learn More",
-    link: "/events",
-    color: "#75A47F",
+      "We are very welcoming. we cant wait to have you worship with us this sunday. We are very welcoming. we cant wait to have you worship with us this sunday",
+    btnText: "Plan Visit",
+    link: "/plan-your-visit",
+    color: "#524C42",
   },
+
   {
     title: "Pastoral Care",
     bodyText:
-      "We are very welcoming. we cant wait to have you worship with us this sunday. We are very welcoming. we cant wait to have you worship with us this sunday",
+      "Need prayer support or counseling? Our dedicated team is always here to pray with you. Submit your prayer request here.",
     btnText: "Email Us",
+    link: "https://mailto:samueludofia94@gmail.com/",
     color: "#3C5B6F",
   },
 ];

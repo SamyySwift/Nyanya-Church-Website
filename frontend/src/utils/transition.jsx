@@ -6,11 +6,11 @@ const Transition = (OgComponent) => {
       <OgComponent />
       <motion.div
         className="fixed inset-0 w-full h-screen z-50"
-        style={{ transformOrigin: "bottom", backgroundColor: "#EADBC8" }}
+        style={{ transformOrigin: "top", backgroundColor: "#EADBC8" }}
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 0 }}
         exit={{ scaleY: 1 }}
-        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-black text-4xl md:text-6xl lg:text-9xl font-grotesque font-bold">

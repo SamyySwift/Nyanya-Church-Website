@@ -24,9 +24,9 @@ export function Welcome({ title, text, imgSrc }) {
             {title}
           </h1>
           <div>
-            <p className="font-poppins md:text-md lg:text-lg xl:text-2xl md:leading-[40px] lg:leading-[50px] xl:leading-[50px]">
+            <span className="font-poppins md:text-md lg:text-lg xl:text-2xl md:leading-[40px] lg:leading-[50px] xl:leading-[50px]">
               {text}
-            </p>
+            </span>
           </div>
         </div>
       </motion.div>
