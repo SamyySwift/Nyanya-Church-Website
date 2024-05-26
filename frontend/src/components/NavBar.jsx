@@ -208,12 +208,12 @@ const links = [
 const socials = [
   {
     title: "Facebook",
-    link: "",
+    link: "https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d",
     icon: <FaFacebook size={30} className="hover:text-sky-500 rounded-full" />,
   },
   {
     title: "Instagram",
-    link: "/",
+    link: "https://www.instagram.com/tacn_na?igsh=dDhxcmplNzVzZDNw",
     icon: <FaInstagram size={30} className="hover:text-sky-500 rounded-full" />,
   },
   {

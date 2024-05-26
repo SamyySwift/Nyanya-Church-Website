@@ -86,7 +86,7 @@ const links = [
   },
   {
     name: "Join a group",
-    href: "/",
+    href: "/join-a-group",
   },
   {
     name: "Plan your visit",
@@ -97,11 +97,11 @@ const links = [
 const socials = [
   {
     name: "Facebook",
-    href: "",
+    href: "https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d",
   },
   {
     name: "Instagram",
-    href: "",
+    href: "https://www.instagram.com/tacn_na?igsh=dDhxcmplNzVzZDNw",
   },
   {
     name: "YouTube",
