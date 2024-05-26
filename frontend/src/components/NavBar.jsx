@@ -155,7 +155,7 @@ const Navbar = () => {
                             exit="exit"
                             initial="initial"
                           >
-                            <Link>{social.icon}</Link>
+                            <Link to={social.link}>{social.icon}</Link>
                           </motion.div>
                         );
                       })}
