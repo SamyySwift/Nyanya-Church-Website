@@ -4,6 +4,7 @@ import HoverBorderGradientButton from "./ui/hover-border-gradient";
 import { motion } from "framer-motion";
 import { useParallax } from "react-scroll-parallax";
 import { SparklesCore } from "./ui/sparkles";
+import { Link } from "react-router-dom";
 
 const ChurchServices = () => {
   const { ref } = useParallax({
@@ -28,20 +29,20 @@ const ChurchServices = () => {
       <h1 className="md:text-7xl text-3xl lg:text-6xl font-semibold text-center text-slate-300 relative z-20 font-grotesque">
         Our Church Services
       </h1>
-      <div className="flex md:flex-row  justify-evenly  mt-10  relative z-20 text-white font-poppins">
+      <div className="flex md:flex-row  gap-11 mt-10  relative z-20 text-white font-poppins">
         <motion.div
           initial={{ x: -1000, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className="flex flex-col gap-10 md:w-[400px]"
         >
-          <h2 className="text-lg md:text-3xl font-extralight underline text-center md:text-left">
+          <h2 className="text-xl md:text-3xl font-extralight underline text-center md:text-left">
             Weekly Services...
           </h2>
 
           <div className="flex flex-col items-center md:gap-3 gap-1">
             {/* <FaPlaceOfWorship className="h-[50px] w-[50px] md:h-[100px] md:w-[100px]" /> */}
-            <h1 className="font-bold text-lg md:text-xl tracking-tight">
+            <h1 className="font-bold text-xl md:text-2xl tracking-tight">
               SUNDAY SERVICE
             </h1>
             <span className="font-light text-md md:text-lg">
@@ -53,7 +54,7 @@ const ChurchServices = () => {
             </span>
           </div>
           <div className="flex flex-col justify-center items-center gap-1 md:gap-3">
-            <h1 className="font-bold text-md md:text-xl tracking-tight">
+            <h1 className="font-bold text-xl md:text-2xl tracking-tight">
               TUESDAY SERVICE
             </h1>
             <span className="font-light text-md md:text-lg">Bible Study</span>
@@ -64,7 +65,7 @@ const ChurchServices = () => {
           </div>
 
           <div className="flex flex-col justify-center items-center gap-1 md:gap-3">
-            <h1 className="font-bold text-lg md:text-xl tracking-tight">
+            <h1 className="font-bold text-xl md:text-2xl tracking-tight">
               FRIDAY SERVICE
             </h1>
             <span className="font-light text-md md:text-lg">
@@ -83,23 +84,23 @@ const ChurchServices = () => {
           transition={{ duration: 1 }}
           className="flex flex-col gap-10 md:w-[400px]"
         >
-          <h2 className="text-lg md:text-3xl font-extralight underline text-center md:text-left ">
+          <h2 className="text-xl md:text-3xl font-extralight underline text-center md:text-left ">
             Join Us Online...
           </h2>
 
           <div className="flex flex-col justify-center items-center gap-3">
-            {/* <CiStreamOn className="h-[50px] w-[50px] md:h-[100px] md:w-[100px]" /> */}
             <h1 className="font-bold text-lg md:text-xl tracking-tight">
               STREAM ONLINE
             </h1>
             <span className="font-light text-sm md:text-lg">
               Sundays & Fridays
             </span>
-
-            <HoverBorderGradientButton
-              text={"Stream"}
-              icon={<CiStreamOn size={22} />}
-            />
+            <Link to="https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d">
+              <HoverBorderGradientButton
+                text={"Stream"}
+                icon={<CiStreamOn size={22} />}
+              />
+            </Link>
           </div>
           <div className="flex flex-col justify-center items-center gap-3">
             <h1 className="font-bold text-lg md:text-xl tracking-tight">

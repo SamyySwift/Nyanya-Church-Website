@@ -22,7 +22,7 @@ const WorshipWithUs = () => {
           Worship With Us <br />
         </h1>
         <span className="font-poppins text-2xl md:text-4xl font-thin">
-          ...and experience God's <FlipWords words={words} />
+          and experience God's <FlipWords words={words} />
         </span>
       </div>
     </ParallaxBanner>
