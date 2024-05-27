@@ -23,7 +23,7 @@ const PraiseTeam = () => {
   return (
     <>
       <Ministries
-        bgImg="praise-team-bg.mp4"
+        bgImg="/praise-team-bg.mp4"
         bgText={"Praise Team"}
         msgBody={msgBody}
         msgTitle={msgTitle}

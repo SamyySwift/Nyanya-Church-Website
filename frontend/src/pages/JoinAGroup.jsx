@@ -51,7 +51,7 @@ const events = [
     description:
       "Come together with the Praise Team to make a joyful noise and worship through music. Join us in making Nyanya a more beautiful place for everyone by lifting spirits with our musical talents.",
     color: "#B0A695",
-    src: "images/praise.jpg",
+    src: "images/praise-team-4.jpg",
     link: "/praise-team",
   },
   {
