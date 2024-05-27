@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm.jsx";
 const Ministries = ({ bgImg, bgText, team, leaderName, images }) => {
   return (
     <>
-      <Hero text={bgText} src={bgImg} />
+      <Hero text={bgText} src={bgImg} background="video" />
 
       <section>
         <div className="h-[1000px] md:h-[800px] w-full pt-10 md:pt-20 flex flex-col items-center md:items-start md:flex-row  justify-center gap-10 bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden px-5  ">
@@ -59,7 +59,7 @@ const Ministries = ({ bgImg, bgText, team, leaderName, images }) => {
                 {images.map((img, idx) => (
                   <img
                     src={`images/${img}`}
-                    className="w-[360px] md:w-[400px]  object-cover rounded-xl"
+                    className="w-[360px] h-[300px] md:w-[400px]  object-cover rounded-xl"
                     key={idx}
                   />
                 ))}

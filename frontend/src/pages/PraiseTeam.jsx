@@ -23,14 +23,19 @@ const PraiseTeam = () => {
   return (
     <>
       <Ministries
-        bgImg="images/praise.jpg"
+        bgImg="praise-team-bg.mp4"
         bgText={"Praise Team"}
         msgBody={msgBody}
         msgTitle={msgTitle}
         biblePortion="Psalm 99:9"
         team="Praise & Worship Team"
         title="Praise & Worship moves God"
-        images={["praise.jpg", "praise.jpg", "praise.jpg", "praise.jpg"]}
+        images={[
+          "praise-team-1.jpg",
+          "praise-team-2.jpg",
+          "praise-team-3.jpg",
+          "praise-team-4.jpg",
+        ]}
       />
     </>
   );
