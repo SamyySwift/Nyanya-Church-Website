@@ -3,10 +3,15 @@ import Hero from "../components/Hero";
 import { Welcome } from "../components/Welcome";
 import InfiniteMovingCards from "../components/ui/infinite-moving-cards";
 import transition from "../utils/transition";
+import PageTitle from "../components/PageTitle";
 
 const PlanVisit = () => {
   return (
     <>
+      <PageTitle
+        title="Plan Your Visit"
+        description="Page contains info on how to locate church"
+      />
       <Hero
         text="PLAN YOUR VISIT"
         background="video"

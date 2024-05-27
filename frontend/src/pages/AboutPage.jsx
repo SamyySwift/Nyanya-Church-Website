@@ -3,10 +3,12 @@ import transition from "../utils/transition";
 import Hero from "../components/Hero";
 import { Welcome } from "../components/Welcome";
 import WordAnimation from "../components/WordAnimation";
+import PageTitle from "../components/PageTitle";
 
 const AboutPage = () => {
   return (
     <>
+      <PageTitle title="About Us" description="About us page" />
       <Hero text="ABOUT US" src="images/group.jpg" mainHero={false} />
       <section>
         <Welcome

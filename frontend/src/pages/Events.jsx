@@ -2,6 +2,7 @@ import Card from "../components/ui/Card";
 import Hero from "../components/Hero";
 import customFetch from "../hooks/customFetch";
 import events from "./data";
+import PageTitle from "../components/PageTitle";
 
 const Events = () => {
   // const { loading, error, data } = customFetch(
@@ -10,6 +11,10 @@ const Events = () => {
 
   return (
     <div>
+      <PageTitle
+        title="Upcoming Events"
+        description="page containing all church upcoming events"
+      />
       <Hero text="UPCOMING EVENTS" src="/images/help.jpg" mainHero={false} />
 
       <section className="" style={{ backgroundColor: "#FEF5E7" }}>

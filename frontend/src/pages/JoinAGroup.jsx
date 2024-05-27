@@ -2,10 +2,12 @@ import Hero from "../components/Hero";
 import { Welcome } from "../components/Welcome";
 import Card from "../components/ui/Card";
 import transition from "../utils/transition";
+import PageTitle from "../components/PageTitle";
 
 const JoinAGroup = () => {
   return (
     <>
+      <PageTitle title="Join a Group" description="Different church groups" />
       <Hero text="JOIN A GROUP" src="images/group.jpg" mainHero={false} />
       <section style={{ backgroundColor: "#EBE3D5" }}>
         <Welcome

@@ -13,27 +13,30 @@ import { AnimatePresence } from "framer-motion";
 import AboutPage from "./pages/AboutPage.jsx";
 import TechTeam from "./pages/TechTeam.jsx";
 import ClassicalChoir from "./pages/ClassicalChoir.jsx";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   const location = useLocation();
   return (
     <>
-      <Navbar />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route index element={<HomeScreen />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/praise-team" element={<PraiseTeam />} />
-          <Route path="/media-team" element={<MediaTeam />} />
-          <Route path="/tech-team" element={<TechTeam />} />
-          <Route path="/plan-your-visit" element={<PlanVisit />} />
-          <Route path="/join-a-group" element={<JoinAGroup />} />
-          <Route path="/youth-fellowship" element={<YouthFellowship />} />
-          <Route path="/classical-choir" element={<ClassicalChoir />} />
-        </Routes>
-      </AnimatePresence>
-      <Footer />
+      <HelmetProvider>
+        <Navbar />
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route index element={<HomeScreen />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/praise-team" element={<PraiseTeam />} />
+            <Route path="/media-team" element={<MediaTeam />} />
+            <Route path="/tech-team" element={<TechTeam />} />
+            <Route path="/plan-your-visit" element={<PlanVisit />} />
+            <Route path="/join-a-group" element={<JoinAGroup />} />
+            <Route path="/youth-fellowship" element={<YouthFellowship />} />
+            <Route path="/classical-choir" element={<ClassicalChoir />} />
+          </Routes>
+        </AnimatePresence>
+        <Footer />
+      </HelmetProvider>
     </>
   );
 }
