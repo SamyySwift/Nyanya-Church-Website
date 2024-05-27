@@ -1,51 +1,43 @@
 const events = [
   {
-    title: "Youth Rally",
+    title: "Youth Encounter",
     description:
       "Join us for an unforgettable youth rally filled with exciting activities, inspiring talks, and meaningful interactions. This event is designed to empower and uplift the youth of Nyanya, providing them with the tools and support they need to thrive in today's world.",
     color: "#BBACAF",
     src: "images/youth.jpg",
-    date: "20th March 2024",
+    date: "20th July 2024",
   },
   {
-    title: "Community Cleanup",
+    title: "Men's Conference",
     description:
-      "Let's come together to make a positive impact on our community by participating in a community cleanup event. By joining forces, we can make Nyanya a cleaner and more beautiful place for everyone to enjoy. Together, we can make a difference!",
+      "Join us for a powerful Men's Conference where we will explore topics relevant to men in today's society. Engage in thought-provoking discussions, inspiring sessions, and fellowship with other men committed to making a positive impact.",
     color: "#977F6D",
     src: "images/help.jpg",
-    date: "22nd April 2024",
+    date: "7th July 2024",
   },
   {
-    title: "Health Awareness",
+    title: "Choir Fiesta",
     description:
-      "Raise awareness about important health issues and promote healthy living habits in Nyanya. Our health awareness campaign aims to educate residents about preventive measures, disease management, and the importance of leading a healthy lifestyle.",
+      "Enjoy an evening of exquisite classical music performed by talented choirs from around the region. The Classical Choir Fiesta promises to be a feast for the ears and a celebration of choral excellence.",
     color: "#C2491D",
     src: "images/help.jpg",
-    date: "19th Aughust 2024",
+    date: "19th August 2024",
   },
   {
-    title: "Charity Fundraiser",
+    title: "Metro Youth Conference",
     description:
-      "Support a worthy cause and make a positive impact on the lives of those in need by attending our charity fundraiser event. Your generosity will help provide essential resources and support to vulnerable individuals and families in Nyanya.",
+      "Attend the Metropolitan Youth Conference to connect with other young people from across the city. This event will feature dynamic speakers, interactive workshops, and networking opportunities designed to inspire and equip the youth.",
     color: "#566573",
     src: "images/help.jpg",
-    date: "20th Febuary 2024",
+    date: "20th February 2024",
   },
   {
-    title: "Cultural Festival",
+    title: "Area Convention",
     description:
-      "Experience the vibrant culture and rich heritage of Nyanya at our annual cultural festival. Celebrate diversity through music, dance, food, and traditional performances showcasing the unique traditions of our community.",
+      "Participate in our Area Convention, a gathering that brings together members from various regions to celebrate achievements, share knowledge, and plan for the future. Join us for sessions, discussions, and community-building activities.",
     color: "#8BA28D",
     src: "images/help.jpg",
     date: "15th March 2024",
-  },
-  {
-    title: "Seminar",
-    description:
-      "Expand your knowledge and enhance your skills by attending our educational seminar. Whether you're interested in personal development, professional growth, or lifelong learning, our seminar offers valuable insights and practical strategies to help you succeed.",
-    color: "#85929E ",
-    src: "images/praise.jpg",
-    date: "30th June 2024",
   },
 ];
 

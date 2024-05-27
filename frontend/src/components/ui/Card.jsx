@@ -47,9 +47,11 @@ const Card = ({ i, title, description, src, color, date, link }) => {
               </button>
             </Link>
 
-            <button className=" px-4 py-4 max-w-[150px] rounded-2xl bg-black  hover:bg-white hover:text-black text-white">
-              Contact Us
-            </button>
+            <Link to="mailto:samueludofia94@gmail.com">
+              <button className=" px-4 py-4 max-w-[150px] rounded-2xl bg-black  hover:bg-white hover:text-black text-white">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </div>
 

@@ -1,4 +1,3 @@
-import React from "react";
 import Ministries from "../components/Ministries";
 
 const msgBody = `

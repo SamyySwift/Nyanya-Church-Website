@@ -3,6 +3,7 @@ import { CiStreamOn } from "react-icons/ci";
 import HoverBorderGradientButton from "./ui/hover-border-gradient";
 import { motion } from "framer-motion";
 import { useParallax } from "react-scroll-parallax";
+import { SparklesCore } from "./ui/sparkles";
 
 const ChurchServices = () => {
   const { ref } = useParallax({
@@ -10,9 +11,20 @@ const ChurchServices = () => {
   });
   return (
     <div
-      className="h-screen relative w-full bg-black flex flex-col justify-center pt-5 overflow-hidden"
+      className="relative h-screen bg-black flex flex-col items-center justify-center overflow-hidden"
       ref={ref}
     >
+      <div className="w-full absolute inset-0">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+      </div>
       <h1 className="md:text-7xl text-3xl lg:text-6xl font-semibold text-center text-slate-300 relative z-20 font-grotesque">
         Our Church Services
       </h1>
@@ -47,7 +59,7 @@ const ChurchServices = () => {
             <span className="font-light text-md md:text-lg">Bible Study</span>
             <span className="flex items-center gap-1">
               <FaClock className="h-[15px] w-[15px] md:h-[20px] md:w-[20px]" />
-              <span className="font-light text-md md:text-md"> 07 :00 PM</span>
+              <span className="font-light text-md md:text-md"> 07 : 00 PM</span>
             </span>
           </div>
 

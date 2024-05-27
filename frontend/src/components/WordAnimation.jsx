@@ -66,7 +66,7 @@ const Animate = ({ children, range, progress }) => {
   return (
     <motion.span
       style={{ y: translateY, opacity, transitionDuration: "1s" }}
-      className="font-bold text-7xl md:text-9xl lg:text-[160px] font-grotesque tracking-tighter text-black"
+      className="font-extrabold text-7xl md:text-9xl lg:text-[160px] font-inter tracking-tight text-black"
     >
       {children}
     </motion.span>

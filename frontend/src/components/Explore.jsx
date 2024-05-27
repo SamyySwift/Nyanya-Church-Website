@@ -87,7 +87,7 @@ const exploreNav = [
     bodyText:
       "Need prayer support or counseling? Our dedicated team is always here to pray with you. Submit your prayer request here.",
     btnText: "Email Us",
-    link: "https://mailto:samueludofia94@gmail.com/",
+    link: "mailto:samueludofia94@gmail.com",
     color: "#3C5B6F",
   },
 ];

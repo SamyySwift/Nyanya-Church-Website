@@ -18,15 +18,13 @@ const Footer = () => {
       <div className="flex flex-col">
         <h1 className="mb-5 font-grotesque text-xl md:text-2xl">CONTACT US</h1>
         <div className="max-w-sm lg:max-w-md space-y-4 font-poppins text-md md:text-lg">
-          <p> Nyanya Area HeadQuaters </p>
+          <p> Nyanya Area HeadQuarters </p>
 
-          <p className="flex items-center font-light ">
-            ‍
+          <p className="flex items-center font-light">
             <MdEmail className="mr-2" />
             <span>info@nyanyarea.com</span>
           </p>
           <p className="flex items-center font-light">
-            ‍
             <FaPhone className="mr-2 w-4" />
             <span>(+234) 809 670 2056</span>
           </p>
@@ -44,10 +42,8 @@ const Footer = () => {
         <h1 className="mb-5 font-grotesque text-md md:text-xl">LINKS</h1>
         <div className="flex flex-col gap-2 font-light font-poppins text-md md:text-lg">
           {links.map((link) => (
-            <Link to={link.href}>
-              <p key={link.name} className="hover:underline">
-                {link.name}
-              </p>
+            <Link to={link.href} key={link.name}>
+              <p className="hover:underline">{link.name}</p>
             </Link>
           ))}
         </div>
@@ -57,10 +53,8 @@ const Footer = () => {
         <h1 className="mb-5 font-grotesque text-xl md:text-xl">SOCIALS</h1>
         <div className="flex flex-col gap-2 font-light font-poppins text-md md:text-lg">
           {socials.map((social) => (
-            <Link to={social.href}>
-              <p key={social.name} className="hover:underline">
-                {social.name}
-              </p>
+            <Link to={social.href} key={social.name}>
+              <p className="hover:underline">{social.name}</p>
             </Link>
           ))}
         </div>

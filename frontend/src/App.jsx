@@ -12,6 +12,7 @@ import YouthFellowship from "./pages/YouthFellowship.jsx";
 import { AnimatePresence } from "framer-motion";
 import AboutPage from "./pages/AboutPage.jsx";
 import TechTeam from "./pages/TechTeam.jsx";
+import ClassicalChoir from "./pages/ClassicalChoir.jsx";
 
 function App() {
   const location = useLocation();
@@ -29,6 +30,7 @@ function App() {
           <Route path="/plan-your-visit" element={<PlanVisit />} />
           <Route path="/join-a-group" element={<JoinAGroup />} />
           <Route path="/youth-fellowship" element={<YouthFellowship />} />
+          <Route path="/classical-choir" element={<ClassicalChoir />} />
         </Routes>
       </AnimatePresence>
       <Footer />

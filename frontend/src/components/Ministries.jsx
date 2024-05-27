@@ -1,40 +1,13 @@
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
-import React from "react";
 import Spotlight from "./ui/spotlight.jsx";
 import Hero from "./Hero.jsx";
 import ContactForm from "./ContactForm.jsx";
-import AuroraBackground from "./ui/aurora-background.jsx";
 
-const Ministries = ({
-  bgImg,
-  bgText,
-  msgTitle,
-  msgBody,
-  title,
-  biblePortion,
-  team,
-  leaderName,
-  images,
-}) => {
+const Ministries = ({ bgImg, bgText, team, leaderName, images }) => {
   return (
     <>
       <Hero text={bgText} src={bgImg} />
-      {/* Introduction */}
 
-      {/* Spotlight */}
-      {/* <AuroraBackground className="text-white flex flex-col items-center justify-center px-2 md:px-0">
-        <h1 className="text-4xl md:text-6xl font-grotesque font-bold text-center">
-          {title}
-        </h1>
-        <h2 className="text-xl md:text-2xl mt-3 font-light text-white max-w-2xl italic text-center mx-auto">
-          {msgTitle}
-          <span className="underline font-semibold">{biblePortion}</span>
-        </h2>
-
-        <p className="mt-12 text-justify  text-md md:text-xl  max-w-7xl font-poppins font-light leading-[40px] md:leading-[50px] mx-5 lg:mx-0">
-          {msgBody}
-        </p>
-      </AuroraBackground> */}
       <section>
         <div className="h-[1000px] md:h-[800px] w-full pt-10 md:pt-20 flex flex-col items-center md:items-start md:flex-row  justify-center gap-10 bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden px-5  ">
           <Spotlight

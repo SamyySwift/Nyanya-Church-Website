@@ -39,7 +39,7 @@ const events = [
   {
     title: "Youth Fellowship",
     description:
-      "Join us for an unforgettable youth rally filled with exciting activities, inspiring talks, and meaningful interactions. This event is designed to empower and uplift the youth of Nyanya, providing them with the tools",
+      "Join us for engaging activities, inspiring talks, and meaningful interactions at the Youth Fellowship. This event is designed to empower and uplift the youth of Nyanya, providing them with the tools and support they need to thrive.",
     color: "#BBACAF",
     src: "images/youth.jpg",
     link: "/youth-fellowship",
@@ -47,7 +47,7 @@ const events = [
   {
     title: "Praise Team",
     description:
-      "Let's come together to make a positive impact on our community by participating in a community cleanup event. By joining forces, we can make Nyanya a cleaner and more beautiful place for everyone to enjoy.",
+      "Come together with the Praise Team to make a joyful noise and worship through music. Join us in making Nyanya a more beautiful place for everyone by lifting spirits with our musical talents.",
     color: "#B0A695",
     src: "images/praise.jpg",
     link: "/praise-team",
@@ -55,7 +55,7 @@ const events = [
   {
     title: "Media Team",
     description:
-      "Raise awareness about important health issues and promote healthy living habits in Nyanya. Our health awareness campaign aims to educate residents about preventive measures, disease management, and the importance of leading a healthy lifestyle.",
+      "Be part of the Media Team to capture and share the vibrant life of our church. Help us raise awareness and promote our message through various media channels, showcasing the importance of community and faith.",
     color: "#A9B388",
     src: "images/media2.jpg",
     link: "/media-team",
@@ -63,7 +63,7 @@ const events = [
   {
     title: "Classical Choir",
     description:
-      "Support a worthy cause and make a positive impact on the lives of those in need by attending our charity fundraiser event. Your generosity will help provide essential.",
+      "Join the Classical Choir and support a worthy cause through your musical talents. Participate in events and performances that uplift and inspire, making a positive impact on our community.",
     color: "#B4B4B8",
     src: "images/help.jpg",
     link: "/classical-choir",
@@ -71,7 +71,7 @@ const events = [
   {
     title: "Tech Team",
     description:
-      "Experience the vibrant culture and rich heritage of Nyanya at our annual cultural festival. Celebrate diversity through music, dance, food, and traditional performances showcasing the unique traditions of our community.",
+      "Experience the innovation and creativity of the Tech Team. Help us enhance our events and services with cutting-edge technology, celebrating the diverse talents within our community.",
     color: "#8BA28D",
     src: "images/tech-team.jpeg",
     link: "/tech-team",
