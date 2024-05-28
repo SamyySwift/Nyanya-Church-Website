@@ -63,7 +63,7 @@ const exploreNav = [
       "Discover exciting events that will uplift your spirit and enrich your journey. Don't miss out on our latest upcoming experiences!",
     btnText: "Learn More",
     link: "/events",
-    color: "#75A47F",
+    color: "#D1BB9E",
   },
   {
     title: "Join a Group",
@@ -71,15 +71,15 @@ const exploreNav = [
       "Explore our diverse church groups and teams, find your place to belong! We encourage your participation in our teams",
     btnText: "Learn More",
     link: "/join-a-group",
-    color: "#D8AE7E",
+    color: "#A79277",
   },
   {
     title: "Plan Your Visit",
     bodyText:
-      "We are very welcoming. we cant wait to have you worship with us this sunday. We are very welcoming. we cant wait to have you worship with us this sunday",
+      "We are very welcoming. we cant wait to have you worship with us this sunday. We are very welcoming.",
     btnText: "Plan Visit",
     link: "/plan-your-visit",
-    color: "#524C42",
+    color: "#AF8260",
   },
 
   {
@@ -88,6 +88,6 @@ const exploreNav = [
       "Need prayer support or counseling? Our dedicated team is always here to pray with you. Submit your prayer request here.",
     btnText: "Email Us",
     link: "mailto:samueludofia94@gmail.com",
-    color: "#3C5B6F",
+    color: "#524C42",
   },
 ];

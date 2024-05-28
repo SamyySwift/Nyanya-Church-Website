@@ -12,12 +12,7 @@ const PlanVisit = () => {
         title="Plan Your Visit"
         description="Page contains info on how to locate church"
       />
-      <Hero
-        text="PLAN YOUR VISIT"
-        background="video"
-        src="/bg.mp4"
-        mainHero={false}
-      />
+      <Hero text="PLAN YOUR VISIT" background="video" src="/bg1.mp4" />
 
       <section style={{ backgroundColor: "#EBE3D5" }}>
         <Welcome

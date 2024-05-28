@@ -8,16 +8,21 @@ import Explore from "../components/Explore";
 import transition from "../utils/transition";
 import WordAnimation from "../components/WordAnimation";
 import { FlipWords } from "../components/ui/flip-words";
+import PageTitle from "../components/PageTitle";
 
 function HomeScreen() {
   const words = ["vibrant", "friendly", "beautiful", "modern", "lovable"];
   return (
-    <>
+    <div className="overflow-hidden">
+      <PageTitle
+        title="Nyanya Assembly"
+        description="Nyanya assembly homepage"
+      />
       <section className="overflow-hidden">
         <Hero
           text="Welcome to Nyanya Assembly"
           background="video"
-          src="/bg2.mp4"
+          src="/bg1.mp4"
           mainHero={true}
         />
       </section>
@@ -39,13 +44,11 @@ function HomeScreen() {
       <section className=" overflow-hidden">
         <WorshipWithUs />
       </section>
-      {/* <section className=" overflow-hidden">
-        <ExtraSection />
-      </section> */}
+
       <section className=" overflow-hidden">
         <ChurchServices />
       </section>
-    </>
+    </div>
   );
 }
 

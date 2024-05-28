@@ -23,24 +23,24 @@ const Card = ({ i, title, description, src, color, date, link }) => {
     >
       <div
         style={{ backgroundColor: color }}
-        className="flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-10 h-[650px] sm:w-[1200px] sm:h-[800px] md:w-[1200px] md:h-[550px] rounded-[40px] p-5"
+        className="relative flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-10 h-[650px] sm:w-[1200px] sm:h-[800px] md:w-[1200px] md:h-[550px] rounded-[40px] p-5"
       >
         {/* Column 1: Title, Description, and Button*/}
         <div className="flex flex-col justify-between max-w-2xl md:max-w-sm lg:max-w-xl">
-          <h2 className="text-3xl md:text-5xl font-bold md:mb-20 mb-5 mt-5 font-grotesque">
+          <h2 className="text-3xl md:text-5xl font-bold md:mb-10 lg:mb-20 mb-5 mt-5 font-grotesque">
             {title}
           </h2>
-          <p className="text-sm sm:text-md md:text-lg font-poppins font-light">
+          <p className="text-sm sm:text-md md:text-lg lg:text-xl font-poppins font-light">
             {description}
           </p>
           {date && (
-            <span className="flex items-center gap-1 mt-5  text-md md:text-lg">
-              <FaCalendarWeek size={22} />
+            <span className="flex items-center gap-1 mt-10  text-md md:text-lg">
+              <FaCalendarWeek size={23} />
               {date}
             </span>
           )}
 
-          <div className="flex gap-3 mt-7 md:mt-20">
+          <div className="flex gap-3 mt-6 md:absolute md:bottom-10">
             <Link to={link}>
               <button className=" px-4 py-4 max-w-[150px] rounded-2xl bg-white  hover:bg-black hover:text-white text-black">
                 Learn More

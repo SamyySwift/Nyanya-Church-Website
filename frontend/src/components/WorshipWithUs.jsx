@@ -18,7 +18,7 @@ const WorshipWithUs = () => {
     >
       {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-        <h1 className="text-6xl md:text-8xl font-light  font-vibes ">
+        <h1 className="text-5xl md:text-8xl font-light font-vibes ">
           Worship With Us <br />
         </h1>
         <span className="font-poppins text-2xl md:text-4xl font-thin">

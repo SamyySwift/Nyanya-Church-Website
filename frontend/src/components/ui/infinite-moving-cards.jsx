@@ -78,7 +78,7 @@ const InfiniteMovingCards = ({
         )}
       >
         {type === "text" ? (
-          <h1 className="font-bold font-grotesque text-5xl md:text-9xl text-neutral-200">
+          <h1 className="font-bold font-poppins text-5xl md:text-9xl text-neutral-200">
             {textContent}
           </h1>
         ) : (

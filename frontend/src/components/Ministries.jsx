@@ -3,10 +3,17 @@ import Spotlight from "./ui/spotlight.jsx";
 import Hero from "./Hero.jsx";
 import ContactForm from "./ContactForm.jsx";
 
-const Ministries = ({ bgImg, bgText, team, leaderName, images }) => {
+const Ministries = ({
+  bgImg,
+  bgText,
+  team,
+  leaderName,
+  images,
+  background,
+}) => {
   return (
     <>
-      <Hero text={bgText} src={bgImg} background="video" />
+      <Hero text={bgText} src={bgImg} background={background} />
 
       <section>
         <div className="h-[1000px] md:h-[800px] w-full pt-10 md:pt-20 flex flex-col items-center md:items-start md:flex-row  justify-center gap-10 bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden px-5  ">
@@ -71,7 +78,7 @@ const Ministries = ({ bgImg, bgText, team, leaderName, images }) => {
       {/* Form */}
       <section
         className="h-[1000px]  bg-cover bg-center relative"
-        style={{ backgroundImage: "url('images/welcome2.jpg')" }}
+        style={{ backgroundImage: "url('images/youth.jpg')" }}
       >
         <div className="absolute bg-gray-500 bg-opacity-30 backdrop-blur-md backdrop-filter w-full h-full flex flex-col items-center justify-center space-y-4">
           <h1 className="text-center">

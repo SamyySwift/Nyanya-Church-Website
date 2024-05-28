@@ -26,7 +26,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
           <div className="absolute inset-0 bg-black opacity-60"></div>
 
           {mainHero ? (
-            <div className="absolute bottom-[200px]">
+            <div className="absolute bottom-[250px]">
               <InfiniteMovingCards
                 direction="left"
                 speed="slow"

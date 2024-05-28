@@ -8,10 +8,11 @@ import {
   FaX,
 } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -23,14 +24,14 @@ const Navbar = () => {
       height: "100vh",
       top: "-24px",
       right: "-12px",
-      transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
     },
     closed: {
       width: 100,
       height: 40,
       top: "0px",
       right: "0px",
-      transition: { duration: 0.5, delay: 0.8, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 0.4, delay: 0.8, ease: [0.76, 0, 0.24, 1] },
     },
   };
 
@@ -93,12 +94,12 @@ const Navbar = () => {
     <div className="fixed inset-x-0 right-0 z-40">
       <div className="flex justify-between items-center max-w-7xl px-6 py-5 md:px-8">
         {/* Logo */}
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
           <div className="h-[65px] w-[65px] md:h-[75px] md:w-[75px] lg:h-[90px] lg:w-[90px] flex flex-col text-center justify-center items-center rounded-full bg-white border text-black font-grotesque  leading-none font-semibold">
             <span className="text-sm md:text-md lg:text-lg">NYANYA</span>
             <span className="text-[10px]">ASSEMBLY</span>
           </div>
-        </div>
+        </div> */}
         {/* Button nav */}
         <div className="fixed top-6 right-3">
           <motion.div
@@ -108,7 +109,7 @@ const Navbar = () => {
             initial="closed"
             style={{ backgroundColor: "#EADBC8" }}
           >
-            <div className="h-full pt-[150px] md:pt-[70px] pb-[40px] md:pl-[80px] pl-[40px] flex flex-col space-y-[50px] md:space-y-[80px] max-w-3xl">
+            <div className="h-full pt-[150px] md:pt-[70px] pb-[40px] md:pl-[80px] pl-[40px] flex flex-col space-y-[60px] md:space-y-[70px] max-w-3xl">
               <AnimatePresence>
                 {isOpen && (
                   <>
@@ -132,9 +133,12 @@ const Navbar = () => {
                             >
                               <Link
                                 to={link.link}
-                                className="text-4xl md:text-8xl font-grotesque font-semibold"
+                                className="text-4xl md:text-7xl font-grotesque font-semibold flex items-center"
                                 onClick={toggleMenu}
                               >
+                                {location.pathname === link.link && (
+                                  <div className="mr-3 w-4 h-4 md:w-7 md:h-7 bg-black rounded-full"></div>
+                                )}
                                 {link.title}
                               </Link>
                             </motion.div>
@@ -154,6 +158,7 @@ const Navbar = () => {
                             animate="enter"
                             exit="exit"
                             initial="initial"
+                            className="p-1 rounded-full border border-black bg-white flex items-center justify-center"
                           >
                             <Link to={social.link}>{social.icon}</Link>
                           </motion.div>
@@ -177,7 +182,7 @@ const Navbar = () => {
               className="relative h-full w-full"
             >
               <div
-                className="flex justify-center items-center gap-2 h-full w-full from-white  to-blue-400"
+                className="flex justify-center items-center gap-2 h-full w-full"
                 // style={{ backgroundColor: "#FEF5E7" }}
               >
                 <p className="font-semibold">MENU</p>
@@ -209,21 +214,21 @@ const socials = [
   {
     title: "Facebook",
     link: "https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d",
-    icon: <FaFacebook size={30} className="hover:text-sky-500 rounded-full" />,
+    icon: <FaFacebook size={25} className="hover:text-sky-500 rounded-full" />,
   },
   {
     title: "Instagram",
     link: "https://www.instagram.com/tacn_na?igsh=dDhxcmplNzVzZDNw",
-    icon: <FaInstagram size={30} className="hover:text-sky-500 rounded-full" />,
+    icon: <FaInstagram size={25} className="hover:text-sky-500 rounded-full" />,
   },
   {
     title: "YouTube",
     link: "/",
-    icon: <FaYoutube size={30} className="hover:text-sky-500 rounded-full" />,
+    icon: <FaYoutube size={25} className="hover:text-sky-500 rounded-full" />,
   },
   {
     title: "Twitter",
     link: "/",
-    icon: <FaXTwitter size={30} className="hover:text-sky-500 rounded-full" />,
+    icon: <FaXTwitter size={25} className="hover:text-sky-500 rounded-full" />,
   },
 ];

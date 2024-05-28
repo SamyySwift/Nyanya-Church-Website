@@ -20,29 +20,36 @@ const WordAnimation = () => {
     offset: ["start end", "end 0.8"],
   });
   const scale = useTransform(p2, [0, 1], [0, 20]);
+
   return (
     <section
       className="h-screen relative overflow-hidden "
       style={{ backgroundColor: "#FEFAF6" }}
     >
-      <h1 className="flex absolute top-[100px] left-10 h-full" ref={ref}>
+      <h1
+        className="flex absolute top-[100px] md:top-[150px] xl:top-[100px] left-10 h-full"
+        ref={ref}
+      >
         <AnimateEachLetter word="CHRIST" progress={scrollYProgress} />
       </h1>
 
-      <h1 className="flex absolute top-[350px] right-20 h-full" ref={ref2}>
+      <h1
+        className="flex absolute top-[350px] md:top-[500px] lg:top-[500px] xl:top-[350px] right-20 h-full"
+        ref={ref2}
+      >
         <AnimateEachLetter word="IS" progress={p} />
       </h1>
       <h1
-        className="flex absolute bottom-[150px] md:bottom-[70px] left-[130px] md:left-[600px]"
+        className="flex absolute bottom-[150px] left-[130px] md:bottom-[70px] md:left-[250px] lg:left-[450px] xl:left-[650px]"
         ref={ref3}
       >
         <AnimateEachLetter word="LOVE" progress={p2} />
       </h1>
 
-      <motion.div
-        className="absolute circle top-1/2  left-[160px] lg:left-[700px]"
-        style={{ scaleX: scale, scaleY: scale, transitionDuration: "1s" }}
-      ></motion.div>
+      {/* <motion.div
+        className="absolute inset-0 flex items-center justify-center circle"
+        style={{ scaleX: scale, scaleY: scale, transitionDuration: "0.7s" }}
+      ></motion.div> */}
     </section>
   );
 };
@@ -66,7 +73,7 @@ const Animate = ({ children, range, progress }) => {
   return (
     <motion.span
       style={{ y: translateY, opacity, transitionDuration: "1s" }}
-      className="font-extrabold text-7xl md:text-9xl lg:text-[160px] font-inter tracking-tight text-black"
+      className="font-alfa text-7xl md:text-9xl lg:text-[120px] tracking-tight text-black"
     >
       {children}
     </motion.span>
