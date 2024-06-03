@@ -11,7 +11,7 @@ const PraiseTeam = () => {
         title="Praise & Worship moves God"
         images={[
           "praise-team-1.jpg",
-          "praise-team-2.jpg",
+          "praise-team-5.JPG",
           "praise-team-3.jpg",
           "praise-team-4.jpg",
         ]}

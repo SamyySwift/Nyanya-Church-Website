@@ -10,9 +10,10 @@ const ChurchServices = () => {
   const { ref } = useParallax({
     speed: -20,
   });
+
   return (
     <div
-      className="relative h-screen bg-black flex flex-col items-center justify-center overflow-hidden"
+      className="relative h-[1200px] md:h-screen bg-black flex flex-col items-center justify-center overflow-hidden"
       ref={ref}
     >
       <div className="w-full absolute inset-0">
@@ -26,96 +27,82 @@ const ChurchServices = () => {
           particleColor="#FFFFFF"
         />
       </div>
-      <h1 className="md:text-7xl text-4xl lg:text-6xl font-semibold text-center text-slate-300 relative z-20 font-grotesque">
+      <h1 className="md:text-7xl text-4xl lg:text-6xl mb-20 font-semibold text-center text-slate-300 relative font-grotesque">
         Our Church Services
       </h1>
-      <div className="flex md:flex-row  gap-10 mt-10  relative z-20 text-white font-poppins">
-        <motion.div
-          initial={{ x: -1000, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="flex flex-col gap-10 md:w-[400px]"
-        >
-          <h2 className="text-xl md:text-3xl font-extralight underline text-center lg:text-left">
-            Weekly Services...
-          </h2>
+      <div className="max-w-[1320px] mx-auto px-6">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-xl rounded-3xl overflow-hidden transform hover:scale-105 transition-transform duration-300"
+            >
+              <div className="p-5">
+                <div className="flex items-center mb-4 font-grotesque">
+                  <div className="bg-black h-10 w-10 mr-2 flex items-center justify-center text-white rounded-xl font-extralight">
+                    {service.day.substring(0, 3)}
+                  </div>
+                  <h3 className="text-xl  font-semibold text-gray-800 tracking-tight">
+                    {service.title}
+                  </h3>
+                </div>
+                <hr
+                  className="w-full mb-1"
+                  style={{
+                    height: "1px",
+                  }}
+                />
+                <div className="flex items-center mb-2 text-md py-2">
+                  <FaClock className="text-xl text-gray-500 mr-2" />
 
-          <div className="flex flex-col items-center md:gap-3 gap-1">
-            {/* <FaPlaceOfWorship className="h-[50px] w-[50px] md:h-[100px] md:w-[100px]" /> */}
-            <h1 className="font-bold text-xl md:text-2xl tracking-tight">
-              SUNDAY SERVICE
-            </h1>
-            <span className="font-light text-md md:text-xl">
-              Sunday Worship
-            </span>
-            <span className="flex items-center gap-1">
-              <FaClock className="h-[15px] w-[15px] md:h-[20px] md:w-[20px]" />
-              <span className="font-light text-md md:text-xl">08 : 00 AM</span>
-            </span>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-1 md:gap-3">
-            <h1 className="font-bold text-xl md:text-2xl tracking-tight">
-              TUESDAY SERVICE
-            </h1>
-            <span className="font-light text-md md:text-xl">Bible Study</span>
-            <span className="flex items-center gap-1">
-              <FaClock className="h-[15px] w-[15px] md:h-[20px] md:w-[20px]" />
-              <span className="font-light text-md md:text-xl"> 07 : 00 PM</span>
-            </span>
-          </div>
-
-          <div className="flex flex-col justify-center items-center gap-1 md:gap-3">
-            <h1 className="font-bold text-xl md:text-2xl tracking-tight">
-              FRIDAY SERVICE
-            </h1>
-            <span className="font-light text-md md:text-xl">
-              Meeting with the lord
-            </span>
-            <span className="flex items-center gap-1">
-              <FaClock className="h-[15px] w-[15px] md:h-[20px] md:w-[20px]" />
-              <span className="font-light text-md md:text-xl"> 09 : 00 AM</span>
-            </span>
-          </div>
-        </motion.div>
-        {/* Column 2 */}
-        <motion.div
-          initial={{ x: 1000, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="flex flex-col gap-10 md:w-[400px]"
-        >
-          <h2 className="text-xl md:text-3xl font-extralight underline text-center lg:text-left ">
-            Join Us Online...
-          </h2>
-
-          <div className="flex flex-col justify-center items-center gap-3">
-            <h1 className="font-bold text-lg md:text-2xl tracking-tight">
-              STREAM ONLINE
-            </h1>
-            <span className="font-light text-sm md:text-xl">
-              Sundays & Fridays
-            </span>
-            <Link to="https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d">
-              <HoverBorderGradientButton
-                text={"Stream"}
-                icon={<CiStreamOn size={22} />}
-              />
-            </Link>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-3">
-            <h1 className="font-bold text-lg md:text-2xl tracking-tight">
-              ARCHIVED SERVICES
-            </h1>
-            <span className="font-light text-md md:text-xl">All Services</span>
-            <HoverBorderGradientButton
-              text={"Archives"}
-              icon={<FaBoxArchive size={20} />}
-            />
-          </div>
-        </motion.div>
+                  <p className="text-gray-600 font-grotesque font-light">
+                    {service.time}
+                  </p>
+                </div>
+                <hr
+                  className="w-full"
+                  style={{
+                    height: "1px",
+                  }}
+                />
+                <p className="text-gray-800 font-grotesque font-light">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
+
+const services = [
+  {
+    title: "Sunday Worship",
+    time: "9:00 AM - 11:00 AM",
+    day: "SUNDAY",
+    description: "Join us for our weekly Sunday worship service.",
+  },
+  {
+    title: "Bible Study",
+    time: "7:00 PM - 8:30 PM",
+    day: "TUESDAY",
+    description: "Deep dive into the scriptures with our midweek Bible study.",
+  },
+  {
+    title: "Meeting With The Lord",
+    time: "9:00 AM - 2:00 PM",
+    day: "FRIDAY",
+    description:
+      "Experience God's power through prayers and prohetic sessions.",
+  },
+  {
+    title: "Youth Fellowship",
+    time: "4:00 PM - 6:00 PM",
+    day: "SATURDAY",
+    description: "A vibrant service for the youth to connect and grow.",
+  },
+];
 
 export default ChurchServices;

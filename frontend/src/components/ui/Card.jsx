@@ -27,10 +27,10 @@ const Card = ({ i, title, description, src, color, date, link }) => {
       >
         {/* Column 1: Title, Description, and Button*/}
         <div className="flex flex-col justify-between max-w-2xl md:max-w-sm lg:max-w-xl">
-          <h2 className="text-3xl md:text-5xl font-bold md:mb-10 lg:mb-20 mb-5 mt-5 font-grotesque">
+          <h2 className="text-3xl md:text-5xl font-bold md:mb-10 lg:mb-10 mb-5 mt-5 font-grotesque">
             {title}
           </h2>
-          <p className="text-sm sm:text-md md:text-lg lg:text-xl font-poppins font-light">
+          <p className="text-sm sm:text-md md:text-lg lg:text-xl font-grotesque font-light lg:leading-loose md:leading-relaxed">
             {description}
           </p>
           {date && (

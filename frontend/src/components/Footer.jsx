@@ -33,7 +33,7 @@ const Footer = () => {
         <h1 className="mb-5 font-grotesque text-md md:text-lg lg:text-xl">
           CONTACT US
         </h1>
-        <div className="max-w-sm md:max-w-xs lg:max-w-xs space-y-3 font-poppins md:text-md lg:text-lg">
+        <div className="max-w-sm md:max-w-xs lg:max-w-xs space-y-3 font-grotesque md:text-md lg:text-lg">
           <p className="">TAC NYANYA ASSEMBLY</p>
           <p className="flex items-center font-light">
             <MdEmail className="mr-2" />
@@ -52,7 +52,7 @@ const Footer = () => {
           </p>
         </div>
         <hr
-          className="mt-8 w-[360px] md:w-[270px]"
+          className="mt-8 w-[360px] md:w-[270px] lg:w-[300px]"
           style={{
             backgroundColor: "black",
             height: "1px",
@@ -79,9 +79,12 @@ const Footer = () => {
         <h1 className="mb-5 font-grotesque text-md md:text-lg lg:text-xl">
           QUICK LINKS
         </h1>
-        <div className="flex flex-col gap-2 font-light font-poppins text-md md:text-md lg:text-lg">
+        <div className="flex flex-col gap-2 font-light font-grotesque text-md md:text-md lg:text-lg">
           {links.map((link) => (
-            <Link to={link.href} key={link.name}>
+            <Link to={link.href} key={link.name} className="flex items-center">
+              {location.pathname === link.href && (
+                <div className="mr-3 w-1 h-1 md:w-2 md:h-2 bg-black rounded-full"></div>
+              )}
               <p className="hover:underline">{link.name}</p>
             </Link>
           ))}
@@ -92,7 +95,7 @@ const Footer = () => {
         <h1 className="mb-5 font-grotesque text-md md:text-lg lg:text-xl">
           STAY TUNED
         </h1>
-        <p className="font-poppins max-w-xs xl:max-w-sm font-light">
+        <p className="font-grotesque max-w-xs xl:max-w-sm font-light">
           Sign up for our newsletter to find out more about what's happening at
           Nyanya Assembly!
         </p>
@@ -105,14 +108,14 @@ const Footer = () => {
           />
         </LabelInputContainer>
         <button
-          className="bg-gradient-to-br text-white from-black to-neutral-600 rounded-3xl h-10 font-medium w-[100px] mt-5"
+          className="bg-gradient-to-br text-white font-grotesque from-black to-neutral-600 rounded-3xl h-10 font-medium w-[100px] mt-5"
           type="submit"
         >
           Subscribe
         </button>
       </div>
       <div className="absolute bottom-20 md:bottom-5">
-        <p className="font-poppins">
+        <p className="font-grotesque">
           &copy; 2024 Nyanya Assembly. All Rights Reserved.
         </p>
       </div>
@@ -139,6 +142,7 @@ const links = [
     name: "Events",
     href: "/events",
   },
+
   {
     name: "About Us",
     href: "/about",

@@ -17,12 +17,12 @@ const Events = () => {
       />
       <Hero text="UPCOMING EVENTS" src="/images/help.jpg" mainHero={false} />
 
-      <section className="" style={{ backgroundColor: "#FEF5E7" }}>
+      <section>
         <div className="text-center pt-20">
           <h1 className=" font-vibes text-5xl md:text-8xl">
             Discover Upcoming Events
           </h1>
-          <p className="font-poppins font-extralight text-xl md:text-2xl max-w-3xl mx-auto mt-5 px-5 md:px-0">
+          <p className="font-grotesque font-extralight text-xl md:text-2xl max-w-3xl mx-auto mt-5 px-5 md:px-0">
             Discover exciting events that will uplift your spirit and enrich
             your journey. Don't miss out on our latest upcoming experiences!
           </p>

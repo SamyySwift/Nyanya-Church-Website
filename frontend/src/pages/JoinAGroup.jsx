@@ -13,7 +13,7 @@ const JoinAGroup = () => {
         <Welcome
           title="JOIN A GROUP"
           text="Life is better when you go through it together – join a group and team and get connected today."
-          imgSrc="group3.jpg"
+          imgSrc="youth4.JPG"
         />
       </section>
       <section>
@@ -43,7 +43,7 @@ const events = [
     description:
       "Join us for engaging activities, inspiring talks, and meaningful interactions at the Youth Fellowship. This event is designed to empower and uplift the youth of Nyanya, providing them with the tools and support they need to thrive.",
     color: "#BBACAF",
-    src: "images/youth.jpg",
+    src: "images/youth4.JPG",
     link: "/youth-fellowship",
   },
   {
@@ -51,7 +51,7 @@ const events = [
     description:
       "Come together with the Praise Team to make a joyful noise and worship through music. Join us in making Nyanya a more beautiful place for everyone by lifting spirits with our musical talents.",
     color: "#B0A695",
-    src: "images/praise-team-4.jpg",
+    src: "images/praise-team-5.JPG",
     link: "/praise-team",
   },
   {
@@ -67,7 +67,7 @@ const events = [
     description:
       "Join the Classical Choir and support a worthy cause through your musical talents. Participate in events and performances that uplift and inspire, making a positive impact on our community.",
     color: "#B4B4B8",
-    src: "images/help.jpg",
+    src: "images/choir.jpg",
     link: "/classical-choir",
   },
   {

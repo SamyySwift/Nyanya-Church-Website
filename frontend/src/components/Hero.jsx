@@ -20,13 +20,16 @@ const Hero = ({ text, background, src, mainHero = false }) => {
               <source src={src} type="video/mp4" />
             </video>
           ) : (
-            <img src={src} className="w-full h-full object-cover" />
+            <img
+              src={src}
+              className="w-full h-full object-cover object-center"
+            />
           )}
 
-          <div className="absolute inset-0 bg-black opacity-60"></div>
+          {/* <div className="absolute inset-0 bg-black opacity-10"></div> */}
 
           {mainHero ? (
-            <div className="absolute bottom-[250px]">
+            <div className="absolute bottom-[250px] md:bottom-[200px]">
               <InfiniteMovingCards
                 direction="left"
                 speed="slow"

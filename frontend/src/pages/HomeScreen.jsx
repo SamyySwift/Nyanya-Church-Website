@@ -45,9 +45,9 @@ function HomeScreen() {
         <WorshipWithUs />
       </section>
 
-      <section className=" overflow-hidden">
+      {/* <section className=" overflow-hidden">
         <ChurchServices />
-      </section>
+      </section> */}
     </div>
   );
 }

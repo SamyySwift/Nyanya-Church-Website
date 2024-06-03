@@ -19,12 +19,12 @@ const WordAnimation = () => {
     target: ref3,
     offset: ["start end", "end 0.8"],
   });
-  const scale = useTransform(p2, [0, 1], [0, 20]);
+  const scale = useTransform(p2, [0, 1], [0, 10]);
 
   return (
     <section
       className="h-screen relative overflow-hidden "
-      style={{ backgroundColor: "#FEFAF6" }}
+      style={{ backgroundColor: "#F7EEDD" }}
     >
       <h1
         className="flex absolute top-[100px] md:top-[150px] xl:top-[100px] left-10 h-full"
@@ -45,11 +45,16 @@ const WordAnimation = () => {
       >
         <AnimateEachLetter word="LOVE" progress={p2} />
       </h1>
-
-      {/* <motion.div
-        className="absolute inset-0 flex items-center justify-center circle"
-        style={{ scaleX: scale, scaleY: scale, transitionDuration: "0.7s" }}
-      ></motion.div> */}
+      <div className="flex justify-center items-center h-screen">
+        <motion.div
+          className="w-48 h-48 border border-black rounded-full"
+          style={{
+            scaleX: scale,
+            scaleY: scale,
+            transitionDuration: "1.5s",
+          }}
+        ></motion.div>
+      </div>
     </section>
   );
 };
@@ -72,7 +77,7 @@ const Animate = ({ children, range, progress }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
     <motion.span
-      style={{ y: translateY, opacity, transitionDuration: "1s" }}
+      style={{ y: translateY, opacity, transitionDuration: "0.7s" }}
       className="font-alfa text-7xl md:text-9xl lg:text-[120px] tracking-tight text-black"
     >
       {children}

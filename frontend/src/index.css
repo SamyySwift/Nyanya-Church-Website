@@ -19,12 +19,3 @@
 ::-webkit-scrollbar {
   width: 0px;
 }
-
-.circle {
-  width: 100px;
-  height: 100px;
-  border: solid;
-  border-radius: 50%; /* Make it round */
-  position: absolute;
-  border-width: thin;
-}

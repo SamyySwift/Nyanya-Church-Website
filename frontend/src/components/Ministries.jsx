@@ -57,7 +57,7 @@ const Ministries = ({
       <section>
         <ParallaxBanner
           className="h-[1500px] md:h-[900px] relative"
-          style={{ backgroundColor: "#E2DFD0" }}
+          style={{ backgroundColor: "" }}
         >
           <ParallaxBannerLayer speed={-20}>
             <img src={""} className="w-full h-full object-cover" />
@@ -80,13 +80,13 @@ const Ministries = ({
         className="h-[1000px]  bg-cover bg-center relative"
         style={{ backgroundImage: "url('images/youth.jpg')" }}
       >
-        <div className="absolute bg-gray-500 bg-opacity-30 backdrop-blur-md backdrop-filter w-full h-full flex flex-col items-center justify-center space-y-4">
+        <div className="absolute bg-opacity-30 backdrop-blur-md backdrop-filter w-full h-full flex flex-col items-center justify-center space-y-4">
           <h1 className="text-center">
             <span className="font-bold text-4xl md:text-7xl font-grotesque ">
               Join the {team}
             </span>
           </h1>
-          <p className="font-poppins font-light text-md md:text-xl mb-8 px-4 md:px-0 max-w-3xl text-center">
+          <p className="font-grotesque font-light text-md md:text-xl mb-8 px-4 md:px-0 max-w-3xl text-center">
             If you are interested in joining the {team} or talking with someone
             about it, feel free to reach out to the team leader using the form
             below.
