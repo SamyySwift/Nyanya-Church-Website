@@ -1,19 +1,66 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { FaCalendarWeek } from "react-icons/fa6";
+import { FaCalendarWeek, FaClock } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { google } from "calendar-link";
 
-const Card = ({ i, title, description, src, color, date, link }) => {
+const Card = ({
+  i,
+  title,
+  description,
+  src,
+  color,
+  time,
+  duration,
+  date,
+  link,
+  btnType,
+  eventImage,
+  btnName = "Learn More",
+}) => {
   const container = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "start start"],
-  });
-  const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  // const { scrollYProgress } = useScroll({
+  //   target: container,
+  //   offset: ["start end", "start start"],
+  // });
+  // const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
 
   // Calculate the dynamic top position based on the index i
   const dynamicTop = `calc(0% + ${i * 20}px)`;
+
+  // Construct an event object
+  const event = {
+    title,
+    description,
+    start: `${date} ${time} +0100`,
+    duration: [duration, "hour"],
+  };
+
+  // create parametized google event link
+  const googleUrl = google(event);
+
+  // Helper function to convert unit time to readable format
+  function convertTimeFormat(timeString) {
+    // Extract hours, minutes, and seconds
+    let [hours, minutes] = timeString.split(":");
+
+    // Convert hours to a number
+    hours = parseInt(hours, 10);
+
+    // Determine AM/PM suffix
+    const period = hours >= 12 ? "PM" : "AM";
+
+    // Convert to 12-hour format
+    hours = hours % 12 || 12; // Convert '0' or '12' to '12'
+
+    // Format hours and minutes with leading zeros if necessary
+    const formattedHours = hours.toString().padStart(2, "0");
+    const formattedMinutes = minutes.padEnd(2, "0");
+
+    // Combine the parts into the desired format
+    return `${formattedHours}:${formattedMinutes}${period}`;
+  }
 
   return (
     <motion.div
@@ -34,21 +81,23 @@ const Card = ({ i, title, description, src, color, date, link }) => {
             {description}
           </p>
           {date && (
-            <span className="flex items-center gap-1 mt-10  text-md md:text-lg">
+            <span className="flex items-center gap-2 mt-10 font-grotesque font-light  text-md md:text-lg">
               <FaCalendarWeek size={23} />
               {date}
+              <FaClock size={22} className="ml-3" />
+              {convertTimeFormat(time)}
             </span>
           )}
 
           <div className="flex gap-3 mt-6 md:absolute md:bottom-10">
-            <Link to={link}>
-              <button className=" px-4 py-4 max-w-[150px] rounded-2xl bg-white  hover:bg-black hover:text-white text-black">
-                Learn More
+            <Link to={btnType === "event" ? googleUrl : link}>
+              <button className=" px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white  hover:bg-black hover:text-white text-black">
+                {btnName}
               </button>
             </Link>
 
             <Link to="mailto:samueludofia94@gmail.com">
-              <button className=" px-4 py-4 max-w-[150px] rounded-2xl bg-black  hover:bg-white hover:text-black text-white">
+              <button className=" px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-black  hover:bg-white hover:text-black text-white">
                 Contact Us
               </button>
             </Link>

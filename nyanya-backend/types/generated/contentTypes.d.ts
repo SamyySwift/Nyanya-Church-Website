@@ -376,11 +376,22 @@ export interface ApiEventEvent extends Schema.CollectionType {
   attributes: {
     title: Attribute.String & Attribute.Required;
     description: Attribute.Text & Attribute.Required;
-    date: Attribute.Date;
+    date: Attribute.Date & Attribute.Required;
     eventImage: Attribute.Media;
     color: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'#BBACAF'>;
+    time: Attribute.Time & Attribute.Required;
+    duration: Attribute.Decimal &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 0.5;
+          max: 6;
+        },
+        number
+      > &
+      Attribute.DefaultTo<1>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

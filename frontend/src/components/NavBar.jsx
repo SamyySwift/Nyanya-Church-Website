@@ -5,9 +5,7 @@ import {
   FaInstagram,
   FaYoutube,
   FaXTwitter,
-  FaX,
 } from "react-icons/fa6";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -181,16 +179,47 @@ const Navbar = () => {
               transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
               className="relative h-full w-full"
             >
-              <div
-                className="flex justify-center items-center gap-2 h-full w-full"
-                // style={{ backgroundColor: "#FEF5E7" }}
-              >
+              <div className="flex justify-center items-center gap-2 h-full w-full">
                 <p className="font-semibold">MENU</p>
-                <GiHamburgerMenu />
+                <motion.svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, rotate: isOpen ? 45 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <path
+                    d="M4 6H20M4 12H20M4 18H20"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </motion.svg>
               </div>
               <div className="absolute top-full h-full w-full flex justify-center gap-2 items-center bg-black text-white">
                 <p className="font-semibold">CLOSE</p>
-                <FaX />
+                <motion.svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, rotate: isOpen ? 0 : -45 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </motion.svg>
               </div>
             </motion.div>
           </div>

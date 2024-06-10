@@ -21,7 +21,8 @@
       "required": true
     },
     "date": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "eventImage": {
       "type": "media",
@@ -35,6 +36,17 @@
       "type": "string",
       "required": true,
       "default": "#BBACAF"
+    },
+    "time": {
+      "type": "time",
+      "required": true
+    },
+    "duration": {
+      "type": "decimal",
+      "required": true,
+      "default": 1,
+      "min": 0.5,
+      "max": 6
     }
   }
 }
