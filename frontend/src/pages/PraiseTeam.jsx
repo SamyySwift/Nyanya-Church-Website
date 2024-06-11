@@ -13,7 +13,7 @@ const PraiseTeam = () => {
           "praise-team-6.JPG",
           "praise-team-3.jpg",
           "praise-team-5.JPG",
-          "praise-team-2.JPG",
+          "praise-team-7.JPG",
         ]}
       />
     </>
