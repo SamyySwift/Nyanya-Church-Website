@@ -51,7 +51,7 @@ const WordAnimation = () => {
           style={{
             scaleX: scale,
             scaleY: scale,
-            transitionDuration: "1.5s",
+            transitionDuration: "0.8s",
           }}
         ></motion.div>
       </div>

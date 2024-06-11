@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import WorshipWithUs from "../components/WorshipWithUs";
-import ChurchServices from "../components/ChurchServices";
+
 // import ExtraSection from "../components/ExtraSection";
 import { Welcome } from "../components/Welcome";
 import "../App.css";
@@ -35,7 +35,7 @@ function HomeScreen() {
             We love Jesus and we love people. We'd love to see you here soon
           </>
         }
-        imgSrc="welcome.webp"
+        imgSrc="welcome-bg.JPG"
       />
       <section className="overflow-hidden">
         <Explore />
@@ -44,10 +44,6 @@ function HomeScreen() {
       <section className=" overflow-hidden">
         <WorshipWithUs />
       </section>
-
-      {/* <section className=" overflow-hidden">
-        <ChurchServices />
-      </section> */}
     </div>
   );
 }

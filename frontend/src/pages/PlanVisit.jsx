@@ -16,10 +16,10 @@ const PlanVisit = () => {
 
       <section style={{ backgroundColor: "#FFFFFF" }}>
         <Welcome
-          title="What's it like?"
+          title="Welcome Home"
           text="No matter who you are or where you come from, our aim is for you
           to feel welcomed and comfortable as soon as you arrive. "
-          imgSrc="welcome2.jpg"
+          imgSrc="home.JPG"
         />
       </section>
       <section>

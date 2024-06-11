@@ -4,10 +4,10 @@ function ClassicalChoir() {
   return (
     <>
       <Ministries
-        bgImg="images/choir.jpg"
-        bgText={"Classical Choir"}
+        bgImg="images/choir-bg.JPG"
+        bgText={"CLASSICAL CHOIR"}
         team="Classical Choir"
-        images={["choir.jpg", "choir2.webp", "choir2.webp", "choir.jpg"]}
+        images={["choir3.jpg", "choir1.JPG", "choir2.JPG", "choir.JPG"]}
         leaderName="Elder Nse Williams"
       />
     </>

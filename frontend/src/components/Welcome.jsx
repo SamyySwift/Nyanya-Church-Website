@@ -32,13 +32,13 @@ export function Welcome({ title, text, imgSrc }) {
       </motion.div>
 
       {/* Image  */}
-      <div className="max-w-2xl md:max-w-xl md:max-h-xl mx-3">
+      <div className="max-w-2xl md:max-w-xl mx-3">
         <motion.img
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
           src={`/images/${imgSrc}`}
-          className=" sm:h-full md:h-[400px] lg:h-full lg:w-full object-cover rounded-tl-[350px] rounded-br-[60px] md:rounded-bl-none rounded-bl-[50px]"
+          className=" sm:h-full md:h-[400px] lg:h-[500px] lg:w-full object-cover rounded-tl-[300px] rounded-br-[60px] md:rounded-bl-none rounded-bl-[50px]"
         />
       </div>
     </div>

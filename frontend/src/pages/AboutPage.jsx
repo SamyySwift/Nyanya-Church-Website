@@ -4,12 +4,13 @@ import Hero from "../components/Hero";
 import { Welcome } from "../components/Welcome";
 import WordAnimation from "../components/WordAnimation";
 import PageTitle from "../components/PageTitle";
+import ChurchServices from "../components/ChurchServices";
 
 const AboutPage = () => {
   return (
     <>
       <PageTitle title="About Us" description="About us page" />
-      <Hero text="ABOUT US" src="images/group.jpg" mainHero={false} />
+      <Hero text="ABOUT US" src="images/about-bg.JPG" mainHero={false} />
       <section>
         <Welcome
           title="Our Pastors"
@@ -18,6 +19,10 @@ const AboutPage = () => {
         />
       </section>
       <WordAnimation />
+
+      <section className=" overflow-hidden">
+        <ChurchServices />
+      </section>
     </>
   );
 };

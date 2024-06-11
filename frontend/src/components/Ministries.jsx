@@ -16,7 +16,7 @@ const Ministries = ({
       <Hero text={bgText} src={bgImg} background={background} />
 
       <section>
-        <div className="h-[1000px] md:h-[800px] w-full pt-10 md:pt-20 flex flex-col items-center md:items-start md:flex-row  justify-center gap-10 bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden px-5  ">
+        <div className="py-20 w-full pt-10 md:pt-20 flex flex-col items-center md:items-start md:flex-row  justify-center gap-10 bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden px-5  ">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
             fill="white"
@@ -36,7 +36,7 @@ const Ministries = ({
                 {leaderName}
               </span>
             </h1>
-            <p className="text-white  font-extralight text-md md:text-lg lg:text-xl">
+            <p className="text-white font-grotesque font-extralight text-md md:text-lg lg:text-xl">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Voluptatibus totam nobis nam placeat ab libero repellendus
               perspiciatis, reiciendis eaque necessitatibus quibusdam quas

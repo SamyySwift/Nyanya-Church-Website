@@ -21,7 +21,7 @@ const JoinAGroup = () => {
           <h1 className=" font-vibes text-5xl md:text-8xl">
             Discover Various Groups
           </h1>
-          <p className="font-poppins font-extralight text-xl md:text-2xl max-w-3xl mx-auto mt-5 px-5 md:px-0">
+          <p className="font-grotesque text-justify font-extralight text-xl md:text-2xl max-w-3xl mx-auto mt-5 px-5 md:px-0">
             Discover exciting groups and teams in nyanya to join that will
             uplift your spirit and enrich your journey. Get connected and stay
             motivated!
@@ -39,7 +39,7 @@ export default transition(JoinAGroup);
 
 const events = [
   {
-    title: "Youth Fellowship",
+    title: "Youth Movement",
     description:
       "Join us for engaging activities, inspiring talks, and meaningful interactions at the Youth Fellowship. This event is designed to empower and uplift the youth of Nyanya, providing them with the tools and support they need to thrive.",
     color: "#BBACAF",
@@ -59,7 +59,7 @@ const events = [
     description:
       "Be part of the Media Team to capture and share the vibrant life of our church. Help us raise awareness and promote our message through various media channels, showcasing the importance of community and faith.",
     color: "#A9B388",
-    src: "images/media2.jpg",
+    src: "images/media4.jpg",
     link: "/media-team",
   },
   {
@@ -67,15 +67,15 @@ const events = [
     description:
       "Join the Classical Choir and support a worthy cause through your musical talents. Participate in events and performances that uplift and inspire, making a positive impact on our community.",
     color: "#B4B4B8",
-    src: "images/choir.jpg",
+    src: "images/choir3.jpg",
     link: "/classical-choir",
   },
-  {
-    title: "Tech Team",
-    description:
-      "Experience the innovation and creativity of the Tech Team. Help us enhance our events and services with cutting-edge technology, celebrating the diverse talents within our community.",
-    color: "#8BA28D",
-    src: "images/tech-team.jpeg",
-    link: "/tech-team",
-  },
+  // {
+  //   title: "Tech Team",
+  //   description:
+  //     "Experience the innovation and creativity of the Tech Team. Help us enhance our events and services with cutting-edge technology, celebrating the diverse talents within our community.",
+  //   color: "#8BA28D",
+  //   src: "images/tech-team.jpeg",
+  //   link: "/tech-team",
+  // },
 ];
