@@ -24,7 +24,7 @@ export function Welcome({ title, text, imgSrc }) {
             {title}
           </h1>
           <div>
-            <span className="font-grotesque md:text-md lg:text-lg xl:text-2xl md:leading-[40px] lg:leading-[50px] xl:leading-[50px]">
+            <span className="font-grotesque md:text-md lg:text-xl xl:text-2xl leading-[30px] md:leading-[40px] lg:leading-[50px] xl:leading-[50px]">
               {text}
             </span>
           </div>
@@ -38,7 +38,7 @@ export function Welcome({ title, text, imgSrc }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
           src={`/images/${imgSrc}`}
-          className=" sm:h-full md:h-[400px] lg:h-[500px] lg:w-full object-cover rounded-tl-[300px] rounded-br-[60px] md:rounded-bl-none rounded-bl-[50px]"
+          className="h-[420px] md:h-[400px] lg:h-[500px] lg:w-full object-cover rounded-tl-[200px] lg:rounded-tl-[300px] rounded-br-[60px] md:rounded-bl-none rounded-bl-[50px]"
         />
       </div>
     </div>

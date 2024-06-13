@@ -1,6 +1,7 @@
 import { useParallax } from "react-scroll-parallax";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { SparklesCore } from "./ui/sparkles";
 const Explore = () => {
   const { ref } = useParallax({ speed: -30 });
 
@@ -10,6 +11,17 @@ const Explore = () => {
       ref={ref}
       style={{ backgroundColor: "#000" }}
     >
+      <div className="w-full absolute inset-0">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+      </div>
       <div className="absolute lg:top-[150px] top-[160px] left-8">
         <p className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-grotesque">
           <span className="">EXPLORE</span>{" "}
@@ -31,7 +43,7 @@ const Explore = () => {
           //   color={item.color}
           //   key={i}
           // />
-          <ProductCard
+          <CardComponent
             title={item.title}
             bodyText={item.bodyText}
             btnText={item.btnText}
@@ -45,26 +57,26 @@ const Explore = () => {
   );
 };
 
-const CardComponent = ({ title, bodyText, btnText, link, color }) => {
-  return (
-    <div
-      className="rounded-[40px] hover:bg-black h-[360px] w-[300px] md:h-[400px] md:w-[320px] font-grotesque mx-auto flex flex-col justify-around  items-start px-7 md:py-0  text-white cursor-pointer transform hover:scale-105 transition-transform duration-300"
-      style={{ backgroundColor: color }}
-    >
-      <h1 className="font-semibold text-2xl md:text-3xl">{title}</h1>
-      <p className="text-md md:text-lg font-light">{bodyText}</p>
-      <Link to={link}>
-        <button className="border px-4 py-2 min-w-[150px] rounded-2xl border-gray-300  hover:bg-white hover:text-black text-white">
-          {btnText}
-        </button>
-      </Link>
-    </div>
-  );
-};
+// const CardComponent = ({ title, bodyText, btnText, link, color }) => {
+//   return (
+//     <div
+//       className="rounded-[40px] hover:bg-black h-[360px] w-[300px] md:h-[400px] md:w-[320px] font-grotesque mx-auto flex flex-col justify-around  items-start px-7 md:py-0  text-white cursor-pointer transform hover:scale-105 transition-transform duration-300"
+//       style={{ backgroundColor: color }}
+//     >
+//       <h1 className="font-semibold text-2xl md:text-3xl">{title}</h1>
+//       <p className="text-md md:text-lg font-light">{bodyText}</p>
+//       <Link to={link}>
+//         <button className="border px-4 py-2 min-w-[150px] rounded-2xl border-gray-300  hover:bg-white hover:text-black text-white">
+//           {btnText}
+//         </button>
+//       </Link>
+//     </div>
+//   );
+// };
 
 export default Explore;
 
-const ProductCard = ({ title, bodyText, btnText, link, src }) => {
+const CardComponent = ({ title, bodyText, btnText, link, src }) => {
   return (
     <div className="h-[360px] w-[300px] md:h-[400px] md:w-[320px] mx-auto shadow-lg rounded-3xl cursor-pointer transform hover:scale-105 transition-transform duration-300 overflow-hidden relative">
       <div className="relative">
@@ -80,7 +92,7 @@ const ProductCard = ({ title, bodyText, btnText, link, src }) => {
       <div className="absolute bottom-0 left-0 w-full  bg-opacity-30 backdrop-blur-md p-2 md:p-3 flex flex-col items-start">
         <p className="text-white font-grotesque font-extralight">{bodyText}</p>
         <Link to={link}>
-          <button className="mt-2 bg-gradient-to-br from-white to-blue-600 text-white px-4 py-2 font-grotesque min-w-[100px] rounded-2xl hover:bg-blue-700 transition duration-300">
+          <button className="mt-2 bg-gradient-to-br  from-blue-700  to-white text-white px-4 py-2 font-grotesque min-w-[100px] rounded-2xl hover:bg-blue-700 transition duration-300">
             {btnText}
           </button>
         </Link>

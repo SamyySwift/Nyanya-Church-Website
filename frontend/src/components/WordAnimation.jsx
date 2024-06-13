@@ -23,7 +23,7 @@ const WordAnimation = () => {
 
   return (
     <section
-      className="h-screen relative overflow-hidden "
+      className="py-5 relative overflow-hidden "
       style={{ backgroundColor: "#F7EEDD" }}
     >
       <h1
