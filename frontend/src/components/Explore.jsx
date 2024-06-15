@@ -92,7 +92,7 @@ const CardComponent = ({ title, bodyText, btnText, link, src }) => {
       <div className="absolute bottom-0 left-0 w-full  bg-opacity-30 backdrop-blur-md p-2 md:p-3 flex flex-col items-start">
         <p className="text-white font-grotesque font-extralight">{bodyText}</p>
         <Link to={link}>
-          <button className="mt-2 bg-gradient-to-br  from-blue-700  to-white text-white px-4 py-2 font-grotesque min-w-[100px] rounded-2xl hover:bg-blue-700 transition duration-300">
+          <button className="mt-2 bg-gradient-to-br  from-gray-400 to-black text-white px-4 py-2 font-grotesque min-w-[100px] rounded-2xl hover:bg-blue-700 transition duration-300">
             {btnText}
           </button>
         </Link>
