@@ -18,7 +18,7 @@ export function Welcome({ title, text, imgSrc }) {
       >
         <div className="md:max-w-md xl:max-w-lg space-y-[30px] md:space-y-[100px] xl:space-y-[120px] mx-4">
           <h1
-            className="text-5xl md:text-7xl lg:text-8xl font-semibold font-grotesque "
+            className="text-5xl md:text-6xl lg:text-7xl font-semibold font-grotesque "
             ref={textScale.ref}
           >
             {title}

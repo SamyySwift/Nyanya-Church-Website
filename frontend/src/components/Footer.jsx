@@ -8,14 +8,15 @@ import {
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Input from "./ui/input";
+// import Input from "./ui/input";
 import { cn } from "../utils/cn";
 
 const Footer = () => {
   return (
     <footer
-      className="text-black h-[1200px] md:h-[500px] flex flex-col pl-5  md:px-10 md:flex-row pt-20 md:justify-evenly gap-10 md:gap-7 lg:gap-7 relative"
+      className="text-black py-[140px] flex flex-col pl-6   md:flex-row pt-20 md:justify-evenly gap-12  relative"
       style={{ backgroundColor: "#F7EEDD" }}
+      name="footer"
     >
       {/* LOGO */}
       <div className="">
@@ -23,7 +24,7 @@ const Footer = () => {
           <span className="text-xl md:text-sm lg:text-lg xl:text-2xl">
             NYANYA
           </span>
-          <span className="text-md md:text-xs lg:text-md xl:text-xl">
+          <span className="text-md md:text-xs lg:text-md xl:text-lg">
             ASSEMBLY
           </span>
         </div>
@@ -33,18 +34,18 @@ const Footer = () => {
         <h1 className="mb-5 font-grotesque text-md md:text-lg lg:text-xl">
           CONTACT US
         </h1>
-        <div className="max-w-sm md:max-w-xs lg:max-w-xs space-y-3 font-grotesque md:text-md lg:text-lg">
+        <div className="max-w-sm md:max-w-xs lg:max-w-md space-y-3 font-grotesque md:text-md lg:text-lg">
           <p className="">TAC NYANYA ASSEMBLY</p>
-          <p className="flex items-center font-light">
-            <MdEmail className="mr-2" />
+          <span className="flex items-center font-light gap-2">
+            <MdEmail className="" />
             <span>info@nyanyarea.com</span>
-          </p>
-          <p className="flex items-center font-light">
-            <FaPhone className="mr-2 w-3" />
+          </span>
+          <p className="flex items-center font-light gap-2">
+            <FaPhone className="w-4" />
             <span>(+234) 809 670 2056</span>
           </p>
-          <p className="flex font-light">
-            <FaLocationDot className="mr-3 w-6 mt-1" />
+          <p className="flex font-light gap-2">
+            <FaLocationDot className="w-6 mt-1" />
             <span>
               NO. 2, Avenue Nyanya Karu Road Opposite A.A. Rano Filling Station,
               Nyanya, Abuja, FCT
@@ -52,7 +53,7 @@ const Footer = () => {
           </p>
         </div>
         <hr
-          className="mt-8 w-[360px] md:w-[270px] lg:w-[300px]"
+          className="mt-8 w-[360px] md:w-[270px] lg:w-[407px]"
           style={{
             backgroundColor: "black",
             height: "1px",
@@ -65,6 +66,7 @@ const Footer = () => {
             <Link to={social.link} key={social.name}>
               <motion.div
                 whileHover={{ translateY: -10, scale: 1.3 }}
+                transition={{ duration: 0.4 }}
                 className="p-1 rounded-full border border-black bg-white flex items-center justify-center"
               >
                 {social.icon}
@@ -85,13 +87,15 @@ const Footer = () => {
               {location.pathname === link.href && (
                 <div className="mr-3 w-1 h-1 md:w-2 md:h-2 bg-black rounded-full"></div>
               )}
-              <p className="hover:underline">{link.name}</p>
+              <p className="hover:underline hover:scale-105 duration-500">
+                {link.name}
+              </p>
             </Link>
           ))}
         </div>
       </div>
       {/* Newsletter */}
-      <div className="flex flex-col">
+      {/* <div className="flex flex-col">
         <h1 className="mb-5 font-grotesque text-md md:text-lg lg:text-xl">
           STAY TUNED
         </h1>
@@ -113,8 +117,8 @@ const Footer = () => {
         >
           Subscribe
         </button>
-      </div>
-      <div className="absolute bottom-20 md:bottom-5">
+      </div> */}
+      <div className="absolute bottom-5">
         <p className="font-grotesque">
           &copy; 2024 Nyanya Assembly. All Rights Reserved.
         </p>

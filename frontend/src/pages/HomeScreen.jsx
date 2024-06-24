@@ -13,19 +13,19 @@ import PageTitle from "../components/PageTitle";
 function HomeScreen() {
   const words = ["vibrant", "friendly", "beautiful", "modern", "lovable"];
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden relative">
       <PageTitle
         title="Nyanya Assembly"
         description="Nyanya assembly homepage"
       />
-      <section className="overflow-hidden">
-        <Hero
-          text="Welcome to Nyanya Assembly"
-          background="video"
-          src="/bg1.mp4"
-          mainHero={true}
-        />
-      </section>
+
+      <Hero
+        text="Welcome to Nyanya Assembly"
+        background="video"
+        src="/bg1.mp4"
+        mainHero={true}
+      />
+
       <Welcome
         title="Welcome To Nyanya"
         text={
@@ -37,10 +37,11 @@ function HomeScreen() {
         }
         imgSrc="welcome-bg.JPG"
       />
+      {/* EXPLORE SECTION */}
       <section className="overflow-hidden">
         <Explore />
       </section>
-      {/* <WordAnimation /> */}
+      {/* WORSHIP WITH US SECTION */}
       <section className=" overflow-hidden">
         <WorshipWithUs />
       </section>

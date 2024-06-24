@@ -1,6 +1,5 @@
-// import { Outlet } from "react-router";
-import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Navbar from "./components/NavBar.jsx";
 import { useLocation, Route, Routes } from "react-router-dom";
 import HomeScreen from "./pages/HomeScreen.jsx";
 import Events from "./pages/Events.jsx";
@@ -19,8 +18,10 @@ function App() {
   const location = useLocation();
   return (
     <>
+      {/* <div className=" backdrop-blur-lg bg-opacity-20 p-8"> */}
+      <Navbar />
+      {/* </div> */}
       <HelmetProvider>
-        <Navbar />
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route index element={<HomeScreen />} />

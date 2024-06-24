@@ -9,6 +9,7 @@ const Explore = () => {
       className="py-[100px] flex flex-col justify-center"
       ref={ref}
       style={{ backgroundColor: "#000" }}
+      name="explore"
     >
       <div className="w-full absolute inset-0">
         <SparklesCore
@@ -22,8 +23,8 @@ const Explore = () => {
         />
       </div>
 
-      <div className="mx-auto md:mx-10">
-        <p className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-grotesque">
+      <div className="mx-auto md:mx-[80px]">
+        <p className="text-3xl sm:text-6xl md:text-5xl lg:text-7xl xl:text-9xl text-white font-grotesque">
           <span className="">EXPLORE</span>{" "}
           <span className="text-neutral-500 font-thin font-poppins">&</span>
           <span className="relative"> CONNECT</span>
@@ -82,7 +83,7 @@ const exploreNav = [
     src: "images/ue1.jpg",
   },
   {
-    title: "Join a Group",
+    title: "Join a Team",
     bodyText:
       "Explore our diverse church groups and teams, find your place to belong!",
     btnText: "Learn More",

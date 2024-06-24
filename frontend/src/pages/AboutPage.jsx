@@ -18,7 +18,7 @@ const AboutPage = () => {
           imgSrc="pastor2.jpg"
         />
       </section>
-      <WordAnimation />
+      {/* <WordAnimation /> */}
 
       <section className=" overflow-hidden">
         <ChurchServices />

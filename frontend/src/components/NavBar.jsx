@@ -6,7 +6,9 @@ import {
   FaYoutube,
   FaXTwitter,
 } from "react-icons/fa6";
+
 import { Link, useLocation } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +22,8 @@ const Navbar = () => {
     open: {
       width: "100vw",
       height: "100vh",
-      top: "-24px",
-      right: "-12px",
+      top: "-16px",
+      right: "-30px",
       transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
     },
     closed: {
@@ -89,17 +91,46 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed inset-x-0 right-0 z-40">
-      <div className="flex justify-between items-center max-w-7xl px-6 py-5 md:px-8">
-        {/* Logo */}
-        {/* <div className="flex items-center">
-          <div className="h-[65px] w-[65px] md:h-[75px] md:w-[75px] lg:h-[90px] lg:w-[90px] flex flex-col text-center justify-center items-center rounded-full bg-white border text-black font-grotesque  leading-none font-semibold">
-            <span className="text-sm md:text-md lg:text-lg">NYANYA</span>
-            <span className="text-[10px]">ASSEMBLY</span>
+    <>
+      <nav className="fixed top-0 z-50 w-full px-[30px] md:px-[80px] py-10 lg:py-6 bg-black backdrop-filter backdrop-blur-md bg-opacity-30">
+        <div className="flex items-center justify-between">
+          <div className=""></div>
+          <div className="hidden lg:block">
+            <div className="flex items-baseline gap-6 text-white font-grotesque text-lg font-thin cursor-pointer">
+              {desktopLinks.map((navItem, idx) => {
+                if (location.pathname !== "/" && navItem.link === "explore") {
+                  return null;
+                }
+                return navItem.action === "scroll" ? (
+                  <LinkScroll
+                    key={`link=${idx}`}
+                    smooth={true}
+                    activeClass="active"
+                    duration={500}
+                    to={navItem.link}
+                  >
+                    <div className="duration-500 hover:-translate-y-1 hover:scale-105">
+                      {navItem.title}
+                    </div>
+                  </LinkScroll>
+                ) : (
+                  <Link to={navItem.link} key={`link=${idx}`}>
+                    <div
+                      className={`duration-500 hover:-translate-y-1 hover:scale-105 ${
+                        location.pathname === navItem.link ? "underline" : ""
+                      }`}
+                    >
+                      {navItem.title}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
-        </div> */}
-        {/* Button nav */}
-        <div className="fixed top-6 right-3">
+        </div>
+
+        {/* Mobile Nav */}
+        <div className="absolute top-4 right-[30px] z-50  lg:hidden ">
           <motion.div
             className={`relative ${!isOpen && "rounded-xl"}`}
             variants={variants}
@@ -131,7 +162,7 @@ const Navbar = () => {
                             >
                               <Link
                                 to={link.link}
-                                className="text-4xl md:text-7xl font-grotesque font-semibold flex items-center"
+                                className="text-4xl md:text-5xl lg:text-6xl font-grotesque font-semibold flex items-center"
                                 onClick={toggleMenu}
                               >
                                 {location.pathname === link.link && (
@@ -224,18 +255,27 @@ const Navbar = () => {
             </motion.div>
           </div>
         </div>
-      </div>
-    </div>
+      </nav>
+    </>
   );
 };
 
 export default Navbar;
 
+const desktopLinks = [
+  { title: "Home", link: "/", action: "route" },
+  { title: "Events", link: "/events", action: "route" },
+  { title: "About Us", link: "/about", action: "route" },
+  { title: "Explore & Connect", link: "explore", action: "scroll" },
+  { title: "Plan your visit", link: "/plan-your-visit", action: "route" },
+  { title: "Contact Us", link: "footer", action: "scroll" },
+];
+
 const links = [
   { title: "Home", link: "/" },
   { title: "Events", link: "/events" },
   { title: "About Us", link: "/about" },
-  { title: "Join a Group", link: "/join-a-group" },
+  { title: "Join a Team", link: "/join-a-group" },
   { title: "Plan your visit", link: "/plan-your-visit" },
 ];
 
