@@ -1,10 +1,5 @@
 import { FaPhone, FaLocationDot } from "react-icons/fa6";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -14,7 +9,7 @@ import { cn } from "../utils/cn";
 const Footer = () => {
   return (
     <footer
-      className="text-black py-[140px] flex flex-col pl-6   md:flex-row pt-20 md:justify-evenly gap-12  relative"
+      className="text-black py-[140px] flex flex-col pl-6 md:pl-0 md:flex-row pt-20 md:justify-around gap-12 md:gap-0  relative"
       style={{ backgroundColor: "#F7EEDD" }}
       name="footer"
     >
@@ -34,7 +29,7 @@ const Footer = () => {
         <h1 className="mb-5 font-grotesque text-md md:text-lg lg:text-xl">
           CONTACT US
         </h1>
-        <div className="max-w-sm md:max-w-xs lg:max-w-md space-y-3 font-grotesque md:text-md lg:text-lg">
+        <div className="max-w-sm md:max-w-xs lg:max-w-md space-y-3 font-grotesque md:text-lg">
           <p className="">TAC NYANYA ASSEMBLY</p>
           <span className="flex items-center font-light gap-2">
             <MdEmail className="" />
@@ -45,15 +40,15 @@ const Footer = () => {
             <span>(+234) 809 670 2056</span>
           </p>
           <p className="flex font-light gap-2">
-            <FaLocationDot className="w-6 mt-1" />
+            <FaLocationDot className="w-4 mt-1" />
             <span>
-              NO. 2, Avenue Nyanya Karu Road Opposite A.A. Rano Filling Station,
-              Nyanya, Abuja, FCT
+              NO. 2, Avenue Nyanya Karu Road Opposite <br /> A.A. Rano Filling
+              Station, Nyanya, Abuja, FCT
             </span>
           </p>
         </div>
         <hr
-          className="mt-8 w-[360px] md:w-[270px] lg:w-[407px]"
+          className="mt-7 w-[360px] md:w-[290px] lg:w-[380px]"
           style={{
             backgroundColor: "black",
             height: "1px",
@@ -81,7 +76,7 @@ const Footer = () => {
         <h1 className="mb-5 font-grotesque text-md md:text-lg lg:text-xl">
           QUICK LINKS
         </h1>
-        <div className="flex flex-col gap-2 font-light font-grotesque text-md md:text-md lg:text-lg">
+        <div className="flex flex-col gap-2 font-light font-grotesque text-md md:text-lg lg:text-lg">
           {links.map((link) => (
             <Link to={link.href} key={link.name} className="flex items-center">
               {location.pathname === link.href && (
@@ -176,10 +171,5 @@ const socials = [
     title: "YouTube",
     link: "/",
     icon: <FaYoutube size={25} className="hover:text-sky-500 rounded-full" />,
-  },
-  {
-    title: "Twitter",
-    link: "/",
-    icon: <FaXTwitter size={25} className="hover:text-sky-500 rounded-full" />,
   },
 ];

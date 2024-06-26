@@ -24,16 +24,17 @@ const WorshipWithUs = () => {
   };
 
   const images = [
-    "images/worship-bg-1.JPG",
-    "images/worship-bg-2.JPG",
-    "images/worship-bg-3.jpg",
+    "images/worship-bg-1.jpg",
+    "images/worship-bg-2.jpg",
+    "images/worship-bg-3.JPG",
     "images/worship-bg-4.JPG",
     "images/worship-bg-5.JPG",
-    "images/worship-bg-6.JPG",
+    "images/worship-bg-6.jpg",
     "images/worship-bg-7.JPG",
     "images/worship-bg-8.JPG",
     "images/worship-bg-9.JPG",
-    "images/worship-bg-10.JPG",
+    "images/worship-bg-10.jpg",
+    "images/worship-bg-11.jpg",
   ];
   return (
     // <ParallaxBanner

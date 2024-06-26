@@ -1,4 +1,3 @@
-import React from "react";
 import Ministries from "../components/Ministries";
 
 const YouthFellowship = () => {
@@ -6,11 +5,15 @@ const YouthFellowship = () => {
     <>
       <Ministries
         bgImg="images/youth.jpg"
-        bgText={"YOUTH MOVEMENT"}
+        bgText="YOUTH MOVEMENT"
         team="Youth Movement"
         title="Magnify God In Thy Youth"
-        leaderName="Emmanuel Nirvana"
-        images={["youth6.JPG", "youth3.JPG", "youth4.JPG", "youth5.JPG"]}
+        images={[
+          "images/youth6.JPG",
+          "images/youth3.JPG",
+          "images/youth4.JPG",
+          "images/youth5.JPG",
+        ]}
       />
     </>
   );

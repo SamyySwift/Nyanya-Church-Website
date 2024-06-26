@@ -22,7 +22,7 @@ const Navbar = () => {
     open: {
       width: "100vw",
       height: "100vh",
-      top: "-16px",
+      top: "-19px",
       right: "-30px",
       transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
     },
@@ -92,7 +92,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 z-50 w-full px-[30px] md:px-[80px] py-10 lg:py-6 bg-black backdrop-filter backdrop-blur-md bg-opacity-30">
+      <nav className="fixed top-0 z-50 w-full px-[30px] md:px-12 py-10 lg:py-6 bg-black backdrop-filter backdrop-blur-xs bg-opacity-30">
         <div className="flex items-center justify-between">
           <div className=""></div>
           <div className="hidden lg:block">
@@ -130,7 +130,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Nav */}
-        <div className="absolute top-4 right-[30px] z-50  lg:hidden ">
+        <nav className="absolute top-5 right-[30px] z-50  lg:hidden ">
           <motion.div
             className={`relative ${!isOpen && "rounded-xl"}`}
             variants={variants}
@@ -254,7 +254,7 @@ const Navbar = () => {
               </div>
             </motion.div>
           </div>
-        </div>
+        </nav>
       </nav>
     </>
   );

@@ -37,12 +37,13 @@ const Hero = ({ text, background, src, mainHero = false }) => {
                   speed="slow"
                   type="text"
                   // textContent="WELCOME TO THE APOSTOLIC CHURCH - NYANYA ASSEMBLY - "
+                  pauseOnHover={false}
                 />
               </div>
             ) : (
               <div className="flex justify-center">
                 <motion.h1
-                  className={`absolute bottom-[250px] font-poppins font-extrabold text-white text-4xl md:text-7xl lg:text-[149px]`}
+                  className={`absolute bottom-[250px] font-grotesque font-extrabold text-white text-4xl md:text-7xl lg:text-9xl`}
                 >
                   {text}
                 </motion.h1>

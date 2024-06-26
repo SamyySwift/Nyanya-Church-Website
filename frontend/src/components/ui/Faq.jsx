@@ -1,29 +1,50 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const FaqAccordion = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const faqs = [
     {
-      question: "What can I expect if I visit Nyanya?",
-      answer:
-        "Nyanya Assembly is a community-based organization that focuses on uplifting and empowering individuals through various programs and activities.",
-    },
-    {
       question: "How can I join a group?",
-      answer:
-        "You can join a group by visiting our 'Join a Group' page and filling out the necessary information. Our team will get in touch with you soon.",
+      answer: (
+        <>
+          You can join a group by visiting our{" "}
+          <Link to="/join-a-group" className="font-bold">
+            Join a Group
+          </Link>{" "}
+          page and filling out the necessary information. Our team will get in
+          touch with you soon.
+        </>
+      ),
     },
+
     {
       question: "When are the upcoming events?",
-      answer:
-        "Our upcoming events are listed on the 'Events' page. We update it regularly to keep you informed about the latest happenings.",
+      answer: (
+        <>
+          Our upcoming events are listed on the{" "}
+          <Link to="/events" className="font-bold">
+            Events Page
+          </Link>
+          . We update it regularly to keep you informed about the latest
+          happenings.
+        </>
+      ),
     },
+
     {
-      question: "How can I get pastoral care?",
-      answer:
-        "For pastoral care, please visit our 'Pastoral Care' page or contact us via email. Our dedicated team is always here to support you.",
+      question: "What are our different church service times?",
+      answer: (
+        <>
+          Our different church service times can be found on the{" "}
+          <Link to="/about" className="font-bold">
+            About Page.
+          </Link>{" "}
+          Please visit it for detailed information.
+        </>
+      ),
     },
 
     {

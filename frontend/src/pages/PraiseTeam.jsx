@@ -1,4 +1,3 @@
-import React from "react";
 import Ministries from "../components/Ministries";
 
 const PraiseTeam = () => {
@@ -6,14 +5,14 @@ const PraiseTeam = () => {
     <>
       <Ministries
         bgImg="images/praise-team-1.jpg"
-        bgText="Praise Team"
+        bgText="PRAISE TEAM"
         team="Praise & Worship Team"
         title="Praise & Worship moves God"
         images={[
-          "praise-team-6.JPG",
-          "praise-team-3.jpg",
-          "praise-team-5.JPG",
-          "praise-team-7.JPG",
+          "images/praise-team-6.JPG",
+          "images/praise-team-3.jpg",
+          "images/praise-team-5.JPG",
+          "images/praise-team-7.JPG",
         ]}
       />
     </>

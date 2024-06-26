@@ -77,7 +77,7 @@ const Card = ({
           <h2 className="text-3xl md:text-5xl font-bold md:mb-10 lg:mb-10 mb-5 mt-5 font-grotesque">
             {title}
           </h2>
-          <p className="text-sm sm:text-md md:text-lg lg:text-xl font-grotesque font-light lg:leading-loose md:leading-relaxed">
+          <p className="text-md md:text-lg lg:text-xl font-grotesque font-light leading-6 lg:leading-loose md:leading-relaxed">
             {description}
           </p>
           {date && (

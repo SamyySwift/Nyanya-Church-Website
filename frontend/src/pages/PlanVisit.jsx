@@ -16,7 +16,7 @@ const PlanVisit = () => {
 
       <section style={{ backgroundColor: "#FFFFFF" }}>
         <Welcome
-          title="Welcome Home"
+          title="Welcome To Church"
           text="No matter who you are or where you come from, our aim is for you
           to feel welcomed and comfortable as soon as you arrive. "
           imgSrc="home.JPG"
@@ -55,7 +55,7 @@ const PlanVisit = () => {
       </section>
       {/* FAQ */}
       <section className="py-20">
-        <div className="flex flex-col md:flex-row justify-between items-start px-4 md:px-10 space-y-10 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-between items-start px-4 md:px-12 space-y-10 md:space-y-0">
           <div className="w-full md:w-1/4 md:pr-5">
             <span className="font-extrabold font-grotesque text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               FAQS

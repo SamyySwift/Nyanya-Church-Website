@@ -1,21 +1,15 @@
-import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
-import Spotlight from "./ui/spotlight.jsx";
+// import Spotlight from "./ui/spotlight.jsx";
 import Hero from "./Hero.jsx";
 import ContactForm from "./ContactForm.jsx";
+import { ImagesSlider } from "./ui/images-slider.jsx";
+import { motion } from "framer-motion";
 
-const Ministries = ({
-  bgImg,
-  bgText,
-  team,
-  leaderName,
-  images,
-  background,
-}) => {
+const Ministries = ({ bgImg, bgText, team, images, background }) => {
   return (
     <>
       <Hero text={bgText} src={bgImg} background={background} />
 
-      <section>
+      {/* <section>
         <div className="py-20 w-full pt-10 md:pt-20 flex flex-col items-center md:items-start md:flex-row  justify-center gap-10 bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden px-5  ">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
@@ -52,29 +46,26 @@ const Ministries = ({
             </p>
           </div>
         </div>
-      </section>
-      {/* Images */}
-      <section>
-        <ParallaxBanner
-          className="h-[1500px] md:h-[900px] relative"
-          style={{ backgroundColor: "" }}
-        >
-          <ParallaxBannerLayer speed={-20}>
-            <img src={""} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className=" grid grid-col-1 justify-items-center md:grid-cols-2 gap-10  w-[800px] md:w-[1000px] md:mx-5">
-                {images.map((img, idx) => (
-                  <img
-                    src={`images/${img}`}
-                    className="w-[360px] h-[300px] md:w-[400px]  object-cover rounded-xl"
-                    key={idx}
-                  />
-                ))}
-              </div>
-            </div>
-          </ParallaxBannerLayer>
-        </ParallaxBanner>
-      </section>
+      </section> */}
+
+      {/* carousel */}
+      <ImagesSlider className="h-screen" images={images}>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: -80,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          className="z-50 flex flex-col justify-center items-center text-white"
+        ></motion.div>
+      </ImagesSlider>
+
       {/* Form */}
       <section
         className="h-[1000px]  bg-cover bg-center relative"

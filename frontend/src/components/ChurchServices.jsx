@@ -13,7 +13,7 @@ const ChurchServices = () => {
 
   return (
     <div
-      className="relative h-[1200px] md:h-screen bg-black flex flex-col items-center justify-center overflow-hidden"
+      className="relative py-20 md:h-screen bg-black flex flex-col items-center justify-center overflow-hidden"
       ref={ref}
     >
       <div className="w-full absolute inset-0">
@@ -30,8 +30,8 @@ const ChurchServices = () => {
       <h1 className="md:text-7xl text-4xl lg:text-6xl mb-20 font-semibold text-center text-slate-300 relative font-grotesque">
         Our Church Services
       </h1>
-      <div className="max-w-[1320px] mx-auto px-6">
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+      <div className="max-w-6xl mx-auto px-10">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => (
             <div
               key={index}
@@ -96,12 +96,6 @@ const services = [
     day: "FRIDAY",
     description:
       "Experience God's power through prayers and prohetic sessions.",
-  },
-  {
-    title: "Youth Fellowship",
-    time: "4:00 PM - 6:00 PM",
-    day: "SATURDAY",
-    description: "A vibrant service for the youth to connect and grow.",
   },
 ];
 

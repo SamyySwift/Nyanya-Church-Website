@@ -7,8 +7,12 @@ function ClassicalChoir() {
         bgImg="images/choir-bg.JPG"
         bgText="CLASSICAL CHOIR"
         team="Classical Choir"
-        images={["choir3.jpg", "choir1.JPG", "choir2.JPG", "choir4.JPG"]}
-        leaderName="Elder Nse Williams"
+        images={[
+          "images/choir3.jpg",
+          "images/choir1.JPG",
+          "images/choir2.JPG",
+          "images/choir4.JPG",
+        ]}
       />
     </>
   );
