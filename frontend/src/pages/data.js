@@ -4,7 +4,7 @@ const events = [
     description:
       "Join us for an unforgettable youth rally filled with exciting activities, inspiring talks, and meaningful interactions. This event is designed to empower and uplift the youth of Nyanya, providing them with the tools and support they need to thrive in today's world.",
     color: "#BBACAF",
-    src: "images/youth.jpg",
+    src: "images/youth4.JPG",
     date: "2024-06-11",
     time: "14:00:00.000",
     duration: 1,

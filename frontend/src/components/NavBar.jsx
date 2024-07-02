@@ -271,6 +271,8 @@ const navLinks = [
   { title: "Home", link: "/" },
   { title: "Events", link: "/events" },
   { title: "About Us", link: "/about" },
+  { title: "Join a Group", link: "/join-a-group" },
+  { title: "Plan a Visit", link: "/plan-a-visit" },
   { title: "Contact Us", link: "footer", scroll: true },
   {
     title: "Explore & Connect",
