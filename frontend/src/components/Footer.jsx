@@ -48,7 +48,7 @@ const Footer = () => {
           </p>
         </div>
         <hr
-          className="mt-7 w-[360px] md:w-[290px] lg:w-[380px]"
+          className="mt-7 w-[340px] md:w-[290px] lg:w-[380px]"
           style={{
             backgroundColor: "black",
             height: "1px",

@@ -1,7 +1,6 @@
 import { useParallax } from "react-scroll-parallax";
 import { Link } from "react-router-dom";
 import { SparklesCore } from "./ui/sparkles";
-// import { cn } from "../utils/cn";
 
 const Explore = () => {
   const { ref } = useParallax({ speed: -20 });
@@ -25,7 +24,7 @@ const Explore = () => {
         />
       </div>
 
-      <div className="mx-5  lg:mx-[40px] xl:mx-[80px]">
+      <div className="mx-auto lg:mx-[40px] xl:mx-[80px]">
         <p className="text-3xl sm:text-6xl md:text-5xl lg:text-7xl xl:text-9xl text-white font-grotesque">
           <span className="">EXPLORE</span>{" "}
           <span className="text-neutral-500 font-thin font-poppins">&</span>

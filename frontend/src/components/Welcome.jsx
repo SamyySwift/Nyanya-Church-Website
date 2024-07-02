@@ -12,7 +12,7 @@ export function Welcome({ title, text, imgSrc }) {
           ease: "easeInOut",
         }}
       >
-        <div className="md:max-w-md xl:max-w-lg space-y-[30px] md:space-y-[100px] xl:space-y-[120px] mx-4">
+        <div className="md:max-w-md xl:max-w-lg space-y-[30px] md:space-y-[100px] xl:space-y-[120px]">
           <h1 className="text-4xl lg:text-6xl font-semibold font-grotesque ">
             {title}
           </h1>
@@ -25,7 +25,7 @@ export function Welcome({ title, text, imgSrc }) {
       </motion.div>
 
       {/* Image  */}
-      <div className="max-w-2xl md:max-w-xl mx-3">
+      <div className="max-w-2xl md:max-w-xl">
         <motion.img
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}

@@ -14,17 +14,8 @@ const WorshipWithUs = () => {
     "Blessing",
   ];
 
-  const gradientOverlay = {
-    opacity: [0.5, 0.8],
-    shouldAlwaysCompleteAnimation: true,
-    expanded: false,
-    children: (
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-black" />
-    ),
-  };
-
   const images = [
-    "images/worship-bg-1.jpg",
+    "images/wsp-bg-1.jpg",
     "images/worship-bg-2.jpg",
     "images/worship-bg-3.JPG",
     "images/worship-bg-4.JPG",

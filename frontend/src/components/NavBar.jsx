@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -184,7 +190,7 @@ const Navbar = () => {
             exit="closed"
             style={{ backgroundColor: "#EADBC8" }}
           >
-            <div className="h-full  md:pl-[80px] pl-[40px] flex flex-col justify-center gap-20 max-w-3xl">
+            <div className="relative h-full md:pl-[80px] pl-[40px] flex flex-col justify-center max-w-3xl">
               <div className="flex flex-col gap-5 md:gap-10">
                 {navLinks.map((navItem, idx) => {
                   if (location.pathname !== "/" && navItem.link === "explore") {
@@ -212,7 +218,7 @@ const Navbar = () => {
                             activeClass="active"
                             duration={500}
                             to={navItem.link}
-                            className="text-4xl md:text-5xl lg:text-6xl font-grotesque font-semibold flex items-center"
+                            className="text-3xl md:text-5xl lg:text-6xl font-grotesque flex items-center"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -223,7 +229,7 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={navItem.link}
-                            className="text-4xl md:text-5xl lg:text-6xl font-grotesque font-semibold flex items-center duration-500 hover:-translate-y-1 hover:scale-105 $"
+                            className="text-3xl md:text-5xl lg:text-6xl font-grotesque flex items-center duration-500 hover:-translate-y-1 hover:scale-105 $"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -237,7 +243,7 @@ const Navbar = () => {
                   );
                 })}
               </div>
-              <div className="flex gap-4">
+              <div className="flex gap-4 absolute bottom-12">
                 {socials.map((social, i) => (
                   <motion.div
                     key={`k_${i}`}
@@ -265,10 +271,9 @@ const navLinks = [
   { title: "Home", link: "/" },
   { title: "Events", link: "/events" },
   { title: "About Us", link: "/about" },
-
   { title: "Contact Us", link: "footer", scroll: true },
   {
-    title: "Explore & Discover",
+    title: "Explore & Connect",
     link: "explore",
     scroll: true,
   },
@@ -280,5 +285,4 @@ const socials = [
   { icon: <FaFacebook size={28} />, link: "/" },
   { icon: <FaInstagram size={28} />, link: "/" },
   { icon: <FaYoutube size={28} />, link: "/" },
-  // { icon: <FaXTwitter size={20} />, link: "/" },
 ];
