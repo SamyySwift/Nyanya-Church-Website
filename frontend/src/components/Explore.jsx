@@ -25,10 +25,10 @@ const Explore = () => {
       </div>
 
       <div className="mx-auto md:mx-5 lg:mx-[40px] xl:mx-[80px]">
-        <p className="text-3xl sm:text-6xl md:text-5xl lg:text-7xl xl:text-9xl text-white font-grotesque text-center md:text-start">
-          <span className="">EXPLORE</span>{" "}
-          <span className="text-neutral-500 font-thin font-poppins">&</span>
-          <span className="relative"> CONNECT</span>
+        <p className="text-4xl md:text-5xl lg:text-7xl xl:text-9xl text-slate-300 font-grotesque font-semibold text-center md:text-start">
+          <span className="">Explore</span>{" "}
+          <span className="font-thin font-poppins">&</span>
+          <span className="relative"> Connect</span>
         </p>
 
         <div className="flex flex-col gap-10 md:flex-row md:flex-wrap  md:justify-between mt-[80px]">
@@ -58,7 +58,7 @@ const CardComponent = ({ title, bodyText, btnText, link, src }) => {
             src={src}
             alt={title}
           />
-          <span className="absolute top-3 left-5 text-xl md:text-3xl text-gray-50 font-grotesque font-semibold">
+          <span className="absolute top-3 left-5 text-3xl md:text-4xl text-gray-50 font-grotesque font-semibold">
             {title}
           </span>
         </div>

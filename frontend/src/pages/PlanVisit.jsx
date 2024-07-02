@@ -1,6 +1,5 @@
 import Hero from "../components/Hero";
 import { Welcome } from "../components/Welcome";
-import InfiniteMovingCards from "../components/ui/infinite-moving-cards";
 import transition from "../utils/transition";
 import PageTitle from "../components/PageTitle";
 import FaqAccordion from "../components/ui/Faq";
@@ -12,7 +11,7 @@ const PlanVisit = () => {
         title="Plan your visit"
         description="Page contains info on how to locate church"
       />
-      <Hero text="PLAN YOUR VISIT" background="video" src="/bg1.mp4" />
+      <Hero text="PLAN YOUR VISIT" background="video" src="/bg2.mp4" />
 
       <section style={{ backgroundColor: "#FFFFFF" }}>
         <Welcome
@@ -24,7 +23,7 @@ const PlanVisit = () => {
       </section>
       <section>
         <div
-          className=" h-screen  flex flex-col md:flex-row justify-center items-center pt-20 gap-10 overflow-hidden"
+          className="py-10 flex flex-col md:flex-row justify-center items-center pt-20 gap-10 overflow-hidden"
           style={{ backgroundColor: "#EBE3D5" }}
         >
           <iframe
@@ -55,7 +54,7 @@ const PlanVisit = () => {
       </section>
       {/* FAQ */}
       <section className="py-20">
-        <div className="flex flex-col md:flex-row justify-between items-start md:px-5 lg:px-[50px] xl:px-[80px] space-y-10 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-between items-start px-5 lg:px-[50px] xl:px-[80px] space-y-10 md:space-y-0">
           <div className="w-full md:w-1/4 md:pr-5">
             <span className="font-extrabold font-grotesque text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               FAQS

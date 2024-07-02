@@ -18,14 +18,13 @@ function HomeScreen() {
         title="Nyanya Assembly"
         description="Nyanya assembly homepage"
       />
-      <section>
-        <Hero
-          text="Welcome to Nyanya Assembly"
-          background="video"
-          src="/bg2.mp4"
-          mainHero={true}
-        />
-      </section>
+
+      <Hero
+        text="Welcome to Nyanya Assembly"
+        background="video"
+        src="/bg2.mp4"
+        mainHero={true}
+      />
 
       <Welcome
         title="Welcome To Nyanya"

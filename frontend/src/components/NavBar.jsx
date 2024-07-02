@@ -27,10 +27,10 @@ const Navbar = () => {
     open: {
       width: "100vw",
       height: "100vh",
-      transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 0.3, ease: [0.76, 0, 0.24, 1] },
     },
     closed: {
-      transition: { duration: 0.4, delay: 0.8, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 0.2, delay: 0.5, ease: [0.76, 0, 0.24, 1] },
     },
   };
 
@@ -47,8 +47,8 @@ const Navbar = () => {
       translateX: 0,
       translateY: 0,
       transition: {
-        duration: 0.65,
-        delay: 0.6 + idx * 0.1,
+        duration: 0.5,
+        delay: 0.5 + idx * 0.1,
       },
       ease: [0.215, 0.61, 0.355, 1],
     }),
@@ -56,7 +56,7 @@ const Navbar = () => {
       opacity: 0,
       y: -200,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         delay: 0.2 + idx * 0.1,
         ease: [0.215, 0.61, 0.355, 1],
       },
@@ -90,11 +90,11 @@ const Navbar = () => {
 
   return (
     <nav className="absolute w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-xs bg-opacity-30">
-      <div className="container mx-auto px-5 md:px-8 xl:px-[80px] py-3 flex justify-between items-center">
+      <div className="container mx-auto px-5 md:px-8 xl:px-[80px] py-6 flex justify-between items-center">
         <Link to="/">
-          <img src="/path/to/logo.png" alt="Logo" className="h-10" />
+          {/* <img src="/path/to/logo.png" alt="Logo" className="h-10" /> */}
         </Link>
-        <div className="hidden xl:flex items-baseline gap-6 text-white font-grotesque text-lg font-thin cursor-pointer">
+        <div className="hidden xl:flex items-baseline gap-6 text-white font-karla text-lg font-thin cursor-pointer">
           {navLinks.map((navItem, idx) => {
             if (location.pathname !== "/" && navItem.link === "explore") {
               return null;
@@ -115,7 +115,9 @@ const Navbar = () => {
               <Link to={navItem.link} key={`link=${idx}`}>
                 <div
                   className={`duration-500 hover:-translate-y-1 hover:scale-105 ${
-                    location.pathname === navItem.link ? "underline" : ""
+                    location.pathname === navItem.link
+                      ? "underline font-thin"
+                      : ""
                   }`}
                 >
                   {navItem.title}
@@ -188,7 +190,7 @@ const Navbar = () => {
             animate={isOpen ? "open" : "closed"}
             initial="closed"
             exit="closed"
-            style={{ backgroundColor: "#EADBC8" }}
+            style={{ backgroundColor: "#f7f2e9" }}
           >
             <div className="relative h-full md:pl-[80px] pl-[40px] flex flex-col justify-center max-w-3xl">
               <div className="flex flex-col gap-3 md:gap-5 lg:gap-7">
@@ -218,7 +220,7 @@ const Navbar = () => {
                             activeClass="active"
                             duration={500}
                             to={navItem.link}
-                            className="text-2xl md:text-3xl lg:text-5xl font-grotesque font-medium flex items-center"
+                            className="text-2xl md:text-3xl lg:text-5xl font-karla font-semibold flex items-center"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -229,7 +231,7 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={navItem.link}
-                            className="text-2xl md:text-3xl lg:text-5xl font-grotesque font-medium flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
+                            className="text-2xl md:text-3xl lg:text-5xl font-karla font-semibold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -272,7 +274,6 @@ const navLinks = [
   { title: "Events", link: "/events" },
   { title: "About Us", link: "/about" },
   { title: "Contact Us", link: "footer", scroll: true },
-  { title: "Join a Group", link: "/join-a-group" },
   { title: "Plan your Visit", link: "/plan-your-visit" },
   {
     title: "Explore & Connect",
@@ -284,7 +285,13 @@ const navLinks = [
 export default Navbar;
 
 const socials = [
-  { icon: <FaFacebook size={28} />, link: "/" },
-  { icon: <FaInstagram size={28} />, link: "/" },
-  { icon: <FaYoutube size={28} />, link: "/" },
+  {
+    icon: <FaFacebook size={28} />,
+    link: "https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d",
+  },
+  {
+    icon: <FaInstagram size={28} />,
+    link: "https://www.instagram.com/tacn_na?igsh=dDhxcmplNzVzZDNw",
+  },
+  { icon: <FaYoutube size={28} />, link: "#" },
 ];

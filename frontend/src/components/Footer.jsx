@@ -1,16 +1,18 @@
-import { FaPhone, FaLocationDot } from "react-icons/fa6";
+import { FaPhone, FaLocationDot, FaArrowUp } from "react-icons/fa6";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-// import Input from "./ui/input";
-import { cn } from "../utils/cn";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer
       className="text-black py-[140px] flex flex-col pl-6 md:pl-0 md:flex-row pt-20 md:justify-around gap-12 md:gap-0  relative"
-      style={{ backgroundColor: "#F7EEDD" }}
+      style={{ backgroundColor: "#f7f2e9" }}
       name="footer"
     >
       {/* LOGO */}
@@ -89,44 +91,21 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      {/* Newsletter */}
-      {/* <div className="flex flex-col">
-        <h1 className="mb-5 font-grotesque text-md md:text-lg lg:text-xl">
-          STAY TUNED
-        </h1>
-        <p className="font-grotesque max-w-xs xl:max-w-sm font-light">
-          Sign up for our newsletter to find out more about what's happening at
-          Nyanya Assembly!
-        </p>
-        <LabelInputContainer className="mt-4 max-w-[300px] xl:max-w-[370px]">
-          <Input
-            id="email"
-            placeholder="kevin@gmail.com"
-            type="email"
-            name="Email Address"
-          />
-        </LabelInputContainer>
-        <button
-          className="bg-gradient-to-br text-white font-grotesque from-black to-neutral-600 rounded-3xl h-10 font-medium w-[100px] mt-5"
-          type="submit"
-        >
-          Subscribe
-        </button>
-      </div> */}
+
       <div className="absolute bottom-5">
         <p className="font-grotesque">
           &copy; 2024 Nyanya Assembly. All Rights Reserved.
         </p>
       </div>
-    </footer>
-  );
-};
 
-const LabelInputContainer = ({ children, className }) => {
-  return (
-    <div className={cn("flex flex-col space-y-2 w-full", className)}>
-      {children}
-    </div>
+      {/* Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className="absolute bottom-20 right-8 p-3 rounded-full bg-black text-white hover:bg-gray-700 transition duration-300"
+      >
+        <FaArrowUp size={20} />
+      </button>
+    </footer>
   );
 };
 

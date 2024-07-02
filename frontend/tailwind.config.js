@@ -27,7 +27,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         vibes: ["Great Vibes"],
         grotesque: ["Bricolage Grotesque", "sans-serif"],
-        alfa: ["Alfa Slab One", "serif"],
+        karla: ["Karla", "sans-serif"],
       },
       animation: {
         aurora: "aurora 60s linear infinite",

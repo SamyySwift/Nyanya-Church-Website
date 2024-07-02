@@ -4,11 +4,11 @@ import InfiniteMovingCards from "../components/ui/infinite-moving-cards";
 
 const Hero = ({ text, background, src, mainHero = false }) => {
   return (
-    <>
-      <div className="h-screen">
+    <section className="">
+      <div className="h-screen relative">
         {background === "video" ? (
           <video
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center absolute inset-0"
             loop
             muted
             autoPlay
@@ -17,7 +17,10 @@ const Hero = ({ text, background, src, mainHero = false }) => {
             <source src={src} type="video/mp4" />
           </video>
         ) : (
-          <img src={src} className="w-full h-full object-cover object-center" />
+          <img
+            src={src}
+            className="w-full h-full object-cover object-center absolute inset-0"
+          />
         )}
 
         <div className="relative z-10 h-full flex items-end">
@@ -32,14 +35,14 @@ const Hero = ({ text, background, src, mainHero = false }) => {
             </div>
           ) : (
             <div className="w-full flex justify-center">
-              <motion.h1 className="absolute bottom-10 font-grotesque font-extrabold text-white text-4xl md:text-7xl lg:text-9xl">
+              <motion.h1 className="absolute bottom-20 md:bottom-10 font-grotesque font-extrabold text-white text-4xl md:text-7xl lg:text-9xl">
                 {text}
               </motion.h1>
             </div>
           )}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

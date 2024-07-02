@@ -74,14 +74,14 @@ const Card = ({
       >
         {/* Column 1: Title, Description, and Button*/}
         <div className="flex flex-col justify-between max-w-2xl md:max-w-sm lg:max-w-xl">
-          <h2 className="text-3xl md:text-5xl font-bold md:mb-10 lg:mb-10 mb-5 mt-5 font-grotesque">
+          <h2 className="text-2xl md:text-4xl font-bold md:mb-10 lg:mb-10 mb-5 mt-4 font-grotesque">
             {title}
           </h2>
-          <p className="text-md md:text-lg lg:text-xl font-grotesque font-light leading-6 lg:leading-loose md:leading-relaxed">
+          <p className="text-md md:text-lg lg:text-xl font-grotesque text-justify font-light md:font-normal leading-6 lg:leading-loose md:leading-relaxed">
             {description}
           </p>
           {date && (
-            <span className="flex items-center gap-2 mt-10 font-grotesque font-light  text-md md:text-lg">
+            <span className="flex items-center gap-2 mt-5 md:mt-10 font-grotesque font-light  text-md md:text-lg">
               <FaCalendarWeek size={23} />
               {date}
               <FaClock size={22} className="ml-3" />
@@ -89,7 +89,7 @@ const Card = ({
             </span>
           )}
 
-          <div className="flex gap-3 mt-6 md:absolute md:bottom-10">
+          <div className="flex gap-3 mt-5 md:absolute md:bottom-10">
             <Link to={btnType === "event" ? googleUrl : link}>
               <button className=" px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white  hover:bg-black hover:text-white text-black">
                 {btnName}
