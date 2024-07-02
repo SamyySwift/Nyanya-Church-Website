@@ -191,7 +191,7 @@ const Navbar = () => {
             style={{ backgroundColor: "#EADBC8" }}
           >
             <div className="relative h-full md:pl-[80px] pl-[40px] flex flex-col justify-center max-w-3xl">
-              <div className="flex flex-col gap-5 md:gap-10">
+              <div className="flex flex-col gap-3 md:gap-5 lg:gap-7">
                 {navLinks.map((navItem, idx) => {
                   if (location.pathname !== "/" && navItem.link === "explore") {
                     return null; // Skip rendering for "explore" link when pathname is not "/"
@@ -218,7 +218,7 @@ const Navbar = () => {
                             activeClass="active"
                             duration={500}
                             to={navItem.link}
-                            className="text-3xl md:text-5xl lg:text-6xl font-grotesque flex items-center"
+                            className="text-2xl md:text-3xl lg:text-5xl font-grotesque font-medium flex items-center"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -229,7 +229,7 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={navItem.link}
-                            className="text-3xl md:text-5xl lg:text-6xl font-grotesque flex items-center duration-500 hover:-translate-y-1 hover:scale-105 $"
+                            className="text-2xl md:text-3xl lg:text-5xl font-grotesque font-medium flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -243,7 +243,7 @@ const Navbar = () => {
                   );
                 })}
               </div>
-              <div className="flex gap-4 absolute bottom-12">
+              <div className="flex gap-4 absolute bottom-[150px]">
                 {socials.map((social, i) => (
                   <motion.div
                     key={`k_${i}`}
@@ -271,9 +271,9 @@ const navLinks = [
   { title: "Home", link: "/" },
   { title: "Events", link: "/events" },
   { title: "About Us", link: "/about" },
-  { title: "Join a Group", link: "/join-a-group" },
-  { title: "Plan a Visit", link: "/plan-a-visit" },
   { title: "Contact Us", link: "footer", scroll: true },
+  { title: "Join a Group", link: "/join-a-group" },
+  { title: "Plan your Visit", link: "/plan-your-visit" },
   {
     title: "Explore & Connect",
     link: "explore",

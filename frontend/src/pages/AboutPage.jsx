@@ -2,7 +2,6 @@ import React from "react";
 import transition from "../utils/transition";
 import Hero from "../components/Hero";
 import { Welcome } from "../components/Welcome";
-import WordAnimation from "../components/WordAnimation";
 import PageTitle from "../components/PageTitle";
 import ChurchServices from "../components/ChurchServices";
 
@@ -15,7 +14,7 @@ const AboutPage = () => {
         <Welcome
           title="Our Pastors"
           text="Apostle and Deaconness I.O Udofia currently serve as Pastors of The Apostoliic Church Nigeria Nyanya Assembly."
-          imgSrc="pastor2.jpg"
+          imgSrc="pastor.jpg"
         />
       </section>
       {/* <WordAnimation /> */}

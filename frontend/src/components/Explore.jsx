@@ -24,8 +24,8 @@ const Explore = () => {
         />
       </div>
 
-      <div className="mx-auto lg:mx-[40px] xl:mx-[80px]">
-        <p className="text-3xl sm:text-6xl md:text-5xl lg:text-7xl xl:text-9xl text-white font-grotesque">
+      <div className="mx-auto md:mx-5 lg:mx-[40px] xl:mx-[80px]">
+        <p className="text-3xl sm:text-6xl md:text-5xl lg:text-7xl xl:text-9xl text-white font-grotesque text-center md:text-start">
           <span className="">EXPLORE</span>{" "}
           <span className="text-neutral-500 font-thin font-poppins">&</span>
           <span className="relative"> CONNECT</span>
