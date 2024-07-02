@@ -5,7 +5,7 @@ import InfiniteMovingCards from "../components/ui/infinite-moving-cards";
 const Hero = ({ text, background, src, mainHero = false }) => {
   return (
     <>
-      <section className="h-screen  relative">
+      <div className="h-screen">
         {background === "video" ? (
           <video
             className="w-full h-full object-cover object-center"
@@ -20,26 +20,25 @@ const Hero = ({ text, background, src, mainHero = false }) => {
           <img src={src} className="w-full h-full object-cover object-center" />
         )}
 
-        {mainHero ? (
-          <div className="absolute bottom-10">
-            <InfiniteMovingCards
-              direction="left"
-              speed="slow"
-              type="text"
-              // textContent="WELCOME TO THE APOSTOLIC CHURCH - NYANYA ASSEMBLY - "
-              pauseOnHover={false}
-            />
-          </div>
-        ) : (
-          <div className="flex justify-center">
-            <motion.h1
-              className={`absolute bottom-10 font-grotesque font-extrabold text-white text-4xl md:text-7xl lg:text-9xl`}
-            >
-              {text}
-            </motion.h1>
-          </div>
-        )}
-      </section>
+        <div className="relative z-10 h-full flex items-end">
+          {mainHero ? (
+            <div className="absolute bottom-10 w-full">
+              <InfiniteMovingCards
+                direction="left"
+                speed="slow"
+                type="text"
+                pauseOnHover={false}
+              />
+            </div>
+          ) : (
+            <div className="w-full flex justify-center">
+              <motion.h1 className="absolute bottom-10 font-grotesque font-extrabold text-white text-4xl md:text-7xl lg:text-9xl">
+                {text}
+              </motion.h1>
+            </div>
+          )}
+        </div>
+      </div>
     </>
   );
 };
