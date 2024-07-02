@@ -13,7 +13,7 @@ const Explore = () => {
       name="explore"
     >
       <div className="w-full absolute inset-0">
-        <SparklesCore
+        {/* <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
           minSize={0.6}
@@ -21,11 +21,11 @@ const Explore = () => {
           particleDensity={100}
           className="w-full h-full"
           particleColor="#FFFFFF"
-        />
+        /> */}
       </div>
 
       <div className="mx-auto md:mx-5 lg:mx-[40px] xl:mx-[80px]">
-        <p className="text-4xl md:text-5xl lg:text-7xl xl:text-9xl text-slate-300 font-grotesque font-semibold text-center md:text-start">
+        <p className="text-4xl md:text-5xl lg:text-7xl xl:text-9xl text-slate-300 font-abril text-center md:text-start">
           <span className="">Explore</span>{" "}
           <span className="font-thin font-poppins">&</span>
           <span className="relative"> Connect</span>
@@ -50,24 +50,25 @@ const Explore = () => {
 
 const CardComponent = ({ title, bodyText, btnText, link, src }) => {
   return (
-    <div className="max-w-xs w-full">
+    <div className="max-w-xs w-full relative">
       <div className="h-96 shadow-xl rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 overflow-hidden relative">
         <div className="relative">
+          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
           <img
-            className="w-full h-full object-cover object-center"
+            className="w-full h-[400px] object-cover object-center"
             src={src}
             alt={title}
           />
-          <span className="absolute top-3 left-5 text-3xl md:text-4xl text-gray-50 font-grotesque font-semibold">
+          <span className="absolute top-3 left-5 text-2xl md:text-3xl text-white font-grotesque font-bold">
             {title}
           </span>
         </div>
-        <div className="absolute bottom-0 left-0 w-full  bg-opacity-30 backdrop-blur-sm bg-black px-5 py-2 flex flex-col items-start">
+        <div className="absolute bottom-0 left-0 w-full  bg-opacity-20 backdrop-blur-sm bg-black px-5 py-2 flex flex-col items-start">
           <p className="text-white font-grotesque font-extralight">
             {bodyText}
           </p>
           <Link to={link}>
-            <button className="mt-2 bg-gradient-to-br  from-gray-400 to-black text-white px-2 py-2 font-grotesque min-w-[100px] rounded-2xl transition duration-300">
+            <button className="mt-2 bg-gradient-to-b  from-gray-400 to-black text-white px-2 py-2 font-grotesque min-w-[100px] rounded-2xl transition duration-300">
               {btnText}
             </button>
           </Link>
@@ -84,7 +85,7 @@ const exploreNav = [
       "Discover exciting events that will uplift your spirit and enrich your journey.",
     btnText: "Learn More",
     link: "/events",
-    src: "images/ue1.jpg",
+    src: "images/men.jpg",
   },
   {
     title: "Join A Team",

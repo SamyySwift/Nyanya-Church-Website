@@ -28,6 +28,7 @@ module.exports = {
         vibes: ["Great Vibes"],
         grotesque: ["Bricolage Grotesque", "sans-serif"],
         karla: ["Karla", "sans-serif"],
+        abril: ["Abril Fatface", "serif"],
       },
       animation: {
         aurora: "aurora 60s linear infinite",

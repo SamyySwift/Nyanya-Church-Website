@@ -94,7 +94,7 @@ const Navbar = () => {
         <Link to="/">
           {/* <img src="/path/to/logo.png" alt="Logo" className="h-10" /> */}
         </Link>
-        <div className="hidden xl:flex items-baseline gap-6 text-white font-karla text-lg font-thin cursor-pointer">
+        <div className="hidden xl:flex items-baseline gap-6 text-white font-grotesque text-lg font-thin cursor-pointer">
           {navLinks.map((navItem, idx) => {
             if (location.pathname !== "/" && navItem.link === "explore") {
               return null;
@@ -193,7 +193,7 @@ const Navbar = () => {
             style={{ backgroundColor: "#f7f2e9" }}
           >
             <div className="relative h-full md:pl-[80px] pl-[40px] flex flex-col justify-center max-w-3xl">
-              <div className="flex flex-col gap-3 md:gap-5 lg:gap-7">
+              <div className="flex flex-col gap-2 md:gap-5 lg:gap-7">
                 {navLinks.map((navItem, idx) => {
                   if (location.pathname !== "/" && navItem.link === "explore") {
                     return null; // Skip rendering for "explore" link when pathname is not "/"
@@ -220,7 +220,7 @@ const Navbar = () => {
                             activeClass="active"
                             duration={500}
                             to={navItem.link}
-                            className="text-2xl md:text-3xl lg:text-5xl font-karla font-semibold flex items-center"
+                            className="text-3xl lg:text-5xl font-abril  flex items-center"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -231,11 +231,11 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={navItem.link}
-                            className="text-2xl md:text-3xl lg:text-5xl font-karla font-semibold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
+                            className="text-3xl lg:text-5xl font-abril flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
-                              <div className="mr-3 w-4 h-4 md:w-7 md:h-7 bg-black rounded-full"></div>
+                              <div className="mr-2 w-2 h-2 md:w-4 md:h-4 bg-black rounded-full"></div>
                             )}
                             {navItem.title}
                           </Link>
@@ -245,7 +245,7 @@ const Navbar = () => {
                   );
                 })}
               </div>
-              <div className="flex gap-4 absolute bottom-[150px]">
+              <div className="flex gap-4 absolute bottom-[160px]">
                 {socials.map((social, i) => (
                   <motion.div
                     key={`k_${i}`}
