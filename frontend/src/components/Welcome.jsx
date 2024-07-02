@@ -5,7 +5,7 @@ export function Welcome({ title, text, imgSrc }) {
     <section>
       <div
         className="h-[760px] sm:h-screen md:h-[500px] lg:h-[700px] xl:h-screen flex flex-col md:flex-row justify-around md:justify-between items-center gap-5 px-5 lg:px-[40px] xl:px-[80px]"
-        style={{ backgroundColor: "#FFF" }}
+        // style={{ backgroundColor: "#FFF" }}
       >
         <motion.div
           initial={{ opacity: 0.0, y: 70 }}
@@ -17,7 +17,9 @@ export function Welcome({ title, text, imgSrc }) {
           }}
         >
           <div className="md:max-w-md xl:max-w-lg space-y-[30px] md:space-y-[100px] xl:space-y-[120px]">
-            <h1 className="text-4xl lg:text-6xl  font-abril">{title}</h1>
+            <h1 className="text-4xl lg:text-6xl font-semibold font-grotesque ">
+              {title}
+            </h1>
             <div>
               <span className="font-grotesque md:text-md lg:text-xl xl:text-2xl leading-[30px] md:leading-[40px] lg:leading-[50px] xl:leading-[50px]">
                 {text}
@@ -33,7 +35,7 @@ export function Welcome({ title, text, imgSrc }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             src={`images/${imgSrc}`}
-            className="h-[420px] md:h-[350px] lg:h-[410px] lg:w-full object-cover rounded-[30px]"
+            className="h-[420px] md:h-[350px] lg:h-[410px] lg:w-full object-cover rounded-[20px]"
           />
         </div>
       </div>

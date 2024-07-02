@@ -10,7 +10,6 @@ import JoinAGroup from "./pages/JoinAGroup.jsx";
 import YouthFellowship from "./pages/YouthFellowship.jsx";
 import { AnimatePresence } from "framer-motion";
 import AboutPage from "./pages/AboutPage.jsx";
-import TechTeam from "./pages/TechTeam.jsx";
 import ClassicalChoir from "./pages/ClassicalChoir.jsx";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -29,7 +28,6 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/praise-team" element={<PraiseTeam />} />
             <Route path="/media-team" element={<MediaTeam />} />
-            <Route path="/tech-team" element={<TechTeam />} />
             <Route path="/plan-your-visit" element={<PlanVisit />} />
             <Route path="/join-a-group" element={<JoinAGroup />} />
             <Route path="/youth-fellowship" element={<YouthFellowship />} />

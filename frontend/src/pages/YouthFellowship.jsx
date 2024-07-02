@@ -5,7 +5,7 @@ const YouthFellowship = () => {
     <>
       <Ministries
         bgImg="images/youth.jpg"
-        bgText="YOUTH MOVEMENT"
+        bgText="Youth Movement"
         team="Youth Movement"
         title="Magnify God In Thy Youth"
         images={[

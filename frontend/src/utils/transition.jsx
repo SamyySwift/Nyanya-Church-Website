@@ -10,7 +10,7 @@ const Transition = (OgComponent) => {
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 0 }}
         exit={{ scaleY: 1 }}
-        transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-black text-4xl md:text-6xl lg:text-9xl font-grotesque font-bold">

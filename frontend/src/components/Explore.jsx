@@ -13,7 +13,7 @@ const Explore = () => {
       name="explore"
     >
       <div className="w-full absolute inset-0">
-        {/* <SparklesCore
+        <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
           minSize={0.6}
@@ -21,11 +21,11 @@ const Explore = () => {
           particleDensity={100}
           className="w-full h-full"
           particleColor="#FFFFFF"
-        /> */}
+        />
       </div>
 
       <div className="mx-auto md:mx-5 lg:mx-[40px] xl:mx-[80px]">
-        <p className="text-4xl md:text-5xl lg:text-7xl xl:text-9xl text-slate-300 font-abril text-center md:text-start">
+        <p className="text-4xl md:text-5xl lg:text-7xl xl:text-9xl text-slate-300 font-grotesque font-semibold text-center md:text-start">
           <span className="">Explore</span>{" "}
           <span className="font-thin font-poppins">&</span>
           <span className="relative"> Connect</span>
@@ -59,7 +59,7 @@ const CardComponent = ({ title, bodyText, btnText, link, src }) => {
             src={src}
             alt={title}
           />
-          <span className="absolute top-3 left-5 text-2xl md:text-3xl text-white font-grotesque font-bold">
+          <span className="absolute top-3 left-5 text-3xl text-white font-grotesque font-bold">
             {title}
           </span>
         </div>

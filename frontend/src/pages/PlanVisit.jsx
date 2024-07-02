@@ -11,9 +11,9 @@ const PlanVisit = () => {
         title="Plan your visit"
         description="Page contains info on how to locate church"
       />
-      <Hero text="PLAN YOUR VISIT" background="video" src="/bg2.mp4" />
+      <Hero text="Plan A Visit" background="video" src="/bg2.mp4" />
 
-      <section style={{ backgroundColor: "#FFFFFF" }}>
+      <section style={{ backgroundColor: "#FFF" }}>
         <Welcome
           title="Welcome To Church"
           text="No matter who you are or where you come from, our aim is for you

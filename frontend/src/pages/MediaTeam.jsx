@@ -5,7 +5,7 @@ const MediaTeam = () => {
     <>
       <Ministries
         bgImg="images/media5.jpg"
-        bgText="MEDIA TEAM"
+        bgText="Media Team"
         team="Media Team"
         images={[
           "images/media5.jpg",

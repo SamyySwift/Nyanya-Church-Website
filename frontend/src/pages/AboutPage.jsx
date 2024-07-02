@@ -9,7 +9,7 @@ const AboutPage = () => {
   return (
     <>
       <PageTitle title="About Us" description="About us page" />
-      <Hero text="ABOUT US" src="images/about-bg.JPG" mainHero={false} />
+      <Hero text="About Us" src="images/about-bg.JPG" mainHero={false} />
       <section>
         <Welcome
           title="Our Pastors"

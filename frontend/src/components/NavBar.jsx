@@ -220,7 +220,7 @@ const Navbar = () => {
                             activeClass="active"
                             duration={500}
                             to={navItem.link}
-                            className="text-3xl lg:text-5xl font-abril  flex items-center"
+                            className="text-3xl lg:text-5xl font-grotesque font-semibold  flex items-center"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -231,7 +231,7 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={navItem.link}
-                            className="text-3xl lg:text-5xl font-abril flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
+                            className="text-3xl lg:text-5xl font-grotesque font-semibold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (

@@ -5,7 +5,7 @@ function ClassicalChoir() {
     <>
       <Ministries
         bgImg="images/choir-bg.JPG"
-        bgText="CLASSICAL CHOIR"
+        bgText="Classical Choir"
         team="Classical Choir"
         images={[
           "images/choir3.jpg",

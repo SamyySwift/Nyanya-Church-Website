@@ -5,7 +5,7 @@ const PraiseTeam = () => {
     <>
       <Ministries
         bgImg="images/praise-team-1.jpg"
-        bgText="PRAISE TEAM"
+        bgText="Praise Team"
         team="Praise & Worship Team"
         title="Praise & Worship moves God"
         images={[
