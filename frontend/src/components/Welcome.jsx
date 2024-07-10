@@ -41,6 +41,7 @@ export function Welcome({ title, text, imgSrc = images }) {
 
         <ImagesSlider
           images={imgSrc}
+          opacity={10}
           className="max-w-2xl md:max-w-lg h-[400px] rounded-lg"
         />
         {/* </div> */}
@@ -50,6 +51,7 @@ export function Welcome({ title, text, imgSrc = images }) {
 }
 const images = [
   "images/wsp-img-1.webp",
+  "images/wsp-img-5.webp",
   "images/welcome-bg-1.webp",
   "images/welcome-bg-2.webp",
   "images/welcome-bg-3.webp",

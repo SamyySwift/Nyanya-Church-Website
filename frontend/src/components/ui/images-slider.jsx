@@ -10,6 +10,7 @@ export const ImagesSlider = ({
   className,
   autoplay = true,
   direction = "up",
+  opacity = 40,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -121,7 +122,10 @@ export const ImagesSlider = ({
       {areImagesLoaded && children}
       {areImagesLoaded && overlay && (
         <div
-          className={cn("absolute inset-0 bg-black/40 z-40", overlayClassName)}
+          className={cn(
+            `absolute inset-0 bg-black/${opacity} z-40`,
+            overlayClassName
+          )}
         />
       )}
 
