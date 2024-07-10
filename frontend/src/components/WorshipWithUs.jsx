@@ -15,26 +15,26 @@ const WorshipWithUs = () => {
   ];
 
   const images = [
-    "images/wsp-bg-1.webp",
-    "images/wsp-bg-2.webp",
-    "images/wsp-bg-3.webp",
-    "images/wsp-bg-4.webp",
-    "images/wsp-bg-5.jpg",
-    "images/wsp-bg-6.webp",
-    // "images/wsp-bg-7.webp",
-    "images/wsp-bg-8.webp",
-    "images/wsp-bg-9.webp",
-    "images/wsp-bg-10.webp",
+    "images/wsp-img-1.webp",
+    "images/wsp-img-2.webp",
+    "images/wsp-img-3.webp",
+    "images/wsp-img-4.webp",
+    "images/wsp-img-5.webp",
+    "images/wsp-img-6.webp",
+    // "images/wsp-img-7.webp",
+    "images/wsp-img-8.webp",
+    "images/wsp-img-9.webp",
+    "images/wsp-img-10.webp",
   ];
   return (
     // <ParallaxBanner
     //   layers={[
-    //     { image: "/images/worship-bg-1.JPG", speed: -15 },
+    //     { image: "/images/worship-img-1.JPG", speed: -15 },
     //     gradientOverlay,
     //   ]}
     //   className="h-screen"
     // >
-    //   {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
+    //   {/* <div className="absolute inset-0 img-black opacity-50"></div> */}
     //   <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
     //     <h1 className="text-5xl md:text-8xl font-light font-vibes ">
     //       Worship With Us <br />
