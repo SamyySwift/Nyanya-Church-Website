@@ -13,7 +13,7 @@ const Explore = () => {
       name="explore"
     >
       <div className="w-full absolute inset-0">
-        <SparklesCore
+        {/* <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
           minSize={0.6}
@@ -21,7 +21,7 @@ const Explore = () => {
           particleDensity={100}
           className="w-full h-full"
           particleColor="#FFFFFF"
-        />
+        /> */}
       </div>
 
       <div className="mx-auto md:mx-5 lg:mx-[40px] xl:mx-[80px]">
@@ -53,7 +53,7 @@ const CardComponent = ({ title, bodyText, btnText, link, src }) => {
     <div className="max-w-xs w-full relative">
       <div className="h-96 shadow-xl rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 overflow-hidden relative">
         <div className="relative">
-          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-25"></div>
           <img
             className="w-full h-[400px] object-cover object-center"
             src={src}
@@ -100,7 +100,7 @@ const exploreNav = [
     title: "Pastoral Care",
     bodyText: "Need prayer support or counseling? Submit request here.",
     btnText: "Email Us",
-    link: "mailto:samueludofia94@gmail.com",
+    link: "mailto:tacnna2024@gmail.com",
     src: "images/pastor.jpg",
   },
 ];

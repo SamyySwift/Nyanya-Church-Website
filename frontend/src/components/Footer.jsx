@@ -35,11 +35,11 @@ const Footer = () => {
           <p className="">TAC NYANYA ASSEMBLY</p>
           <span className="flex items-center font-light gap-2">
             <MdEmail className="" />
-            <span>info@nyanyarea.com</span>
+            <span>tacnna2024@gmail.com</span>
           </span>
           <p className="flex items-center font-light gap-2">
             <FaPhone className="w-4" />
-            <span>(+234) 809 670 2056</span>
+            <span>(+234) 816 725 9757</span>
           </p>
           <p className="flex font-light gap-2">
             <FaLocationDot className="w-4 mt-1" />

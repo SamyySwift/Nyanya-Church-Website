@@ -18,7 +18,6 @@ const PlanVisit = () => {
           title="Welcome To Church"
           text="No matter who you are or where you come from, our aim is for you
           to feel welcomed and comfortable as soon as you arrive. "
-          imgSrc="home.JPG"
         />
       </section>
       <section>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import { ImagesSlider } from "./ui/images-slider";
 
-export function Welcome({ title, text, imgSrc }) {
+export function Welcome({ title, text, imgSrc = images }) {
   return (
     <section>
       <div
@@ -29,16 +30,29 @@ export function Welcome({ title, text, imgSrc }) {
         </motion.div>
 
         {/* Image  */}
-        <div className="max-w-2xl md:max-w-lg">
-          <motion.img
+        {/* <div className="max-w-2xl md:max-w-lg"> */}
+        {/* <motion.img
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
             src={`images/${imgSrc}`}
             className="h-[420px] md:h-[350px] lg:h-[410px] lg:w-full object-cover rounded-[20px]"
-          />
-        </div>
+          /> */}
+
+        <ImagesSlider
+          images={imgSrc}
+          className="max-w-2xl md:max-w-lg h-[400px] rounded-lg"
+        />
+        {/* </div> */}
       </div>
     </section>
   );
 }
+const images = [
+  "images/wsp-bg-1.webp",
+  "images/welcome-bg-1.webp",
+  "images/welcome-bg-2.webp",
+  "images/welcome-bg-3.webp",
+  "images/welcome-bg-4.webp",
+  "images/welcome-bg-5.webp",
+];

@@ -15,16 +15,16 @@ const WorshipWithUs = () => {
   ];
 
   const images = [
-    "images/wsp-bg-1.jpg",
-    "images/wsp-bg-2.jpg",
-    "images/wsp-bg-3.JPG",
-    "images/wsp-bg-4.JPG",
-    "images/wsp-bg-5.JPG",
-    "images/wsp-bg-6.jpg",
-    "images/wsp-bg-7.JPG",
-    "images/wsp-bg-8.JPG",
-    "images/wsp-bg-9.JPG",
-    "images/wsp-bg-10.jpg",
+    "images/wsp-bg-1.webp",
+    "images/wsp-bg-2.webp",
+    "images/wsp-bg-3.webp",
+    "images/wsp-bg-4.webp",
+    "images/wsp-bg-5.jpg",
+    "images/wsp-bg-6.webp",
+    // "images/wsp-bg-7.webp",
+    "images/wsp-bg-8.webp",
+    "images/wsp-bg-9.webp",
+    "images/wsp-bg-10.webp",
   ];
   return (
     // <ParallaxBanner

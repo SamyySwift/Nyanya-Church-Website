@@ -12,14 +12,27 @@ import { AnimatePresence } from "framer-motion";
 import AboutPage from "./pages/AboutPage.jsx";
 import ClassicalChoir from "./pages/ClassicalChoir.jsx";
 import { HelmetProvider } from "react-helmet-async";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 function App() {
   const location = useLocation();
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <>
-      {/* <div className=" backdrop-blur-lg bg-opacity-20 p-8"> */}
       <Navbar />
-      {/* </div> */}
+
       <HelmetProvider>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>

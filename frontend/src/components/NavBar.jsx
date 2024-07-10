@@ -89,7 +89,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-xs bg-opacity-30">
+    <nav className="absolute w-full top-0 z-50 bg-gradient-to-b from-black to-black/0 backdrop-filter backdrop-blur-xs bg-opacity-30">
       <div className="container mx-auto px-5 md:px-8 xl:px-[80px] py-6 flex justify-between items-center">
         <Link to="/">
           {/* <img src="/path/to/logo.png" alt="Logo" className="h-10" /> */}

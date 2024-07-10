@@ -6,6 +6,7 @@ import PageTitle from "../components/PageTitle";
 import ChurchServices from "../components/ChurchServices";
 
 const AboutPage = () => {
+  const images = ["images/pastor.jpg"];
   return (
     <>
       <PageTitle title="About Us" description="About us page" />
@@ -14,7 +15,7 @@ const AboutPage = () => {
         <Welcome
           title="Our Pastors"
           text="Apostle and Deaconness I.O Udofia currently serve as Pastors of The Apostoliic Church Nigeria Nyanya Assembly."
-          imgSrc="pastor.jpg"
+          imgSrc={images}
         />
       </section>
       {/* <WordAnimation /> */}

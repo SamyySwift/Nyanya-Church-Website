@@ -5,6 +5,7 @@ import transition from "../utils/transition";
 import PageTitle from "../components/PageTitle";
 
 const JoinAGroup = () => {
+  const images = ["images/youth4.JPG"];
   return (
     <>
       <PageTitle title="Join a Group" description="Different church groups" />
@@ -13,7 +14,7 @@ const JoinAGroup = () => {
         <Welcome
           title="JOIN A TEAM"
           text="Join a team at Nyanya Assembly to contribute to our vision. Connect with like-minded individuals, learn new skills, and find your fit. Together, we can achieve so much more!"
-          imgSrc="youth4.JPG"
+          imgSrc={images}
         />
       </section>
       <section>
