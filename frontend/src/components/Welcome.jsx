@@ -49,7 +49,7 @@ export function Welcome({ title, text, imgSrc = images }) {
   );
 }
 const images = [
-  "images/wsp-bg-1.webp",
+  "images/wsp-img-1.webp",
   "images/welcome-bg-1.webp",
   "images/welcome-bg-2.webp",
   "images/welcome-bg-3.webp",
