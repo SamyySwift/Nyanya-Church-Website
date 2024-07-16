@@ -82,7 +82,7 @@ const Footer = () => {
           {links.map((link) => (
             <Link to={link.href} key={link.name} className="flex items-center">
               {location.pathname === link.href && (
-                <div className="mr-3 w-1 h-1 md:w-2 md:h-2 bg-black rounded-full"></div>
+                <div className="mr-1 w-1 h-1 md:w-2 md:h-2 bg-black rounded-full"></div>
               )}
               <p className="hover:underline hover:scale-105 duration-500">
                 {link.name}
@@ -119,6 +119,10 @@ const links = [
   {
     name: "Events",
     href: "/events",
+  },
+  {
+    name: "Sermons",
+    href: "/sermons",
   },
 
   {

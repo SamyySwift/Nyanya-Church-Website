@@ -54,9 +54,9 @@ const Navbar = () => {
     }),
     exit: (idx) => ({
       opacity: 0,
-      y: -200,
+      y: -30,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
         delay: 0.2 + idx * 0.1,
         ease: [0.215, 0.61, 0.355, 1],
       },
@@ -93,8 +93,14 @@ const Navbar = () => {
       <div className="container mx-auto px-5 md:px-8 xl:px-[80px] py-6 flex justify-between items-center">
         <Link to="/">
           {/* <img src="/path/to/logo.png" alt="Logo" className="h-10" /> */}
+          {/* <div class="text-white border border-1 border-white rounded-full flex justify-center items-center text-sm md:w-15 md:h-15 md:text-xs sm:w-16 sm:h-16 sm:text-xs">
+            <span>
+              Nyanya <br />
+              Assembly
+            </span>
+          </div> */}
         </Link>
-        <div className="hidden xl:flex items-baseline gap-6 text-white font-grotesque text-lg font-thin cursor-pointer">
+        <div className="hidden xl:flex items-baseline gap-5  text-white font-grotesque text-md font-thin cursor-pointer">
           {navLinks.map((navItem, idx) => {
             if (location.pathname !== "/" && navItem.link === "explore") {
               return null;
@@ -272,14 +278,15 @@ const Navbar = () => {
 const navLinks = [
   { title: "Home", link: "/" },
   { title: "Events", link: "/events" },
-  { title: "About Us", link: "/about" },
-  { title: "Contact Us", link: "footer", scroll: true },
-  { title: "Plan your Visit", link: "/plan-your-visit" },
+  { title: "Sermons", link: "/sermons" },
   {
-    title: "Explore & Connect",
+    title: "Explore",
     link: "explore",
     scroll: true,
   },
+  { title: "About Us", link: "/about" },
+  { title: "Contact Us", link: "footer", scroll: true },
+  { title: "Plan Your Visit", link: "/plan-your-visit" },
 ];
 
 export default Navbar;

@@ -11,7 +11,7 @@ const PraiseTeam = () => {
         images={[
           "images/praise-team-6.JPG",
           "images/praise-team-3.jpg",
-          "images/praise-team-5.JPG",
+          // "images/praise-team-5.JPG",
           "images/praise-team-7.JPG",
         ]}
       />

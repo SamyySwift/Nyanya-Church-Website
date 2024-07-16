@@ -1,6 +1,8 @@
 import { useParallax } from "react-scroll-parallax";
 import { Link } from "react-router-dom";
-import { SparklesCore } from "./ui/sparkles";
+// import { SparklesCore } from "./ui/sparkles";
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 
 const Explore = () => {
   const { ref } = useParallax({ speed: -20 });
@@ -37,6 +39,7 @@ const Explore = () => {
               title={item.title}
               bodyText={item.bodyText}
               btnText={item.btnText}
+              icon={item.icon}
               link={item.link}
               src={item.src}
               key={i}
@@ -48,7 +51,7 @@ const Explore = () => {
   );
 };
 
-const CardComponent = ({ title, bodyText, btnText, link, src }) => {
+const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
   return (
     <div className="max-w-xs w-full relative">
       <div className="h-96 shadow-xl rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 overflow-hidden relative">
@@ -59,7 +62,7 @@ const CardComponent = ({ title, bodyText, btnText, link, src }) => {
             src={src}
             alt={title}
           />
-          <span className="absolute top-3 left-5 text-3xl text-white font-grotesque font-bold">
+          <span className="absolute top-2 left-5 text-3xl text-white font-grotesque font-bold">
             {title}
           </span>
         </div>
@@ -68,7 +71,8 @@ const CardComponent = ({ title, bodyText, btnText, link, src }) => {
             {bodyText}
           </p>
           <Link to={link}>
-            <button className="mt-2 bg-gradient-to-b  from-gray-400 to-black text-white px-2 py-2 font-grotesque min-w-[100px] rounded-2xl transition duration-300">
+            <button className="flex items-center gap-1 mt-2 bg-black text-white px-2 py-2 font-grotesque font-light min-w-[100px] rounded-2xl">
+              {icon}
               {btnText}
             </button>
           </Link>
@@ -80,26 +84,29 @@ const CardComponent = ({ title, bodyText, btnText, link, src }) => {
 
 const exploreNav = [
   {
-    title: "Upcoming Events",
+    title: "Events",
     bodyText:
       "Discover exciting events that will uplift your spirit and enrich your journey.",
     btnText: "Learn More",
+    icon: <BsArrowUpRightCircleFill />,
     link: "/events",
-    src: "images/men.jpg",
+    src: "images/iyc.jpg",
   },
   {
     title: "Join A Team",
     bodyText:
       "Explore our diverse church groups and teams, find your place to belong!",
     btnText: "Learn More",
+    icon: <BsArrowUpRightCircleFill />,
     link: "/join-a-group",
-    src: "images/pv.jpg",
+    src: "images/welcome-bg-8.JPG",
   },
 
   {
     title: "Pastoral Care",
     bodyText: "Need prayer support or counseling? Submit request here.",
     btnText: "Email Us",
+    icon: <MdEmail />,
     link: "mailto:tacnna2024@gmail.com",
     src: "images/pastor.jpg",
   },

@@ -14,6 +14,8 @@ import ClassicalChoir from "./pages/ClassicalChoir.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import ScrollToTop from "./utils/scroll-to-top.js";
+import Sermons from "./pages/Sermons.jsx";
 
 function App() {
   const location = useLocation();
@@ -31,6 +33,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
 
       <HelmetProvider>
@@ -39,6 +42,7 @@ function App() {
             <Route index element={<HomeScreen />} />
             <Route path="/events" element={<Events />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/sermons" element={<Sermons />} />
             <Route path="/praise-team" element={<PraiseTeam />} />
             <Route path="/media-team" element={<MediaTeam />} />
             <Route path="/plan-your-visit" element={<PlanVisit />} />

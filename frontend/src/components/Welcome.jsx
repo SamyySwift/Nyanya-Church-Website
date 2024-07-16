@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { ImagesSlider } from "./ui/images-slider";
+import { useParallax } from "react-scroll-parallax";
 
 export function Welcome({ title, text, imgSrc = images }) {
+  const { ref } = useParallax({ speed: -20 });
   return (
-    <section>
+    <section className="overflow-hidden">
       <div
         className="h-[760px] sm:h-screen md:h-[500px] lg:h-[700px] xl:h-screen flex flex-col md:flex-row justify-around md:justify-between items-center gap-5 px-5 lg:px-[40px] xl:px-[80px]"
-        // style={{ backgroundColor: "#FFF" }}
+        ref={ref}
       >
         <motion.div
           initial={{ opacity: 0.0, y: 70 }}
@@ -29,32 +31,24 @@ export function Welcome({ title, text, imgSrc = images }) {
           </div>
         </motion.div>
 
-        {/* Image  */}
-        {/* <div className="max-w-2xl md:max-w-lg"> */}
-        {/* <motion.img
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeInOut", duration: 1, delay: 0.5 }}
-            src={`images/${imgSrc}`}
-            className="h-[420px] md:h-[350px] lg:h-[410px] lg:w-full object-cover rounded-[20px]"
-          /> */}
-
         <ImagesSlider
           images={imgSrc}
-          opacity={10}
-          className="max-w-2xl md:max-w-lg h-[400px] rounded-lg"
+          opacity={0}
+          className="max-w-2xl md:max-w-lg h-[400px] rounded-2xl"
         />
-        {/* </div> */}
       </div>
     </section>
   );
 }
 const images = [
   "images/wsp-img-1.webp",
+  "images/welcome-bg-8.JPG",
   "images/wsp-img-5.webp",
   "images/welcome-bg-1.webp",
+  "images/welcome-bg-6.JPG",
   "images/welcome-bg-2.webp",
+  "images/welcome-bg-7.JPG",
   "images/welcome-bg-3.webp",
   "images/welcome-bg-4.webp",
-  "images/welcome-bg-5.webp",
+  "images/welcome-bg-5.JPG",
 ];

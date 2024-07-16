@@ -4,15 +4,15 @@ const YouthFellowship = () => {
   return (
     <>
       <Ministries
-        bgImg="images/youth.jpg"
+        bgImg="/bg2.mp4"
+        background="video"
         bgText="Youth Movement"
         team="Youth Movement"
-        title="Magnify God In Thy Youth"
         images={[
-          "images/youth6.JPG",
+          "images/youth.JPG",
           "images/youth3.JPG",
           "images/youth4.JPG",
-          "images/youth5.JPG",
+          "images/youth1.JPG",
         ]}
       />
     </>

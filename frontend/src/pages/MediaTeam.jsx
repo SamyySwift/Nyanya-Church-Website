@@ -11,7 +11,7 @@ const MediaTeam = () => {
           "images/media5.jpg",
           "images/media1.jpg",
           "images/media4.jpg",
-          "images/media3.jpg",
+          "images/media.JPG",
         ]}
       />
     </>

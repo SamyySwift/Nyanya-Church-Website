@@ -1,15 +1,5 @@
 const events = [
   {
-    title: "Men's Conference",
-    description:
-      "Join us for a powerful Men's Conference where we will explore topics relevant to men in today's society. Engage in thought-provoking discussions, inspiring sessions, and fellowship with other men committed to making a positive impact.",
-    color: "#977F6D",
-    src: "images/men.jpg",
-    date: "2024-07-06",
-    time: "10:00:00.000",
-    duration: 3,
-  },
-  {
     title: "Youth Encounter",
     description:
       "Join us for an unforgettable youth rally filled with exciting activities, inspiring talks, and meaningful interactions. This event is designed to empower and uplift the youth of Nyanya, providing them with the tools and support they need to thrive in today's world.",
@@ -47,7 +37,7 @@ const events = [
     description:
       "Participate in our Area Convention, a gathering that brings together members from various regions to celebrate achievements, share knowledge, and plan for the future. Join us for sessions, discussions, and community-building activities.",
     color: "#8BA28D",
-    src: "images/youth6.JPG",
+    src: "images/about-bg.JPG",
     date: "2024-03-15",
     time: "08:00:00.000",
     duration: 0.5,
