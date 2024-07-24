@@ -14,22 +14,11 @@ const Explore = () => {
       style={{ backgroundColor: "#000" }}
       name="explore"
     >
-      <div className="w-full absolute inset-0">
-        {/* <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        /> */}
-      </div>
+      <div className="w-full absolute inset-0"></div>
 
       <div className="mx-auto md:mx-5 lg:mx-[40px] xl:mx-[80px]">
         <p className="text-4xl md:text-5xl lg:text-7xl xl:text-9xl text-slate-300 font-grotesque font-semibold text-center md:text-start">
-          <span className="">Explore</span>{" "}
-          <span className="font-thin font-poppins">&</span>
+          <span className="">Explore</span> <span className="font-thin">&</span>
           <span className="relative"> Connect</span>
         </p>
 
@@ -54,7 +43,7 @@ const Explore = () => {
 const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
   return (
     <div className="max-w-xs w-full relative">
-      <div className="h-96 shadow-xl rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 overflow-hidden relative">
+      <div className="h-96 rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 overflow-hidden relative">
         <div className="relative">
           <div className="absolute inset-0 bg-black bg-opacity-25"></div>
           <img
@@ -66,12 +55,12 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
             {title}
           </span>
         </div>
-        <div className="absolute bottom-0 left-0 w-full  bg-opacity-20 backdrop-blur-sm bg-black px-5 py-2 flex flex-col items-start">
+        <div className="absolute bottom-0 left-0 w-full  bg-opacity-20 backdrop-blur-md bg-black px-5 py-2 flex flex-col items-start">
           <p className="text-white font-grotesque font-extralight">
             {bodyText}
           </p>
           <Link to={link}>
-            <button className="flex items-center gap-1 mt-2 bg-black text-white px-2 py-2 font-grotesque font-light min-w-[100px] rounded-2xl">
+            <button className="flex items-center gap-1 mt-2 bg-gradient-to-b from-black to-black/0 text-white px-2 py-2 font-grotesque font-light min-w-[100px] rounded-2xl">
               {icon}
               {btnText}
             </button>
@@ -99,7 +88,7 @@ const exploreNav = [
     btnText: "Learn More",
     icon: <BsArrowUpRightCircleFill />,
     link: "/join-a-group",
-    src: "images/welcome-bg-8.JPG",
+    src: "images/welcome-bg-8.webp",
   },
 
   {
@@ -108,7 +97,7 @@ const exploreNav = [
     btnText: "Email Us",
     icon: <MdEmail />,
     link: "mailto:tacnna2024@gmail.com",
-    src: "images/pastor.jpg",
+    src: "images/pastor.webp",
   },
 ];
 

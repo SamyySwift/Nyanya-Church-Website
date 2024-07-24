@@ -31,7 +31,7 @@ const Footer = () => {
         <h1 className="mb-5 font-grotesque text-md md:text-lg lg:text-xl">
           CONTACT US
         </h1>
-        <div className="max-w-sm md:max-w-xs lg:max-w-md space-y-3 font-grotesque md:text-lg">
+        <div className="max-w-sm md:max-w-xs lg:max-w-sm space-y-3 font-grotesque md:text-md">
           <p className="">TAC NYANYA ASSEMBLY</p>
           <span className="flex items-center font-light gap-2">
             <MdEmail className="" />
@@ -41,16 +41,17 @@ const Footer = () => {
             <FaPhone className="w-4" />
             <span>(+234) 816 725 9757</span>
           </p>
-          <p className="flex font-light gap-2">
-            <FaLocationDot className="w-4 mt-1" />
+          <p className="flex font-light gap-[6px]">
+            <FaLocationDot className="w-8 mt-1" />
             <span>
-              NO. 2, Avenue Nyanya Karu Road Opposite <br /> A.A. Rano Filling
-              Station, Nyanya, Abuja, FCT
+              NO. 2, Church Avenue, Nyanya Karu Road Opposite A.A. Rano Filling
+              Station, Nyanya,
+              <br /> Abuja, FCT
             </span>
           </p>
         </div>
         <hr
-          className="mt-7 w-[340px] md:w-[290px] lg:w-[380px]"
+          className="mt-7 w-[340px] md:w-[290px] lg:w-[330px]"
           style={{
             backgroundColor: "black",
             height: "1px",
@@ -75,10 +76,8 @@ const Footer = () => {
 
       {/* Links */}
       <div className="flex flex-col">
-        <h1 className="mb-5 font-grotesque text-md md:text-lg lg:text-xl">
-          QUICK LINKS
-        </h1>
-        <div className="flex flex-col gap-2 font-light font-grotesque text-md md:text-lg lg:text-lg">
+        <h1 className="mb-5 font-grotesque text-md md:text-lg">QUICK LINKS</h1>
+        <div className="flex flex-col gap-2 font-light font-grotesque text-md md:text-md">
           {links.map((link) => (
             <Link to={link.href} key={link.name} className="flex items-center">
               {location.pathname === link.href && (

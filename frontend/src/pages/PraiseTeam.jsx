@@ -4,15 +4,16 @@ const PraiseTeam = () => {
   return (
     <>
       <Ministries
-        bgImg="images/praise-team-1.jpg"
+        bgImg="images/praise-team-1.webp"
         bgText="Praise Team"
         team="Praise & Worship Team"
-        title="Praise & Worship moves God"
         images={[
-          "images/praise-team-6.JPG",
-          "images/praise-team-3.jpg",
-          // "images/praise-team-5.JPG",
-          "images/praise-team-7.JPG",
+          "images/praise-team-1.webp",
+          "images/praise-team-5.webp",
+          "images/praise-team-4.webp",
+          "images/praise-team-2.webp",
+          "images/praise-team-3.webp",
+          "images/praise-team-7.webp",
         ]}
       />
     </>

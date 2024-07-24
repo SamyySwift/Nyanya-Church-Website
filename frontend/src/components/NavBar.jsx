@@ -92,7 +92,7 @@ const Navbar = () => {
     <nav className="absolute w-full top-0 z-50 bg-gradient-to-b from-black to-black/0 backdrop-filter backdrop-blur-xs bg-opacity-30">
       <div className="container mx-auto px-5 md:px-8 xl:px-[80px] py-6 flex justify-between items-center">
         <Link to="/">
-          {/* <img src="/path/to/logo.png" alt="Logo" className="h-10" /> */}
+          <img src="/path/to/logo.png" alt="Logo" className="h-10" />
           {/* <div class="text-white border border-1 border-white rounded-full flex justify-center items-center text-sm md:w-15 md:h-15 md:text-xs sm:w-16 sm:h-16 sm:text-xs">
             <span>
               Nyanya <br />

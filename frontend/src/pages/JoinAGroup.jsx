@@ -6,23 +6,24 @@ import PageTitle from "../components/PageTitle";
 
 const JoinAGroup = () => {
   const images = [
-    "images/youth.JPG",
-    "images/youth1.JPG",
-    "images/youth3.JPG",
-    "images/youth4.JPG",
+    "images/youth.webp",
+    "images/youth1.webp",
+    "images/youth3.webp",
+    "images/youth4.webp",
   ];
   return (
     <>
       <PageTitle title="Join a Group" description="Different church groups" />
-      <Hero text="Join A Team" background="video" src="/bg2.mp4" />
-      <section style={{ backgroundColor: "#f7f2e9" }}>
+      <Hero text="Join A Team" background="video" src="/bg3.mp4" />
+      {/* WELCOME */}
+      <section style={{ backgroundColor: "##F7F2E9" }}>
         <Welcome
           title="Nyanya Teams"
           text="Join a team at Nyanya Assembly to contribute to our vision. Connect with like-minded individuals, learn new skills, and find your fit. Together, we can achieve so much more!"
           imgSrc={images}
         />
       </section>
-      <section>
+      <section style={{ backgroundColor: "#ECECEC" }}>
         <div className="text-center pt-20">
           <h1 className=" font-vibes text-5xl md:text-8xl mx-2">
             Discover Various Groups
@@ -49,7 +50,7 @@ const events = [
     description:
       "Join us for engaging activities, inspiring talks, and meaningful interactions at the Youth Fellowship. This event is designed to empower and uplift the youth of Nyanya, providing them with the tools and support they need to thrive.",
     color: "#BBACAF",
-    src: "images/youth.JPG",
+    src: "images/youth.webp",
     link: "/youth-fellowship",
   },
   {
@@ -57,7 +58,7 @@ const events = [
     description:
       "Come together with the Praise Team to make a joyful noise and worship through music. Join us in making Nyanya a more beautiful place for everyone by lifting spirits with our musical talents.",
     color: "#B0A695",
-    src: "images/praise-team-2.JPG",
+    src: "images/praise-team-2.webp",
     link: "/praise-team",
   },
   {
@@ -65,7 +66,7 @@ const events = [
     description:
       "Be part of the Media Team to capture and share the vibrant life of our church. Help us raise awareness and promote our message through various media channels, showcasing the importance of community and faith.",
     color: "#A9B388",
-    src: "images/media.JPG",
+    src: "images/media.webp",
     link: "/media-team",
   },
   {
@@ -73,7 +74,7 @@ const events = [
     description:
       "Join the Classical Choir and support a worthy cause through your musical talents. Participate in events and performances that uplift and inspire, making a positive impact on our community.",
     color: "#B4B4B8",
-    src: "images/choir3.jpg",
+    src: "images/choir3.webp",
     link: "/classical-choir",
   },
 ];

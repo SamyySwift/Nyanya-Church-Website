@@ -11,9 +11,9 @@ const PlanVisit = () => {
         title="Plan your visit"
         description="Page contains info on how to locate church"
       />
-      <Hero text="Plan A Visit" background="video" src="/bg2.mp4" />
+      <Hero text="Plan A Visit" background="video" src="/bg3.mp4" />
 
-      <section style={{ backgroundColor: "#FFF" }}>
+      <section>
         <Welcome
           title="Welcome To Church"
           text="No matter who you are or where you come from, our aim is for you
@@ -23,7 +23,7 @@ const PlanVisit = () => {
       <section>
         <div
           className="py-10 flex flex-col md:flex-row justify-center items-center pt-20 gap-10 overflow-hidden"
-          style={{ backgroundColor: "#EBE3D5" }}
+          style={{ backgroundColor: "#ECECEC" }}
         >
           <iframe
             className="md:w-[600px] md:h-[500px]  w-screen h-[600px] px-5"

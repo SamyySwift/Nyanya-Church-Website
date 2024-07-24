@@ -46,7 +46,7 @@ export function ContactForm({ team }) {
   };
 
   return (
-    <div className="max-w-sm md:max-w-xl w-full mx-auto rounded-xl md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+    <div className="max-w-sm md:max-w-xl w-full mx-auto rounded-xl md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black font-grotesque">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         {team} Contact Form
       </h2>

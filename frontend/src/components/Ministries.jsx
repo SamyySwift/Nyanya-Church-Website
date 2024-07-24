@@ -1,19 +1,22 @@
 import Hero from "./Hero.jsx";
 import ContactForm from "./ContactForm.jsx";
-import { useParallax } from "react-scroll-parallax";
 
 import InfiniteMovingCards from "./ui/infinite-moving-cards.jsx";
 
 const Ministries = ({ bgImg, bgText, team, images, background }) => {
-  const { ref } = useParallax({ speed: -20 });
+  // const { ref } = useParallax({ speed: -20 });
 
   return (
     <>
       <Hero text={bgText} src={bgImg} background={background} />
 
       <section className="overflow-hidden">
-        <div className="py-[200px] bg-black flex items-center" ref={ref}>
-          <InfiniteMovingCards items={images} type="image" />
+        <div className="py-20 bg-black flex items-center">
+          <InfiniteMovingCards
+            items={images}
+            type="image"
+            pauseOnHover={false}
+          />
         </div>
       </section>
 

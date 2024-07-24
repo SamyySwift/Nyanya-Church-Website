@@ -10,10 +10,7 @@ const ITEMS_PER_PAGE = 9; // Adjust this number based on how many items you want
 export const ParallaxScroll = ({ items, className }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const gridRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    // container: gridRef,
-    // offset: ["start start", "end start"], // remove this if your container is not fixed height
-  });
+  const { scrollYProgress } = useScroll();
 
   const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
   const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
@@ -35,7 +32,11 @@ export const ParallaxScroll = ({ items, className }) => {
   const thirdPart = paginatedImages.slice(2 * third);
 
   const Card = ({ imgSrc, title, preacher, date, idx, translateY }) => (
-    <motion.div style={{ y: translateY }} key={idx}>
+    <motion.div
+      style={{ y: translateY }}
+      key={idx}
+      className="flex justify-center w-full"
+    >
       <div className="max-w-xs w-full">
         <div
           className={cn(
@@ -69,45 +70,48 @@ export const ParallaxScroll = ({ items, className }) => {
   );
 
   return (
-    <div
-      className={cn("h-[40rem] items-start overflow-y-auto w-full", className)}
-    >
+    <div className={cn("w-full", className)}>
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 py-40 px-10"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 pt-40 md:py-40 px-10 overflow-hidden"
         ref={gridRef}
       >
-        <div className="grid gap-10">
+        <div className="flex flex-col items-center gap-10">
           {firstPart.map((el, idx) => (
             <Card
               imgSrc={el.bgImg}
               title={el.title}
               preacher={el.preacher}
               date={el.date}
-              idx={"grid-1" + idx}
+              key={`grid-1-${startIndex + idx}`}
               translateY={translateFirst}
             />
           ))}
         </div>
-        <div className="grid gap-10">
+        <div className="flex flex-col items-center gap-10">
           {secondPart.map((el, idx) => (
             <Card
               imgSrc={el.bgImg}
               title={el.title}
               preacher={el.preacher}
               date={el.date}
-              idx={"grid-2" + idx}
+              key={`grid-2-${startIndex + idx}`}
               translateY={translateSecond}
             />
           ))}
         </div>
-        <div className="grid gap-10">
+        <div
+          className={cn(
+            "flex flex-col items-center gap-10",
+            thirdPart.length <= 1 ? "mt-0" : "mt-[300px] md:mt-0"
+          )}
+        >
           {thirdPart.map((el, idx) => (
             <Card
               imgSrc={el.bgImg}
               title={el.title}
               preacher={el.preacher}
               date={el.date}
-              idx={"grid-3" + idx}
+              key={`grid-3-${startIndex + idx}`}
               translateY={translateThird}
             />
           ))}
@@ -119,7 +123,7 @@ export const ParallaxScroll = ({ items, className }) => {
           disabled={currentPage === 1}
           className="px-4 py-2 mx-2 bg-gray-300 rounded-lg font-grotesque disabled:opacity-50"
         >
-          Previous
+          Prev
         </button>
         {Array.from({ length: totalPages }, (_, index) => (
           <button

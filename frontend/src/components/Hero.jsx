@@ -1,6 +1,4 @@
-import React from "react";
 import { motion } from "framer-motion";
-import InfiniteMovingCards from "../components/ui/infinite-moving-cards";
 
 const Hero = ({ text, background, src, mainHero = false }) => {
   return (
@@ -22,16 +20,18 @@ const Hero = ({ text, background, src, mainHero = false }) => {
             className="w-full h-full object-cover object-center absolute inset-0"
           />
         )}
+        <div className="absolute inset-0 bg-black opacity-30"></div>
 
-        <div className="relative z-10 h-full flex items-end">
+        <div>
           {mainHero ? (
-            <div className="absolute bottom-10 w-full">
-              <InfiniteMovingCards
-                direction="left"
-                speed="slow"
-                type="text"
-                pauseOnHover={false}
-              />
+            <div>
+              <h1 className="absolute bottom-10 left-5 md:left-8  xl:left-[80px] text-white font-extrabold text-4xl md:text-6xl lg:text-8xl  max-w-xs md:max-w-lg">
+                {text}
+              </h1>
+              {/* 
+              <button className="absolute bottom-[50px] right-[10px] md:right-[80px] xl:right-[600px] bg-white hover:bg-gray-300 font-grotesque text-lg md:text-xl text-black rounded-xl p-4">
+                Live Stream
+              </button> */}
             </div>
           ) : (
             <div className="w-full flex justify-center">

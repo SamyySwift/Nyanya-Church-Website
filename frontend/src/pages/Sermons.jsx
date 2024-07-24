@@ -1,32 +1,47 @@
 import Hero from "../components/Hero";
+import PageTitle from "../components/PageTitle";
 import { ParallaxScroll } from "../components/ui/parallax-scroll";
+import transition from "../utils/transition";
+// import WavyBackground from "../components/ui/wavy-background";
 
 const Sermons = () => {
   return (
     <>
+      <PageTitle
+        title="Sermons | Nyanya Assembly"
+        description="church sermons"
+      />
       <Hero
         text="Sermons"
         // background="video"
-        src="images/bible.jpg"
+        src="images/bible.webp"
         mainHero={false}
       />
-      {/* <div className="max-h-[800px] max-w-[900px] mx-auto "> */}
-      <ParallaxScroll items={messages} className="h-full" />
-      {/* </div> */}
+
+      {/* <WavyBackground className="" waveWidth={40}>
+        <p className="font-grotesque text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
+          Sermons
+        </p>
+        <p className="text-base font-grotesque md:text-lg mt-4 text-white font-normal inter-var text-center">
+          Inspiring messages to uplift your spirit and guide your journey of
+          faith
+        </p>
+      </WavyBackground> */}
+
+      <ParallaxScroll items={messages} />
     </>
   );
 };
 
-export default Sermons;
+export default transition(Sermons);
 
 const messages = [
   {
     title: "Your Season of Release and Freedom",
-    bgImg:
-      "https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+    bgImg: "images/about-bg.webp",
     link: "",
     preacher: "Pastor Imoh Udofia",
-    date: "Huly 27, 2024",
+    date: "July 27, 2024",
   },
   {
     title: "Embracing the Light of Hope",
@@ -67,7 +82,7 @@ const messages = [
   },
   {
     title: "Courage to Overcome",
-    bgImg: `https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80`,
+    bgImg: `images/pastor.webp`,
     link: "",
     preacher: "Pastor Samuel Green",
     date: "August 31, 2024",

@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 // import customFetch from "../hooks/customFetch";
 import events from "./data";
 import PageTitle from "../components/PageTitle";
+import transition from "../utils/transition";
 
 const Events = () => {
   // const { loading, error, data } = customFetch(
@@ -16,7 +17,7 @@ const Events = () => {
         description="page containing all church upcoming events"
       />
 
-      <Hero text="Upcoming Events" background="video" src="/bg2.mp4" />
+      <Hero text="Upcoming Events" background="video" src="/bg3.mp4" />
 
       <section>
         <div className="text-center pt-20">
@@ -72,4 +73,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default transition(Events);

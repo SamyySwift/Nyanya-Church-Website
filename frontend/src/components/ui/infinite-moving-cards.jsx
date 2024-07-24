@@ -113,7 +113,7 @@ const InfiniteMovingCards = ({
               //     </div>
               //   </blockquote>
               // </li>
-              <div className="w-[400px] h-[400px]">
+              <div className="w-[300px] h-[300px]">
                 <img
                   src={item}
                   key={idx}

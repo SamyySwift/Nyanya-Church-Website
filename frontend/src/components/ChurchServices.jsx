@@ -1,32 +1,12 @@
-import { FaClock, FaBoxArchive } from "react-icons/fa6";
-import { CiStreamOn } from "react-icons/ci";
-import HoverBorderGradientButton from "./ui/hover-border-gradient";
-import { motion } from "framer-motion";
+import { FaClock } from "react-icons/fa6";
 import { useParallax } from "react-scroll-parallax";
-import { SparklesCore } from "./ui/sparkles";
-import { Link } from "react-router-dom";
 
 const ChurchServices = () => {
-  const { ref } = useParallax({
-    speed: -20,
-  });
-
   return (
     <div
-      className="relative py-20 md:h-screen bg-black flex flex-col items-center justify-center overflow-hidden"
-      ref={ref}
+      className="relative py-10  bg-black flex flex-col items-center justify-center overflow-hidden"
+      // ref={ref}
     >
-      <div className="w-full absolute inset-0">
-        <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
       <h1 className="md:text-7xl text-4xl lg:text-6xl mb-20 font-semibold text-center text-slate-300 relative font-grotesque">
         Our Church Services
       </h1>
@@ -42,10 +22,11 @@ const ChurchServices = () => {
                   <div className="bg-black h-10 w-10 mr-2 flex items-center justify-center text-white rounded-xl font-extralight">
                     {service.day.substring(0, 3)}
                   </div>
-                  <h3 className="text-xl  font-semibold text-gray-800 tracking-tight">
+                  <h3 className="text-xl  font-semibold text-black tracking-tight">
                     {service.title}
                   </h3>
                 </div>
+
                 <hr
                   className="w-full mb-1"
                   style={{
@@ -65,7 +46,7 @@ const ChurchServices = () => {
                     height: "1px",
                   }}
                 />
-                <p className="text-gray-800 font-grotesque font-light">
+                <p className="text-gray-900 font-grotesque font-light">
                   {service.description}
                 </p>
               </div>
