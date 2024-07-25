@@ -33,11 +33,12 @@
     from var(--angle),
     transparent 60%,
     #ffd700,
-    #7851a9
+    #7851a9,
+    #ffb6c1
   );
   z-index: -1;
   border-radius: 10px;
-  animation: 4s spin linear infinite;
+  animation: 6s spin linear infinite;
 }
 
 .card::before {

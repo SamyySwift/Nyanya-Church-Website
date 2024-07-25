@@ -15,7 +15,7 @@ const Explore = () => {
           <span className="relative"> Connect</span>
         </p>
 
-        <div className="flex flex-col gap-10 md:gap-5 md:flex-row md:justify-between mt-[80px]">
+        <div className="flex flex-col gap-[60px] md:gap-5 md:flex-row md:justify-between mt-[80px]">
           {exploreNav.map((item, i) => (
             <CardComponent
               title={item.title}
