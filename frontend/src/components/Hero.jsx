@@ -37,7 +37,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
             </div>
           ) : (
             <div className="w-full flex justify-center">
-              <motion.h1 className="absolute bottom-20 md:bottom-10 font-grotesque font-extrabold text-white text-4xl md:text-7xl lg:text-9xl">
+              <motion.h1 className="absolute bottom-[150px] md:bottom-10 font-grotesque font-extrabold text-white text-4xl md:text-7xl lg:text-9xl">
                 {text}
               </motion.h1>
             </div>
