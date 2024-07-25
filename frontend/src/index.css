@@ -20,8 +20,7 @@
   initial-value: 0deg;
   inherits: false;
 }
-.card::after,
-.card::before {
+.card::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -29,10 +28,10 @@
   width: calc(100% + 3px); /* Increase size to mimic padding */
   height: calc(100% + 3px); /* Increase size to mimic padding */
   transform: translate(-50%, -50%); /* Center the pseudo-element */
-  background-image: conic-gradient(from var(--angle), transparent 70%, #ffd700);
+  background-image: conic-gradient(from var(--angle), transparent 60%, #ffd700);
   z-index: -1;
   border-radius: 10px;
-  animation: 5s spin linear infinite;
+  animation: 4s spin linear infinite;
 }
 
 .card::before {

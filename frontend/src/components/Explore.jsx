@@ -41,7 +41,7 @@ const Explore = () => {
 
 const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
   return (
-    <div className="card max-w-xs w-full relative">
+    <div className="card max-w-xs w-full ">
       <div className="h-96 rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 overflow-hidden">
         <div className="relative">
           <div className="absolute inset-0 bg-black bg-opacity-25"></div>
