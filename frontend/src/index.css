@@ -21,8 +21,7 @@
   inherits: false;
 }
 
-.card::after,
-.card::before {
+.card::after {
   content: "";
   position: absolute;
   top: 50%;
