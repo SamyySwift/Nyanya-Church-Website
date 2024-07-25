@@ -1,21 +1,15 @@
-import { useParallax } from "react-scroll-parallax";
 import { Link } from "react-router-dom";
-// import { SparklesCore } from "./ui/sparkles";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
 const Explore = () => {
-  // const { ref } = useParallax({ speed: -15 });
-
   return (
     <div
-      className="py-[100px] flex flex-col justify-center relative -z-20 bg-black"
-      // ref={ref}
-
+      className="py-[100px] flex flex-col justify-center bg-black relative"
       name="explore"
     >
-      <div className="w-full absolute inset-0"></div>
-      <div className="mx-auto md:mx-5 lg:mx-[40px] xl:mx-[80px]">
+      <div className="w-full absolute inset-0 z-0"></div>
+      <div className="mx-auto md:mx-5 lg:mx-[40px] xl:mx-[80px] z-10">
         <p className="text-4xl md:text-5xl lg:text-7xl xl:text-9xl text-slate-300 font-grotesque font-semibold text-center md:text-start">
           <span className="">Explore</span> <span className="font-thin">&</span>
           <span className="relative"> Connect</span>
@@ -41,25 +35,25 @@ const Explore = () => {
 
 const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
   return (
-    <div className="card max-w-xs w-full ">
-      <div className="h-96 rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 overflow-hidden">
+    <div className="relative max-w-xs w-full card">
+      <div className="h-96 rounded-lg cursor-pointer transform  overflow-hidden">
         <div className="relative">
-          <div className="absolute inset-0 bg-black bg-opacity-25"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-25 z-10"></div>
           <img
             className="w-full h-[400px] object-cover object-center"
             src={src}
             alt={title}
           />
-          <span className="absolute top-2 left-5 text-3xl text-white font-grotesque font-bold">
+          <span className="absolute top-2 left-5 text-3xl text-white font-grotesque font-bold z-10">
             {title}
           </span>
         </div>
-        <div className="absolute bottom-0 left-0 w-full  bg-opacity-20 backdrop-blur-md bg-black px-5 py-2 flex flex-col items-start">
+        <div className="absolute bottom-0 left-0 w-full bg-opacity-20 backdrop-blur-md bg-black px-5 py-2 flex flex-col items-start z-20">
           <p className="text-white font-grotesque font-extralight">
             {bodyText}
           </p>
           <Link to={link}>
-            <button className="flex items-center gap-1 mt-2 bg-black text-white px-2 py-2 font-grotesque font-light min-w-[100px] rounded-2xl">
+            <button className="flex items-center gap-1 mt-2 bg-black text-white px-2 py-2 font-grotesque font-light min-w-[100px] rounded-2xl z-20">
               {icon}
               {btnText}
             </button>
@@ -89,7 +83,6 @@ const exploreNav = [
     link: "/join-a-group",
     src: "images/welcome-bg-8.webp",
   },
-
   {
     title: "Pastoral Care",
     bodyText: "Need prayer support or counseling? Submit request here.",
