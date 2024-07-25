@@ -2,16 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-* html {
-  scroll-behavior: smooth;
-}
-
 /* section {
   height: 100vh;
 } */
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+.card {
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.card::after,
+.card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 3px); /* Increase size to mimic padding */
+  height: calc(100% + 3px); /* Increase size to mimic padding */
+  transform: translate(-50%, -50%); /* Center the pseudo-element */
+  background-image: conic-gradient(from var(--angle), transparent 70%, #ffd700);
+  z-index: -1;
+  border-radius: 10px;
+  animation: 5s spin linear infinite;
+}
+
+.card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }

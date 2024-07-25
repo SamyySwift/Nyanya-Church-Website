@@ -1,14 +1,10 @@
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
-import {
-  FaCalendarWeek,
-  FaClock,
-  FaGoogle,
-  FaApple,
-  FaMicrosoft,
-} from "react-icons/fa6";
+import { useState, useEffect } from "react";
+import { FaCalendarWeek, FaClock, FaApple, FaYahoo } from "react-icons/fa6";
+import { SiGooglecalendar, SiMicrosoftoutlook } from "react-icons/si";
+
 import { Link } from "react-router-dom";
-import { google, outlook, ics } from "calendar-link";
+import { google, outlook, ics, yahoo } from "calendar-link";
 
 const Card = ({
   i,
@@ -24,9 +20,6 @@ const Card = ({
   eventImage,
   btnName = "Learn More",
 }) => {
-  const container = useRef(null);
-  const [showPopover, setShowPopover] = useState(false);
-
   // Calculate the dynamic top position based on the index i
   const dynamicTop = `calc(0% + ${i * 20}px)`;
 
@@ -42,6 +35,7 @@ const Card = ({
   const googleUrl = google(event);
   const outlookUrl = outlook(event);
   const icsUrl = ics(event);
+  const yahooUrl = yahoo(event);
 
   // Helper function to convert unit time to readable format
   function convertTimeFormat(timeString) {
@@ -65,15 +59,16 @@ const Card = ({
     return `${formattedHours}:${formattedMinutes}${period}`;
   }
 
+  const [showPopover, setShowPopover] = useState(false);
+
   return (
     <motion.div
       className="h-[900px] md:h-screen flex justify-center items-center sticky top-0"
-      ref={container}
       style={{ top: dynamicTop }}
     >
       <div
         style={{ backgroundColor: color }}
-        className="relative flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-10 h-[650px] sm:w-[1200px] sm:h-[800px] md:w-[1200px] md:h-[550px] rounded-[40px] p-5"
+        className="relative flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-10 h-[680px] sm:w-[1200px] sm:h-[800px] md:w-[1200px] md:h-[550px] rounded-[40px] p-5"
       >
         {/* Column 1: Title, Description, and Button*/}
         <div className="flex flex-col justify-between max-w-2xl md:max-w-sm lg:max-w-xl">
@@ -97,28 +92,18 @@ const Card = ({
               <>
                 <button
                   onClick={() => setShowPopover(!showPopover)}
-                  className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white  text-black"
+                  className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white hover:bg-black hover:text-white text-black"
                 >
                   {btnName}
                 </button>
                 {showPopover && (
-                  <div className="font-grotesque absolute bottom-full left-0 mb-5 p-3 bg-white border border-gray-300 shadow-md rounded-2xl z-50 transition-all duration-1000 transform translate-y-2">
-                    <a
-                      href={googleUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
-                    >
-                      <FaGoogle /> Google Calendar
-                    </a>
-                    <a
-                      href={outlookUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
-                    >
-                      <FaMicrosoft /> Outlook Calendar
-                    </a>
+                  <motion.div
+                    className="font-grotesque absolute bottom-full left-0 mb-5 p-3 bg-white border border-gray-300 shadow-md rounded-2xl z-50"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                  >
                     <a
                       href={icsUrl}
                       target="_blank"
@@ -127,19 +112,43 @@ const Card = ({
                     >
                       <FaApple /> Apple Calendar
                     </a>
-                  </div>
+                    <a
+                      href={googleUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
+                    >
+                      <SiGooglecalendar /> Google Calendar
+                    </a>
+                    <a
+                      href={outlookUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
+                    >
+                      <SiMicrosoftoutlook /> Outlook Calendar
+                    </a>
+                    <a
+                      href={yahooUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
+                    >
+                      <FaYahoo /> Yahoo Calendar
+                    </a>
+                  </motion.div>
                 )}
               </>
             ) : (
               <Link to={link}>
-                <button className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white text-black">
+                <button className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white hover:bg-black hover:text-white text-black">
                   {btnName}
                 </button>
               </Link>
             )}
 
             <Link to="mailto:tacnna2024@gmail.com">
-              <button className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-black  text-white">
+              <button className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-black hover:bg-white hover:text-black text-white">
                 Contact Us
               </button>
             </Link>

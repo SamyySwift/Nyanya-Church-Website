@@ -14,7 +14,7 @@ const JoinAGroup = () => {
   return (
     <>
       <PageTitle title="Join a Group" description="Different church groups" />
-      <Hero text="Join A Team" background="video" src="/bg3.webm" />
+      <Hero text="Join A Team" background="video" src="/bg.webm" />
       {/* WELCOME */}
       <section style={{ backgroundColor: "##F7F2E9" }}>
         <Welcome

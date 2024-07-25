@@ -11,7 +11,7 @@ const PlanVisit = () => {
         title="Plan your visit"
         description="Page contains info on how to locate church"
       />
-      <Hero text="Plan A Visit" background="video" src="/bg3.webm" />
+      <Hero text="Plan A Visit" background="video" src="/bg.webm" />
 
       <section>
         <Welcome

@@ -5,17 +5,16 @@ import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
 const Explore = () => {
-  const { ref } = useParallax({ speed: -15 });
+  // const { ref } = useParallax({ speed: -15 });
 
   return (
     <div
-      className="py-[100px] flex flex-col justify-center"
-      ref={ref}
-      style={{ backgroundColor: "#000" }}
+      className="py-[100px] flex flex-col justify-center relative -z-20 bg-black"
+      // ref={ref}
+
       name="explore"
     >
       <div className="w-full absolute inset-0"></div>
-
       <div className="mx-auto md:mx-5 lg:mx-[40px] xl:mx-[80px]">
         <p className="text-4xl md:text-5xl lg:text-7xl xl:text-9xl text-slate-300 font-grotesque font-semibold text-center md:text-start">
           <span className="">Explore</span> <span className="font-thin">&</span>
@@ -42,8 +41,8 @@ const Explore = () => {
 
 const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
   return (
-    <div className="max-w-xs w-full relative">
-      <div className="h-96 rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 overflow-hidden relative">
+    <div className="card max-w-xs w-full relative">
+      <div className="h-96 rounded-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 overflow-hidden">
         <div className="relative">
           <div className="absolute inset-0 bg-black bg-opacity-25"></div>
           <img
