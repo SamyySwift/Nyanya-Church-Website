@@ -13,7 +13,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
             autoPlay
             playsInline
           >
-            <source src={src} type="video/mp4" />
+            <source src={src} type="video/webm" />
           </video>
         ) : (
           <img
