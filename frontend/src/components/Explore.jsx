@@ -5,7 +5,7 @@ import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
 const Explore = () => {
-  const { ref } = useParallax({ speed: -20 });
+  const { ref } = useParallax({ speed: -15 });
 
   return (
     <div
@@ -22,7 +22,7 @@ const Explore = () => {
           <span className="relative"> Connect</span>
         </p>
 
-        <div className="flex flex-col gap-10 md:flex-row md:flex-wrap  md:justify-between mt-[80px]">
+        <div className="flex flex-col gap-10 md:gap-5 md:flex-row md:justify-between mt-[80px]">
           {exploreNav.map((item, i) => (
             <CardComponent
               title={item.title}
@@ -60,7 +60,7 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
             {bodyText}
           </p>
           <Link to={link}>
-            <button className="flex items-center gap-1 mt-2 bg-gradient-to-b from-black to-black/0 text-white px-2 py-2 font-grotesque font-light min-w-[100px] rounded-2xl">
+            <button className="flex items-center gap-1 mt-2 bg-black text-white px-2 py-2 font-grotesque font-light min-w-[100px] rounded-2xl">
               {icon}
               {btnText}
             </button>

@@ -21,7 +21,7 @@ function HomeScreen() {
       <Hero
         text="NYANYA ASSEMBLY"
         background="video"
-        src="/bg3.mp4"
+        src="/bg3.webm"
         mainHero={true}
       />
 

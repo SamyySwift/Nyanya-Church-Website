@@ -17,7 +17,7 @@ const Events = () => {
         description="page containing all church upcoming events"
       />
 
-      <Hero text="Upcoming Events" background="video" src="/bg3.mp4" />
+      <Hero text="Upcoming Events" background="video" src="/bg3.webm" />
 
       <section>
         <div className="text-center pt-20">

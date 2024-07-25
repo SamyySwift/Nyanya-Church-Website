@@ -4,7 +4,7 @@ const YouthFellowship = () => {
   return (
     <>
       <Ministries
-        bgImg="/bg3.mp4"
+        bgImg="/bg3.webm"
         background="video"
         bgText="Youth Movement"
         team="Youth Movement"

@@ -10,7 +10,7 @@ export const ImagesSlider = ({
   className,
   autoplay = true,
   direction = "up",
-  opacity = 50,
+  opacity = 60,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);

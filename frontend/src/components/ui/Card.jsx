@@ -1,8 +1,14 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import { FaCalendarWeek, FaClock } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import {
+  FaCalendarWeek,
+  FaClock,
+  FaGoogle,
+  FaApple,
+  FaMicrosoft,
+} from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { google } from "calendar-link";
+import { google, outlook, ics } from "calendar-link";
 
 const Card = ({
   i,
@@ -19,12 +25,7 @@ const Card = ({
   btnName = "Learn More",
 }) => {
   const container = useRef(null);
-
-  // const { scrollYProgress } = useScroll({
-  //   target: container,
-  //   offset: ["start end", "start start"],
-  // });
-  // const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  const [showPopover, setShowPopover] = useState(false);
 
   // Calculate the dynamic top position based on the index i
   const dynamicTop = `calc(0% + ${i * 20}px)`;
@@ -37,8 +38,10 @@ const Card = ({
     duration: [duration, "hour"],
   };
 
-  // create parametized google event link
+  // create parameterized calendar event links
   const googleUrl = google(event);
+  const outlookUrl = outlook(event);
+  const icsUrl = ics(event);
 
   // Helper function to convert unit time to readable format
   function convertTimeFormat(timeString) {
@@ -81,7 +84,7 @@ const Card = ({
             {description}
           </p>
           {date && (
-            <span className="flex items-center gap-2 mt-5 md:mt-10 font-grotesque font-light  text-md md:text-lg">
+            <span className="flex items-center gap-2 mt-5 md:mt-10 font-grotesque font-light text-md md:text-lg">
               <FaCalendarWeek size={23} />
               {date}
               <FaClock size={22} className="ml-3" />
@@ -89,15 +92,54 @@ const Card = ({
             </span>
           )}
 
-          <div className="flex gap-3 mt-5 md:absolute md:bottom-10">
-            <Link to={btnType === "event" ? googleUrl : link}>
-              <button className=" px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white  hover:bg-black hover:text-white text-black">
-                {btnName}
-              </button>
-            </Link>
+          <div className="flex gap-3 mt-5 md:absolute md:bottom-10 relative">
+            {btnType === "event" ? (
+              <>
+                <button
+                  onClick={() => setShowPopover(!showPopover)}
+                  className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white  text-black"
+                >
+                  {btnName}
+                </button>
+                {showPopover && (
+                  <div className="font-grotesque absolute bottom-full left-0 mb-5 p-3 bg-white border border-gray-300 shadow-md rounded-2xl z-50 transition-all duration-1000 transform translate-y-2">
+                    <a
+                      href={googleUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
+                    >
+                      <FaGoogle /> Google Calendar
+                    </a>
+                    <a
+                      href={outlookUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
+                    >
+                      <FaMicrosoft /> Outlook Calendar
+                    </a>
+                    <a
+                      href={icsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
+                    >
+                      <FaApple /> Apple Calendar
+                    </a>
+                  </div>
+                )}
+              </>
+            ) : (
+              <Link to={link}>
+                <button className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white text-black">
+                  {btnName}
+                </button>
+              </Link>
+            )}
 
-            <Link to="mailto:samueludofia94@gmail.com">
-              <button className=" px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-black  hover:bg-white hover:text-black text-white">
+            <Link to="mailto:tacnna2024@gmail.com">
+              <button className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-black  text-white">
                 Contact Us
               </button>
             </Link>
@@ -106,11 +148,9 @@ const Card = ({
 
         <div className="overflow-hidden md:mt-1 w-full h-full">
           <motion.img
-            // style={{ scale }}
-            // src={`http://localhost:1337${eventImage.data.attributes.url}`}
             src={src}
             alt={title}
-            className="h-full w-full  md:h-[500px]  object-cover rounded-3xl"
+            className="h-full w-full md:h-[500px] object-cover rounded-3xl"
           />
         </div>
       </div>

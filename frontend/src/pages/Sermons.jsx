@@ -2,7 +2,6 @@ import Hero from "../components/Hero";
 import PageTitle from "../components/PageTitle";
 import { ParallaxScroll } from "../components/ui/parallax-scroll";
 import transition from "../utils/transition";
-// import WavyBackground from "../components/ui/wavy-background";
 
 const Sermons = () => {
   return (
@@ -17,16 +16,6 @@ const Sermons = () => {
         src="images/bible.webp"
         mainHero={false}
       />
-
-      {/* <WavyBackground className="" waveWidth={40}>
-        <p className="font-grotesque text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
-          Sermons
-        </p>
-        <p className="text-base font-grotesque md:text-lg mt-4 text-white font-normal inter-var text-center">
-          Inspiring messages to uplift your spirit and guide your journey of
-          faith
-        </p>
-      </WavyBackground> */}
 
       <ParallaxScroll items={messages} />
     </>
@@ -81,6 +70,13 @@ const messages = [
     date: "August 24, 2024",
   },
   {
+    title: "A Call to Worship",
+    bgImg: `https://images.unsplash.com/photo-1439853949127-fa647821eba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2640&q=80`,
+    link: "",
+    preacher: "Pastor Samuel Green",
+    date: "August 31, 2024",
+  },
+  {
     title: "Courage to Overcome",
     bgImg: `images/pastor.webp`,
     link: "",
@@ -102,10 +98,39 @@ const messages = [
     date: "August 31, 2024",
   },
   {
+    title: "Embracing the Light of Hope",
+    bgImg: `https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80`,
+    link: "",
+    preacher: "Reverend Angela Smith",
+    date: "August 3, 2024",
+  },
+
+  {
     title: "A Call to Worship",
     bgImg: `https://images.unsplash.com/photo-1439853949127-fa647821eba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2640&q=80`,
     link: "",
     preacher: "Pastor Samuel Green",
     date: "August 31, 2024",
+  },
+  {
+    title: "Grace in Abundance",
+    bgImg: `https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80`,
+    link: "",
+    preacher: "Pastor David Green",
+    date: "August 31, 2024",
+  },
+  {
+    title: "Journey to Spiritual Renewal",
+    bgImg: `https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80`,
+    link: "",
+    preacher: "Pastor Daniel Brown",
+    date: "August 17, 2024",
+  },
+  {
+    title: "Restoration of the Heart",
+    bgImg: `https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80`,
+    link: "",
+    preacher: "Sister Emily Clark",
+    date: "August 24, 2024",
   },
 ];

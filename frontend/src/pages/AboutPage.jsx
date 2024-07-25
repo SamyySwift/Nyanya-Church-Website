@@ -1,4 +1,3 @@
-import React from "react";
 import transition from "../utils/transition";
 import Hero from "../components/Hero";
 import { Welcome } from "../components/Welcome";
