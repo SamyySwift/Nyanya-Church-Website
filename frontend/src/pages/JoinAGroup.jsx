@@ -14,11 +14,11 @@ const JoinAGroup = () => {
   return (
     <>
       <PageTitle title="Join a Group" description="Different church groups" />
-      <Hero text="Join A Team" background="video" src="/bg.webm" />
+      <Hero text="Join A Group" background="video" src="/bg.webm" />
       {/* WELCOME */}
       <section style={{ backgroundColor: "##F7F2E9" }}>
         <Welcome
-          title="Nyanya Teams"
+          title="Teams/Groups"
           text="Join a team at Nyanya Assembly to contribute to our vision. Connect with like-minded individuals, learn new skills, and find your fit. Together, we can achieve so much more!"
           imgSrc={images}
         />

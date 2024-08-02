@@ -18,18 +18,13 @@ function HomeScreen() {
         description="Nyanya assembly homepage"
       />
 
-      <Hero
-        text="NYANYA ASSEMBLY"
-        background="video"
-        src="/bg.webm"
-        mainHero={true}
-      />
+      <Hero text="" background="video" src="/bg.webm" mainHero={true} />
 
       <Welcome
         title="Welcome To Church"
         text={
           <>
-            Nyanya Assembly is a {""}
+            The Apostolic Church Nigeria, Nyanya Assembly is a {""}
             <FlipWords words={words} /> church in the beautiful city of Abuja.
             We love Jesus and we love people. We'd love to see you here soon!
           </>

@@ -1,6 +1,5 @@
-import { useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "../../utils/cn";
 import { FaClock } from "react-icons/fa6";
 import { BsPersonCircle } from "react-icons/bs";
@@ -18,6 +17,10 @@ export const ParallaxScroll = ({ items, className }) => {
 
   const totalItems = items.length;
   const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+
+  useEffect(() => {
+    window.scrollTo({ top: 200, behavior: "smooth" });
+  }, [currentPage]);
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -40,7 +43,7 @@ export const ParallaxScroll = ({ items, className }) => {
       <div className="max-w-xs w-full">
         <div
           className={cn(
-            "group w-full cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800",
+            "w-full cursor-pointer overflow-hidden relative h-96 rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800",
             "hover:after:content-[''] hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-50",
             "transition-all duration-500"
           )}
@@ -68,6 +71,44 @@ export const ParallaxScroll = ({ items, className }) => {
       </div>
     </motion.div>
   );
+
+  const renderPagination = () => {
+    const pageNumbers = [];
+
+    for (let i = 1; i <= totalPages; i++) {
+      if (
+        i === 1 ||
+        i === totalPages ||
+        (i >= currentPage - 1 && i <= currentPage + 1)
+      ) {
+        pageNumbers.push(
+          <button
+            key={i}
+            onClick={() => handlePageChange(i)}
+            className={`px-4 py-2 mx-2 rounded-full ${
+              currentPage === i ? "bg-black text-white" : "bg-gray-300"
+            }`}
+          >
+            {i}
+          </button>
+        );
+      } else if (i === 2 && currentPage > 3) {
+        pageNumbers.push(
+          <span key="dots1" className="px-4 py-2 mx-2">
+            ...
+          </span>
+        );
+      } else if (i === totalPages - 1 && currentPage < totalPages - 2) {
+        pageNumbers.push(
+          <span key="dots2" className="px-4 py-2 mx-2">
+            ...
+          </span>
+        );
+      }
+    }
+
+    return pageNumbers;
+  };
 
   return (
     <div className={cn("w-full", className)}>
@@ -125,17 +166,7 @@ export const ParallaxScroll = ({ items, className }) => {
         >
           Prev
         </button>
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index}
-            onClick={() => handlePageChange(index + 1)}
-            className={`px-4 py-2 mx-2 rounded-full font-grotesque ${
-              currentPage === index + 1 ? "bg-black text-white" : "bg-gray-300"
-            }`}
-          >
-            {index + 1}
-          </button>
-        ))}
+        {renderPagination()}
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}

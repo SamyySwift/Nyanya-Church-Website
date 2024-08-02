@@ -29,16 +29,10 @@
   width: calc(100% + 3px); /* Increase size to mimic padding */
   height: calc(100% + 3px); /* Increase size to mimic padding */
   transform: translate(-50%, -50%); /* Center the pseudo-element */
-  background-image: conic-gradient(
-    from var(--angle),
-    transparent 60%,
-    #ffd700,
-    #7851a9,
-    #ffb6c1
-  );
+  background-image: conic-gradient(from var(--angle), transparent 80%, #ffd700);
   z-index: -1;
-  border-radius: 10px;
-  animation: 6s spin linear infinite;
+  border-radius: 16px;
+  animation: 5s spin linear infinite;
 }
 
 .card::before {
