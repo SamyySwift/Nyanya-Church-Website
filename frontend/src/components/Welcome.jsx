@@ -24,7 +24,7 @@ export function Welcome({ title, text, imgSrc = images }) {
             {title}
           </h1>
           <div>
-            <span className="font-grotesque font-light text-justify md:text-md lg:text-xl leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
+            <span className="font-grotesque font-light md:text-md lg:text-xl leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
               {text}
             </span>
           </div>

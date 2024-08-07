@@ -23,7 +23,7 @@ const WorshipWithUs = () => {
     "images/wsp-img-6.webp",
     // "images/wsp-img-7.JPG",
     "images/wsp-img-8.webp",
-    "images/wsp-img-9.webp",
+    // "images/wsp-img-9.webp",
     "images/wsp-img-10.webp",
   ];
   return (
