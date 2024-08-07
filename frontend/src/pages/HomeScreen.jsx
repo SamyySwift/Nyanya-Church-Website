@@ -35,9 +35,9 @@ function HomeScreen() {
         <Explore />
       </section>
       {/* WORSHIP WITH US SECTION */}
-      {/* <section className=" overflow-hidden">
+      <section className=" overflow-hidden">
         <WorshipWithUs />
-      </section> */}
+      </section>
     </div>
   );
 }
