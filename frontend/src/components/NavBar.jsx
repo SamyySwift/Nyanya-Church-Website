@@ -283,9 +283,9 @@ const navLinks = [
     link: "explore",
     scroll: true,
   },
-  { title: "About Us", link: "/about" },
-  { title: "Contact Us", link: "footer", scroll: true },
-  { title: "Plan Your Visit", link: "/plan-your-visit" },
+  { title: "About us", link: "/about" },
+  { title: "Contact us", link: "/contact-us" },
+  { title: "Plan your visit", link: "/plan-your-visit" },
 ];
 
 export default Navbar;
@@ -299,5 +299,5 @@ const socials = [
     icon: <FaInstagram size={28} />,
     link: "https://www.instagram.com/tacn_na?igsh=dDhxcmplNzVzZDNw",
   },
-  { icon: <FaYoutube size={28} />, link: "#" },
+  { icon: <FaYoutube size={28} />, link: "https://www.youtube.com/@TACN_NA" },
 ];

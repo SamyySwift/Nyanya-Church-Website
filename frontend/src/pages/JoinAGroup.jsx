@@ -6,19 +6,22 @@ import PageTitle from "../components/PageTitle";
 
 const JoinAGroup = () => {
   const images = [
-    "images/youth.webp",
+    "images/youth5.webp",
     "images/youth1.webp",
     "images/youth3.webp",
     "images/youth4.webp",
   ];
   return (
     <>
-      <PageTitle title="Join a Group" description="Different church groups" />
-      <Hero text="Join A Group" background="video" src="/bg.webm" />
+      <PageTitle
+        title="Nyanya Assembly | Join a Team"
+        description="Different church groups"
+      />
+      <Hero text="Join A Team" background="video" src="/bg.webm" />
       {/* WELCOME */}
       <section style={{ backgroundColor: "##F7F2E9" }}>
         <Welcome
-          title="Teams/Groups"
+          title="Teams"
           text="Join a team at Nyanya Assembly to contribute to our vision. Connect with like-minded individuals, learn new skills, and find your fit. Together, we can achieve so much more!"
           imgSrc={images}
         />
@@ -34,8 +37,8 @@ const JoinAGroup = () => {
             motivated!
           </p>
         </div>
-        {events.map((event, idx) => {
-          return <Card key={idx} {...event} i={idx} />;
+        {groups.map((group, idx) => {
+          return <Card key={idx} {...group} i={idx} />;
         })}
       </section>
     </>
@@ -44,7 +47,7 @@ const JoinAGroup = () => {
 
 export default transition(JoinAGroup);
 
-const events = [
+const groups = [
   {
     title: "Youth Movement",
     description:

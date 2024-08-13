@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { BsCameraReelsFill } from "react-icons/bs";
 
 const Hero = ({ text, background, src, mainHero = false }) => {
   return (

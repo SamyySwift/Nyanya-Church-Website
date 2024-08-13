@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "../../utils/cn";
 import { FaClock } from "react-icons/fa6";
 import { BsPersonCircle } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const ITEMS_PER_PAGE = 9; // Adjust this number based on how many items you want per page
 
@@ -118,26 +119,30 @@ export const ParallaxScroll = ({ items, className }) => {
       >
         <div className="flex flex-col items-center gap-10">
           {firstPart.map((el, idx) => (
-            <Card
-              imgSrc={el.bgImg}
-              title={el.title}
-              preacher={el.preacher}
-              date={el.date}
-              key={`grid-1-${startIndex + idx}`}
-              translateY={translateFirst}
-            />
+            <a href={el.link} target="_blank">
+              <Card
+                imgSrc={el.image}
+                title={el.title}
+                preacher={el.preacher}
+                date={el.date}
+                key={`grid-1-${startIndex + idx}`}
+                translateY={translateFirst}
+              />
+            </a>
           ))}
         </div>
         <div className="flex flex-col items-center gap-10">
           {secondPart.map((el, idx) => (
-            <Card
-              imgSrc={el.bgImg}
-              title={el.title}
-              preacher={el.preacher}
-              date={el.date}
-              key={`grid-2-${startIndex + idx}`}
-              translateY={translateSecond}
-            />
+            <a href={el.link} target="_blank">
+              <Card
+                imgSrc={el.image}
+                title={el.title}
+                preacher={el.preacher}
+                date={el.date}
+                key={`grid-2-${startIndex + idx}`}
+                translateY={translateSecond}
+              />
+            </a>
           ))}
         </div>
         <div
@@ -147,14 +152,16 @@ export const ParallaxScroll = ({ items, className }) => {
           )}
         >
           {thirdPart.map((el, idx) => (
-            <Card
-              imgSrc={el.bgImg}
-              title={el.title}
-              preacher={el.preacher}
-              date={el.date}
-              key={`grid-3-${startIndex + idx}`}
-              translateY={translateThird}
-            />
+            <a href={el.link} target="_blank">
+              <Card
+                imgSrc={el.image}
+                title={el.title}
+                preacher={el.preacher}
+                date={el.date}
+                key={`grid-3-${startIndex + idx}`}
+                translateY={translateThird}
+              />
+            </a>
           ))}
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaCalendarWeek, FaClock, FaApple, FaYahoo } from "react-icons/fa6";
 import { SiGooglecalendar, SiMicrosoftoutlook } from "react-icons/si";
 
@@ -10,9 +10,9 @@ const Card = ({
   i,
   title,
   description,
-  src,
   color,
   time,
+  src,
   duration,
   date,
   link,
@@ -92,7 +92,7 @@ const Card = ({
               <>
                 <button
                   onClick={() => setShowPopover(!showPopover)}
-                  className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white hover:bg-black hover:text-white text-black"
+                  className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white"
                 >
                   {btnName}
                 </button>
@@ -148,7 +148,7 @@ const Card = ({
             )}
 
             <Link to="mailto:tacnna2024@gmail.com">
-              <button className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-black hover:bg-white hover:text-black text-white">
+              <button className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-black text-white">
                 Contact Us
               </button>
             </Link>
@@ -157,7 +157,7 @@ const Card = ({
 
         <div className="overflow-hidden md:mt-1 w-full h-full">
           <motion.img
-            src={src}
+            src={btnType !== "event" ? src : eventImage.data.attributes.url}
             alt={title}
             className="h-full w-full md:h-[500px] object-cover rounded-3xl"
           />

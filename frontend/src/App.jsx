@@ -16,6 +16,7 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import ScrollToTop from "./utils/scroll-to-top.js";
 import Sermons from "./pages/Sermons.jsx";
+import Contact from "./pages/Contact.jsx";
 
 function App() {
   const location = useLocation();
@@ -49,6 +50,7 @@ function App() {
             <Route path="/join-a-group" element={<JoinAGroup />} />
             <Route path="/youth-fellowship" element={<YouthFellowship />} />
             <Route path="/classical-choir" element={<ClassicalChoir />} />
+            <Route path="/contact-us" element={<Contact />} />
           </Routes>
         </AnimatePresence>
         <Footer />
