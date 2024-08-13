@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "../../utils/cn";
 import { FaClock } from "react-icons/fa6";
 import { BsPersonCircle } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
 const ITEMS_PER_PAGE = 9; // Adjust this number based on how many items you want per page
 
@@ -44,17 +43,17 @@ export const ParallaxScroll = ({ items, className }) => {
       <div className="max-w-xs w-full">
         <div
           className={cn(
-            "w-full cursor-pointer overflow-hidden relative h-96 rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800",
-            "hover:after:content-[''] hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-50",
-            "transition-all duration-500"
+            "group w-full cursor-pointer overflow-hidden relative h-96 rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800"
+            // "hover:after:content-[''] hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-50",
+            // "hover:scale-105 transition-all duration-500"
           )}
         >
           <img
             src={imgSrc}
             alt={title}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-[url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeW9wdHhpdXMzanQyaXFqbWU0M2ZmYjNrcnp5ZTUzZWE0NG04eGR5OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z01yV397AZubSmVimm/giphy.gif')] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div className="absolute inset-0 bg-black opacity-40 transition-opacity duration-500 group-hover:opacity-50"></div>
           <div className="text relative z-50">
             <h1 className="font-bold font-grotesque text-xl md:text-3xl text-gray-50 relative">
               {title}
@@ -114,10 +113,10 @@ export const ParallaxScroll = ({ items, className }) => {
   return (
     <div className={cn("w-full", className)}>
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 pt-40 md:py-40 px-10 overflow-hidden"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 pt-40 md:py-40 px-10"
         ref={gridRef}
       >
-        <div className="flex flex-col items-center gap-10">
+        <div className="flex flex-col items-center">
           {firstPart.map((el, idx) => (
             <a href={el.link} target="_blank">
               <Card
@@ -131,7 +130,7 @@ export const ParallaxScroll = ({ items, className }) => {
             </a>
           ))}
         </div>
-        <div className="flex flex-col items-center gap-10">
+        <div className="flex flex-col items-center">
           {secondPart.map((el, idx) => (
             <a href={el.link} target="_blank">
               <Card
@@ -147,8 +146,8 @@ export const ParallaxScroll = ({ items, className }) => {
         </div>
         <div
           className={cn(
-            "flex flex-col items-center gap-10",
-            thirdPart.length <= 1 ? "mt-0" : "mt-[300px] md:mt-0"
+            "flex flex-col items-center",
+            thirdPart.length <= 1 ? "mt-[300px] md:mt-0" : "mt-0"
           )}
         >
           {thirdPart.map((el, idx) => (

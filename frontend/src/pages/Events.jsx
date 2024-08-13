@@ -1,7 +1,6 @@
 import Card from "../components/ui/Card";
 import Hero from "../components/Hero";
 import customFetch from "../hooks/customFetch";
-// import events from "./data";
 import PageTitle from "../components/PageTitle";
 import transition from "../utils/transition";
 
@@ -21,9 +20,9 @@ const Events = () => {
 
       <section>
         <div className="text-center pt-20">
-          <h1 className=" font-vibes text-5xl md:text-8xl">
+          {/* <h1 className=" font-vibes text-5xl md:text-8xl">
             Discover Upcoming Events
-          </h1>
+          </h1> */}
           <p className="font-grotesque font-extralight text-center text-xl md:text-2xl max-w-3xl mb-5 mx-auto mt-5 px-5 md:px-0">
             Discover exciting events that will uplift your spirit and enrich
             your journey. Don't miss out on our latest upcoming experiences!

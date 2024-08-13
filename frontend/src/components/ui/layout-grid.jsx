@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../utils/cn";
+import { Link } from "react-router-dom";
 
 export const LayoutGrid = ({ cards }) => {
   const [selected, setSelected] = useState(null);
@@ -17,7 +18,7 @@ export const LayoutGrid = ({ cards }) => {
   };
 
   return (
-    <div className="w-full h-[800px] p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 ">
+    <div className="w-full h-[800px] p-5 grid grid-cols-1 md:grid-cols-3  max-w-5xl mx-auto gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -41,7 +42,7 @@ export const LayoutGrid = ({ cards }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          "absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10",
+          "absolute h-full w-full left-0 top-0  opacity-0 z-10",
           selected?.id ? "pointer-events-auto" : "pointer-events-none"
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}
@@ -51,21 +52,31 @@ export const LayoutGrid = ({ cards }) => {
 };
 
 const BlurImage = ({ card }) => {
-  const [loaded, setLoaded] = useState(false);
   return (
-    <img
-      src={card.thumbnail}
-      height="500"
-      width="500"
-      onLoad={() => setLoaded(true)}
-      className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200",
-        loaded ? "blur-none" : "blur-md"
-      )}
-      alt="thumbnail"
-    />
+    <div className="h-full w-full">
+      <img
+        src={card.thumbnail}
+        height="500"
+        width="500"
+        onLoad={() => setLoaded(true)}
+        className={cn(
+          "object-cover object-top absolute inset-0 h-full w-full transition duration-200"
+        )}
+        alt="thumbnail"
+      />
+      <div
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 p-4 rounded-2xl shadow-md"
+        style={{ backgroundColor: "#f7f2e9" }}
+      >
+        <h3 className="text-md text-center text-black underline font-karla">
+          {card.title}
+        </h3>
+      </div>
+    </div>
   );
 };
+
+export default BlurImage;
 
 const SelectedCard = ({ selected }) => {
   return (
@@ -92,9 +103,9 @@ const SelectedCard = ({ selected }) => {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative px-8 pb-4 z-[70]"
+        className="relative px-8 pb-20 z-[70]"
       >
-        {selected?.content}
+        <Link to={selected?.link}>{selected?.content}</Link>
       </motion.div>
     </div>
   );
