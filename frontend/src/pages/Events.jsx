@@ -7,7 +7,7 @@ import transition from "../utils/transition";
 
 const Events = () => {
   const { loading, error, data } = customFetch(
-    "http://localhost:1337/api/events?populate=*"
+    "https://nyanya-church-backend.onrender.com/api/events?populate=*"
   );
 
   return (

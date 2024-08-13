@@ -6,7 +6,7 @@ import customFetch from "../hooks/customFetch";
 
 const Sermons = () => {
   const { loading, error, data } = customFetch(
-    "http://localhost:1337/api/sermons?populate=*"
+    "https://nyanya-church-backend.onrender.com/api/sermons?populate=*"
   );
 
   // Extracting the necessary fields from the fetched data
