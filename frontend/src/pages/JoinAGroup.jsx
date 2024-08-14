@@ -78,6 +78,23 @@ const SkeletonFour = () => {
   return (
     <div>
       <p className="font-bold font-karla md:text-4xl text-xl text-white">
+        Userring Team
+      </p>
+      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal font-karla text-base my-4 max-w-md text-neutral-200">
+        Be a part of the Userring Team and make a difference in creating
+        welcoming environments. Whether you're greeting guests or helping with
+        logistics, your role is essential in ensuring smooth and memorable
+        experiences for everyone.
+      </p>
+    </div>
+  );
+};
+
+const SkeletonFive = () => {
+  return (
+    <div>
+      <p className="font-bold font-karla md:text-4xl text-xl text-white">
         Classical Choir
       </p>
       <p className="font-normal text-base text-white"></p>
@@ -88,7 +105,6 @@ const SkeletonFour = () => {
     </div>
   );
 };
-
 const cards = [
   {
     id: 1,
@@ -99,18 +115,10 @@ const cards = [
     link: "/youth-fellowship",
   },
   {
-    id: 1,
-    title: "Usering Team",
-    content: <SkeletonOne />,
-    className: "md:col-span-1",
-    thumbnail: "images/youth4.webp",
-    link: "/youth-fellowship",
-  },
-  {
     id: 2,
     title: "Praise Team",
     content: <SkeletonTwo />,
-    className: "col-span-1",
+    className: "md:col-span-1",
     thumbnail: "images/praise-team-2.webp",
     link: "/praise-team",
   },
@@ -124,8 +132,16 @@ const cards = [
   },
   {
     id: 4,
-    title: "Classical Choir",
+    title: "Userring Team",
     content: <SkeletonFour />,
+    className: "col-span-1",
+    thumbnail: "images/youth4.webp",
+    link: "/youth-fellowship",
+  },
+  {
+    id: 5,
+    title: "Classical Choir",
+    content: <SkeletonFive />,
     className: "md:col-span-2",
     thumbnail: "images/choir3.webp",
     link: "/classical-choir",
