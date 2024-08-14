@@ -68,10 +68,10 @@ const Card = ({
     >
       <div
         style={{ backgroundColor: color }}
-        className="relative flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-10 h-[680px] sm:w-[1200px] sm:h-[800px] md:w-[1100px] md:h-[550px] rounded-[40px] px-5 md:px-8 py-5"
+        className="relative flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-5 h-[680px] sm:w-[1200px] sm:h-[800px] md:min-w-[700px] md:h-[500px] lg:w-[1100px] lg:h-[550px]  rounded-[40px] px-5 md:px-8 py-5"
       >
         {/* Column 1: Title, Description, and Button*/}
-        <div className="flex flex-col justify-between max-w-2xl md:max-w-[500px]">
+        <div className="flex flex-col justify-between max-w-3xl md:max-w-[400px] lg:max-w-[500px]">
           <h2 className="text-2xl md:text-4xl font-bold md:mb-10 lg:mb-10 mb-5 mt-4 font-grotesque">
             {title}
           </h2>
@@ -80,7 +80,7 @@ const Card = ({
           </p>
           <div className="md:absolute md:bottom-[145px] ">
             {date && (
-              <span className="flex items-center gap-2 mt-5 md:mt-10 font-grotesque font-light text-md md:text-lg">
+              <span className="flex items-center gap-2 mt-5 md:mt-10 font-grotesque font-semibold text-md md:text-lg">
                 <FaCalendarWeek size={20} />
                 {new Date(date).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -161,11 +161,11 @@ const Card = ({
           </div>
         </div>
 
-        <div className=" w-[500px]">
+        <div className="overflow-hidden h-full md:w-[350px] lg:w-[500px]">
           <motion.img
             src={btnType !== "event" ? src : eventImage.data.attributes.url}
             alt={title}
-            className="h-full w-full md:h-[500px]  object-cover rounded-3xl"
+            className="h-full w-full object-cover rounded-3xl"
           />
         </div>
       </div>
