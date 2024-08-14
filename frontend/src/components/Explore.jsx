@@ -38,7 +38,7 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
     <div className="relative max-w-sm w-full ">
       <div className="h-80 rounded-2xl cursor-pointer transform  overflow-hidden  duration-500 hover:scale-105 hover:shadow-xl">
         <div className="relative">
-          <div className="absolute top-0 inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-10"></div>
+          <div className="absolute top-0 inset-0 bg-gradient-to-b from-black/70 via-transparent to-transparent z-10"></div>
           <img className="w-full h-96 object-cover " src={src} alt={title} />
           <span className="absolute top-2 left-5 text-3xl text-white font-grotesque font-bold z-10 ">
             {title}
@@ -68,12 +68,11 @@ const exploreNav = [
     btnText: "Learn More",
     icon: <BsArrowUpRightCircleFill />,
     link: "/events",
-    src: "images/s.jpg",
+    src: "images/convention.jpg",
   },
   {
-    title: "Join a Group",
-    bodyText:
-      "Explore our diverse church groups and teams, find your place to belong!",
+    title: "Join a Team",
+    bodyText: "Explore our diverse church teams, find your place to belong!",
     btnText: "Learn More",
     icon: <BsArrowUpRightCircleFill />,
     link: "/join-a-group",

@@ -89,15 +89,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute w-full top-0 z-50 bg-gradient-to-b from-black/50 via-transparent to-transparent backdrop-filter backdrop-blur-xs bg-opacity-30">
+    <nav className="fixed w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-xs bg-opacity-30">
       <div className="container mx-auto px-5 md:px-8 xl:px-[80px] py-6 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
-          {/* <img src="/path/to/logo.png" alt="Logo" className="h-10" />
+          <img src="images/logo.jpg" alt="Logo" className="h-10 rounded-xl" />
           <div className="flex flex-col text-white font-grotesque">
-            <span className="text-xs font-bold">
+            <span className="text-[10px] md:text-xs font-bold max-w-xs">
               The Apostolic Church <br /> Nigeria Nyanya Assembly
             </span>
-          </div> */}
+          </div>
         </Link>
         <div className="hidden xl:flex items-baseline gap-5  text-white font-grotesque text-md font-thin cursor-pointer">
           {navLinks.map((navItem, idx) => {
@@ -121,7 +121,7 @@ const Navbar = () => {
                 <div
                   className={`duration-500 hover:-translate-y-1 hover:scale-105 ${
                     location.pathname === navItem.link
-                      ? "underline font-thin"
+                      ? "underline underline-offset-4 font-thin"
                       : ""
                   }`}
                 >

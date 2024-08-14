@@ -86,7 +86,7 @@ export const ParallaxScroll = ({ items, className }) => {
             key={i}
             onClick={() => handlePageChange(i)}
             className={`px-4 py-2 mx-2 rounded-full ${
-              currentPage === i ? "bg-black text-white" : "bg-gray-300"
+              currentPage === i ? "bg-[#f7f2e9] text-black" : "bg-gray-300"
             }`}
           >
             {i}
@@ -118,7 +118,7 @@ export const ParallaxScroll = ({ items, className }) => {
       >
         <div className="flex flex-col items-center">
           {firstPart.map((el, idx) => (
-            <a href={el.link} target="_blank">
+            <a href={el.link} target="_blank" key={idx}>
               <Card
                 imgSrc={el.image}
                 title={el.title}
@@ -132,7 +132,7 @@ export const ParallaxScroll = ({ items, className }) => {
         </div>
         <div className="flex flex-col items-center">
           {secondPart.map((el, idx) => (
-            <a href={el.link} target="_blank">
+            <a href={el.link} target="_blank" key={idx}>
               <Card
                 imgSrc={el.image}
                 title={el.title}
@@ -151,7 +151,7 @@ export const ParallaxScroll = ({ items, className }) => {
           )}
         >
           {thirdPart.map((el, idx) => (
-            <a href={el.link} target="_blank">
+            <a href={el.link} target="_blank" key={idx}>
               <Card
                 imgSrc={el.image}
                 title={el.title}
@@ -164,7 +164,7 @@ export const ParallaxScroll = ({ items, className }) => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center my-20">
+      <div className="flex justify-center my-10 md:my-20">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}

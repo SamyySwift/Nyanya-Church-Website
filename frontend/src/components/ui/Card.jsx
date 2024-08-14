@@ -68,24 +68,30 @@ const Card = ({
     >
       <div
         style={{ backgroundColor: color }}
-        className="relative flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-10 h-[680px] sm:w-[1200px] sm:h-[800px] md:w-[1200px] md:h-[550px] rounded-[40px] p-5"
+        className="relative flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-10 h-[680px] sm:w-[1200px] sm:h-[800px] md:w-[1100px] md:h-[550px] rounded-[40px] px-5 md:px-8 py-5"
       >
         {/* Column 1: Title, Description, and Button*/}
-        <div className="flex flex-col justify-between max-w-2xl md:max-w-sm lg:max-w-xl">
+        <div className="flex flex-col justify-between max-w-2xl md:max-w-[500px]">
           <h2 className="text-2xl md:text-4xl font-bold md:mb-10 lg:mb-10 mb-5 mt-4 font-grotesque">
             {title}
           </h2>
-          <p className="text-md md:text-lg lg:text-xl font-grotesque text-justify font-light md:font-normal leading-6 lg:leading-loose md:leading-relaxed">
+          <p className="text-md md:text-lg lg:text-xl font-grotesque text-justify font-light leading-6 lg:leading-loose md:leading-relaxed">
             {description}
           </p>
-          {date && (
-            <span className="flex items-center gap-2 mt-5 md:mt-10 font-grotesque font-light text-md md:text-lg">
-              <FaCalendarWeek size={23} />
-              {date}
-              <FaClock size={22} className="ml-3" />
-              {convertTimeFormat(time)}
-            </span>
-          )}
+          <div className="md:absolute md:bottom-[145px] ">
+            {date && (
+              <span className="flex items-center gap-2 mt-5 md:mt-10 font-grotesque font-light text-md md:text-lg">
+                <FaCalendarWeek size={20} />
+                {new Date(date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+                <FaClock size={20} className="ml-3" />
+                {convertTimeFormat(time)}
+              </span>
+            )}
+          </div>
 
           <div className="flex gap-3 mt-5 md:absolute md:bottom-10 relative">
             {btnType === "event" ? (
@@ -98,20 +104,20 @@ const Card = ({
                 </button>
                 {showPopover && (
                   <motion.div
-                    className="font-grotesque absolute bottom-full left-0 mb-5 p-3 bg-white border border-gray-300 shadow-md rounded-2xl z-50"
+                    className="font-grotesque absolute bottom-full left-0 mb-5 p-3 bg-white border border-gray-300 shadow-md rounded-3xl z-50"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <a
+                    {/* <a
                       href={icsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
                     >
                       <FaApple /> Apple Calendar
-                    </a>
+                    </a> */}
                     <a
                       href={googleUrl}
                       target="_blank"
@@ -155,11 +161,11 @@ const Card = ({
           </div>
         </div>
 
-        <div className="overflow-hidden md:mt-1 w-full h-full">
+        <div className=" w-[500px]">
           <motion.img
             src={btnType !== "event" ? src : eventImage.data.attributes.url}
             alt={title}
-            className="h-full w-full md:h-[500px] object-cover rounded-3xl"
+            className="h-full w-full md:h-[500px]  object-cover rounded-3xl"
           />
         </div>
       </div>

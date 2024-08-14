@@ -17,14 +17,21 @@ const Footer = () => {
     >
       {/* LOGO */}
       <div className="">
-        <div className="h-[100px] w-[100px] md:h-[70px] md:w-[70px] lg:h-[90px] lg:w-[90px] xl:h-[130px] xl:w-[130px] flex flex-col text-center justify-center items-center rounded-full bg-black border text-white font-grotesque leading-none font-semibold">
+        {/* <div className="h-[100px] w-[100px] md:h-[70px] md:w-[70px] lg:h-[90px] lg:w-[90px] xl:h-[130px] xl:w-[130px] flex flex-col text-center justify-center items-center rounded-full bg-black border text-white font-grotesque leading-none font-semibold">
           <span className="text-xl md:text-sm lg:text-lg xl:text-2xl">
             NYANYA
           </span>
           <span className="text-md md:text-xs lg:text-md xl:text-lg">
             ASSEMBLY
           </span>
-        </div>
+        </div> */}
+        <Link to="/">
+          <img
+            src="images/logo.jpg"
+            alt="Logo"
+            className="h-[100px] md:h-[150px] rounded-full"
+          />
+        </Link>
       </div>
       {/* Contact */}
       <div className="flex flex-col">
@@ -83,7 +90,10 @@ const Footer = () => {
               {location.pathname === link.href && (
                 <div className="mr-1 w-1 h-1 md:w-2 md:h-2 bg-black rounded-full"></div>
               )}
-              <p className="hover:underline hover:scale-105 duration-500">
+              <p
+                className="hover:underline hover:scale-105 duration-500"
+                key={link.name}
+              >
                 {link.name}
               </p>
             </Link>
@@ -127,6 +137,10 @@ const links = [
   {
     name: "About Us",
     href: "/about",
+  },
+  {
+    name: "Contact Us",
+    href: "/contact-us",
   },
   {
     name: "Join a group",

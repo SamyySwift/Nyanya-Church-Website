@@ -13,23 +13,13 @@ const Contact = () => {
       <Hero text="Our Contact " background="video" src="/bg.webm" />
       <section className="py-20">
         <div class="max-w-7xl mx-auto px-8 md:px-16 lg:px-20">
-          <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 font-grotesque">
-              Contact Us
-            </h2>
-            <p class="mt-4 text-lg md:text-xl text-gray-700 font-grotesque">
-              We’d love to hear from you! Reach out with any questions or prayer
-              requests.
-            </p>
-          </div>
-
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* <!-- Contact Information --> */}
             <div class="flex flex-col justify-center">
               <h3 class="text-3xl font-semibold text-black font-grotesque">
                 Get In Touch
               </h3>
-              <p class="mt-4 text-gray-700 font-grotesque">
+              <p class="mt-4 text-gray-900 font-grotesque">
                 We're here to answer any questions you may have. Fill out the
                 form or use one of the contact methods below.
               </p>
@@ -37,7 +27,7 @@ const Contact = () => {
               <div class="mt-8 space-y-4">
                 <div class="flex items-center">
                   <FaLocationDot />
-                  <p class="ml-3 text-gray-700 font-grotesque">
+                  <p class="ml-3 text-gray-900 font-grotesque">
                     NO. 2, Church Avenue, Nyanya Karu Road Opposite <br /> A.A.
                     Rano Filling Station, Nyanya, Abuja, FCT
                   </p>
@@ -56,8 +46,8 @@ const Contact = () => {
                 </div>
               </div>
               {/* Socials */}
-              <h1 className="mt-10 text-2xl text-black font-grotesque">
-                Follow Our Socials
+              <h1 className="mt-10 text-3xl font-semibold text-black font-grotesque">
+                Our Socials
               </h1>
               <div className="flex gap-3 mt-3">
                 {socials.map((social) => (

@@ -19,11 +19,8 @@ const Events = () => {
       <Hero text="Upcoming Events" background="video" src="/bg.webm" />
 
       <section>
-        <div className="text-center pt-20">
-          {/* <h1 className=" font-vibes text-5xl md:text-8xl">
-            Discover Upcoming Events
-          </h1> */}
-          <p className="font-grotesque font-extralight text-center text-xl md:text-2xl max-w-3xl mb-5 mx-auto mt-5 px-5 md:px-0">
+        <div className="text-center py-10">
+          <p className="font-karla text-justify text-xl md:text-2xl max-w-lg mx-auto px-5 md:px-0">
             Discover exciting events that will uplift your spirit and enrich
             your journey. Don't miss out on our latest upcoming experiences!
           </p>

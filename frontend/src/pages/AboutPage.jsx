@@ -12,7 +12,7 @@ const AboutPage = () => {
         title="About Us | Nyanya Assembly"
         description="About us page"
       />
-      <Hero text="About Us" src="images/about-bg.webp" mainHero={false} />
+      <Hero text="About Us" background="video" src="/bg.webm" />
       <section>
         <Welcome
           title="Our Pastors"
