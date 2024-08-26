@@ -45,9 +45,7 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
           </span>
         </div>
         <div className="absolute bottom-0 left-0 w-full bg-opacity-20 backdrop-blur-sm bg-black px-5 py-2 flex flex-col items-start z-20">
-          <p className="text-white font-grotesque font-extralight">
-            {bodyText}
-          </p>
+          <p className="text-white font-grotesque font-light">{bodyText}</p>
           <Link to={link}>
             <button className="flex items-center gap-1 mt-2 bg-black text-white px-2 py-2 font-grotesque font-light min-w-[100px] rounded-2xl z-20">
               {icon}

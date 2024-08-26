@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import transition from "../utils/transition";
+import Transition from "../utils/transition";
 import PageTitle from "../components/PageTitle";
 import { LayoutGrid } from "../components/ui/layout-grid";
 
@@ -27,7 +27,7 @@ const JoinAGroup = () => {
   );
 };
 
-export default transition(JoinAGroup);
+export default Transition(JoinAGroup);
 
 const SkeletonOne = () => {
   return (

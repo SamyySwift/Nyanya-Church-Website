@@ -1,4 +1,5 @@
 import Ministries from "../components/Ministries";
+import Transition from "../utils/transition";
 
 const MediaTeam = () => {
   return (
@@ -18,4 +19,4 @@ const MediaTeam = () => {
   );
 };
 
-export default MediaTeam;
+export default Transition(MediaTeam);

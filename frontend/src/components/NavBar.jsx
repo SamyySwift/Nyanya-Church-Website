@@ -3,6 +3,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
+import { CiMenuBurger } from "react-icons/ci";
+import { TfiClose } from "react-icons/tfi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,7 +96,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center space-x-3">
           <img src="images/logo.jpg" alt="Logo" className="h-10 rounded-xl" />
           <div className="flex flex-col text-white font-grotesque">
-            <span className="text-[10px] md:text-xs font-bold max-w-xs">
+            <span className="text-[10px] md:text-xs font-bold max-w-xs hidden md:block">
               The Apostolic Church <br /> Nigeria Nyanya Assembly
             </span>
           </div>
@@ -131,58 +133,32 @@ const Navbar = () => {
             );
           })}
         </div>
-
         <div
-          className="block xl:hidden relative h-[40px] w-[100px] rounded-2xl cursor-pointer overflow-hidden z-50"
+          className="block xl:hidden relative h-[40px] w-[40px] rounded-full cursor-pointer overflow-hidden z-50"
           onClick={toggleMenu}
-          style={{ backgroundColor: "#FFFF" }}
         >
           <motion.div
             animate={{ top: isOpen ? "-100%" : "0" }}
             transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
             className="relative h-full w-full"
           >
-            <div className="flex relative justify-center items-center gap-1 h-full w-full">
-              <p className="font-semibold">MENU</p>
-              <motion.svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className="flex justify-center items-center h-full w-full">
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, rotate: isOpen ? 45 : 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <path
-                  d="M4 6H20M4 12H20M4 18H20"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </motion.svg>
+                <CiMenuBurger size={25} className="text-white" />
+              </motion.div>
             </div>
-            <div className="absolute top-full h-full w-full flex justify-center gap-1 items-center bg-black text-white">
-              <p className="font-semibold">CLOSE</p>
-              <motion.svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className="absolute top-full h-full w-full flex justify-center items-center bg-black text-white">
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, rotate: isOpen ? 0 : -45 }}
                 transition={{ duration: 0.3 }}
               >
-                <path
-                  d="M18 6L6 18M6 6L18 18"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </motion.svg>
+                <TfiClose size={24} />
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -225,7 +201,7 @@ const Navbar = () => {
                             activeClass="active"
                             duration={500}
                             to={navItem.link}
-                            className="text-3xl lg:text-5xl font-grotesque font-semibold  flex items-center"
+                            className="text-2xl lg:text-5xl font-grotesque font-semibold  flex items-center"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -236,7 +212,7 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={navItem.link}
-                            className="text-3xl lg:text-5xl font-grotesque font-semibold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
+                            className="text-2xl lg:text-5xl font-grotesque font-semibold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -284,7 +260,8 @@ const navLinks = [
     scroll: true,
   },
   { title: "About us", link: "/about" },
-  { title: "Contact us", link: "/contact-us" },
+  { title: "Join a group", link: "/join-a-group" },
+  // { title: "Contact us", link: "/contact-us" },
   { title: "Plan your visit", link: "/plan-your-visit" },
 ];
 

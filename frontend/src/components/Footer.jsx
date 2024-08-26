@@ -1,7 +1,7 @@
 import { FaPhone, FaLocationDot, FaArrowUp } from "react-icons/fa6";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -9,22 +9,16 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const location = useLocation();
+
   return (
     <footer
-      className="text-black py-[140px] flex flex-col pl-6 md:pl-0 md:flex-row pt-20 md:justify-around gap-12 md:gap-0  relative"
+      className="text-black py-[140px] flex flex-col pl-6 md:pl-0 md:flex-row pt-20 md:justify-around gap-12 md:gap-0 relative"
       style={{ backgroundColor: "#f7f2e9" }}
       name="footer"
     >
       {/* LOGO */}
       <div className="">
-        {/* <div className="h-[100px] w-[100px] md:h-[70px] md:w-[70px] lg:h-[90px] lg:w-[90px] xl:h-[130px] xl:w-[130px] flex flex-col text-center justify-center items-center rounded-full bg-black border text-white font-grotesque leading-none font-semibold">
-          <span className="text-xl md:text-sm lg:text-lg xl:text-2xl">
-            NYANYA
-          </span>
-          <span className="text-md md:text-xs lg:text-md xl:text-lg">
-            ASSEMBLY
-          </span>
-        </div> */}
         <Link to="/">
           <img
             src="images/logo.jpg"
@@ -68,7 +62,7 @@ const Footer = () => {
         {/* Socials */}
         <div className="flex gap-4 mt-6">
           {socials.map((social) => (
-            <Link to={social.link} key={social.name}>
+            <Link to={social.link} key={social.title}>
               <motion.div
                 whileHover={{ translateY: -10, scale: 1.3 }}
                 transition={{ duration: 0.4 }}
@@ -90,10 +84,7 @@ const Footer = () => {
               {location.pathname === link.href && (
                 <div className="mr-1 w-1 h-1 md:w-2 md:h-2 bg-black rounded-full"></div>
               )}
-              <p
-                className="hover:underline hover:scale-105 duration-500"
-                key={link.name}
-              >
+              <p className="hover:underline hover:scale-105 duration-500">
                 {link.name}
               </p>
             </Link>
@@ -133,7 +124,6 @@ const links = [
     name: "Sermons",
     href: "/sermons",
   },
-
   {
     name: "About Us",
     href: "/about",

@@ -17,9 +17,12 @@ import Lenis from "lenis";
 import ScrollToTop from "./utils/scroll-to-top.js";
 import Sermons from "./pages/Sermons.jsx";
 import Contact from "./pages/Contact.jsx";
+import GivingPage from "./pages/Giving.jsx";
+import pingServer from "./utils/ping.js";
 
 function App() {
   const location = useLocation();
+  pingServer();
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -51,6 +54,7 @@ function App() {
             <Route path="/youth-fellowship" element={<YouthFellowship />} />
             <Route path="/classical-choir" element={<ClassicalChoir />} />
             <Route path="/contact-us" element={<Contact />} />
+            <Route path="/giving" element={<GivingPage />} />
           </Routes>
         </AnimatePresence>
         <Footer />
