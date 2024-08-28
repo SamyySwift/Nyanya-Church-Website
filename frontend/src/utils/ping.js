@@ -1,4 +1,4 @@
-const url = "https://nyanya-church-backend.onrender.com";
+const url = "https://nyanya-church-backend.onrender.com/events";
 
 function pingServer() {
   fetch(url)
