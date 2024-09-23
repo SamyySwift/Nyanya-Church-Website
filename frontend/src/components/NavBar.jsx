@@ -3,8 +3,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
-import { CiMenuBurger } from "react-icons/ci";
-import { TfiClose } from "react-icons/tfi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -133,34 +131,57 @@ const Navbar = () => {
             );
           })}
         </div>
-        <div
-          className="block xl:hidden relative h-[40px] w-[40px] rounded-full cursor-pointer overflow-hidden z-50"
-          onClick={toggleMenu}
-        >
-          <motion.div
-            animate={{ top: isOpen ? "-100%" : "0" }}
-            transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-            className="relative h-full w-full"
-          >
-            <div className="flex justify-center items-center h-full w-full">
+        <div className="block xl:hidden z-50" onClick={toggleMenu}>
+          <div className="relative flex items-center">
+            <motion.div
+              className="space-y-2 relative"
+              initial={false}
+              animate={isOpen ? "open" : "closed"}
+              variants={{
+                closed: {
+                  opacity: 1,
+                  transition: { duration: 0.3 },
+                },
+                open: {
+                  opacity: 1,
+                  transition: { duration: 0.3 },
+                },
+              }}
+            >
+              {/* Top Bar */}
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, rotate: isOpen ? 45 : 0 }}
+                className="h-[1px] w-8 bg-white"
+                style={{ transformOrigin: "center" }}
+                animate={
+                  isOpen
+                    ? { rotate: 45, y: 3, backgroundColor: "#000" }
+                    : { rotate: 0, y: 0, backgroundColor: "#fff" }
+                }
                 transition={{ duration: 0.3 }}
-              >
-                <CiMenuBurger size={25} className="text-white" />
-              </motion.div>
-            </div>
-            <div className="absolute top-full h-full w-full flex justify-center items-center bg-black text-white">
+              />
+              {/* Middle Bar */}
+              {/* <motion.div
+                className="h-[1px] w-8 bg-white"
+                animate={
+                  isOpen
+                    ? { opacity: 0, backgroundColor: "#000" }
+                    : { opacity: 1, backgroundColor: "#fff" }
+                }
+                transition={{ duration: 0.3 }}
+              /> */}
+              {/* Bottom Bar */}
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, rotate: isOpen ? 0 : -45 }}
+                className="h-[1px] w-8 bg-white"
+                style={{ transformOrigin: "center" }}
+                animate={
+                  isOpen
+                    ? { rotate: -45, y: -6, backgroundColor: "#000" }
+                    : { rotate: 0, y: 0, backgroundColor: "#fff" }
+                }
                 transition={{ duration: 0.3 }}
-              >
-                <TfiClose size={24} />
-              </motion.div>
-            </div>
-          </motion.div>
+              />
+            </motion.div>
+          </div>
         </div>
       </div>
       <AnimatePresence>

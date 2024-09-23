@@ -28,7 +28,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
         <div>
           {mainHero ? (
             <div className="absolute bottom-[30px] md:bottom-10 left-5 md:left-8 xl:left-[80px] flex space-x-4">
-              <button className="flex items-center bg-[#f7f2e9] text-black p-4 rounded-2xl shadow-md text-sm md:text-base font-grotesque">
+              {/* <button className="flex items-center bg-[#f7f2e9] text-black p-4 rounded-2xl shadow-md text-sm md:text-base font-grotesque">
                 <BsFillCameraReelsFill className="mr-2" />
                 <span> Live Stream</span>
               </button>
@@ -37,7 +37,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
                 <Link to="/giving">
                   <span>Giving </span>
                 </Link>
-              </button>
+              </button> */}
             </div>
           ) : (
             <div className="w-full flex justify-center">
