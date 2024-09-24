@@ -11,12 +11,14 @@ const Ministries = ({ bgImg, bgText, team, images, background }) => {
       <Hero text={bgText} src={bgImg} background={background} />
 
       <section className="overflow-hidden">
-        <div className="py-20 bg-black flex items-center">
-          <InfiniteMovingCards
-            items={images}
-            type="image"
-            pauseOnHover={false}
-          />
+        <div className="py-20 bg-gradient-to-br from-gray-900 to-black flex items-center">
+          <div className="w-full max-w-screen-xl mx-auto">
+            <InfiniteMovingCards
+              items={images}
+              type="image"
+              pauseOnHover={false}
+            />
+          </div>
         </div>
       </section>
 

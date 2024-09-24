@@ -92,7 +92,7 @@ const Navbar = () => {
     <nav className="fixed w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-xs bg-opacity-30">
       <div className="container mx-auto px-5 md:px-8 xl:px-[80px] py-6 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
-          <img src="images/logo.jpg" alt="Logo" className="h-10 rounded-xl" />
+          <img src="images/logo.jpg" alt="Logo" className="h-8 rounded-xl" />
           <div className="flex flex-col text-white font-grotesque">
             <span className="text-[10px] md:text-xs font-bold max-w-xs hidden md:block">
               The Apostolic Church <br /> Nigeria Nyanya Assembly
@@ -281,7 +281,7 @@ const navLinks = [
     scroll: true,
   },
   { title: "About us", link: "/about" },
-  { title: "Join a group", link: "/join-a-group" },
+  { title: "Join A Team", link: "/join-a-group" },
   // { title: "Contact us", link: "/contact-us" },
   { title: "Plan your visit", link: "/plan-your-visit" },
 ];

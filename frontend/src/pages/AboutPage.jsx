@@ -16,8 +16,7 @@ const AboutPage = () => {
       <section>
         <Welcome
           title="Our Pastors"
-          text="Apostle and Deaconness I.O Udofia currently serve as Pastors of The Apostoliic Church Nigeria Nyanya Assembly. Apostle I.O. Udofia is a man with a great 
-          God who by God's grace has pastored and shepherd over 5 assemblies. "
+          text="Apostle I.O. Udofia and Deaconess I.O. Udofia are currently serving as the dedicated pastors of The Apostolic Church Nigeria, Nyanya Assembly. By the grace of God, Apostle I.O. Udofia is a servant leader with a heart for ministry, having faithfully pastored and shepherded over five assemblies, demonstrating unwavering commitment to the growth of the church and the spiritual well-being of its members. "
           imgSrc={images}
         />
       </section>

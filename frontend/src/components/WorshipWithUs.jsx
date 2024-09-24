@@ -3,6 +3,8 @@ import { FlipWords } from "../components/ui/flip-words";
 import { motion } from "framer-motion";
 import React from "react";
 import { ImagesSlider } from "./ui/images-slider";
+import { BsFillCameraReelsFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const WorshipWithUs = () => {
   const words = [
@@ -35,6 +37,12 @@ const WorshipWithUs = () => {
         <span className="font-grotesque text-2xl md:text-4xl font-thin">
           and experience God's <FlipWords words={words} />
         </span>
+        <a href="https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d">
+          <button className="flex items-center mt-5 bg-[#f7f2e9] text-black p-3 rounded-2xl shadow-md text-sm md:text-base font-grotesque">
+            <BsFillCameraReelsFill className="mr-2" />
+            <span> Live Stream</span>
+          </button>
+        </a>
       </motion.div>
     </ImagesSlider>
   );

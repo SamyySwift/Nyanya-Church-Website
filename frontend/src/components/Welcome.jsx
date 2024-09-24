@@ -7,7 +7,7 @@ export function Welcome({ title, text, imgSrc = images }) {
   return (
     <section className="overflow-hidden">
       <div
-        className="h-[760px] sm:h-screen md:h-[500px] lg:h-[700px] xl:h-screen flex flex-col md:flex-row justify-around md:justify-between items-center gap-5 px-5 lg:px-[40px] xl:px-[80px]"
+        className="h-[700px] sm:h-screen md:h-[500px] lg:h-[700px] xl:h-screen flex flex-col md:flex-row justify-around md:justify-between items-center gap-5 px-5 lg:px-[40px] xl:px-[80px]"
         // ref={ref}
       >
         <motion.div
@@ -18,13 +18,13 @@ export function Welcome({ title, text, imgSrc = images }) {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="flex flex-col justify-center md:max-w-md xl:max-w-lg space-y-[30px] md:space-y-[100px]"
+          className="flex flex-col justify-center md:max-w-md xl:max-w-xl space-y-[30px] md:space-y-[100px]"
         >
           <h1 className="text-4xl lg:text-6xl font-semibold font-grotesque">
             {title}
           </h1>
           <div>
-            <span className="font-grotesque text-justify font-light md:text-md lg:text-xl leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
+            <span className="font-grotesque text-justify font-light md:text-md lg:text-lg leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
               {text}
             </span>
           </div>
@@ -44,7 +44,7 @@ const images = [
   "images/welcome-bg-10.webp",
   "images/welcome-bg-9.webp",
   "images/welcome-bg-1.webp",
-  "images/welcome-bg-6.webp",
+  // "images/welcome-bg-6.webp",
   "images/welcome-bg-2.webp",
   "images/welcome-bg-7.webp",
   "images/welcome-bg-3.webp",

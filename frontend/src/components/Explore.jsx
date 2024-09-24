@@ -69,7 +69,7 @@ const exploreNav = [
     src: "images/convention.jpg",
   },
   {
-    title: "Join a Team",
+    title: "Join A Team",
     bodyText: "Explore our diverse church teams, find your place to belong!",
     btnText: "Learn More",
     icon: <BsArrowUpRightCircleFill />,
