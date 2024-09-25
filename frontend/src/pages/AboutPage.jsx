@@ -25,7 +25,7 @@ const AboutPage = () => {
         />
       </section>
 
-      {/* <div
+      <div
         className="relative h-[600px] w-full flex items-center justify-center font-grotesque"
         style={{
           backgroundImage: `url(${"images/bible.webp"})`,
@@ -38,7 +38,7 @@ const AboutPage = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold">
             OUR MOTTO 2024
           </h1>
-          <p className="text-lg md:text-xl mt-4 md:max-w-lg p-4">
+          <p className="text-lg md:text-2xl mt-4 md:max-w-lg p-4">
             Our redeemer is strong, the Lord of hosts is His name, He will
             surely plead our cause!{" "}
             <span className="font-bold underline underline-offset-4">
@@ -46,7 +46,7 @@ const AboutPage = () => {
             </span>
           </p>
         </div>
-      </div> */}
+      </div>
 
       <AuroraBackground>
         <motion.div
@@ -59,21 +59,12 @@ const AboutPage = () => {
           }}
           className="relative flex flex-col gap-4 items-center justify-center px-4"
         >
-          <div className="text-4xl md:text-6xl font-extrabold dark:text-white text-center">
-            Our Motto 2024
-          </div>
-          <p className="text-lg md:text-xl mt-4 md:max-w-lg p-4 text-white">
-            Our redeemer is strong, the Lord of hosts is His name, He will
-            surely plead our cause!{" "}
-            <span className="font-bold underline underline-offset-4">
-              Jeremiah 50:34.
-            </span>
-          </p>
+          <ChurchServices />
         </motion.div>
       </AuroraBackground>
 
       {/* <section className="overflow-hidden">
-        <ChurchServices />
+       
       </section> */}
     </>
   );

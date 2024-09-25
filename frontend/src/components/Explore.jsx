@@ -82,7 +82,7 @@ const exploreNav = [
     btnText: "Email Us",
     icon: <MdEmail />,
     link: "mailto:tacnna2024@gmail.com",
-    src: "images/pastor-imoh.jpg",
+    src: "images/pastor.webp",
   },
 ];
 
