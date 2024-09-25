@@ -47,8 +47,8 @@ const Navbar = () => {
       translateX: 0,
       translateY: 0,
       transition: {
-        duration: 0.5,
-        delay: 0.5 + idx * 0.1,
+        duration: 0.3,
+        delay: 0.3 + idx * 0.1,
       },
       ease: [0.215, 0.61, 0.355, 1],
     }),
@@ -56,7 +56,7 @@ const Navbar = () => {
       opacity: 0,
       y: -30,
       transition: {
-        duration: 0.4,
+        duration: 0.2,
         delay: 0.2 + idx * 0.1,
         ease: [0.215, 0.61, 0.355, 1],
       },
@@ -222,7 +222,7 @@ const Navbar = () => {
                             activeClass="active"
                             duration={500}
                             to={navItem.link}
-                            className="text-2xl lg:text-5xl font-grotesque font-semibold  flex items-center"
+                            className="text-2xl lg:text-5xl font-grotesque font-bold  flex items-center"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -233,7 +233,7 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={navItem.link}
-                            className="text-2xl lg:text-5xl font-grotesque font-semibold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
+                            className="text-2xl lg:text-5xl font-grotesque font-bold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -281,7 +281,7 @@ const navLinks = [
     scroll: true,
   },
   { title: "About us", link: "/about" },
-  { title: "Join A Team", link: "/join-a-group" },
+  { title: "Join a team", link: "/join-a-group" },
   // { title: "Contact us", link: "/contact-us" },
   { title: "Plan your visit", link: "/plan-your-visit" },
 ];

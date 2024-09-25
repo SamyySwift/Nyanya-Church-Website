@@ -34,11 +34,11 @@ const WorshipWithUs = () => {
         <h1 className="text-5xl md:text-8xl font-light font-vibes">
           Worship With Us <br />
         </h1>
-        <span className="font-grotesque text-2xl md:text-4xl font-thin">
+        <span className="font-grotesque text-2xl md:text-4xl font-light">
           and experience God's <FlipWords words={words} />
         </span>
         <a href="https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d">
-          <button className="flex items-center mt-5 bg-[#f7f2e9] text-black p-3 rounded-2xl shadow-md text-sm md:text-base font-grotesque">
+          <button className="flex items-center mt-8 bg-[#f7f2e9] text-black p-3 rounded-2xl shadow-md text-sm md:text-base font-grotesque">
             <BsFillCameraReelsFill className="mr-2" />
             <span> Live Stream</span>
           </button>

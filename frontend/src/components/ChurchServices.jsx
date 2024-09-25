@@ -1,10 +1,10 @@
 import { FaClock } from "react-icons/fa6";
-import { useParallax } from "react-scroll-parallax";
+// import { useParallax } from "react-scroll-parallax";
 
 const ChurchServices = () => {
   return (
     <div
-      className="relative py-10  bg-black flex flex-col items-center justify-center overflow-hidden"
+      className="relative py-[50px] bg-gray-800 flex flex-col items-center justify-center overflow-hidden"
       // ref={ref}
     >
       <h1 className="md:text-7xl text-4xl lg:text-6xl mb-20 font-semibold text-center text-slate-300 relative font-grotesque">

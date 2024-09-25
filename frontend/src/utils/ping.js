@@ -10,7 +10,7 @@ function pingServer() {
     });
 
   // Schedule the next ping after 10 minutes (600,000 milliseconds)
-  setTimeout(pingServer, 600000);
+  setTimeout(pingServer, 300000);
 }
 
 export default pingServer;

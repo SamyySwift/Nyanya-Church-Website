@@ -125,15 +125,15 @@ const links = [
     href: "/sermons",
   },
   {
-    name: "About Us",
+    name: "About us",
     href: "/about",
   },
   {
-    name: "Contact Us",
+    name: "Contact us",
     href: "/contact-us",
   },
   {
-    name: "Join a group",
+    name: "Join a team",
     href: "/join-a-group",
   },
   {
