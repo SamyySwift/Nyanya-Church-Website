@@ -18,7 +18,7 @@ function HomeScreen() {
         description="Nyanya assembly homepage"
       />
 
-      <Hero text="" background="video" src="/bg.webm" mainHero={true} />
+      <Hero text="" background="video" src="/bg.mp4" mainHero={true} />
 
       <Welcome
         title="Welcome To Church"
