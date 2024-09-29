@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ImagesSlider } from "./ui/images-slider";
-import { useParallax } from "react-scroll-parallax";
+// import { useParallax } from "react-scroll-parallax";
 
 export function Welcome({ title, text, imgSrc = images }) {
   // const { ref } = useParallax({ speed: -15 });

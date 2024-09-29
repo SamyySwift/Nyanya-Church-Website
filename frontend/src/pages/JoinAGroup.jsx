@@ -10,11 +10,11 @@ const JoinAGroup = () => {
         title="Nyanya Assembly | Join a Team"
         description="Different church groups"
       />
-      <Hero text="Teams" background="video" src="/join-bg.mp4" />
+      <Hero text="Teams" background="video" src="/join.mp4" />
 
       <section style={{ backgroundColor: "#FFFFFF" }} className="py-5">
         <div className="text-center py-10">
-          <p className="font-grotesque text-base md:text-2xl text-justify max-w-xl mx-auto px-5 md:px-0">
+          <p className="font-grotesque text-xl md:text-2xl text-justify max-w-xl mx-auto px-5 md:px-0">
             Discover exciting groups and teams in nyanya to join that will
             uplift your spirit and enrich your journey. Get connected and stay
             motivated!
