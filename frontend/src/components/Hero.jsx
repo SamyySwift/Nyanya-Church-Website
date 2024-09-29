@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Hero = ({ text, background, src, mainHero = false }) => {
   return (
     <section className="">
-      <div className="h-[700px] md:h-screen relative">
+      <div className="h-[600px] md:h-screen relative">
         {background === "video" ? (
           <video
             className="w-full h-full object-cover object-center absolute inset-0"
