@@ -3,16 +3,14 @@ import ContactForm from "./ContactForm.jsx";
 
 import InfiniteMovingCards from "./ui/infinite-moving-cards.jsx";
 
-const Ministries = ({ bgImg, bgText, team, images, background }) => {
-  // const { ref } = useParallax({ speed: -20 });
-
+const Ministries = ({ src, bgText, team, images, background }) => {
   return (
     <>
-      <Hero text={bgText} src={bgImg} background={background} />
+      <Hero text={bgText} src={src} background={background} />
 
       <section className="overflow-hidden">
-        <div className="py-20 bg-gradient-to-br from-gray-900 to-black flex items-center">
-          <div className="w-full max-w-screen-xl mx-auto">
+        <div className="py-20 bg-black flex items-center">
+          <div className="w-full mx-auto">
             <InfiniteMovingCards
               items={images}
               type="image"

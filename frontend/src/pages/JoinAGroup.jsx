@@ -10,7 +10,7 @@ const JoinAGroup = () => {
         title="Nyanya Assembly | Join a Team"
         description="Different church groups"
       />
-      <Hero text="Teams" background="video" src="/join.mp4" />
+      <Hero text="Teams" background="video" src="/join.webm" />
 
       <section style={{ backgroundColor: "#FFFFFF" }} className="py-5">
         <div className="text-center py-10">

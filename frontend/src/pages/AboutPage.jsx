@@ -46,9 +46,9 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <section className="overflow-hidden">
+      {/* <section className="overflow-hidden">
         <ChurchServices />
-      </section>
+      </section> */}
     </>
   );
 };

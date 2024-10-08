@@ -4,7 +4,8 @@ function ClassicalChoir() {
   return (
     <>
       <Ministries
-        bgImg="images/youth4.webp"
+        src="/join.webm"
+        background="video"
         bgText="Usering Team"
         team="Usering Team"
         images={[

@@ -15,7 +15,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
             autoPlay
             playsInline
           >
-            <source src={src} type="video/mp4" />
+            <source src={src} type="video/webm" />
           </video>
         ) : (
           <img
@@ -23,7 +23,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
             className="w-full h-full object-cover object-center absolute inset-0"
           />
         )}
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-70"></div>
 
         <div>
           {mainHero ? (
@@ -41,7 +41,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
             </div>
           ) : (
             <div className="w-full flex justify-center">
-              <motion.h1 className="absolute bottom-10 left-5 md:left-8 xl:left-[80px] font-grotesque font-extrabold text-white text-4xl md:text-7xl lg:text-8xl">
+              <motion.h1 className="absolute bottom-5 left-5 md:left-8 xl:left-[80px] max-w-md font-grotesque font-bold text-white text-4xl md:text-7xl lg:text-8xl">
                 {text}
               </motion.h1>
             </div>

@@ -4,7 +4,8 @@ const PraiseTeam = () => {
   return (
     <>
       <Ministries
-        bgImg="images/praise-team-1.webp"
+        src="/join.webm"
+        background="video"
         bgText="Praise Team"
         team="Praise & Worship Team"
         images={[

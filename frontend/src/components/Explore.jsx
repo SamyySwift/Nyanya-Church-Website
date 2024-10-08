@@ -35,25 +35,39 @@ const Explore = () => {
 
 const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
   return (
-    <div className="relative max-w-sm w-full ">
-      <div className="h-80 rounded-2xl cursor-pointer transform  overflow-hidden  duration-500 hover:scale-105 hover:shadow-xl">
+    <div className="max-w-sm w-full flex flex-col items-center">
+      {/* Card */}
+      <Link
+        to={link}
+        className="h-80 rounded-2xl cursor-pointer transform overflow-hidden duration-500 hover:scale-105 hover:shadow-xl"
+      >
         <div className="relative">
+          {/* Image and Title */}
           <div className="absolute top-0 inset-0 bg-gradient-to-b from-black/70 via-transparent to-transparent z-10"></div>
-          <img className="w-full h-96 object-cover " src={src} alt={title} />
-          <span className="absolute top-2 left-5 text-3xl text-white font-grotesque font-bold z-10 ">
+          <img className="w-full h-96 object-cover" src={src} alt={title} />
+          <span className="absolute top-2 left-5 text-2xl text-white font-grotesque font-bold z-10">
             {title}
           </span>
         </div>
+
+        {/* Body Text */}
         <div className="absolute bottom-0 left-0 w-full bg-opacity-20 backdrop-blur-sm bg-black px-5 py-2 flex flex-col items-start z-20">
           <p className="text-white font-grotesque font-light">{bodyText}</p>
-          <Link to={link}>
-            <button className="flex items-center gap-1 mt-2 bg-black text-white px-2 py-2 font-grotesque font-light min-w-[100px] rounded-2xl z-20">
-              {icon}
-              {btnText}
-            </button>
-          </Link>
         </div>
-      </div>
+      </Link>
+
+      {/* Lower Button */}
+
+      <Link
+        to={link}
+        className="mt-6 p-3 rounded-2xl shadow-md z-10"
+        style={{ backgroundColor: "#f7f2e9" }}
+      >
+        <h3 className="flex items-center gap-1 text-md text-center text-black underline underline-offset-8 font-karla">
+          {/* {icon} */}
+          {btnText}
+        </h3>
+      </Link>
     </div>
   );
 };
@@ -66,7 +80,7 @@ const exploreNav = [
     btnText: "Learn More",
     icon: <BsArrowUpRightCircleFill />,
     link: "/events",
-    src: "images/convention.jpg",
+    src: "images/upcoming.png",
   },
   {
     title: "Join A Team",
