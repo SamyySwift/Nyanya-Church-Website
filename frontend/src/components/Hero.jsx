@@ -23,7 +23,7 @@ const Hero = ({ text, background, src, mainHero = false }) => {
             className="w-full h-full object-cover object-center absolute inset-0"
           />
         )}
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="absolute inset-0 bg-black opacity-10"></div>
 
         <div>
           {mainHero ? (
