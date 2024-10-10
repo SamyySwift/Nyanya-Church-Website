@@ -80,7 +80,7 @@ const exploreNav = [
     btnText: "Learn More",
     icon: <BsArrowUpRightCircleFill />,
     link: "/events",
-    src: "images/upcoming.png",
+    src: "images/ue3.jpg",
   },
   {
     title: "Join A Team",
