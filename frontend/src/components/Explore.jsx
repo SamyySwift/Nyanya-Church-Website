@@ -64,7 +64,7 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
         style={{ backgroundColor: "#f7f2e9" }}
       >
         <h3 className="flex items-center gap-1 text-md text-center text-black underline underline-offset-8 font-karla">
-          {/* {icon} */}
+          {icon}
           {btnText}
         </h3>
       </Link>
