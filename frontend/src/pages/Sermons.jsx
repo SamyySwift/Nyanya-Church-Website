@@ -1,8 +1,8 @@
-import Hero from "../components/Hero";
 import PageTitle from "../components/PageTitle";
 import { ParallaxScroll } from "../components/ui/parallax-scroll";
 import transition from "../utils/transition";
 import customFetch from "../hooks/customFetch";
+import HeroSection from "../components/HeroSection";
 
 const Sermons = () => {
   const { loading, error, data } = customFetch(
@@ -25,20 +25,31 @@ const Sermons = () => {
   return (
     <>
       <PageTitle
-        title="Sermons | Nyanya Assembly"
-        description="Church sermons"
+        title="Nyanya Assembly | Sermons"
+        description="Listen to inspiring sermons from Nyanya Assembly"
       />
-      <Hero text="Sermons" src="images/bible.webp" mainHero={false} />
+      {/* <Hero text="Sermons" src="images/bible.webp" mainHero={false} /> */}
 
-      {loading ? (
-        <div className="flex justify-center my-20">
-          <span class="loader"></span>
-        </div>
-      ) : error ? (
-        <></>
-      ) : (
-        <ParallaxScroll items={sermons} />
-      )}
+      <HeroSection
+        title={"Sermons"}
+        backgroundImage="images/bible.webp"
+        section_title="Our Sermons"
+        svg_color="#F7F2E9"
+        description={`Explore our collection of sermons that offer spiritual guidance, 
+            inspiration, and encouragement. Stay connected with our community 
+            and deepen your faith through these powerful messages.`}
+        content={
+          loading ? (
+            <div className="flex justify-center my-20">
+              <span class="loader"></span>
+            </div>
+          ) : error ? (
+            <></>
+          ) : (
+            <ParallaxScroll items={sermons} />
+          )
+        }
+      />
     </>
   );
 };

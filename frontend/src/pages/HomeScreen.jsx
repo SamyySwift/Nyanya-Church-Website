@@ -4,7 +4,6 @@ import { Welcome } from "../components/Welcome";
 import "../App.css";
 import Explore from "../components/Explore";
 import transition from "../utils/transition";
-// import WordAnimation from "../components/WordAnimation";
 import { FlipWords } from "../components/ui/flip-words";
 import PageTitle from "../components/PageTitle";
 
@@ -12,16 +11,16 @@ function HomeScreen() {
   const words = ["vibrant", "friendly", "beautiful", "modern", "lovable"];
 
   return (
-    <div className="overflow-hidden relative">
+    <>
       <PageTitle
         title="Nyanya Assembly"
-        description="Nyanya assembly homepage"
+        description="Nyanya assembly | Homepage"
       />
 
       <Hero text="" background="video" src="/bg.webm" mainHero={true} />
 
       <Welcome
-        title="Welcome To Church"
+        title="Welcome"
         text={
           <>
             The Apostolic Church Nigeria, Nyanya Assembly is a {""}
@@ -30,15 +29,9 @@ function HomeScreen() {
           </>
         }
       />
-      {/* EXPLORE SECTION */}
-      <section className="overflow-hidden">
-        <Explore />
-      </section>
-      {/* WORSHIP WITH US SECTION */}
-      <section className=" overflow-hidden">
-        <WorshipWithUs />
-      </section>
-    </div>
+      <Explore />
+      <WorshipWithUs />
+    </>
   );
 }
 

@@ -10,7 +10,7 @@ export const ImagesSlider = ({
   className,
   autoplay = true,
   direction = "up",
-  opacity = 60,
+  opacity = 50,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -67,7 +67,7 @@ export const ImagesSlider = ({
     if (autoplay) {
       interval = setInterval(() => {
         handleNext();
-      }, 3000);
+      }, 300000);
     }
 
     return () => {

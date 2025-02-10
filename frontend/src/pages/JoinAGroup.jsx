@@ -1,7 +1,7 @@
-import Hero from "../components/Hero";
 import Transition from "../utils/transition";
 import PageTitle from "../components/PageTitle";
 import { LayoutGrid } from "../components/ui/layout-grid";
+import HeroSection from "../components/HeroSection";
 
 const JoinAGroup = () => {
   return (
@@ -10,19 +10,16 @@ const JoinAGroup = () => {
         title="Nyanya Assembly | Join a Team"
         description="Different church groups"
       />
-      <Hero text="Teams" background="video" src="/join.webm" />
-
-      <section style={{ backgroundColor: "#FFFFFF" }} className="py-5">
-        <div className="text-center py-10">
-          <p className="font-grotesque text-xl md:text-2xl text-justify max-w-xl mx-auto px-5 md:px-0">
-            Discover exciting groups and teams in nyanya to join that will
+      {/* <Hero text="Teams" background="video" src="/join.webm" /> */}
+      <HeroSection
+        title={"Teams"}
+        section_title={"Join a Team"}
+        backgroundImage="/images/people.jpg"
+        description={`Discover exciting groups and teams in nyanya to join that will
             uplift your spirit and enrich your journey. Get connected and stay
-            motivated!
-          </p>
-        </div>
-
-        <LayoutGrid cards={cards} />
-      </section>
+            motivated!`}
+        content={<LayoutGrid cards={cards} />}
+      />
     </>
   );
 };

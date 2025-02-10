@@ -19,6 +19,7 @@ import Sermons from "./pages/Sermons.jsx";
 import Contact from "./pages/Contact.jsx";
 import GivingPage from "./pages/Giving.jsx";
 import pingServer from "./utils/ping.js";
+import Test from "./pages/Test.jsx";
 
 function App() {
   const location = useLocation();
@@ -36,7 +37,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="">
       <ScrollToTop />
       <Navbar />
 
@@ -55,11 +56,12 @@ function App() {
             <Route path="/classical-choir" element={<ClassicalChoir />} />
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/giving" element={<GivingPage />} />
+            <Route path="/test" element={<Test />} />
           </Routes>
         </AnimatePresence>
         <Footer />
       </HelmetProvider>
-    </>
+    </div>
   );
 }
 
