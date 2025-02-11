@@ -20,6 +20,8 @@ function HomeScreen() {
       {/* <Hero text="" background="video" src="/bg.webm" mainHero={true} /> */}
       <HeroSection
         svg_color="#F5AAA1"
+        backgroundImage="/images/people.jpg"
+        title="Home"
         content={
           <Welcome
             title="Welcome"
