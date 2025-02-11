@@ -28,7 +28,6 @@ const HeroSection = ({
           </h1>
         </div>
       </div>
-
       {/* C-Curve Bottom */}
       <svg className="absolute bottom-0" viewBox="0 0 1440 320">
         <path
@@ -36,9 +35,8 @@ const HeroSection = ({
           d="M0,256 C480,400 960,100 1440,256 L1440,320 L0,320 Z"
         ></path>
       </svg>
-
-      {/* Content Below the Curve
-      <div className={`bg-[${svg_color}] text-black  md:text-start`}>
+      Content Below the Curve
+      <div className={`bg-[${svg_color}] text-black py-[50px] md:text-start`}>
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-10 md:text-6xl font-extrabold font-poppins">
             {section_title}
@@ -48,7 +46,7 @@ const HeroSection = ({
           </p>
           {content}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
