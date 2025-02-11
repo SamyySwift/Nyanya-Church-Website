@@ -37,7 +37,7 @@ const HeroSection = ({
         ></path>
       </svg>
 
-      {/* Content Below the Curve */}
+      {/* Content Below the Curve
       <div className={`bg-[${svg_color}] text-black  md:text-start`}>
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-10 md:text-6xl font-extrabold font-poppins">
@@ -48,7 +48,7 @@ const HeroSection = ({
           </p>
           {content}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

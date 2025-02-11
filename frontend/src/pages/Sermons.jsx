@@ -34,22 +34,22 @@ const Sermons = () => {
         title={"Sermons"}
         backgroundImage="images/bible.webp"
         section_title="Our Sermons"
-        svg_color="#F7F2E9"
+        svg_color="#F5AAA1"
         description={`Explore our collection of sermons that offer spiritual guidance, 
             inspiration, and encouragement. Stay connected with our community 
             and deepen your faith through these powerful messages.`}
-        content={
-          loading ? (
-            <div className="flex justify-center my-20">
-              <span class="loader"></span>
-            </div>
-          ) : error ? (
-            <></>
-          ) : (
-            <ParallaxScroll items={sermons} />
-          )
-        }
       />
+      <div>
+        {loading ? (
+          <div className="flex justify-center my-20">
+            <span class="loader"></span>
+          </div>
+        ) : error ? (
+          <></>
+        ) : (
+          <ParallaxScroll items={sermons} />
+        )}
+      </div>
     </>
   );
 };
