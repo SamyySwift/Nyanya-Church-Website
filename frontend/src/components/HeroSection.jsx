@@ -9,7 +9,7 @@ const HeroSection = ({
   svg_color = "",
 }) => {
   return (
-    <div className="relative">
+    <div className="">
       {/* Background Image */}
       <div className="w-full h-screen overflow-hidden relative">
         <div
