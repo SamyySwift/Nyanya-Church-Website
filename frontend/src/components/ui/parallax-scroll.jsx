@@ -113,7 +113,7 @@ export const ParallaxScroll = ({ items, className }) => {
   return (
     <div className={cn("w-full", className)}>
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-6xl mx-auto gap-10 pt-40 md:py-40 px-5"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-6xl mx-auto gap-10 pt-5 md:py-40 px-5"
         ref={gridRef}
       >
         <div className="flex flex-col items-center">

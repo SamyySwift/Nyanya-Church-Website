@@ -35,12 +35,12 @@ const Sermons = () => {
         backgroundImage="images/bible.webp"
         svg_color="#F7F2E9"
       />
-      <section className="bg-[#F7F2E9] py-20">
+      <section className="bg-[#F7F2E9] py-10">
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-5 md:text-4xl font-extrabold font-poppins">
             Our Sermons
           </h2>
-          <p className="font-karla text-neutral-600 font-light mb-[60px] text-xl text-justify max-w-2xl">
+          <p className="font-karla text-neutral-700 font-light mb-[60px] text-xl text-justify max-w-2xl">
             Explore our collection of sermons that offer spiritual guidance,
             inspiration, and encouragement. Stay connected with our community
             and deepen your faith through these powerful messages.

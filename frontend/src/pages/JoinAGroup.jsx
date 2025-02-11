@@ -21,7 +21,7 @@ const JoinAGroup = () => {
           <h2 className="text-3xl mb-5 md:text-4xl font-extrabold font-poppins">
             Join a Team
           </h2>
-          <p className="font-karla text-neutral-600 font-light mb-[60px] text-xl text-justify max-w-2xl">
+          <p className="font-karla text-neutral-700 font-light mb-[60px] text-xl text-justify max-w-2xl">
             Discover exciting groups and teams in nyanya to join that will
             uplift your spirit and enrich your journey. Get connected and stay
             motivated!

@@ -14,7 +14,7 @@ const HeroSection = ({ title, backgroundImage, svg_color = "" }) => {
 
         {/* Content */}
         <div className="container mx-auto px-5 relative z-10 flex items-center h-full text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold font-poppins">
+          <h1 className="text-5xl md:text-6xl lg:text-8xl font-extrabold font-poppins">
             {title}
           </h1>
         </div>
