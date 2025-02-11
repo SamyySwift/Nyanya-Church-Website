@@ -3,7 +3,7 @@ import { ImagesSlider } from "./ui/images-slider";
 
 export function Welcome({ title, text, imgSrc = images }) {
   return (
-    <div className="container mx-auto px-5 md:h-[400px] lg:h-[800px]  flex flex-col md:flex-row justify-around md:justify-between items-center gap-5">
+    <div className="container mx-auto px-5 py-20 md:h-[400px] lg:h-[800px]  flex flex-col md:flex-row justify-around md:justify-between items-center gap-5">
       <motion.div
         initial={{ opacity: 0.0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ export function Welcome({ title, text, imgSrc = images }) {
           {title}
         </h1>
         <div>
-          <span className="font-grotesque md:text-md lg:text-2xl leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
+          <span className="font-karla font-light md:text-md lg:text-2xl leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
             {text}
           </span>
         </div>

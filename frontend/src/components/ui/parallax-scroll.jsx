@@ -55,7 +55,7 @@ export const ParallaxScroll = ({ items, className }) => {
           />
           <div className="absolute inset-0 bg-black opacity-40 transition-opacity duration-500 group-hover:opacity-50"></div>
           <div className="text relative z-50">
-            <h1 className="font-bold font-grotesque text-xl md:text-3xl text-gray-50 relative">
+            <h1 className="font-bold font-poppins text-xl  text-gray-50 relative">
               {title}
             </h1>
             <p className="flex items-center gap-2 font-normal font-grotesque text-base text-gray-50 relative mt-4">
@@ -86,7 +86,7 @@ export const ParallaxScroll = ({ items, className }) => {
             key={i}
             onClick={() => handlePageChange(i)}
             className={`px-4 py-2 mx-2 rounded-full ${
-              currentPage === i ? "bg-[#f7f2e9] text-black" : "bg-gray-300"
+              currentPage === i ? "bg-black text-white" : "bg-gray-300"
             }`}
           >
             {i}
@@ -113,7 +113,7 @@ export const ParallaxScroll = ({ items, className }) => {
   return (
     <div className={cn("w-full", className)}>
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 pt-40 md:py-40 px-10"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-6xl mx-auto gap-10 pt-40 md:py-40 px-5"
         ref={gridRef}
       >
         <div className="flex flex-col items-center">

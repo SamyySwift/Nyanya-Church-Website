@@ -10,17 +10,26 @@ const JoinAGroup = () => {
         title="Nyanya Assembly | Join a Team"
         description="Different church groups"
       />
-      {/* <Hero text="Teams" background="video" src="/join.webm" /> */}
+
       <HeroSection
-        title={"Teams"}
-        section_title={"Join a Team"}
         backgroundImage="/images/people.jpg"
         svg_color="#F7F2E9"
-        description={`Discover exciting groups and teams in nyanya to join that will
-            uplift your spirit and enrich your journey. Get connected and stay
-            motivated!`}
-        content={<LayoutGrid cards={cards} />}
+        title="Teams"
       />
+      <section className="bg-[#F7F2E9] py-20">
+        <div className="container mx-auto px-5">
+          <h2 className="text-3xl mb-5 md:text-4xl font-extrabold font-poppins">
+            Join a Team
+          </h2>
+          <p className="font-karla text-neutral-600 font-light mb-[60px] text-xl text-justify max-w-2xl">
+            Discover exciting groups and teams in nyanya to join that will
+            uplift your spirit and enrich your journey. Get connected and stay
+            motivated!
+          </p>
+        </div>
+
+        <LayoutGrid cards={cards} />
+      </section>
     </>
   );
 };

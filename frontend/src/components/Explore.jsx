@@ -39,14 +39,14 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
           {/* Image and Title */}
           <div className="absolute top-0 inset-0 bg-gradient-to-b from-black/90 via-transparent to-transparent z-10"></div>
           <img className="w-full h-96 object-cover" src={src} alt={title} />
-          <span className="absolute top-2 left-5 text-2xl text-white font-grotesque font-semibold z-10">
+          <span className="absolute top-2 left-5 text-3xl text-white font-poppins font-semibold z-10">
             {title}
           </span>
         </div>
 
         {/* Body Text */}
         <div className="absolute bottom-0 left-0 w-full bg-opacity-60 backdrop-blur-sm bg-black px-5 py-2 flex flex-col items-start z-20">
-          <p className="text-white font-grotesque font-light">{bodyText}</p>
+          <p className="text-white font-karla font-light">{bodyText}</p>
         </div>
       </Link>
 
@@ -58,7 +58,7 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
         style={{ backgroundColor: "#f7f2e9" }}
       >
         <h3 className="flex items-center gap-1 text-md text-center text-black underline underline-offset-8 font-karla">
-          {icon}
+          {/* {icon} */}
           {btnText}
         </h3>
       </Link>
@@ -68,7 +68,7 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
 
 const exploreNav = [
   {
-    title: "Upcoming Events",
+    title: "Events",
     bodyText:
       "Discover exciting events that will uplift your spirit and enrich your journey.",
     btnText: "Learn More",

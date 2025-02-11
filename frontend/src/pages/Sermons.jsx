@@ -31,15 +31,22 @@ const Sermons = () => {
       {/* <Hero text="Sermons" src="images/bible.webp" mainHero={false} /> */}
 
       <HeroSection
-        title={"Sermons"}
+        title="Sermons"
         backgroundImage="images/bible.webp"
-        section_title="Our Sermons"
-        svg_color="#F5AAA1"
-        description={`Explore our collection of sermons that offer spiritual guidance, 
-            inspiration, and encouragement. Stay connected with our community 
-            and deepen your faith through these powerful messages.`}
+        svg_color="#F7F2E9"
       />
-      <div>
+      <section className="bg-[#F7F2E9] py-20">
+        <div className="container mx-auto px-5">
+          <h2 className="text-3xl mb-5 md:text-4xl font-extrabold font-poppins">
+            Our Sermons
+          </h2>
+          <p className="font-karla text-neutral-600 font-light mb-[60px] text-xl text-justify max-w-2xl">
+            Explore our collection of sermons that offer spiritual guidance,
+            inspiration, and encouragement. Stay connected with our community
+            and deepen your faith through these powerful messages.
+          </p>
+        </div>
+
         {loading ? (
           <div className="flex justify-center my-20">
             <span class="loader"></span>
@@ -49,7 +56,7 @@ const Sermons = () => {
         ) : (
           <ParallaxScroll items={sermons} />
         )}
-      </div>
+      </section>
     </>
   );
 };

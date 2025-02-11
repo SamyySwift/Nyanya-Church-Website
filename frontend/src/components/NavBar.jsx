@@ -92,7 +92,11 @@ const Navbar = () => {
     <nav className="fixed w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-xs bg-opacity-70">
       <div className="container mx-auto px-5 py-10 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
-          <img src="images/logo.jpg" alt="Logo" className="h-12 rounded-full" />
+          <img
+            src="images/logo.jpg"
+            alt="Logo"
+            className="h-8 md:h-12 rounded-full"
+          />
           {/* <div className="flex flex-col text-white font-grotesque">
             <span className="text-[10px] md:text-xs font-bold max-w-xs hidden md:block">
               The Apostolic Church <br /> Nigeria Nyanya Assembly
