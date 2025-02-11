@@ -9,7 +9,7 @@ const HeroSection = ({
   svg_color = "",
 }) => {
   return (
-    <div className="">
+    <div className="relative">
       {/* Background Image */}
       <div className="w-full h-screen overflow-hidden relative">
         <div
@@ -30,7 +30,7 @@ const HeroSection = ({
       </div>
 
       {/* C-Curve Bottom */}
-      <svg className="absolute bottom-0 w-full" viewBox="0 0 1440 320">
+      <svg className="absolute bottom-0" viewBox="0 0 1440 320">
         <path
           fill={svg_color}
           d="M0,256 C480,400 960,100 1440,256 L1440,320 L0,320 Z"
