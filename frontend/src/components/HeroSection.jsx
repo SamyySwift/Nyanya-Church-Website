@@ -9,9 +9,9 @@ const HeroSection = ({
   svg_color = "",
 }) => {
   return (
-    <div className="">
+    <div className="relative h-screen">
       {/* Background Image */}
-      <div className="w-full h-screen overflow-hidden relative">
+      <div className="w-full h-full overflow-hidden relative">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
