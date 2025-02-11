@@ -11,7 +11,7 @@ const HeroSection = ({
   return (
     <div className="flex flex-col">
       {/* Background Image */}
-      <div className="w-full h-screen overflow-hidden">
+      <div className="w-full h-screen overflow-hidden relative">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
