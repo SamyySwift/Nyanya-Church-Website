@@ -90,7 +90,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-xs bg-opacity-70">
-      <div className="container mx-auto px-5 py-10 flex justify-between items-center">
+      <div className="container mx-auto px-5 py-5 md:py-10 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
           <img
             src="images/logo.jpg"

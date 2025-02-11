@@ -1,6 +1,6 @@
 const HeroSection = ({ title, backgroundImage, svg_color = "" }) => {
   return (
-    <div className="relative h-[900px] md:h-screen">
+    <div className="relative h-[500px] md:h-screen">
       {/* Background Image */}
       <div className="w-full h-full overflow-hidden relative">
         <div
