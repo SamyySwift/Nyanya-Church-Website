@@ -6,7 +6,7 @@ const HeroSection = ({
   description,
   content,
   backgroundImage,
-  svg_color = "#F7F2E9",
+  svg_color = "",
 }) => {
   return (
     <div className="flex flex-col">

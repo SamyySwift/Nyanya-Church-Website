@@ -25,7 +25,11 @@ function HomeScreen() {
           <>
             The Apostolic Church Nigeria, Nyanya Assembly is a {""}
             <FlipWords words={words} /> church in the beautiful city of Abuja.
-            We love Jesus and we love people. We'd love to see you here soon!
+            We are a modern community that loves Jesus and loves people. Whether
+            you're new to the area or looking for a place to call home, we'd
+            love to welcome you with open arms. Join us for worship and
+            experience the warmth and love of our congregation. We can't wait to
+            meet you!
           </>
         }
       />

@@ -15,6 +15,7 @@ const JoinAGroup = () => {
         title={"Teams"}
         section_title={"Join a Team"}
         backgroundImage="/images/people.jpg"
+        svg_color="#F7F2E9"
         description={`Discover exciting groups and teams in nyanya to join that will
             uplift your spirit and enrich your journey. Get connected and stay
             motivated!`}

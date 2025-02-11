@@ -13,13 +13,13 @@ export function Welcome({ title, text, imgSrc = images }) {
             duration: 1,
             ease: "easeInOut",
           }}
-          className="flex flex-col justify-center md:max-w-md xl:max-w-xl space-y-[30px] md:space-y-[80px]"
+          className="flex flex-col justify-center md:max-w-md xl:max-w-2xl space-y-[30px] md:space-y-[80px]"
         >
           <h1 className="text-4xl lg:text-7xl font-extrabold font-poppins">
             {title}
           </h1>
           <div>
-            <span className="font-grotesque  md:text-md lg:text-2xl leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
+            <span className="font-karla  md:text-md lg:text-2xl leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
               {text}
             </span>
           </div>
@@ -28,7 +28,7 @@ export function Welcome({ title, text, imgSrc = images }) {
         <ImagesSlider
           images={imgSrc}
           opacity={0}
-          className="max-w-3xl h-[400px] md:h-[600px]"
+          className="max-w-[40rem] h-[500px]"
         />
       </div>
     </section>
