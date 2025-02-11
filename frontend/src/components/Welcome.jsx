@@ -3,35 +3,33 @@ import { ImagesSlider } from "./ui/images-slider";
 
 export function Welcome({ title, text, imgSrc = images }) {
   return (
-    <section className="bg-[#f4f1eb]">
-      <div className="container mx-auto px-5 py-[40px] md:h-[400px] lg:h-[500px] xl:h-screen flex flex-col md:flex-row justify-around md:justify-between items-center gap-5">
-        <motion.div
-          initial={{ opacity: 0.0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 1,
-            ease: "easeInOut",
-          }}
-          className="flex flex-col justify-center md:max-w-md xl:max-w-2xl space-y-[30px] md:space-y-[80px]"
-        >
-          <h1 className="text-4xl lg:text-7xl font-extrabold font-poppins">
-            {title}
-          </h1>
-          <div>
-            <span className="font-karla  md:text-md lg:text-2xl leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
-              {text}
-            </span>
-          </div>
-        </motion.div>
+    <div className="md:h-[400px] lg:h-[600px] flex flex-col md:flex-row justify-around md:justify-between items-center gap-5">
+      <motion.div
+        initial={{ opacity: 0.0, y: 70 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 1,
+          ease: "easeInOut",
+        }}
+        className="flex flex-col justify-center md:max-w-md xl:max-w-2xl space-y-[30px] md:space-y-[80px]"
+      >
+        <h1 className="text-4xl lg:text-7xl font-extrabold font-poppins">
+          {title}
+        </h1>
+        <div>
+          <span className="font-grotesque md:text-md lg:text-2xl leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
+            {text}
+          </span>
+        </div>
+      </motion.div>
 
-        <ImagesSlider
-          images={imgSrc}
-          opacity={0}
-          className="max-w-[40rem] h-[500px]"
-        />
-      </div>
-    </section>
+      <ImagesSlider
+        images={imgSrc}
+        opacity={0}
+        className="max-w-[40rem] h-[400px] md:h-[500px]"
+      />
+    </div>
   );
 }
 const images = [

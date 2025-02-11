@@ -38,9 +38,7 @@ const HeroSection = ({
       </svg>
 
       {/* Content Below the Curve */}
-      <div
-        className={`bg-[${svg_color}] text-black py-[80px] text-center md:text-start`}
-      >
+      <div className={`bg-[${svg_color}] text-black py-[60px]  md:text-start`}>
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-10 md:text-6xl font-extrabold font-poppins">
             {section_title}

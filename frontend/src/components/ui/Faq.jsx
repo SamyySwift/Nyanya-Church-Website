@@ -59,7 +59,7 @@ const FaqAccordion = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-3xl">
       {faqs.map((faq, index) => (
         <div key={index} className="mb-4 border-b border-black">
           <button
@@ -112,7 +112,7 @@ const FaqAccordion = () => {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="py-2 text-gray-600 font-grotesque font-light">
+                <div className="py-2 text-black font-grotesque font-light">
                   {faq.answer}
                 </div>
               </motion.div>
