@@ -7,19 +7,19 @@ const JoinAGroup = () => {
   return (
     <>
       <PageTitle
-        title="Nyanya Assembly | Join a Team"
+        title="Join a Team | Nyanya Assembly"
         description="Different church groups"
       />
 
       <HeroSection
-        backgroundImage="/images/people.jpg"
+        backgroundVideo="joinbg.mp4"
         svg_color="#F7F2E9"
         title="Teams"
       />
-      <section className="bg-[#F7F2E9] py-20">
+      <section className="bg-[#F7F2E9] py-[80px]">
         <div className="container mx-auto px-5">
-          <h2 className="text-3xl mb-5 md:text-4xl font-extrabold font-poppins">
-            Join a Team
+          <h2 className="text-3xl mb-5 md:text-5xl font-alfa">
+            Explore Our Teams
           </h2>
           <p className="font-karla text-neutral-700 font-light mb-[60px] text-xl text-justify max-w-2xl">
             Discover exciting groups and teams in nyanya to join that will

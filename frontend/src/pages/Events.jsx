@@ -1,8 +1,8 @@
 import Card from "../components/ui/Card";
-import Hero from "../components/Hero";
 import customFetch from "../hooks/customFetch";
 import PageTitle from "../components/PageTitle";
 import transition from "../utils/transition";
+import HeroSection from "../components/HeroSection";
 
 const Events = () => {
   const { loading, error, data } = customFetch(
@@ -12,15 +12,17 @@ const Events = () => {
   return (
     <div>
       <PageTitle
-        title="Nyanya Assembly | Upcoming Events"
+        title="Events | Nyanya Assembly"
         description="page containing all church upcoming events"
       />
 
-      <Hero text="Upcoming Events" background="video" src="/bg.webm" />
-
-      <section>
-        <div className="text-center py-10">
-          <p className="font-grotesque text-justify text-xl md:text-2xl max-w-lg mx-auto px-5 md:px-0">
+      <HeroSection backgroundVideo="eventbg.mp4" svg_color="#E5E0D4" />
+      <section className="bg-[#E5E0D4] py-[60px]">
+        <div className="container mx-auto px-5">
+          <h2 className="text-3xl mb-5 md:text-5xl font-alfa">
+            Upcoming Events
+          </h2>
+          <p className="font-karla text-neutral-700 font-light  text-xl md:text-2xl text-justify max-w-2xl">
             Discover exciting events that will uplift your spirit and enrich
             your journey. Don't miss out on our latest upcoming experiences!
           </p>
@@ -28,11 +30,13 @@ const Events = () => {
 
         <div>
           {loading ? (
-            <div className="flex justify-center my-20">
+            <div className="flex justify-center">
               <span class="loader"></span>
             </div>
           ) : error ? (
-            <h1 className="text-center text-5xl font-semibold py-20"></h1>
+            <h1 className="text-center text-5xl font-semibold py-20">
+              {error}
+            </h1>
           ) : (
             <>
               {data.data.map((event, idx) => {

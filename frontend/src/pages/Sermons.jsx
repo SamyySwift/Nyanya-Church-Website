@@ -25,20 +25,20 @@ const Sermons = () => {
   return (
     <>
       <PageTitle
-        title="Nyanya Assembly | Sermons"
+        title="Sermons | Nyanya Assembly"
         description="Listen to inspiring sermons from Nyanya Assembly"
       />
       {/* <Hero text="Sermons" src="images/bible.webp" mainHero={false} /> */}
 
       <HeroSection
-        title="Sermons"
-        backgroundImage="images/bible.webp"
+        // title="Sermons"
+        backgroundVideo="sermonbg.mp4"
         svg_color="#F7F2E9"
       />
       <section className="bg-[#F7F2E9] py-10">
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-5 md:text-4xl font-extrabold font-poppins">
-            Our Sermons
+            Church Sermons
           </h2>
           <p className="font-karla text-neutral-700 font-light mb-[60px] text-xl text-justify max-w-2xl">
             Explore our collection of sermons that offer spiritual guidance,

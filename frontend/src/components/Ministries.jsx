@@ -1,37 +1,34 @@
-import Hero from "./Hero.jsx";
+import HeroSection from "./HeroSection.jsx";
 import ContactForm from "./ContactForm.jsx";
-
 import InfiniteMovingCards from "./ui/infinite-moving-cards.jsx";
 
-const Ministries = ({ src, bgText, team, images, background }) => {
+const Ministries = ({ src, team, images }) => {
   return (
     <>
-      <Hero text={bgText} src={src} background={background} />
+      <HeroSection backgroundVideo={src} svg_color="#F7F2E9" />
+      <section className="bg-[#F7F2E9] py-[90px]">
+        <div className="container mx-auto px-5">
+          <h2 className="text-3xl mb-10 md:text-5xl font-alfa text-center">
+            Meet The {team}
+          </h2>
 
-      <section className="overflow-hidden">
-        <div className="py-20 bg-black flex items-center">
-          <div className="w-full mx-auto">
-            <InfiniteMovingCards
-              items={images}
-              type="image"
-              pauseOnHover={false}
-            />
-          </div>
+          <InfiniteMovingCards
+            items={images}
+            type="image"
+            pauseOnHover={true}
+          />
         </div>
       </section>
 
       {/* Form */}
-      <section
-        className="h-[1000px]  bg-cover bg-center relative"
-        style={{ backgroundImage: "url('images/youth.jpg')" }}
-      >
-        <div className="absolute bg-opacity-30 backdrop-blur-md backdrop-filter w-full h-full flex flex-col items-center justify-center space-y-4">
+      <section className="h-[1000px] bg-[#E5E0D4]">
+        <div className="w-full h-full flex flex-col items-center justify-center space-y-4">
           <h1 className="text-center">
-            <span className="font-bold text-4xl md:text-7xl font-grotesque ">
-              Join the {team}
+            <span className="text-3xl md:text-5xl font-alfa ">
+              Join The {team}
             </span>
           </h1>
-          <p className="font-grotesque font-light text-md md:text-xl pb-[50px] px-4 md:px-0 max-w-3xl text-center">
+          <p className="font-karla font-light text-md md:text-xl pb-[50px] px-4 md:px-0 max-w-3xl text-center">
             If you are interested in joining the {team} or talking with someone
             about it, feel free to reach out to the team leader using the form
             below.

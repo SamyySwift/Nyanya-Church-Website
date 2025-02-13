@@ -1,20 +1,42 @@
-const HeroSection = ({ title, backgroundImage, svg_color = "" }) => {
+const HeroSection = ({
+  title,
+  backgroundImage,
+  backgroundVideo,
+  svg_color = "",
+}) => {
   return (
     <div className="relative h-[500px] md:h-screen">
-      {/* Background Image */}
+      {/* Background */}
       <div className="w-full h-full overflow-hidden relative">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${backgroundImage})`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black opacity-40"></div>
-        </div>
+        {backgroundVideo ? (
+          // Render Video Background if backgroundVideo is supplied
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            style={{ objectPosition: "center" }}
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          // Render Image Background otherwise
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${backgroundImage})`,
+            }}
+          />
+        )}
+
+        {/* Overlay */}
+        {/* <div className="absolute inset-0 bg-black opacity-20"></div> */}
 
         {/* Content */}
-        <div className="container mx-auto px-5 relative z-10 flex items-center h-full text-white">
-          <h1 className="text-5xl md:text-6xl lg:text-8xl font-extrabold font-poppins">
+        <div className="absolute w-full bottom-20 text-neutral-400">
+          <h1 className="container mx-auto px-5 text-5xl md:text-6xl lg:text-6xl font-alfa">
             {title}
           </h1>
         </div>

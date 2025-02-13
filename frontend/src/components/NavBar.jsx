@@ -89,8 +89,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-xs bg-opacity-70">
-      <div className="container mx-auto px-5 py-5 md:py-10 flex justify-between items-center">
+    <nav className="fixed w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-xs bg-opacity-50">
+      <div className="container mx-auto px-5 py-3 md:py-5 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
           <img
             src="images/logo.jpg"
@@ -103,7 +103,7 @@ const Navbar = () => {
             </span>
           </div> */}
         </Link>
-        <div className="hidden xl:flex items-baseline gap-5  text-neutral-300 font-grotesque text-lg font-light cursor-pointer">
+        <div className="hidden xl:flex items-baseline gap-5  text-neutral-300 font-karla text-lg font-light cursor-pointer">
           {navLinks.map((navItem, idx) => {
             if (location.pathname !== "/" && navItem.link === "explore") {
               return null;

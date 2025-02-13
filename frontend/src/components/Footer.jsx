@@ -17,7 +17,7 @@ const Footer = () => {
       // style={{ backgroundColor: "#0000" }}
       name="footer"
     >
-      <div className="container mx-auto px-5 flex flex-col gap-10  md:flex-row md:justify-evenly">
+      <div className="container mx-auto px-5 flex flex-col gap-10  md:flex-row md:justify-between">
         {/* LOGO */}
         <div>
           <Link to="/">
@@ -30,10 +30,10 @@ const Footer = () => {
         </div>
         {/* Contact */}
         <div className="flex flex-col">
-          <h1 className="mb-8 font-grotesque font-bold text-md md:text-xl lg:text-2xl underline underline-offset-8">
+          <h1 className="mb-8 font-karla font-bold text-md md:text-xl lg:text-2xl underline underline-offset-8">
             Contact Us
           </h1>
-          <div className="max-w-sm md:max-w-xs lg:max-w-sm space-y-3 font-grotesque md:text-lg">
+          <div className="max-w-sm md:max-w-xs lg:max-w-sm space-y-3 font-karla md:text-lg">
             <p className="">TACN Nyanya Assembly</p>
             <span className="flex items-center font-light gap-2">
               <MdEmail className="" />
@@ -77,10 +77,10 @@ const Footer = () => {
         </div>
         {/* Links */}
         <div className="items-center">
-          <h1 className="mb-5 font-grotesque font-bold text-md md:text-xl lg:text-2xl underline underline-offset-8">
+          <h1 className="mb-5 font-karla font-bold text-md md:text-xl lg:text-2xl underline underline-offset-8">
             Quick Links
           </h1>
-          <div className="flex flex-col gap-2 font-light font-grotesque text-md md:text-lg">
+          <div className="flex flex-col gap-2 font-light font-karla text-md md:text-lg">
             {links.map((link) => (
               <Link
                 to={link.href}
@@ -98,7 +98,7 @@ const Footer = () => {
           </div>
         </div>
         {/* <div className="absolute  bottom-0">
-          <p className="font-grotesque">
+          <p className="font-karla">
             &copy; 2024 Nyanya Assembly. All Rights Reserved.
           </p>
         </div> */}

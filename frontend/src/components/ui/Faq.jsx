@@ -66,7 +66,7 @@ const FaqAccordion = () => {
             onClick={() => toggleAccordion(index)}
             className="w-full text-left py-4 flex justify-between items-center focus:outline-none"
           >
-            <span className="text-lg font-medium font-grotesque">
+            <span className="text-lg font-medium font-karla">
               {faq.question}
             </span>
             <span className="ml-4">
@@ -112,7 +112,7 @@ const FaqAccordion = () => {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="py-2 text-black font-grotesque font-light">
+                <div className="py-2 text-black font-karla font-light">
                   {faq.answer}
                 </div>
               </motion.div>

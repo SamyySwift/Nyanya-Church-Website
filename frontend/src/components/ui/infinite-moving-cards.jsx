@@ -72,7 +72,7 @@ const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          " flex min-w-full shrink-0 gap-8 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
@@ -113,11 +113,11 @@ const InfiniteMovingCards = ({
               //     </div>
               //   </blockquote>
               // </li>
-              <div className="w-[300px] h-[300px]">
+              <div className="w-[400px] h-[500px]">
                 <img
                   src={item}
                   key={idx}
-                  className="object-cover w-full h-full rounded-md"
+                  className="object-cover w-full h-full object-center"
                 />
               </div>
             ))}

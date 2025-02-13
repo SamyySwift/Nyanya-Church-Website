@@ -72,15 +72,15 @@ const Card = ({
       >
         {/* Column 1: Title, Description, and Button*/}
         <div className="flex flex-col justify-between max-w-3xl md:max-w-[400px] lg:max-w-[500px]">
-          <h2 className="text-2xl md:text-4xl font-bold md:mb-10 lg:mb-10 mb-5 mt-4 font-grotesque">
+          <h2 className="text-2xl md:text-4xl md:mb-10 lg:mb-10 mb-5 mt-4 font-karla font-etrabold">
             {title}
           </h2>
-          <p className="text-md md:text-lg lg:text-xl font-grotesque text-justify font-light leading-6 lg:leading-loose md:leading-relaxed">
+          <p className="text-md md:text-lg lg:text-xl font-karla text-justify font-light leading-6 lg:leading-loose md:leading-relaxed">
             {description}
           </p>
           <div className="md:absolute md:bottom-[145px] ">
             {date && (
-              <span className="flex items-center gap-2 mt-5 md:mt-10 font-grotesque font-semibold text-md md:text-lg">
+              <span className="flex items-center gap-2 mt-5 md:mt-10 font-karla font-semibold text-md md:text-lg">
                 <FaCalendarWeek size={20} />
                 {new Date(date).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -98,13 +98,13 @@ const Card = ({
               <>
                 <button
                   onClick={() => setShowPopover(!showPopover)}
-                  className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white"
+                  className="px-3 py-4 max-w-[150px] rounded-2xl font-karla bg-white"
                 >
                   {btnName}
                 </button>
                 {showPopover && (
                   <motion.div
-                    className="font-grotesque absolute bottom-full left-0 mb-5 p-3 bg-white border border-gray-300 shadow-md rounded-3xl z-50"
+                    className="font-karla absolute bottom-full left-0 mb-5 p-3 bg-white border border-gray-300 shadow-md rounded-3xl z-50"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}

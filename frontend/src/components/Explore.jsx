@@ -9,6 +9,9 @@ const Explore = () => {
       name="explore"
     >
       <div className="container mx-auto px-5">
+        <h3 className="mb-12 text-white font-alfa text-3xl lg:text-4xl">
+          Our Community
+        </h3>
         <div className="flex flex-col gap-[60px] md:gap-10 md:flex-row md:justify-between">
           {exploreNav.map((item, i) => (
             <CardComponent
@@ -39,14 +42,14 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
           {/* Image and Title */}
           <div className="absolute top-0 inset-0 bg-gradient-to-b from-black/90 via-transparent to-transparent z-10"></div>
           <img className="w-full h-96 object-cover" src={src} alt={title} />
-          <span className="absolute top-2 left-5 text-3xl text-white font-poppins font-semibold z-10">
+          <span className="absolute top-2 left-5 text-2xl text-white font-poppins font-semibold z-10">
             {title}
           </span>
         </div>
 
         {/* Body Text */}
         <div className="absolute bottom-0 left-0 w-full bg-opacity-60 backdrop-blur-sm bg-black px-5 py-2 flex flex-col items-start z-20">
-          <p className="text-white font-karla font-light">{bodyText}</p>
+          <p className="text-white font-karla font-light text-lg">{bodyText}</p>
         </div>
       </Link>
 
@@ -54,7 +57,7 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
 
       <Link
         to={link}
-        className="mt-6 p-3 rounded-2xl shadow-md z-10"
+        className="mt-6 p-4 rounded-xl shadow-md z-10"
         style={{ backgroundColor: "#f7f2e9" }}
       >
         <h3 className="flex items-center gap-1 text-md text-center text-black underline underline-offset-8 font-karla">
@@ -71,7 +74,7 @@ const exploreNav = [
     title: "Events",
     bodyText:
       "Discover exciting events that will uplift your spirit and enrich your journey.",
-    btnText: "Learn More",
+    btnText: "Explore Events",
     icon: <BsArrowUpRightCircleFill />,
     link: "/events",
     src: "images/ue3.jpg",
@@ -79,7 +82,7 @@ const exploreNav = [
   {
     title: "Teams",
     bodyText: "Explore our diverse church teams, find your place to belong!",
-    btnText: "Learn More",
+    btnText: "Join A Team",
     icon: <BsArrowUpRightCircleFill />,
     link: "/join-a-group",
     src: "images/welcome-bg-8.webp",
@@ -87,7 +90,7 @@ const exploreNav = [
   {
     title: "Pastoral Care",
     bodyText: "Need prayer support or counseling? Submit request here.",
-    btnText: "Email Us",
+    btnText: "Get In Touch",
     icon: <MdEmail />,
     link: "mailto:tacnna2024@gmail.com",
     src: "images/pastor.webp",
