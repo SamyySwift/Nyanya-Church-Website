@@ -85,7 +85,7 @@ const exploreNav = [
     btnText: "Join A Team",
     icon: <BsArrowUpRightCircleFill />,
     link: "/join-a-group",
-    src: "images/welcome-bg-8.webp",
+    src: "images/team.webp",
   },
   {
     title: "Pastoral Care",

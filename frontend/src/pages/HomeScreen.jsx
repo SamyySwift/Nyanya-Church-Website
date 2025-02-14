@@ -35,7 +35,7 @@ function HomeScreen() {
       </div>
 
       <Explore />
-      <WorshipWithUs />
+      <WorshipWithUs overlayClassName="opacity-30" />
     </>
   );
 }

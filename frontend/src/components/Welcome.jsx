@@ -24,10 +24,20 @@ export function Welcome({ title, text, imgSrc = images }) {
 
       <ImagesSlider
         images={imgSrc}
-        opacity={0}
+        // opacity={90}
         className="max-w-[40rem] h-[400px] lg:h-[500px]"
       />
     </div>
   );
 }
-const images = ["images/welcome-bg-8.webp"];
+const images = [
+  "images/welcome-bg-1.webp",
+  "images/welcome-bg-2.webp",
+  "images/welcome-bg-3.webp",
+  "images/welcome-bg-4.webp",
+  "images/welcome-bg-5.webp",
+  // "images/welcome-bg-6.webp",
+  "images/welcome-bg-7.webp",
+  "images/welcome-bg-8.webp",
+  "images/welcome-bg-9.webp",
+];
