@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { PaystackButton } from "react-paystack";
-import Hero from "../components/Hero";
 import PageTitle from "../components/PageTitle";
 import Transition from "../utils/transition";
+import HeroSection from "../components/HeroSection";
 
 const GivingPage = () => {
   return (
     <>
       <PageTitle
         title="Giving | Nyanya Assembly"
-        description="Different church groups"
+        description="Chucrh giving page"
       />
-      <Hero text="Giving" background="video" src="/bg.webm" />
+      <HeroSection backgroundVideo="/bg.mp4" svg_color="#F7F2E9" />
 
       <OnlineGiving />
     </>
@@ -48,11 +48,11 @@ const OnlineGiving = () => {
   };
 
   return (
-    <>
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl lg:max-w-3xl my-10 font-grotesque space-y-10">
+    <div className="bg-[#F7F2E9]">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl lg:max-w-3xl space-y-10 ">
         <section className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold">Why We Give</h2>
-          <p className="text-sm md:text-base lg:text-lg leading-relaxed text-justify">
+          <h2 className="text-3xl md:text-4xl font-alfa">Why We Give</h2>
+          <p className="text-sm md:text-base lg:text-lg leading-relaxed text-justify font-karla">
             Giving is a vital part of our worship and relationship with God. It
             is a way for us to express our gratitude for the blessings we
             receive and to contribute to the work of the church in spreading the
@@ -60,7 +60,7 @@ const OnlineGiving = () => {
             continue supporting various ministries, outreach programs, and
             missionary work, making a lasting impact both locally and globally.
           </p>
-          <p className="text-sm md:text-base lg:text-lg leading-relaxed text-justify">
+          <p className="text-sm md:text-base lg:text-lg leading-relaxed text-justify font-karla">
             We believe that giving is a reflection of our heart's devotion to
             God and an opportunity to participate in His work. Whether through
             tithes, offerings, or special donations, your support helps us to
@@ -68,8 +68,8 @@ const OnlineGiving = () => {
           </p>
         </section>
 
-        <h1 className="font-bold text-2xl md:text-3xl">Make A Bank Transfer</h1>
-        <p className="text-sm md:text-base lg:text-lg leading-relaxed">
+        <h1 className="text-2xl md:text-3xl font-alfa">Make A Bank Transfer</h1>
+        <p className="text-sm md:text-base lg:text-lg leading-relaxed font-karla">
           Our account details are: <br />
           <strong>Account Name: </strong> The Apostolic Church Nyanya Assembly{" "}
           <br />
@@ -85,7 +85,7 @@ const OnlineGiving = () => {
         <h1 className="text-2xl md:text-3xl mb-6 md:mb-10">
           <span className="font-semibold">Make A Card Payment</span>
         </h1>
-        <div className="bg-white p-6 md:p-8 shadow-lg rounded-lg font-grotesque max-w-md mx-auto">
+        <div className="bg-white p-6 md:p-8 shadow-lg rounded-lg font-karla max-w-md mx-auto">
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="block text-gray-700 text-sm md:text-base">
@@ -158,7 +158,7 @@ const OnlineGiving = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

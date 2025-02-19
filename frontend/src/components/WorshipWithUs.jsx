@@ -17,8 +17,8 @@ const WorshipWithUs = () => {
 
   const images = [
     "images/wsp-img-1.webp",
-    "images/wsp-img-2.webp",
-    "images/wsp-img-3.webp",
+    // "images/wsp-img-2.webp",
+    // "images/wsp-img-3.webp",
     // "images/wsp-img-4.webp",
     // "images/wsp-img-5.webp",
     // "images/wsp-img-6.webp",

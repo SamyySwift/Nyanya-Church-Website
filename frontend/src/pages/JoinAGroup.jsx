@@ -7,15 +7,11 @@ const JoinAGroup = () => {
   return (
     <>
       <PageTitle
-        title="Join a Team | Nyanya Assembly"
+        title="Teams | Nyanya Assembly"
         description="Different church groups"
       />
 
-      <HeroSection
-        backgroundVideo="joinbg.mp4"
-        svg_color="#F7F2E9"
-        title="Teams"
-      />
+      <HeroSection backgroundVideo="joinbg.mp4" svg_color="#F7F2E9" />
       <section className="bg-[#F7F2E9] py-[80px]">
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-5 md:text-5xl font-alfa">
@@ -85,7 +81,7 @@ const SkeletonFour = () => {
   return (
     <div>
       <p className="font-bold font-karla md:text-4xl text-xl text-white">
-        Userring Team
+        Ushering Team
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal font-karla text-base my-4 max-w-md text-neutral-200">
@@ -126,7 +122,7 @@ const cards = [
     title: "Praise Team",
     content: <SkeletonTwo />,
     className: "md:col-span-1",
-    thumbnail: "images/praise-team-2.webp",
+    thumbnail: "images/praise-team-3.webp",
     link: "/praise-team",
   },
   {
@@ -134,15 +130,15 @@ const cards = [
     title: "Media Team",
     content: <SkeletonThree />,
     className: "col-span-1",
-    thumbnail: "images/media.webp",
+    thumbnail: "images/media1.webp",
     link: "/media-team",
   },
   {
     id: 4,
-    title: "Userring Team",
+    title: "Ushering Team",
     content: <SkeletonFour />,
     className: "col-span-1",
-    thumbnail: "images/youth4.webp",
+    thumbnail: "images/ushering.webp",
     link: "/youth-fellowship",
   },
   {

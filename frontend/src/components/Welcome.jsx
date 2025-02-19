@@ -32,12 +32,11 @@ export function Welcome({ title, text, imgSrc = images }) {
 }
 const images = [
   "images/welcome-bg-1.webp",
-  "images/welcome-bg-2.webp",
-  "images/welcome-bg-3.webp",
-  "images/welcome-bg-4.webp",
-  "images/welcome-bg-5.webp",
-  // "images/welcome-bg-6.webp",
-  "images/welcome-bg-7.webp",
-  "images/welcome-bg-8.webp",
-  "images/welcome-bg-9.webp",
+  // "images/welcome-bg-2.webp",
+  // "images/welcome-bg-3.webp",
+  // "images/welcome-bg-4.webp",
+  // "images/welcome-bg-5.webp",
+  // "images/welcome-bg-7.webp",
+  // "images/welcome-bg-8.webp",
+  // "images/welcome-bg-9.webp",
 ];

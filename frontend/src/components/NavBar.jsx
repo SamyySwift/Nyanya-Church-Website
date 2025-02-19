@@ -1,26 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
+import { FaFacebook, FaSquareInstagram, FaYoutube } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
+import { disablePageScroll, enablePageScroll } from "@fluejs/noscroll";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState();
   const location = useLocation();
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    if (isOpen) {
+      enablePageScroll();
+    } else {
+      disablePageScroll();
+    }
   };
 
   const variants = {
@@ -90,7 +86,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-xs bg-opacity-50">
-      <div className="container mx-auto px-5 py-3 md:py-5 flex justify-between items-center">
+      <div className="container mx-auto px-5 py-3 md:py-6 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
           <img
             src="images/logo.jpg"
@@ -103,7 +99,7 @@ const Navbar = () => {
             </span>
           </div> */}
         </Link>
-        <div className="hidden xl:flex items-baseline gap-5  text-neutral-300 font-karla text-lg font-light cursor-pointer">
+        <div className="hidden xl:flex items-baseline gap-5  text-neutral-300 font-karla text-lg lg:text-xl font-extralight cursor-pointer">
           {navLinks.map((navItem, idx) => {
             if (location.pathname !== "/" && navItem.link === "explore") {
               return null;
@@ -125,7 +121,7 @@ const Navbar = () => {
                 <div
                   className={`duration-500 hover:-translate-y-1 hover:scale-105 ${
                     location.pathname === navItem.link
-                      ? "underline underline-offset-4 font-thin"
+                      ? "underline underline-offset-4 decoration-[1px]"
                       : ""
                   }`}
                 >
@@ -172,7 +168,7 @@ const Navbar = () => {
                     : { opacity: 1, backgroundColor: "#fff" }
                 }
                 transition={{ duration: 0.3 }}
-              /> */}
+              /> 
               {/* Bottom Bar */}
               <motion.div
                 className="h-[1px] w-8 bg-white"
@@ -226,7 +222,7 @@ const Navbar = () => {
                             activeClass="active"
                             duration={500}
                             to={navItem.link}
-                            className="text-2xl lg:text-5xl font-grotesque font-bold  flex items-center"
+                            className="text-2xl lg:text-5xl font-karla font-extrabold flex items-center"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -237,11 +233,11 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={navItem.link}
-                            className="text-2xl lg:text-5xl font-grotesque font-bold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
+                            className="text-2xl lg:text-5xl font-karla font-extrabold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
-                              <div className="mr-2 w-2 h-2 md:w-4 md:h-4 bg-black rounded-full"></div>
+                              <div className="mr-2 w-2 h-2  bg-black rounded-full"></div>
                             )}
                             {navItem.title}
                           </Link>
@@ -261,7 +257,7 @@ const Navbar = () => {
                     animate="enter"
                     exit="exit"
                     initial="initial"
-                    className="p-1 rounded-full border border-black bg-white flex items-center justify-center "
+                    className="p-1 rounded-full border-2 border-black bg-white flex items-center justify-center "
                   >
                     <Link to={social.link}>{social.icon}</Link>
                   </motion.div>
@@ -298,7 +294,7 @@ const socials = [
     link: "https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d",
   },
   {
-    icon: <FaInstagram size={28} />,
+    icon: <RiInstagramFill size={28} />,
     link: "https://www.instagram.com/tacn_na?igsh=dDhxcmplNzVzZDNw",
   },
   { icon: <FaYoutube size={28} />, link: "https://www.youtube.com/@TACN_NA" },
