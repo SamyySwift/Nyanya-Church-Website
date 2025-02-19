@@ -222,7 +222,7 @@ const Navbar = () => {
                             activeClass="active"
                             duration={500}
                             to={navItem.link}
-                            className="text-2xl lg:text-5xl font-karla font-extrabold flex items-center"
+                            className="text-2xl lg:text-5xl font-karla font-bold flex items-center"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -233,7 +233,7 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={navItem.link}
-                            className="text-2xl lg:text-5xl font-karla font-extrabold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
+                            className="text-2xl lg:text-5xl font-karla font-bold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -257,7 +257,7 @@ const Navbar = () => {
                     animate="enter"
                     exit="exit"
                     initial="initial"
-                    className="p-1 rounded-full border-2 border-black bg-white flex items-center justify-center "
+                    className="p-1 rounded-full border border-black bg-white flex items-center justify-center "
                   >
                     <Link to={social.link}>{social.icon}</Link>
                   </motion.div>
