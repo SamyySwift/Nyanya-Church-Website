@@ -6,7 +6,7 @@ import HeroSection from "../components/HeroSection";
 
 const Events = () => {
   const { loading, error, data } = customFetch(
-    "http://localhost:1337/api/events?populate=*"
+    "https://nyanya-church-website-backend.onrender.com/api/events?populate=*"
   );
 
   return (

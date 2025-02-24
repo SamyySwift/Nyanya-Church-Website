@@ -143,7 +143,7 @@ const navLinks = [
   { title: "Sermons", link: "/sermons" },
   { title: "Explore", link: "explore", scroll: true },
   { title: "Giving", link: "/giving" },
-  { title: "About us", link: "/about" },
+  { title: "Daily Word", link: "/daily-word" },
   { title: "Join a team", link: "/join-a-group" },
   { title: "Plan your visit", link: "/plan-your-visit" },
 ];

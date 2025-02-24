@@ -23,7 +23,7 @@ import DailyRefresh from "./pages/DailyRefresh.jsx";
 
 function App() {
   const location = useLocation();
-  // pingServer();
+  pingServer();
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -56,7 +56,7 @@ function App() {
             <Route path="/classical-choir" element={<ClassicalChoir />} />
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/giving" element={<GivingPage />} />
-            <Route path="/daily-refresh" element={<DailyRefresh />} />
+            <Route path="/daily-word" element={<DailyRefresh />} />
           </Routes>
         </AnimatePresence>
         <Footer />

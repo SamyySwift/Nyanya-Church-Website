@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
-import { useState, useEffect } from "react";
 import HeroSection from "../components/HeroSection";
+import PageTitle from "../components/PageTitle";
 import {
   Modal,
   ModalBody,
@@ -75,7 +75,7 @@ const RenderText = ({ content }) => {
   );
 };
 
-const EventCard = ({ event }) => {
+const DailyCard = ({ event }) => {
   return (
     <div className="flex flex-col md:flex-row mb-20 font-karla">
       <img
@@ -167,18 +167,22 @@ const LazyLoadedComponent = ({ event }) => {
         inView ? "opacity-100" : "opacity-0"
       }`}
     >
-      <EventCard event={event} />
+      <DailyCard event={event} />
     </div>
   );
 };
 
 const DailyRefresh = () => {
   const { loading, error, data } = customFetch(
-    "http://localhost:1337/api/daily-words?populate=*"
+    "https://nyanya-church-website-backend.onrender.com/api/daily-words?populate=*"
   );
 
   return (
     <>
+      <PageTitle
+        title="Daily Word | Nyanya Assembly"
+        description="page containing all church daily words"
+      />
       <HeroSection backgroundVideo="joinbg.mp4" svg_color="#F7F2E9" />
       <div className="bg-[#F7F2E9] py-20">
         <div className="container mx-auto px-5">
