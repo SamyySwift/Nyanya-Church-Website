@@ -6,16 +6,16 @@ import HeroSection from "../components/HeroSection";
 
 const Sermons = () => {
   const { loading, error, data } = customFetch(
-    "https://nyanya-church-backend.onrender.com/api/sermons?populate=*"
+    "http://localhost:1337/api/sermons?populate=*"
   );
 
   // Extracting the necessary fields from the fetched data
   const sermons = data?.data?.map((sermon) => ({
-    image: sermon.attributes.image.data.attributes.url,
-    title: sermon.attributes.title,
-    link: sermon.attributes.link,
-    preacher: sermon.attributes.preacher,
-    date: new Date(sermon.attributes.date).toLocaleDateString("en-US", {
+    image: sermon.image.url,
+    title: sermon.title,
+    link: sermon.link,
+    preacher: sermon.preacher,
+    date: new Date(sermon.date).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -37,7 +37,7 @@ const Sermons = () => {
       />
       <section className="bg-[#F7F2E9] py-10">
         <div className="container mx-auto px-5">
-          <h2 className="text-3xl mb-5 md:text-4xl font-extrabold font-poppins">
+          <h2 className="text-3xl mb-10 md:text-4xl font-extrabold font-poppins">
             Church Sermons
           </h2>
           <p className="font-karla text-neutral-700 font-light mb-[60px] text-xl text-justify max-w-2xl">
@@ -52,7 +52,9 @@ const Sermons = () => {
             <span class="loader"></span>
           </div>
         ) : error ? (
-          <></>
+          <p className="flex justify-center  text-center text-xl  py-[100px] font-karla">
+            No Sermons at the momemt. Try again later
+          </p>
         ) : (
           <ParallaxScroll items={sermons} />
         )}

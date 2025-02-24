@@ -58,11 +58,11 @@ export const ParallaxScroll = ({ items, className }) => {
             <h1 className="font-bold font-poppins text-xl  text-gray-50 relative">
               {title}
             </h1>
-            <p className="flex items-center gap-2 font-normal font-grotesque text-base text-gray-50 relative mt-4">
+            <p className="flex items-center gap-2 font-normal font-karla text-base text-gray-50 relative mt-4">
               <BsPersonCircle />
               {preacher}
             </p>
-            <p className="flex items-center gap-2 font-normal font-grotesque text-base text-gray-50 relative">
+            <p className="flex items-center gap-2 font-normal font-karla text-base text-gray-50 relative">
               <FaClock />
               {date}
             </p>
@@ -168,7 +168,7 @@ export const ParallaxScroll = ({ items, className }) => {
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="px-4 py-2 mx-2 bg-gray-300 rounded-lg font-grotesque disabled:opacity-50"
+          className="px-4 py-2 mx-2 bg-gray-300 rounded-lg font-karla disabled:opacity-50"
         >
           Prev
         </button>
@@ -176,7 +176,7 @@ export const ParallaxScroll = ({ items, className }) => {
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 mx-2 bg-gray-300 rounded-lg disabled:opacity-50 font-grotesque"
+          className="px-4 py-2 mx-2 bg-gray-300 rounded-lg disabled:opacity-50 font-karla"
         >
           Next
         </button>

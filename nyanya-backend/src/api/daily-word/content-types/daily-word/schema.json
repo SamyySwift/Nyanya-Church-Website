@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "daily_words",
+  "info": {
+    "singularName": "daily-word",
+    "pluralName": "daily-words",
+    "displayName": "Daily Word"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "preacher": {
+      "type": "string",
+      "required": true
+    },
+    "portion": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "blocks",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
