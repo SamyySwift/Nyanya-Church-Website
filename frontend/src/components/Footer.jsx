@@ -1,5 +1,6 @@
 import { FaPhone, FaLocationDot, FaArrowUp } from "react-icons/fa6";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
+import { FaFacebook, FaYoutube } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -13,7 +14,7 @@ const Footer = () => {
 
   return (
     <footer
-      className=" bg-black py-[150px] relative text-white"
+      className=" bg-black py-[90px] md:py-[150px] relative text-white"
       // style={{ backgroundColor: "#0000" }}
       name="footer"
     >
@@ -156,7 +157,9 @@ const socials = [
   {
     title: "Instagram",
     link: "https://www.instagram.com/tacn_na?igsh=dDhxcmplNzVzZDNw",
-    icon: <FaInstagram size={25} className="hover:text-sky-500 rounded-full" />,
+    icon: (
+      <RiInstagramFill size={25} className="hover:text-sky-500 rounded-full" />
+    ),
   },
   {
     title: "YouTube",

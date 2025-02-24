@@ -6,7 +6,7 @@ import HeroSection from "../components/HeroSection";
 
 const Events = () => {
   const { loading, error, data } = customFetch(
-    "https://nyanya-church-backend.onrender.com/api/events?populate=*"
+    "http://localhost:1337/api/events?populate=*"
   );
 
   return (
@@ -19,7 +19,7 @@ const Events = () => {
       <HeroSection backgroundVideo="eventbg.mp4" svg_color="#E5E0D4" />
       <section className="bg-[#E5E0D4] py-[60px]">
         <div className="container mx-auto px-5">
-          <h2 className="text-3xl mb-5 md:text-5xl font-alfa">
+          <h2 className="text-3xl mb-10 md:text-5xl font-alfa">
             Upcoming Events
           </h2>
           <p className="font-karla text-neutral-700 font-light  text-xl md:text-2xl text-justify max-w-2xl">
@@ -34,16 +34,21 @@ const Events = () => {
               <span class="loader"></span>
             </div>
           ) : error ? (
-            <h1 className="text-center text-5xl font-semibold py-20">
-              {error}
-            </h1>
+            <p className="flex justify-center  text-center text-xl  py-[100px] font-karla">
+              No Events at the momemt. Try again later
+            </p>
           ) : (
             <>
               {data.data.map((event, idx) => {
                 return (
                   <Card
                     key={idx}
-                    {...event.attributes}
+                    title={event.title}
+                    color={event.color}
+                    description={event.description}
+                    time={event.time}
+                    date={event.date}
+                    eventImage={event.eventImage.url}
                     btnName="Add To Calender"
                     btnType="event"
                     i={idx}

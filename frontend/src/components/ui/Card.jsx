@@ -163,7 +163,7 @@ const Card = ({
 
         <div className="overflow-hidden h-full md:w-[350px] lg:w-[500px]">
           <motion.img
-            src={btnType !== "event" ? src : eventImage.data.attributes.url}
+            src={btnType !== "event" ? src : eventImage}
             alt={title}
             className="h-full w-full object-cover rounded-3xl"
           />

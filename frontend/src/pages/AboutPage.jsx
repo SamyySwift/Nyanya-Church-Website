@@ -48,10 +48,10 @@ const AboutPage = () => {
         <div className="relative z-10 text-center text-white">
           <h1 className="text-4xl md:text-6xl font-alfa">OUR 2025 MOTTO</h1>
           <p className="text-lg md:text-2xl mt-4 md:max-w-xl p-4 font-karla">
-            Our redeemer is strong, the Lord of hosts is His name, He will
-            surely plead our cause!{" "}
+            Help us, oh God of our salvation, for the glory of thy name: and
+            deliver us. <br />{" "}
             <span className="font-bold underline underline-offset-4">
-              Jeremiah 50:34.
+              Psalm 79:09
             </span>
           </p>
         </div>

@@ -49,7 +49,7 @@ const OnlineGiving = () => {
 
   return (
     <div className="bg-[#F7F2E9]">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl lg:max-w-3xl space-y-10 ">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl lg:max-w-3xl space-y-10 py-20">
         <section className="text-center space-y-4">
           <h2 className="text-3xl md:text-4xl font-alfa">Why We Give</h2>
           <p className="text-sm md:text-base lg:text-lg leading-relaxed text-justify font-karla">
@@ -82,7 +82,7 @@ const OnlineGiving = () => {
           giving. This allows us to identify your giving, and send you a thank
           you note.
         </p>
-        <h1 className="text-2xl md:text-3xl mb-6 md:mb-10">
+        {/* <h1 className="text-2xl md:text-3xl mb-6 md:mb-10">
           <span className="font-semibold">Make A Card Payment</span>
         </h1>
         <div className="bg-white p-6 md:p-8 shadow-lg rounded-lg font-karla max-w-md mx-auto">
@@ -156,7 +156,7 @@ const OnlineGiving = () => {
               />
             </div>
           </form>
-        </div>
+        </div> */}
       </div>
     </div>
   );

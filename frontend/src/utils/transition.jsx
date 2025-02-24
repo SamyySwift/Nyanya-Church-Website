@@ -1,32 +1,54 @@
 import { motion } from "framer-motion";
 
-const Transition = (OgComponent, page = "HOME") => {
+const calculateRandomBlockDelay = (rowIndex, totalRows) => {
+  const blockDelay = Math.random() * 0.5;
+  const rowDelay = (totalRows - rowIndex - 1) * 0.05;
+  return blockDelay + rowDelay;
+};
+const Transition = (OgComponent) => {
   return () => (
     <>
       <OgComponent />
-      <motion.div
-        className="fixed inset-0 w-full h-screen z-50"
-        style={{ transformOrigin: "top", backgroundColor: "#F7F2E9" }}
-        initial={{ translateY: "-100%" }}
-        animate={{ translateY: "-100%" }}
-        exit={{ translateY: "0%" }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-black text-4xl md:text-6xl lg:text-7xl font-alfa">
-            Welcome
-          </h1>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="fixed top-0 left-0 w-full h-screen z-50"
-        style={{ transformOrigin: "top", backgroundColor: "#F7F2E9" }}
-        initial={{ translateY: "0%" }}
-        animate={{ translateY: "-100%" }}
-        exit={{ translateY: "-100%" }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-      />
+      <div className="fixed top-0 left-0 w-full h-full flex flex-col pointer-events-none transform origin-top">
+        {Array.from({ length: 10 }).map((_, rowIndex) => (
+          <div className="flex flex-1 w-full" key={rowIndex}>
+            {Array.from({ length: 11 }).map((_, blockIndex) => (
+              <motion.div
+                key={blockIndex}
+                className="relative flex flex-1 bg-[#E5E0D4] -m-[0.25px]"
+                initial={{ scaleY: 1 }}
+                animate={{ scaleY: 0 }}
+                exit={{ scaleY: 0 }}
+                transition={{
+                  duration: 1,
+                  ease: [0.22, 2, 0.36, 1],
+                  delay: calculateRandomBlockDelay(rowIndex, 10),
+                }}
+              ></motion.div>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div className="fixed top-0 left-0 w-full h-full flex flex-col pointer-events-none transform origin-bottom">
+        {Array.from({ length: 10 }).map((_, rowIndex) => (
+          <div className="flex flex-1 w-full" key={rowIndex}>
+            {Array.from({ length: 11 }).map((_, blockIndex) => (
+              <motion.div
+                key={blockIndex}
+                className="relative flex flex-1 bg-[#E5E0D4] -m-[0.25px]"
+                initial={{ scaleY: 0 }}
+                animate={{ scaleY: 0 }}
+                exit={{ scaleY: 1 }}
+                transition={{
+                  duration: 1,
+                  ease: [0.22, 2, 0.36, 1],
+                  delay: calculateRandomBlockDelay(rowIndex, 10),
+                }}
+              ></motion.div>
+            ))}
+          </div>
+        ))}
+      </div>
     </>
   );
 };

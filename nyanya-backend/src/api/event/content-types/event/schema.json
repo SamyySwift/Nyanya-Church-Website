@@ -10,43 +10,40 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text",
-      "required": true
+    "color": {
+      "type": "string",
+      "default": "#B9B28A",
+      "required": false
     },
     "date": {
       "type": "date",
       "required": true
-    },
-    "eventImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "color": {
-      "type": "string",
-      "required": true,
-      "default": "#BBACAF"
     },
     "time": {
       "type": "time",
       "required": true
     },
     "duration": {
-      "type": "decimal",
-      "required": true,
       "default": 1,
-      "min": 0.5,
-      "max": 6
+      "required": true,
+      "type": "integer"
+    },
+    "eventImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text",
+      "required": true
     }
   }
 }
