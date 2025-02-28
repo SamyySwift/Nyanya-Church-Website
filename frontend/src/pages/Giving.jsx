@@ -51,8 +51,8 @@ const OnlineGiving = () => {
     <div className="bg-[#F7F2E9]">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl lg:max-w-3xl space-y-10 py-20">
         <section className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-alfa">Why We Give</h2>
-          <p className="text-sm md:text-base lg:text-lg leading-relaxed text-justify font-karla">
+          <h2 className="text-3xl md:text-4xl font-alfa mb-5">Why We Give</h2>
+          <p className="text-lg lg:text-xl leading-relaxed text-justify font-karla">
             Giving is a vital part of our worship and relationship with God. It
             is a way for us to express our gratitude for the blessings we
             receive and to contribute to the work of the church in spreading the
@@ -60,7 +60,7 @@ const OnlineGiving = () => {
             continue supporting various ministries, outreach programs, and
             missionary work, making a lasting impact both locally and globally.
           </p>
-          <p className="text-sm md:text-base lg:text-lg leading-relaxed text-justify font-karla">
+          <p className="text-lg lg:text-xl leading-relaxed text-justify font-karla">
             We believe that giving is a reflection of our heart's devotion to
             God and an opportunity to participate in His work. Whether through
             tithes, offerings, or special donations, your support helps us to

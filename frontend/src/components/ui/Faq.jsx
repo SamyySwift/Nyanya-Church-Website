@@ -61,19 +61,19 @@ const FaqAccordion = () => {
   return (
     <div className="max-w-3xl">
       {faqs.map((faq, index) => (
-        <div key={index} className="mb-4 border-b border-black">
+        <div key={index} className="mb-4 border-b border-white">
           <button
             onClick={() => toggleAccordion(index)}
             className="w-full text-left py-4 flex justify-between items-center focus:outline-none"
           >
-            <span className="text-lg font-medium font-karla">
+            <span className="text-lg md:text-xl font-karla text-white">
               {faq.question}
             </span>
             <span className="ml-4">
               {activeIndex === index ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 transform rotate-180 transition-transform duration-200"
+                  className="h-6 w-6 transform rotate-180 transition-transform duration-200 text-white"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -88,7 +88,7 @@ const FaqAccordion = () => {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 transition-transform duration-200"
+                  className="h-6 w-6 transition-transform duration-200 text-white"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -112,7 +112,7 @@ const FaqAccordion = () => {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="py-2 text-black font-karla font-light">
+                <div className="py-2 text-lg text-white font-karla font-light">
                   {faq.answer}
                 </div>
               </motion.div>

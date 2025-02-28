@@ -1,6 +1,5 @@
 import WorshipWithUs from "../components/WorshipWithUs";
 import { Welcome } from "../components/Welcome";
-import "../App.css";
 import Explore from "../components/Explore";
 import transition from "../utils/transition";
 import { FlipWords } from "../components/ui/flip-words";

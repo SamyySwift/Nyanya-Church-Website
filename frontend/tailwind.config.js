@@ -12,11 +12,8 @@ export const content = [
 export const theme = {
   extend: {
     fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
       alfa: ["Alfa Slab One", "serif"],
-      raleway: ["Raleway", "serif"],
       vibes: ["Great Vibes"],
-      grotesque: ["Bricolage Grotesque", "sans-serif"],
       karla: ["Karla", "sans-serif"],
     },
     animation: {

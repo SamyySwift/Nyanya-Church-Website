@@ -5,7 +5,6 @@ const MediaTeam = () => {
   return (
     <>
       <Ministries
-        src="/joinbg.mp4"
         team="Media Team"
         images={[
           "images/media1.webp",

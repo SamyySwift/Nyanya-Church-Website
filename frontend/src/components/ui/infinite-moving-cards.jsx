@@ -117,6 +117,7 @@ const InfiniteMovingCards = ({
                 <img
                   src={item}
                   key={idx}
+                  loading="lazy"
                   className="object-cover w-full h-full object-center"
                 />
               </div>

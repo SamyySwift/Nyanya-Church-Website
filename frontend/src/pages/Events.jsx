@@ -1,7 +1,7 @@
 import Card from "../components/ui/Card";
 import customFetch from "../hooks/customFetch";
 import PageTitle from "../components/PageTitle";
-import transition from "../utils/transition";
+import Transition from "../utils/transition";
 import HeroSection from "../components/HeroSection";
 
 const Events = () => {
@@ -17,7 +17,7 @@ const Events = () => {
       />
 
       <HeroSection backgroundVideo="eventbg.mp4" svg_color="#E5E0D4" />
-      <section className="bg-[#E5E0D4] py-[60px]">
+      <section className="bg-[#E5E0D4] py-[90px]">
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-10 md:text-5xl font-alfa">
             Upcoming Events
@@ -63,4 +63,4 @@ const Events = () => {
   );
 };
 
-export default transition(Events);
+export default Transition(Events);

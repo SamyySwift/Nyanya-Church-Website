@@ -4,7 +4,6 @@ function ClassicalChoir() {
   return (
     <>
       <Ministries
-        src="joinbg.mp4"
         team="Classical Choir"
         images={[
           "images/choir3.webp",

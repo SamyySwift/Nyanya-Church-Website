@@ -10,6 +10,7 @@ import {
 import { motion } from "framer-motion";
 import Transition from "../utils/transition";
 import customFetch from "../hooks/customFetch";
+import { TextGenerateEffect } from "../components/ui/text-generate-effect";
 
 const RenderText = ({ content }) => {
   return (
@@ -81,17 +82,17 @@ const DailyCard = ({ event }) => {
       <img
         src={event.image.url}
         alt={event.title}
-        className="w-[500px] h-[350px] object-cover"
+        className="w-[520px] h-[350px] object-cover"
       />
       <div className="flex flex-col items-start md:px-8 mt-5 md:mt-0 max-w-3xl">
         <h2 className="text-xl md:text-2xl font-alfa">{event.title}</h2>
 
-        <p className="text-lg mt-3">
-          <span className="font-medium">Preacher: </span>
+        <p className="text-lg mt-3 font-light">
+          <span className="font-normal">Preacher: </span>
           {event.preacher}
         </p>
-        <p className="text-lg">
-          <span className="font-medium">Bible Portion: </span> {event.portion}
+        <p className="text-lg font-light">
+          <span className="font-normal">Bible Portion: </span> {event.portion}
         </p>
 
         <p className="text-lg md:text-xl mt-4 line-clamp-2">
@@ -100,11 +101,11 @@ const DailyCard = ({ event }) => {
 
         <Modal>
           <ModalTrigger className="bg-black flex justify-center group/modal-btn mt-8">
-            <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 text-yellow-600 text-lg font-karla">
+            <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 text-[#F2A83C] text-lg font-karla">
               Read More
             </span>
             <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-              ✈️
+              📖
             </div>
           </ModalTrigger>
           <ModalBody>
@@ -183,15 +184,17 @@ const DailyRefresh = () => {
         title="Daily Word | Nyanya Assembly"
         description="page containing all church daily words"
       />
-      <HeroSection backgroundVideo="joinbg.mp4" svg_color="#F7F2E9" />
+      <HeroSection backgroundImage="images/daily.jpg" svg_color="#F7F2E9" />
       <div className="bg-[#F7F2E9] py-20">
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-5 md:text-4xl font-alfa">Daily Word</h2>
           <p className="font-karla text-neutral-700 font-light mb-[90px] text-xl text-justify max-w-2xl">
-            Explore our daily word of God bullets to gain inspiration, wisdom,
+            <TextGenerateEffect
+              words={`Explore our daily word of God bullets to gain inspiration, wisdom,
             and guidance for your spiritual journey. Each day brings a new
             opportunity to deepen your faith and connect with the teachings of
-            the Bible.
+            the Bible.`}
+            />
           </p>
 
           {loading ? (

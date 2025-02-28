@@ -36,7 +36,7 @@ const images = [
   "images/welcome-bg-3.webp",
   "images/welcome-bg-4.webp",
   "images/welcome-bg-5.webp",
-  "images/welcome-bg-7.webp",
+  // "images/welcome-bg-7.webp",
   "images/welcome-bg-8.webp",
   "images/welcome-bg-9.webp",
 ];

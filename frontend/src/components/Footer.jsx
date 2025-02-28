@@ -6,28 +6,31 @@ import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
 
   const location = useLocation();
 
   return (
     <footer
-      className=" bg-black py-[90px] md:py-[150px] relative text-white"
+      className=" bg-black py-[90px] md:py-[180px] relative text-white"
       // style={{ backgroundColor: "#0000" }}
       name="footer"
     >
-      <div className="container mx-auto px-5 flex flex-col gap-10  md:flex-row md:justify-between">
+      <div className="container mx-auto px-5 lg:px-[180px] flex flex-col gap-10  md:flex-row md:justify-between">
         {/* LOGO */}
         <div>
-          <Link to="/">
+          {/* <Link to="/">
             <img
               src="images/logo.jpg"
               alt="Logo"
               className="h-[100px] md:h-[150px] rounded-full"
             />
-          </Link>
+          </Link> */}
+          <h2 className="font-alfa text-3xl max-w-sm text-neutral-200">
+            TACN <br /> Nyanya <br /> Assembly
+          </h2>
         </div>
         {/* Contact */}
         <div className="flex flex-col">
@@ -35,7 +38,7 @@ const Footer = () => {
             Contact Us
           </h1>
           <div className="max-w-sm md:max-w-xs lg:max-w-sm space-y-3 font-karla md:text-lg">
-            <p className="">TACN Nyanya Assembly</p>
+            {/* <p className="">TACN Nyanya Assembly</p> */}
             <span className="flex items-center font-light gap-2">
               <MdEmail className="" />
               <span>tacnna2024@gmail.com</span>
@@ -89,7 +92,7 @@ const Footer = () => {
                 className="flex items-center"
               >
                 {location.pathname === link.href && (
-                  <div className="mr-1 w-1 h-1 md:w-2 md:h-2 bg-sky-400 rounded-full"></div>
+                  <div className="mr-1 w-1 h-1 md:w-2 md:h-2 bg-white rounded-full"></div>
                 )}
                 <p className="hover:underline hover:scale-105 duration-500">
                   {link.name}
@@ -104,12 +107,12 @@ const Footer = () => {
           </p>
         </div> */}
         {/* Scroll to Top Button */}
-        <button
+        {/* <button
           onClick={scrollToTop}
           className="absolute bottom-20 right-8 p-3 rounded-full bg-white text-black hover:bg-gray-700 transition duration-300"
         >
           <FaArrowUp size={20} />
-        </button>
+        </button> */}
       </div>
     </footer>
   );

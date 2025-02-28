@@ -1,8 +1,9 @@
-import transition from "../utils/transition";
+import Transition from "../utils/transition";
 import HeroSection from "../components/HeroSection";
 import { Welcome } from "../components/Welcome";
 import PageTitle from "../components/PageTitle";
 import ChurchServices from "../components/ChurchServices";
+import GrainyBackground from "../components/GrainyBackground";
 
 const AboutPage = () => {
   const images = ["images/pastor.webp"];
@@ -12,11 +13,7 @@ const AboutPage = () => {
         title="About Us | Nyanya Assembly"
         description="About us page"
       />
-      <HeroSection
-        svg_color="#E5E0D4"
-        backgroundVideo="bg.mp4"
-        title="About Us"
-      />
+      <HeroSection svg_color="#E5E0D4" backgroundVideo="bg.mp4" />
       <section className="bg-[#E5E0D4]">
         <Welcome
           title="Our Pastors"
@@ -28,36 +25,30 @@ const AboutPage = () => {
       </section>
 
       {/* Church Services */}
-      <section className="bg-black py-[10rem]">
+      {/* <section className="bg-black py-[10rem]">
         <h3 className="container mx-auto px-5 mb-10 text-white font-alfa text-3xl md:text-4xl">
           Our Church Services
         </h3>
         <ChurchServices />
-      </section>
+      </section> */}
 
-      {/* Motto */}
-      <div
-        className="relative h-[600px] w-full flex items-center justify-center font-karla"
-        style={{
-          backgroundImage: `url(${"images/bible.webp"})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-alfa">OUR 2025 MOTTO</h1>
-          <p className="text-lg md:text-2xl mt-4 md:max-w-xl p-4 font-karla">
-            Help us, oh God of our salvation, for the glory of thy name: and
-            deliver us. <br />{" "}
-            <span className="font-bold underline underline-offset-4">
-              Psalm 79:09
-            </span>
-          </p>
-        </div>
-      </div>
+      <GrainyBackground
+        bgImg="images/noise.jpg"
+        content={
+          <div className="relative z-10 py-[100px] md:py-[300px] flex flex-col items-center justify-center h-full text-center text-white">
+            <h1 className="text-4xl md:text-6xl font-alfa">OUR 2025 MOTTO</h1>
+            <p className="text-2xl md:text-4xl mt-4 md:max-w-3xl p-4 font-karla">
+              Help us, oh God of our salvation, for the glory of thy name: and
+              deliver us. <br />{" "}
+              <span className="font-bold underline underline-offset-4">
+                Psalm 79:9
+              </span>
+            </p>
+          </div>
+        }
+      />
     </>
   );
 };
 
-export default transition(AboutPage);
+export default Transition(AboutPage);

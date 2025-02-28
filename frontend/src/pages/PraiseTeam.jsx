@@ -4,7 +4,6 @@ const PraiseTeam = () => {
   return (
     <>
       <Ministries
-        src="/joinbg.mp4"
         team="Praise & Worship Team"
         images={[
           "images/praise-team-1.webp",
