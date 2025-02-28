@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
-import { BsArrowUpRightCircleFill } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
 import GrainyBackground from "./GrainyBackground";
 
 const Explore = () => {
   return (
     <GrainyBackground
-      bgImg="images/noise.jpg"
+      bgImg="images/noise4.jpg"
       content={
         <div
           className="py-[80px] lg:py-[200px] flex flex-col justify-center relative"
@@ -70,19 +68,19 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
 
 const exploreNav = [
   {
-    title: "Teams",
-    bodyText: "Explore our diverse church teams, find your place to belong!",
-    btnText: "Join A Team",
-    link: "/join-a-group",
-    src: "images/join.jpg",
-  },
-  {
     title: "Events",
     bodyText:
       "Discover exciting events that will uplift your spirit and enrich your journey.",
     btnText: "Explore Events",
     link: "/events",
     src: "images/ue.jpg",
+  },
+  {
+    title: "Teams",
+    bodyText: "Explore our diverse church teams, find your place to belong!",
+    btnText: "Join A Team",
+    link: "/join-a-group",
+    src: "images/join.jpg",
   },
 
   {
