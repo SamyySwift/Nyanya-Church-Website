@@ -19,40 +19,40 @@ const GivingPage = () => {
 };
 
 const OnlineGiving = () => {
-  const publicKey = "pk_live_59554d542cddaae21f2933b293e009041f62f4f6";
-  const [email, setEmail] = useState("");
-  const [amount, setAmount] = useState(1000);
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [purpose, setPurpose] = useState("Tithes");
+  // const publicKey = "pk_live_59554d542cddaae21f2933b293e009041f62f4f6";
+  // const [email, setEmail] = useState("");
+  // const [amount, setAmount] = useState(1000);
+  // const [name, setName] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [purpose, setPurpose] = useState("Tithes");
 
-  const amountInKobo = amount * 100; // Convert amount to kobo for Paystack
+  // const amountInKobo = amount * 100; // Convert amount to kobo for Paystack
 
-  const componentProps = {
-    email,
-    amount: amountInKobo,
-    metadata: {
-      name,
-      phone,
-      purpose,
-    },
-    publicKey,
-    text: "Donate Now",
-    onSuccess: () => alert("Thanks for your donation!"),
-    onClose: () => alert("Transaction was not completed"),
-  };
+  // const componentProps = {
+  //   email,
+  //   amount: amountInKobo,
+  //   metadata: {
+  //     name,
+  //     phone,
+  //     purpose,
+  //   },
+  //   publicKey,
+  //   text: "Donate Now",
+  //   onSuccess: () => alert("Thanks for your donation!"),
+  //   onClose: () => alert("Transaction was not completed"),
+  // };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  // // Handle form submission
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  // };
 
   return (
     <div className="bg-[#F7F2E9]">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl lg:max-w-3xl space-y-10 py-20">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl lg:max-w-4xl  py-[90px]">
         <section className="text-center space-y-4">
           <h2 className="text-3xl md:text-4xl font-alfa mb-5">Why We Give</h2>
-          <p className="text-lg lg:text-xl leading-relaxed text-justify font-karla">
+          <p className="text-xl lg:text-2xl leading-normal lg:leading-relaxed text-justify font-karla">
             Giving is a vital part of our worship and relationship with God. It
             is a way for us to express our gratitude for the blessings we
             receive and to contribute to the work of the church in spreading the
@@ -60,7 +60,7 @@ const OnlineGiving = () => {
             continue supporting various ministries, outreach programs, and
             missionary work, making a lasting impact both locally and globally.
           </p>
-          <p className="text-lg lg:text-xl leading-relaxed text-justify font-karla">
+          <p className="text-xl lg:text-2xl  leading-normal lg:leading-relaxed text-justify font-karla">
             We believe that giving is a reflection of our heart's devotion to
             God and an opportunity to participate in His work. Whether through
             tithes, offerings, or special donations, your support helps us to
@@ -68,14 +68,19 @@ const OnlineGiving = () => {
           </p>
         </section>
 
-        <h1 className="text-2xl md:text-3xl font-alfa">Make A Bank Transfer</h1>
-        <p className="text-sm md:text-base lg:text-lg leading-relaxed font-karla">
-          Our account details are: <br />
-          <strong>Account Name: </strong> The Apostolic Church Nyanya Assembly{" "}
+        <h1 className="text-2xl md:text-3xl font-alfa mt-[60px]">
+          Make A Bank Transfer
+        </h1>
+        <p className="text-xl lg:text-2xl leading-normal font-karla mt-5 lg:leading-relaxed ">
+          <div className="mb-3 font-semibold underline">
+            Our account details are: <br />
+          </div>
+          Account Number: <strong>0053120230</strong>
           <br />
-          <strong>Account Number: </strong>0053120230
+          Account Name:{" "}
+          <strong> The Apostolic Church Nigeria Nyanya Assembly </strong>
           <br />
-          <strong>Bank Name:</strong> Access Bank <br />
+          Bank Name:<strong> Access Bank</strong> <br />
           <br />
           Once you’ve made a transfer please, email the team at{" "}
           <strong>tacnna2024@gmail.com</strong> to let us know about your

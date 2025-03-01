@@ -13,7 +13,7 @@ function ReadMore() {
 
   return (
     <GrainyBackground
-      bgImg="images/noise5.jpg"
+      bgImg="images/noise5.webp"
       content={
         <div className="flex flex-col justify-center items-center h-auto py-[100px] md:py-[200px] font-karla px-5">
           <h1 className="text-xl md:text-3xl font-alfa text-center text-white mb-4">

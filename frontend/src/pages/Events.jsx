@@ -16,7 +16,7 @@ const Events = () => {
         description="page containing all church upcoming events"
       />
 
-      <HeroSection backgroundVideo="eventbg.mp4" svg_color="#E5E0D4" />
+      <HeroSection backgroundVideo="bg.mp4" svg_color="#E5E0D4" />
       <section className="bg-[#E5E0D4] py-[90px]">
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-10 md:text-5xl font-alfa">

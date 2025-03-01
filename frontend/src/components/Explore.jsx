@@ -80,7 +80,7 @@ const exploreNav = [
     bodyText: "Explore our diverse church teams, find your place to belong!",
     btnText: "Join A Team",
     link: "/join-a-group",
-    src: "images/join.webp",
+    src: "images/join.jpg",
   },
 
   {
@@ -89,7 +89,7 @@ const exploreNav = [
       "New to our church? Learn more about us and how you can get involved.",
     btnText: "I'm New",
     link: "/welcome",
-    src: "images/pastorblack.jpg",
+    src: "images/pastor.webp",
   },
 ];
 

@@ -72,7 +72,7 @@ const DailyRefresh = () => {
             </div>
           ) : error ? (
             <div className="py-20">
-              <h1 className="text-xl">
+              <h1 className="flex justify-center  text-center text-xl  py-[100px] font-karla">
                 Could not retrieve daily words, try again.
               </h1>
             </div>

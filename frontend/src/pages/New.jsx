@@ -5,7 +5,7 @@ import Transition from "../utils/transition";
 const New = () => {
   return (
     <GrainyBackground
-      bgImg="images/noise2.jpg"
+      bgImg="images/noise2.webp"
       content={
         <section className="py-[100px] md:py[150px]">
           <div className="container mx-auto px-5 flex flex-col lg:flex-row items-center gap-12">
@@ -53,7 +53,7 @@ const New = () => {
             {/* Image Section */}
             <div className="w-full lg:w-1/2 mt-[50px]">
               <img
-                src="images/pastor.jpg"
+                src="images/pastor.webp"
                 alt="Church members"
                 className="rounded-xl shadow-md w-full"
               />

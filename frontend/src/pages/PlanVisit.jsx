@@ -55,7 +55,7 @@ const PlanVisit = () => {
 
       {/* FAQ */}
       <GrainyBackground
-        bgImg="images/noise3.jpg"
+        bgImg="images/noise3.webp"
         content={
           <div className="py-[150px] lg:py-[250px] flex items-center">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-5 space-y-10 md:space-y-0">

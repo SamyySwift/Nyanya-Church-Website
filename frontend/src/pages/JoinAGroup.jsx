@@ -11,7 +11,7 @@ const JoinAGroup = () => {
         description="Different church groups"
       />
 
-      <HeroSection backgroundImage="images/joinbg.jpg" svg_color="#F7F2E9" />
+      <HeroSection backgroundVideo="joinbg.mp4" svg_color="#F7F2E9" />
       <section className="bg-[#F7F2E9] py-[80px]">
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-5 md:text-5xl font-alfa">
@@ -114,7 +114,7 @@ const cards = [
     title: "Youth Movement",
     content: <SkeletonOne />,
     className: "md:col-span-1",
-    thumbnail: "images/youth1.webp",
+    thumbnail: "images/youth5.webp",
     link: "/youth-fellowship",
   },
   {
