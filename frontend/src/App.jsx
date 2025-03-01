@@ -21,6 +21,8 @@ import GivingPage from "./pages/Giving.jsx";
 import pingServer from "./utils/ping.js";
 import DailyRefresh from "./pages/DailyRefresh.jsx";
 import New from "./pages/New.jsx";
+import ReadMore from "./pages/ReadMore.jsx";
+import Ushering from "./pages/UseringTeam.jsx";
 
 function App() {
   const location = useLocation();
@@ -55,10 +57,12 @@ function App() {
             <Route path="/join-a-group" element={<JoinAGroup />} />
             <Route path="/youth-fellowship" element={<YouthFellowship />} />
             <Route path="/classical-choir" element={<ClassicalChoir />} />
+            <Route path="/ushering-team" element={<Ushering />} />
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/giving" element={<GivingPage />} />
             <Route path="/daily-word" element={<DailyRefresh />} />
             <Route path="/welcome" element={<New />} />
+            <Route path="/read-more" element={<ReadMore />} />
           </Routes>
         </AnimatePresence>
         <Footer />

@@ -7,7 +7,7 @@ const Ministries = ({ team, images }) => {
   return (
     <>
       <HeroSection backgroundVideo="meetbg.mp4" svg_color="#F7F2E9" />
-      <section className="bg-[#F7F2E9] py-[90px]">
+      <section className="bg-[#F7F2E9] py-[100px]">
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-10 md:text-5xl font-alfa text-center">
             Meet The {team}
@@ -24,7 +24,7 @@ const Ministries = ({ team, images }) => {
       {/* Form */}
 
       <GrainyBackground
-        bgImg="images/noise3.jpg"
+        bgImg="images/noise.webp"
         content={
           <section className="h-[1000px] container mx-auto px-5">
             <div className="w-full h-full flex flex-col items-center justify-center space-y-4">

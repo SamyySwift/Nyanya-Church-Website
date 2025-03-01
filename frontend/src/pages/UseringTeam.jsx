@@ -1,20 +1,11 @@
 import Ministries from "../components/Ministries";
 
-function ClassicalChoir() {
+function Ushering() {
   return (
     <>
-      <Ministries
-        team="Usering Team"
-        images={[
-          "images/choir3.webp",
-          "images/choir5.webp",
-          "images/choir1.webp",
-          "images/choir2.webp",
-          "images/choir4.webp",
-        ]}
-      />
+      <Ministries team="Ushering Team" images={["images/ushering.webp"]} />
     </>
   );
 }
 
-export default ClassicalChoir;
+export default Ushering;

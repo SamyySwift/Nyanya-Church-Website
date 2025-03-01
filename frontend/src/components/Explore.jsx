@@ -4,7 +4,7 @@ import GrainyBackground from "./GrainyBackground";
 const Explore = () => {
   return (
     <GrainyBackground
-      bgImg="images/noise4.jpg"
+      bgImg="images/noise.webp"
       content={
         <div
           className="py-[80px] lg:py-[200px] flex flex-col justify-center relative"
@@ -73,14 +73,14 @@ const exploreNav = [
       "Discover exciting events that will uplift your spirit and enrich your journey.",
     btnText: "Explore Events",
     link: "/events",
-    src: "images/ue.jpg",
+    src: "images/ue.webp",
   },
   {
     title: "Teams",
     bodyText: "Explore our diverse church teams, find your place to belong!",
     btnText: "Join A Team",
     link: "/join-a-group",
-    src: "images/join.jpg",
+    src: "images/join.webp",
   },
 
   {

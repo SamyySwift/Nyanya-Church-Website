@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaFacebook, FaYoutube } from "react-icons/fa6";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
@@ -9,12 +9,26 @@ import { disablePageScroll, enablePageScroll } from "@fluejs/noscroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
   const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     isOpen ? enablePageScroll() : disablePageScroll();
   };
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsVisible(lastScrollY > currentScrollY || currentScrollY < 10);
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const variants = {
     open: {
@@ -82,7 +96,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-xs bg-opacity-50">
+    <nav
+      className={`fixed w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-xs bg-opacity-50 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="container mx-auto px-5 py-4 md:py-8 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
           <img
@@ -234,7 +252,7 @@ const Navbar = () => {
                             activeClass="active"
                             duration={500}
                             to={navItem.link}
-                            className="text-2xl lg:text-5xl font-karla font-bold flex items-center"
+                            className="text-2xl lg:text-5xl font-karla font-extrabold flex items-center"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -245,7 +263,7 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={navItem.link}
-                            className="text-2xl lg:text-5xl font-karla font-bold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
+                            className="text-2xl lg:text-5xl font-karla font-extrabold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (

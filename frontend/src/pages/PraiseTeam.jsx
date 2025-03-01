@@ -11,7 +11,7 @@ const PraiseTeam = () => {
           "images/praise-team-4.webp",
           "images/praise-team-2.webp",
           "images/praise-team-3.webp",
-          "images/praise-team-7.webp",
+          // "images/praise-team-7.webp",
         ]}
       />
     </>

@@ -14,11 +14,11 @@ const Footer = () => {
 
   return (
     <footer
-      className=" bg-black py-[90px] md:py-[180px] relative text-white"
+      className=" bg-black py-[90px] md:py-[170px] relative text-white"
       // style={{ backgroundColor: "#0000" }}
       name="footer"
     >
-      <div className="container mx-auto px-5 lg:px-[180px] flex flex-col gap-10  md:flex-row md:justify-between">
+      <div className="container mx-auto px-5 lg:px-[170px] flex flex-col gap-10  md:flex-row md:justify-between">
         {/* LOGO */}
         <div>
           {/* <Link to="/">
@@ -28,7 +28,7 @@ const Footer = () => {
               className="h-[100px] md:h-[150px] rounded-full"
             />
           </Link> */}
-          <h2 className="font-alfa text-3xl max-w-sm text-neutral-200">
+          <h2 className="font-alfa text-2xl max-w-sm text-neutral-200">
             TACN <br /> Nyanya <br /> Assembly
           </h2>
         </div>
@@ -124,6 +124,10 @@ const links = [
   {
     name: "Home",
     href: "/",
+  },
+  {
+    name: "I'm New",
+    href: "/welcome",
   },
   {
     name: "Events",

@@ -20,7 +20,7 @@ export function ContactForm({ team }) {
     }));
   };
 
-  const accessKey = "2fe1f226-b3df-4223-b2ae-01222c28aabb";
+  const accessKey = "8d9a2f2b-ff0f-438a-9156-a335f834b4df";
 
   const handleSubmit = async (event) => {
     event.preventDefault();

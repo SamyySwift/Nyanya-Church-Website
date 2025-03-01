@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../utils/cn";
 import { Link } from "react-router-dom";
+import { LazyLoadedComponent } from "../LazyLoadComponent";
 
 export const LayoutGrid = ({ cards }) => {
   const [selected, setSelected] = useState(null);
@@ -18,9 +19,9 @@ export const LayoutGrid = ({ cards }) => {
   };
 
   return (
-    <div className="w-full h-[1000px] grid grid-cols-1 md:grid-cols-3 container mx-auto px-5 gap-10 relative">
+    <div className="w-full h-auto py-[20px] grid grid-cols-1 md:grid-cols-3 container mx-auto px-5 gap-10 relative">
       {cards.map((card, i) => (
-        <div key={i} className={cn(card.className, "")}>
+        <LazyLoadedComponent key={i} className={cn(card.className, "")}>
           <motion.div
             onClick={() => handleClick(card)}
             className={cn(
@@ -35,14 +36,14 @@ export const LayoutGrid = ({ cards }) => {
             layout
           >
             {selected?.id === card.id && <SelectedCard selected={selected} />}
-            <BlurImage card={card} />
+            <BlurImage card={card} selected={selected} />
           </motion.div>
-        </div>
+        </LazyLoadedComponent>
       ))}
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          "absolute h-full w-full left-0 top-0  opacity-0 z-10",
+          "absolute h-full w-full left-0 top-0 opacity-0 z-10",
           selected?.id ? "pointer-events-auto" : "pointer-events-none"
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}
@@ -51,28 +52,29 @@ export const LayoutGrid = ({ cards }) => {
   );
 };
 
-const BlurImage = ({ card }) => {
+const BlurImage = ({ selected, card }) => {
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full min-h-[250px] md:min-h-[500px]">
       <img
         src={card.thumbnail}
         height="500"
         width="500"
         loading="lazy"
-        onLoad={() => setLoaded(true)}
         className={cn(
           "object-cover object-top absolute inset-0 h-full w-full transition duration-200"
         )}
         alt="thumbnail"
       />
-      <div
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 p-4 rounded-2xl shadow-md"
-        style={{ backgroundColor: "#f7f2e9" }}
-      >
-        <h3 className="text-md text-center text-black underline underline-offset-8 font-karla">
-          {card.title}
-        </h3>
-      </div>
+      {!selected?.id && (
+        <div
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 p-4 rounded-2xl shadow-md"
+          style={{ backgroundColor: "#f7f2e9" }}
+        >
+          <h3 className="text-md text-center text-black underline underline-offset-8 font-karla">
+            {card.title}
+          </h3>
+        </div>
+      )}
     </div>
   );
 };
@@ -81,7 +83,7 @@ export default BlurImage;
 
 const SelectedCard = ({ selected }) => {
   return (
-    <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
+    <div className=" bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
       <motion.div
         initial={{
           opacity: 0,
@@ -106,7 +108,17 @@ const SelectedCard = ({ selected }) => {
         }}
         className="relative px-8 pb-20 z-[70]"
       >
-        <Link to={selected?.link}>{selected?.content}</Link>
+        <Link to={selected?.link}>
+          {selected?.content}
+          <div
+            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 p-4 rounded-2xl shadow-md"
+            style={{ backgroundColor: "#f7f2e9" }}
+          >
+            <h3 className="text-md text-center text-black underline underline-offset-8 font-karla">
+              Click to Join
+            </h3>
+          </div>
+        </Link>
       </motion.div>
     </div>
   );
