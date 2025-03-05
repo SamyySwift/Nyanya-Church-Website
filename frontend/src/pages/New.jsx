@@ -5,7 +5,7 @@ import Transition from "../utils/transition";
 const New = () => {
   return (
     <GrainyBackground
-      bgImg="images/noise2.webp"
+      bgImg="images/noise.webp"
       content={
         <section className="py-[100px] md:py[150px]">
           <div className="container mx-auto px-5 flex flex-col lg:flex-row items-center gap-12">
@@ -15,9 +15,9 @@ const New = () => {
                 I'm New
               </h1>
               <p className="mt-5 text-white text-lg md:text-xl max-w-xl font-karla leading-loose">
-                We're passionate about people feeling like they belong to the
-                HTB family and knowing that they have a part to play in the life
-                of the church!
+                We're passionate about people feeling like they belong to our
+                family! No matter who you are or where you come from, our aim is
+                for you to feel welcomed and comfortable as soon as you arrive.
               </p>
 
               {/* Buttons */}
@@ -51,11 +51,11 @@ const New = () => {
             </div>
 
             {/* Image Section */}
-            <div className="w-full lg:w-1/2 mt-[50px]">
+            <div className="w-full  lg:w-1/2 mt-[50px]">
               <img
-                src="images/pastor.webp"
+                src="images/welcome-bg-2.webp"
                 alt="Church members"
-                className="rounded-xl shadow-md w-full"
+                className="rounded-xl shadow-md w-full h-[400px] md:h-[600px] object-cover"
               />
             </div>
           </div>

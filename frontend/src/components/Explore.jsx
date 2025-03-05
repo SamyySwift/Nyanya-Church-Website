@@ -31,7 +31,7 @@ const Explore = () => {
   );
 };
 
-const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
+const CardComponent = ({ title, bodyText, btnText, link, src }) => {
   return (
     <div className="max-w-md flex flex-col items-center">
       {/* Card */}
@@ -49,16 +49,16 @@ const CardComponent = ({ title, bodyText, btnText, icon, link, src }) => {
         </div>
 
         {/* Body Text */}
-        <div className="absolute bottom-0 left-0 w-full bg-opacity-50 backdrop-blur-sm bg-black px-5 py-2 flex flex-col items-start z-20">
+        {/* <div className="absolute bottom-0 left-0 w-full bg-opacity-50 backdrop-blur-sm bg-black px-5 py-2 flex flex-col items-start z-20">
           <p className="text-white font-karla font-light text-lg">{bodyText}</p>
-        </div>
+        </div> */}
       </Link>
 
       {/* Lower Button */}
 
       <Link
         to={link}
-        className="mt-6 border font-karla underline underline-offset-8 border-white px-6 py-4 rounded-lg text-center hover:bg-[#F7F2E9] text-white hover:text-black flex justify-center w-40"
+        className="mt-6 border font-karla underline underline-offset-8  px-6 py-4 rounded-lg text-center bg-[#F7F2E9] text-black flex justify-center w-40"
       >
         {btnText}
       </Link>
@@ -73,7 +73,7 @@ const exploreNav = [
       "Discover exciting events that will uplift your spirit and enrich your journey.",
     btnText: "Explore Events",
     link: "/events",
-    src: "images/ue.webp",
+    src: "images/ue.jpg",
   },
   {
     title: "Teams",
@@ -89,7 +89,7 @@ const exploreNav = [
       "New to our church? Learn more about us and how you can get involved.",
     btnText: "I'm New",
     link: "/welcome",
-    src: "images/pastor.webp",
+    src: "images/p.jpeg",
   },
 ];
 

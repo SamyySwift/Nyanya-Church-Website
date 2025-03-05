@@ -19,8 +19,9 @@ const Events = () => {
       <HeroSection backgroundVideo="bg.mp4" svg_color="#E5E0D4" />
       <section className="bg-[#E5E0D4] py-[90px]">
         <div className="container mx-auto px-5">
-          <h2 className="text-3xl mb-10 md:text-5xl font-alfa">
-            Upcoming Events
+          <h2 className="text-3xl mb-10 md:text-5xl">
+            <span className="font-alfa">Upcoming</span>{" "}
+            <span className="font-thin italic font-karla">Events</span>
           </h2>
           <p className="font-karla text-neutral-700 font-light  text-xl md:text-2xl text-justify max-w-2xl">
             Discover exciting events that will uplift your spirit and enrich
@@ -34,13 +35,13 @@ const Events = () => {
               <span class="loader"></span>
             </div>
           ) : error ? (
-            <p className="flex justify-center  text-center text-xl  py-[100px] font-karla">
+            <p className="flex justify-center  text-center text-xl  py-[150px] font-karla">
               No Events at the momemt. Try again later
             </p>
           ) : (
-            <>
-              {data.data.map((event, idx) => {
-                return (
+            <div>
+              {data?.data?.length > 0 ? (
+                data.data.map((event, idx) => (
                   <Card
                     key={idx}
                     title={event.title}
@@ -53,9 +54,13 @@ const Events = () => {
                     btnType="event"
                     i={idx}
                   />
-                );
-              })}
-            </>
+                ))
+              ) : (
+                <p className="flex justify-center  text-center text-xl  py-[150px] font-karla">
+                  No Events at the moment. Try again later
+                </p>
+              )}
+            </div>
           )}
         </div>
       </section>

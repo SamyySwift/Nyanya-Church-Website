@@ -307,7 +307,7 @@ const navLinks = [
   { title: "Events", link: "/events" },
   { title: "Teams", link: "/join-a-group" },
   { title: "Sermons", link: "/sermons" },
-  { title: "Explore", link: "explore", scroll: true },
+  // { title: "Explore", link: "explore", scroll: true },
   { title: "Giving", link: "/giving" },
   { title: "Daily Word", link: "/daily-word" },
   { title: "Visit Us", link: "/plan-your-visit" },

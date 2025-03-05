@@ -17,7 +17,7 @@ const PlanVisit = () => {
       <HeroSection backgroundVideo="bg.mp4" svg_color="#F7F2E9" />
       <div className="bg-[#F7F2E9]">
         <Welcome
-          title="What's it like here?"
+          title="What's it like here"
           text="No matter who you are or where you come from, our aim is for you
           to feel welcomed and comfortable as soon as you arrive. "
         />
@@ -26,7 +26,7 @@ const PlanVisit = () => {
       {/* DIRECTION SECTION */}
       <div className="container mx-auto px-5 py-20 lg:py-40 flex flex-col md:flex-row justify-between pt-20 gap-10 overflow-hidden">
         <iframe
-          className="md:w-[600px] h-[600px] "
+          className="md:w-[600px] h-[600px]"
           src="https://maps.google.com/maps?width=720&amp;height=500&amp;hl=en&amp;q=NO.%202,%20Avenue%20Nyanya%20Karu%20Road%20Opposite%20A.A.%20Rano%20Filling%20Station,%20Nyanya,%20Abuja,%20FCT+(Nyanya%20Assembly)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         >
           <a href="https://www.gps.ie/">gps devices</a>
@@ -38,15 +38,11 @@ const PlanVisit = () => {
           </span>
           <p className="mt-5 font-karla text-justify leading-loose font-light">
             <TextGenerateEffect
-              className="font-karla text-lg md:text-xl text-black leading-loose"
-              words={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ea
-            earum ut, numquam nesciunt alias laudantium dolorum magni corrupti
-            eos rerum nisi fugit impedit ducimus, nemo magnam tempora ex nihil.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Dignissimos, quos dolores? Earum nihil et eveniet in sapiente nemo
-            itaque. Labore alias dolorem adipisci accusamus, obcaecati esse
-            veritatis incidunt officia ad?
-            
+              className="font-karla text-lg md:text-xl text-black md:leading-loose"
+              words={`
+              If you're driving, simply click on the Google Map and it will direct you to our church.
+              When coming from the Mararaba or Karu axis, take a car, keke, or bike if you are not driving, and stop at the A.A. Rano filling station on Karu Road. Cross to the other side of the road.
+              The street opposite the filling station is where the church is located. It is the first building on the left side of the street.
             `}
             />
           </p>

@@ -23,6 +23,7 @@ import DailyRefresh from "./pages/DailyRefresh.jsx";
 import New from "./pages/New.jsx";
 import ReadMore from "./pages/ReadMore.jsx";
 import Ushering from "./pages/UseringTeam.jsx";
+import Home from "./pages/Home.jsx";
 
 function App() {
   const location = useLocation();
@@ -63,6 +64,7 @@ function App() {
             <Route path="/daily-word" element={<DailyRefresh />} />
             <Route path="/welcome" element={<New />} />
             <Route path="/read-more" element={<ReadMore />} />
+            <Route path="/home" element={<Home />} />
           </Routes>
         </AnimatePresence>
         <Footer />

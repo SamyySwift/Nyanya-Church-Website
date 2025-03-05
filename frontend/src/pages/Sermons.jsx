@@ -37,8 +37,9 @@ const Sermons = () => {
       />
       <section className="bg-[#F7F2E9] py-10">
         <div className="container mx-auto px-5">
-          <h2 className="text-3xl mb-10 md:text-4xl font-extrabold font-poppins">
-            Church Sermons
+          <h2 className="text-3xl mb-10 md:text-4xl font-alfa">
+            <span className="font-alfa">Church</span>{" "}
+            <span className="font-thin italic font-karla">Sermons</span>
           </h2>
           <p className="font-karla text-neutral-700 font-light mb-[60px] text-xl text-justify max-w-2xl">
             Explore our collection of sermons that offer spiritual guidance,

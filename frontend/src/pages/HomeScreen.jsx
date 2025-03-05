@@ -15,7 +15,7 @@ function HomeScreen() {
         title="Home | Nyanya Assembly"
         description="Nyanya Assembly Home Page "
       />
-      <HeroSection svg_color="#F7F2E9" backgroundVideo="bg.mp4" />
+      <HeroSection svg_color="#F7F2E9" backgroundVideo="bg.webm" />
       <div className="bg-[#F7F2E9]">
         <Welcome
           title="Welcome"

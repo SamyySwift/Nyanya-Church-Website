@@ -15,6 +15,7 @@ export const theme = {
       alfa: ["Alfa Slab One", "serif"],
       vibes: ["Great Vibes"],
       karla: ["Karla", "sans-serif"],
+      anton: ["Anton", "sans-serif"],
     },
     animation: {
       aurora: "aurora 60s linear infinite",

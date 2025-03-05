@@ -5,6 +5,7 @@ import { cn } from "../../utils/cn";
 export const TextGenerateEffect = ({
   words,
   className,
+  color,
   filter = true,
   duration = 0.5,
 }) => {
@@ -31,7 +32,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className=" text-black opacity-0"
+              className={` text-${color} opacity-0`}
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}

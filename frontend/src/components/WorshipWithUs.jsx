@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ImagesSlider } from "./ui/images-slider";
 import { BsFillCameraReelsFill } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
+import { TextGenerateEffect } from "../components/ui/text-generate-effect";
 
 const WorshipWithUs = () => {
   const images = [
@@ -20,8 +21,8 @@ const WorshipWithUs = () => {
       duration={13000} // Change duration to 12000 milliseconds (12 seconds)
     >
       <motion.div className="z-50 flex flex-col justify-center items-center">
-        <h1 className="text-5xl md:text-8xl font-light font-vibes text-neutral-300">
-          <Typewriter
+        <h1 className="text-5xl md:text-8xl font-light font-vibes">
+          {/* <Typewriter
             options={{
               strings: ["Worship  With  Us"],
               autoStart: true,
@@ -30,7 +31,8 @@ const WorshipWithUs = () => {
               delay: 200,
               deleteSpeed: 100,
             }}
-          />
+          /> */}
+          <TextGenerateEffect color="neutral-300" words={`Worship With Us`} />
         </h1>
 
         <a href="https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d">

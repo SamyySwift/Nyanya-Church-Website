@@ -2,7 +2,6 @@ import HeroSection from "../components/HeroSection";
 import PageTitle from "../components/PageTitle";
 import Transition from "../utils/transition";
 import customFetch from "../hooks/customFetch";
-import { TextGenerateEffect } from "../components/ui/text-generate-effect";
 import { Link } from "react-router-dom";
 import { RenderText } from "../components/RenderRichText";
 import { LazyLoadedComponent } from "../components/LazyLoadComponent";
@@ -58,12 +57,10 @@ const DailyRefresh = () => {
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-5 md:text-4xl font-alfa">Daily Word</h2>
           <p className="font-karla text-neutral-700 font-light mb-[90px] text-xl text-justify max-w-2xl">
-            <TextGenerateEffect
-              words={`Explore our daily word of God bullets to gain inspiration, wisdom,
+            Explore our daily word of God bullets to gain inspiration, wisdom,
             and guidance for your spiritual journey. Each day brings a new
             opportunity to deepen your faith and connect with the teachings of
-            the Bible.`}
-            />
+            the Bible.
           </p>
 
           {loading ? (
