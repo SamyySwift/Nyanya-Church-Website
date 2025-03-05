@@ -48,7 +48,7 @@ function App() {
       <HelmetProvider>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
-            <Route index element={<HomeScreen />} />
+            <Route index element={<Home />} />
             <Route path="/events" element={<Events />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/sermons" element={<Sermons />} />
@@ -64,7 +64,6 @@ function App() {
             <Route path="/daily-word" element={<DailyRefresh />} />
             <Route path="/welcome" element={<New />} />
             <Route path="/read-more" element={<ReadMore />} />
-            <Route path="/home" element={<Home />} />
           </Routes>
         </AnimatePresence>
         <Footer />
