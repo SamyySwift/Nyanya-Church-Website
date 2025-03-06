@@ -20,7 +20,7 @@ const Home = () => {
         />
 
         <Section
-          title=" Teams"
+          title=" Join"
           image="images/join.jpg"
           subtitle="Our Teams"
           link="/join-a-group"
@@ -38,10 +38,16 @@ const HeroSection = () => {
   return (
     <div className="relative w-full my-[100px] md:my-[200px] h-[700px] md:h-[900px] flex items-center justify-left text-white rounded-2xl overflow-hidden">
       <div className="absolute inset-0">
-        <video autoPlay loop muted className="w-full h-full object-cover">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
           <source src="bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent bg-opacity-20"></div>
       </div>
 
       <div className="relative z-10 max-w-xl px-6 md:px-12">
@@ -78,34 +84,34 @@ const Section = ({
 }) => {
   return (
     <div
-      className="relative h-[700px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[300px]"
+      className="relative h-[600px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row-reverse px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[100px] lg:mb-[250px]"
       style={{ backgroundColor: bgColor }}
     >
-      {/* Text Content */}
-      <div className="w-full lg:w-1/2 xl:max-w-lg">
-        <h2 className="absolute -top-5 md:-top-7 text-5xl md:text-7xl lg:text-8xl font-anton text-black">
-          {title}
-        </h2>
-        <h3 className="mt-[80px] lg:mt-[150px] lg:ml-10 text-3xl md:text-5xl lg:text-7xl italic text-black font-karla">
-          {subtitle}
-        </h3>
-        <p className="mt-5 lg:ml-10 text-black font-light md:max-w-2xl lg:max-w-xs xl:max-w-md font-karla text-lg md:text-xl">
-          {content}
-        </p>
-        <Link to={link}>
-          <button className="my-10 lg:ml-10 md:mt-10 px-7 py-4 bg-black text-white font-light rounded-xl text-lg lg:text-xl font-karla w-50">
-            {btnName}
-          </button>
-        </Link>
-      </div>
-
       {/* Image */}
-      <div className="lg:absolute lg:-top-8 lg:right-0 lg:w-[450px] xl:w-[600px] lg:mr-[50px] xl:mr-[70px] h-full  mb-5">
+      <div className="lg:absolute lg:-top-[40px] lg:-mt-0 -mt-[40px] lg:right-0 lg:w-[450px] xl:w-[600px] lg:mr-[50px] xl:mr-[70px] h-full mb-5">
         <img
           src={image}
           alt="Church gathering"
           className="rounded-lg shadow-lg w-full h-full object-cover"
         />
+      </div>
+
+      {/* Text Content */}
+      <div className="w-full lg:w-1/2 xl:max-w-lg text-left lg:absolute lg:left-12 xl:left-20 lg:space-y-[200px]">
+        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-6 text-5xl md:text-6xl lg:text-8xl font-anton text-black">
+          {title}
+        </h2>
+        {/* <h3 className="md:mt-[80px] lg:mt-[150px] lg:ml-10 text-3xl md:text-5xl lg:text-7xl italic text-black font-karla">
+          {subtitle}
+        </h3> */}
+        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-karla font-light text-xl md:text-2xl">
+          {content}
+        </p>
+        <Link to={link}>
+          <button className="my-10 lg:my-20 md:mt-10 px-7 py-4 bg-cyan-400 text-black rounded-full text-lg lg:text-xl font-karla w-50">
+            {btnName}
+          </button>
+        </Link>
       </div>
     </div>
   );
@@ -114,19 +120,18 @@ const Section = ({
 const WelcomeSection = () => {
   const words = ["vibrant", "friendly", "beautiful", "modern", "lovable"];
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-10 mb-[150px] lg:mb-[300px] ">
+    <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-10 lg:gap-20 mb-[150px] lg:mb-[250px] ">
       {/* Image */}
       <div className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px]">
         <img
           src="images/hug.jpg"
-          alt="People hugging"
           className="rounded-lg shadow-lg w-full h-full object-cover"
         />
       </div>
 
       {/* Text Content */}
       <div className="w-full text-left">
-        <h2 className="text-4xl lg:text-7xl xl:text-9xl font-anton text-black">
+        <h2 className="text-5xl lg:text-7xl xl:text-9xl font-anton text-black">
           Welcome
         </h2>
         <p className="text-black font-light mt-8 font-karla lg:leading-loose text-lg xl:text-xl text-justify xl:max-w-2xl">
@@ -139,36 +144,38 @@ const WelcomeSection = () => {
               love to welcome you with open arms. Join us for worship and
               experience the warmth and love of our congregation. We can't wait
               to meet you!
+              <br />
+              <br />
+              If this is your first time, click on the button to know where to
+              start from and how to get involved!
             </>
           }
         </p>
-
-        <button className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-3xl mt-8 font-karla text-lg">
-          Get Started
-        </button>
+        <Link to="/welcome">
+          <button className="px-8 py-4 bg-cyan-400 hover:bg-cyan-500 text-black rounded-full mt-8 font-karla text-lg">
+            Get Started
+          </button>
+        </Link>
       </div>
     </div>
   );
 };
 
 const GivingSection = () => {
-  const words = ["vibrant", "friendly", "beautiful", "modern", "lovable"];
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-10 mb-[150px] lg:mb-[300px] max-w-7xl mx-auto ">
+    <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-20 mb-[150px] lg:mb-[300px] max-w-6xl mx-auto ">
       {/* Text Content */}
       <div className="w-full text-left">
-        <h2 className="text-4xl lg:text-7xl xl:text-9xl font-anton text-black">
+        <h2 className="text-5xl lg:text-7xl xl:text-9xl font-anton text-black">
           Giving
         </h2>
         <p className="text-black font-light mt-8 font-karla lg:leading-loose text-lg xl:text-xl text-justify ">
           We believe Jesus is a giver and not a taker. Not only has He given us
           life and breath, but by His death and resurrection, He defeated the
-          sin that would rob us of both. So, when it comes to giving, we believe
-          percentages are a thing of the past, and obligation is the wrong
-          approach.
+          sin that would rob us of both.
         </p>
         <Link to="/giving">
-          <button className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-3xl mt-8 font-karla text-lg">
+          <button className="px-8 py-4 bg-cyan-400 hover:bg-cyan-500 text-black rounded-full mt-10 font-karla text-lg w-full">
             Give Now
           </button>
         </Link>
