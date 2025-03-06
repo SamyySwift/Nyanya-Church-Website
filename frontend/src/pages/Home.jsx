@@ -11,22 +11,20 @@ const Home = () => {
         <Section
           title="Events"
           image="images/welcome-bg-1.webp"
-          //   subtitle="Are You New?"
           link="/welcome"
           btnName="Explore Events"
           bgColor="#F7F2E9"
           subtitle="Upcoming Events"
-          content="Discover exciting events that will uplift your spirit and enrich your journey."
+          content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events designed to help you grow in your faith and connect with others."
         />
-
         <Section
-          title=" Join"
+          title="Teams"
           image="images/join.jpg"
           subtitle="Our Teams"
           link="/join-a-group"
           bgColor="#F7F2E9"
           btnName="Join a Team"
-          content="Explore our diverse church teams, find your place to belong!"
+          content="Explore our diverse church teams and find your place to belong! Whether you're passionate about music, hospitality, children's ministry, or outreach, there's a team for you. Get involved and make a difference in our community."
         />
         <GivingSection />
       </div>
@@ -43,15 +41,15 @@ const HeroSection = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         >
           <source src="bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent bg-opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80  to-transparent"></div>
       </div>
 
-      <div className="relative z-10 max-w-xl px-6 md:px-12">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+      <div className="relative max-w-xl px-6 md:px-12">
+        <h1 className="text-4xl md:text-6xl font-anton">
           For God.
           <br />
           For People.
@@ -98,17 +96,17 @@ const Section = ({
 
       {/* Text Content */}
       <div className="w-full lg:w-1/2 xl:max-w-lg text-left lg:absolute lg:left-12 xl:left-20 lg:space-y-[200px]">
-        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-6 text-5xl md:text-6xl lg:text-8xl font-anton text-black">
+        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-6 text-4xl md:text-6xl lg:text-8xl font-anton text-black">
           {title}
         </h2>
         {/* <h3 className="md:mt-[80px] lg:mt-[150px] lg:ml-10 text-3xl md:text-5xl lg:text-7xl italic text-black font-karla">
           {subtitle}
         </h3> */}
-        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-karla font-light text-xl md:text-2xl">
+        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-karla font-light text-lg md:text-xl">
           {content}
         </p>
         <Link to={link}>
-          <button className="my-10 lg:my-20 md:mt-10 px-7 py-4 bg-cyan-400 text-black rounded-full text-lg lg:text-xl font-karla w-50">
+          <button className="my-10 lg:my-20 md:mt-10 px-7 py-4 bg-black text-white rounded-full text-lg lg:text-xl font-karla w-50">
             {btnName}
           </button>
         </Link>
