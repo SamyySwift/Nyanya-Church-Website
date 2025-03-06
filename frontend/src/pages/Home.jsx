@@ -63,8 +63,8 @@ const HeroSection = () => {
           lead story. We are a Jesus church and want to gather in worship and
           scatter to shine His light and love throughout the city and beyond.
         </p>
-        <button className="mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full">
-          Learn More
+        <button className="mt-6 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-karla rounded-full">
+          Live Stream
         </button>
       </div>
     </div>
