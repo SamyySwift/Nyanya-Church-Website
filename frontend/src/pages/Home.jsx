@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Transition from "../utils/transition";
 import { FlipWords } from "../components/ui/flip-words";
+import { ImagesSlider } from "../components/ui/images-slider";
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
         <WelcomeSection />
         <Section
           title="Events"
-          image="images/welcome-bg-1.webp"
+          image="images/ue.jpg"
           link="/welcome"
           btnName="Explore Events"
           bgColor="#F7F2E9"
@@ -58,10 +59,9 @@ const HeroSection = () => {
           <br />
           For the World.
         </h1>
-        <p className="mt-4 text-lg md:text-xl font-karla font-extralight">
+        <p className="mt-4 text-lg md:text-xl font-karla font-extralight max-w-xs">
           Welcome to a place where the gospel is central and Jesus is always the
-          lead story. We are a Jesus church and want to gather in worship and
-          scatter to shine His light and love throughout the city and beyond.
+          lead story.
         </p>
         <button className="mt-6 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-karla rounded-full">
           Live Stream
@@ -120,12 +120,11 @@ const WelcomeSection = () => {
   return (
     <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-10 lg:gap-20 mb-[150px] lg:mb-[250px] ">
       {/* Image */}
-      <div className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px]">
-        <img
-          src="images/hug.jpg"
-          className="rounded-lg shadow-lg w-full h-full object-cover"
-        />
-      </div>
+      <ImagesSlider
+        images={images}
+        // opacity={90}
+        className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px] rounded-lg shadow-lg"
+      />
 
       {/* Text Content */}
       <div className="w-full text-left">
@@ -150,7 +149,7 @@ const WelcomeSection = () => {
           }
         </p>
         <Link to="/welcome">
-          <button className="px-8 py-4 bg-cyan-400 hover:bg-cyan-500 text-black rounded-full mt-8 font-karla text-lg">
+          <button className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full mt-8 font-karla text-lg">
             Get Started
           </button>
         </Link>
@@ -182,11 +181,20 @@ const GivingSection = () => {
       <div className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px]">
         <img
           src="images/hug.jpg"
-          alt="People hugging"
           className="rounded-lg shadow-lg w-full h-full object-cover"
         />
       </div>
     </div>
   );
 };
+
+const images = [
+  "images/welcome-bg-1.webp",
+  "images/welcome-bg-2.webp",
+  "images/welcome-bg-3.webp",
+  "images/welcome-bg-4.webp",
+  "images/welcome-bg-5.webp",
+  "images/welcome-bg-8.webp",
+];
+
 export default Transition(Home);
