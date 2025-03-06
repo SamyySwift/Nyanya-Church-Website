@@ -14,13 +14,13 @@ const Home = () => {
           image="images/ue.jpg"
           link="/welcome"
           btnName="Explore Events"
-          bgColor="#F7F2E9"
+          bgColor="#E2E3DA"
           subtitle="Upcoming Events"
           content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events."
         />
 
         <Section
-          title="Join Us"
+          title="Teams"
           image="images/join.jpg"
           subtitle="Our Teams"
           link="/join-a-group"
@@ -53,24 +53,61 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80  to-transparent"></div>
       </div>
 
-      <div className="relative max-w-xl px-6 md:px-12">
+      <div className="relative max-w-2xl px-6 md:px-12">
         <h1 className="text-4xl md:text-6xl font-helvetica">
-          For God.
+          Welcome
           <br />
-          For People.
+          To Tacn
           <br />
-          For the City.
+          Nyanya
           <br />
-          For the World.
+          Assembly
+          <br />
         </h1>
-        <p className="mt-4 text-lg md:text-xl font-karla font-extralight max-w-xs">
-          Welcome to a place where the gospel is central and Jesus is always the
-          lead story.
+        <p className="mt-8 text-lg md:text-xl font-karla font-light max-w-xs">
+          We are glad to see you!
         </p>
-        <button className="mt-6 px-7 py-4 bg-cyan-500 hover:bg-cyan-600 text-white font-karla rounded-full">
-          Live Stream
-        </button>
       </div>
+    </div>
+  );
+};
+
+const WelcomeSection = () => {
+  const words = ["vibrant", "friendly", "beautiful", "modern"];
+  return (
+    <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[150px] lg:mb-[250px] max-w-7xl mx-auto">
+      {/* Text Content */}
+      <div className="w-full text-left">
+        <h2 className="text-4xl lg:text-7xl xl:text-8xl  text-black">
+          <span className="font-helvetica font-bold">welcome to </span>{" "}
+          <span className="italic font-saol">Church</span>
+        </h2>
+        <p className="text-black mt-3 font-karla text-justify font-light xl:leading-relaxed text-xl xl:text-2xl xl:max-w-2xl">
+          {
+            <>
+              The Apostolic Church Nigeria, Nyanya Assembly is a {""}
+              <FlipWords words={words} /> church in the beautiful city of Abuja.
+              Whether you're new to the area or looking for a place to call
+              home, we'd love to welcome you with open arms. Join us for worship
+              and experience the warmth and love of our congregation. We can't
+              wait to meet you!
+              <br />
+            </>
+          }
+        </p>
+        {/* <Link to="/welcome">
+            <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full mt-8 font-karla text-lg w-full">
+              Get Started
+            </button>
+          </Link> */}
+      </div>
+      {/* Image */}
+      <ImagesSlider
+        images={images}
+        // opacity={90}
+
+        className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px] rounded-lg shadow-lg"
+      />
     </div>
   );
 };
@@ -98,7 +135,7 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
         {/* <h3 className="md:mt-[80px] lg:mt-[150px] lg:ml-10 text-3xl md:text-5xl lg:text-7xl italic text-black font-karla">
           {subtitle}
         </h3> */}
-        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-owners font-light text-lg lg:text-xl">
+        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-karla font-light text-lg lg:text-xl">
           {content}
         </p>
         <Link to={link}>
@@ -107,46 +144,6 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
           </button>
         </Link>
       </div>
-    </div>
-  );
-};
-
-const WelcomeSection = () => {
-  const words = ["vibrant", "friendly", "beautiful", "modern", "lovable"];
-  return (
-    <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[150px] lg:mb-[250px] max-w-7xl mx-auto">
-      {/* Text Content */}
-      <div className="w-full text-left">
-        <h2 className="text-4xl lg:text-7xl xl:text-7xl  text-black">
-          <span className="font-helvetica font-bold">welcome to </span>{" "}
-          <span className="italic font-saol">Church</span>
-        </h2>
-        <p className="text-black mt-3 font-owners text-justify font-light xl:leading-relaxed text-xl xl:text-2xl xl:max-w-2xl">
-          {
-            <>
-              The Apostolic Church Nigeria, Nyanya Assembly is a {""}
-              <FlipWords words={words} /> church in the beautiful city of Abuja.
-              Whether you're new to the area or looking for a place to call
-              home, we'd love to welcome you with open arms. Join us for worship
-              and experience the warmth and love of our congregation. We can't
-              wait to meet you!
-              <br />
-            </>
-          }
-        </p>
-        {/* <Link to="/welcome">
-          <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full mt-8 font-karla text-lg w-full">
-            Get Started
-          </button>
-        </Link> */}
-      </div>
-      {/* Image */}
-      <ImagesSlider
-        images={images}
-        // opacity={90}
-
-        className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px] rounded-lg shadow-lg"
-      />
     </div>
   );
 };
@@ -166,7 +163,7 @@ const GivingSection = () => {
         <h2 className="text-5xl lg:text-7xl xl:text-9xl font-helvetica tracking-tighter text-black">
           Giving
         </h2>
-        <p className="text-black mt-8 font-owners font-light lg:leading-loose text-lg xl:text-xl text-justify ">
+        <p className="text-black mt-8 font-karla font-light lg:leading-loose text-lg xl:text-xl text-justify ">
           We believe Jesus is a giver and not a taker. Not only has He given us
           life and breath, but by His death and resurrection, He defeated the
           sin that would rob us of both.
@@ -183,13 +180,16 @@ const GivingSection = () => {
 
 const WorshipWithUs = () => {
   return (
-    <div className="relative w-full my-[200px] md:my-[200px] h-[700px] md:h-[900px]  text-white rounded-2xl overflow-hidden">
+    <div className="relative w-full my-[200px] md:my-[200px] h-[700px] md:h-[900px] text-white rounded-2xl">
       <ImagesSlider
         images={worshipImages}
-        duration={10000}
+        duration={8000}
         opacity={40}
-        className="w-full  rounded-lg shadow-lg"
+        className="w-full rounded-lg shadow-lg"
       />
+      <h3 className="absolute inset-0 top-1/2 text-5xl md:text-8xl font-light font-vibes text-center">
+        Worship With Us
+      </h3>
     </div>
   );
 };
