@@ -15,7 +15,7 @@ const Home = () => {
           btnName="Explore Events"
           bgColor="#F7F2E9"
           subtitle="Upcoming Events"
-          content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events designed to help you grow in your faith and connect with others."
+          content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events."
         />
         <Section
           title="Teams"
@@ -24,7 +24,7 @@ const Home = () => {
           link="/join-a-group"
           bgColor="#F7F2E9"
           btnName="Join a Team"
-          content="Explore our diverse church teams and find your place to belong! Whether you're passionate about music, hospitality, children's ministry, or outreach, there's a team for you. Get involved and make a difference in our community."
+          content="Explore our diverse church teams and find your place to belong! Whether you're passionate about music, or outreach, there's a team for you."
         />
         <GivingSection />
       </div>
@@ -82,15 +82,15 @@ const Section = ({
 }) => {
   return (
     <div
-      className="relative h-[600px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row-reverse px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[100px] lg:mb-[250px]"
+      className="relative h-[650px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row-reverse px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[100px] lg:mb-[250px]"
       style={{ backgroundColor: bgColor }}
     >
       {/* Image */}
-      <div className="lg:absolute lg:-top-[40px] lg:-mt-0 -mt-[40px] lg:right-0 lg:w-[450px] xl:w-[600px] lg:mr-[50px] xl:mr-[70px] h-full mb-5">
+      <div className="lg:absolute lg:-top-[40px] lg:-mt-0 -mt-[40px] lg:right-0 lg:w-[450px] xl:w-[600px] lg:mr-[50px] xl:mr-[70px] md:h-full">
         <img
           src={image}
           alt="Church gathering"
-          className="rounded-lg shadow-lg w-full h-full object-cover"
+          className="rounded-lg shadow-lg w-full h-[350px] md:h-full object-cover"
         />
       </div>
 
@@ -102,11 +102,11 @@ const Section = ({
         {/* <h3 className="md:mt-[80px] lg:mt-[150px] lg:ml-10 text-3xl md:text-5xl lg:text-7xl italic text-black font-karla">
           {subtitle}
         </h3> */}
-        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-karla font-light text-lg md:text-xl">
+        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-karla font-light text-lg lg:text-xl">
           {content}
         </p>
         <Link to={link}>
-          <button className="my-10 lg:my-20 md:mt-10 px-7 py-4 bg-black text-white rounded-full text-lg lg:text-xl font-karla w-50">
+          <button className="absolute bottom-5 md:bottom-0 md:relative md:my-5 lg:my-20 md:mt-10 px-7 py-4 bg-black text-white rounded-full text-lg lg:text-xl font-karla w-50">
             {btnName}
           </button>
         </Link>

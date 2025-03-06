@@ -101,7 +101,7 @@ const Navbar = () => {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="container mx-auto px-5 py-4 md:py-8 flex justify-between items-center">
+      <div className="container mx-auto px-5 py-8 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
           <img
             src="images/logo.jpg"
