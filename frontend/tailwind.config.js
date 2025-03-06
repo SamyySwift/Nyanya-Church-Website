@@ -15,7 +15,9 @@ export const theme = {
       alfa: ["Alfa Slab One", "serif"],
       vibes: ["Great Vibes"],
       karla: ["Karla", "sans-serif"],
-      anton: ["Anton", "sans-serif"],
+      saol: ["SaolDisplay-Regular", "sans-serif"],
+      helvetica: ["Helvetica Now Display W05 Bold", "sans-serif"],
+      owners: ["Owners TRIAL Light", "sans-serif"],
     },
     animation: {
       aurora: "aurora 60s linear infinite",

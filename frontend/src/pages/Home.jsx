@@ -18,8 +18,9 @@ const Home = () => {
           subtitle="Upcoming Events"
           content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events."
         />
+
         <Section
-          title="Teams"
+          title="Join Us"
           image="images/join.jpg"
           subtitle="Our Teams"
           link="/join-a-group"
@@ -27,7 +28,10 @@ const Home = () => {
           btnName="Join a Team"
           content="Explore our diverse church teams and find your place to belong! Whether you're passionate about music, or outreach, there's a team for you."
         />
+
         <GivingSection />
+
+        <WorshipWithUs />
       </div>
     </div>
   );
@@ -50,7 +54,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative max-w-xl px-6 md:px-12">
-        <h1 className="text-4xl md:text-6xl font-anton">
+        <h1 className="text-4xl md:text-6xl font-helvetica">
           For God.
           <br />
           For People.
@@ -63,7 +67,7 @@ const HeroSection = () => {
           Welcome to a place where the gospel is central and Jesus is always the
           lead story.
         </p>
-        <button className="mt-6 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-karla rounded-full">
+        <button className="mt-6 px-7 py-4 bg-cyan-500 hover:bg-cyan-600 text-white font-karla rounded-full">
           Live Stream
         </button>
       </div>
@@ -71,18 +75,10 @@ const HeroSection = () => {
   );
 };
 
-const Section = ({
-  title,
-  content,
-  image,
-  subtitle,
-  link,
-  btnName,
-  bgColor,
-}) => {
+const Section = ({ title, content, image, link, btnName, bgColor }) => {
   return (
     <div
-      className="relative h-[650px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row-reverse px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[100px] lg:mb-[250px]"
+      className="relative h-[650px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row-reverse px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[150px] lg:mb-[250px]"
       style={{ backgroundColor: bgColor }}
     >
       {/* Image */}
@@ -96,13 +92,13 @@ const Section = ({
 
       {/* Text Content */}
       <div className="w-full lg:w-1/2 xl:max-w-lg text-left lg:absolute lg:left-12 xl:left-20 lg:space-y-[200px]">
-        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-6 text-4xl md:text-6xl lg:text-8xl font-anton text-black">
+        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-9 text-5xl md:text-6xl lg:text-[150px]  font-helvetica tracking-tighter text-black">
           {title}
         </h2>
         {/* <h3 className="md:mt-[80px] lg:mt-[150px] lg:ml-10 text-3xl md:text-5xl lg:text-7xl italic text-black font-karla">
           {subtitle}
         </h3> */}
-        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-karla font-light text-lg lg:text-xl">
+        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-owners font-light text-lg lg:text-xl">
           {content}
         </p>
         <Link to={link}>
@@ -118,65 +114,46 @@ const Section = ({
 const WelcomeSection = () => {
   const words = ["vibrant", "friendly", "beautiful", "modern", "lovable"];
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-10 lg:gap-20 mb-[150px] lg:mb-[250px] ">
-      {/* Image */}
-      <ImagesSlider
-        images={images}
-        // opacity={90}
-        className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px] rounded-lg shadow-lg"
-      />
-
+    <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[150px] lg:mb-[250px] max-w-7xl mx-auto">
       {/* Text Content */}
       <div className="w-full text-left">
-        <h2 className="text-5xl lg:text-7xl xl:text-9xl font-anton text-black">
-          Welcome
+        <h2 className="text-4xl lg:text-7xl xl:text-7xl  text-black">
+          <span className="font-helvetica font-bold">welcome to </span>{" "}
+          <span className="italic font-saol">Church</span>
         </h2>
-        <p className="text-black font-light mt-8 font-karla lg:leading-loose text-lg xl:text-xl text-justify xl:max-w-2xl">
+        <p className="text-black mt-3 font-owners text-justify font-light xl:leading-relaxed text-xl xl:text-2xl xl:max-w-2xl">
           {
             <>
               The Apostolic Church Nigeria, Nyanya Assembly is a {""}
               <FlipWords words={words} /> church in the beautiful city of Abuja.
-              We are a community that loves Jesus and loves people. Whether
-              you're new to the area or looking for a place to call home, we'd
-              love to welcome you with open arms. Join us for worship and
-              experience the warmth and love of our congregation. We can't wait
-              to meet you!
+              Whether you're new to the area or looking for a place to call
+              home, we'd love to welcome you with open arms. Join us for worship
+              and experience the warmth and love of our congregation. We can't
+              wait to meet you!
               <br />
-              <br />
-              If this is your first time, click on the button to know where to
-              start from and how to get involved!
             </>
           }
         </p>
-        <Link to="/welcome">
-          <button className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full mt-8 font-karla text-lg">
+        {/* <Link to="/welcome">
+          <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full mt-8 font-karla text-lg w-full">
             Get Started
           </button>
-        </Link>
+        </Link> */}
       </div>
+      {/* Image */}
+      <ImagesSlider
+        images={images}
+        // opacity={90}
+
+        className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px] rounded-lg shadow-lg"
+      />
     </div>
   );
 };
 
 const GivingSection = () => {
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-20 mb-[150px] lg:mb-[300px] max-w-6xl mx-auto ">
-      {/* Text Content */}
-      <div className="w-full text-left">
-        <h2 className="text-5xl lg:text-7xl xl:text-9xl font-anton text-black">
-          Giving
-        </h2>
-        <p className="text-black font-light mt-8 font-karla lg:leading-loose text-lg xl:text-xl text-justify ">
-          We believe Jesus is a giver and not a taker. Not only has He given us
-          life and breath, but by His death and resurrection, He defeated the
-          sin that would rob us of both.
-        </p>
-        <Link to="/giving">
-          <button className="px-8 py-4 bg-cyan-400 hover:bg-cyan-500 text-black rounded-full mt-10 font-karla text-lg w-full">
-            Give Now
-          </button>
-        </Link>
-      </div>
+    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[150px] lg:mb-[300px] max-w-6xl mx-auto ">
       {/* Image */}
       <div className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px]">
         <img
@@ -184,6 +161,35 @@ const GivingSection = () => {
           className="rounded-lg shadow-lg w-full h-full object-cover"
         />
       </div>
+      {/* Text Content */}
+      <div className="w-full text-left">
+        <h2 className="text-5xl lg:text-7xl xl:text-9xl font-helvetica tracking-tighter text-black">
+          Giving
+        </h2>
+        <p className="text-black mt-8 font-owners font-light lg:leading-loose text-lg xl:text-xl text-justify ">
+          We believe Jesus is a giver and not a taker. Not only has He given us
+          life and breath, but by His death and resurrection, He defeated the
+          sin that would rob us of both.
+        </p>
+        <Link to="/giving">
+          <button className="absolute -bottom-30 md:relative px-8 py-4 bg-cyan-400 hover:bg-cyan-500 text-black rounded-full mt-10 font-karla text-lg w-full">
+            Give Now
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+const WorshipWithUs = () => {
+  return (
+    <div className="relative w-full my-[200px] md:my-[200px] h-[700px] md:h-[900px]  text-white rounded-2xl overflow-hidden">
+      <ImagesSlider
+        images={worshipImages}
+        duration={10000}
+        opacity={40}
+        className="w-full  rounded-lg shadow-lg"
+      />
     </div>
   );
 };
@@ -195,6 +201,15 @@ const images = [
   "images/welcome-bg-4.webp",
   "images/welcome-bg-5.webp",
   "images/welcome-bg-8.webp",
+];
+
+const worshipImages = [
+  "images/wsp-img-1.webp",
+  "images/wsp-img-2.webp",
+  "images/wsp-img-3.webp",
+  "images/wsp-img-4.webp",
+  "images/wsp-img-5.webp",
+  "images/wsp-img-8.webp",
 ];
 
 export default Transition(Home);
