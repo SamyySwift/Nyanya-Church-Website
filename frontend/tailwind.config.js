@@ -12,12 +12,10 @@ export const content = [
 export const theme = {
   extend: {
     fontFamily: {
-      alfa: ["Alfa Slab One", "serif"],
-      vibes: ["Great Vibes"],
       karla: ["Karla", "sans-serif"],
       saol: ["SaolDisplay-Regular", "sans-serif"],
       helvetica: ["Helvetica Now Display W05 Bold", "sans-serif"],
-      owners: ["Owners TRIAL Light", "sans-serif"],
+      anton: ["Anton", "sans-serif"],
     },
     animation: {
       aurora: "aurora 60s linear infinite",

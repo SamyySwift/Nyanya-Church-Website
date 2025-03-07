@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 @import url("https://db.onlinewebfonts.com/c/4c4c08af466e9ad071b6d69cf44093df?family=SaolDisplay-Regular");
 @import url("https://db.onlinewebfonts.com/c/edb27e30cd0569701355db3c0486c7e5?family=Helvetica+Now+Display+W05+Bold");
-@import url(https://db.onlinewebfonts.com/c/934a43edd399ae748eb38fa829097726?family=Owners+TRIAL+Light);
+@import url(https://db.onlinewebfonts.com/c/0d4bd6300a54d19c5fc62fe7e07c48cb?family=Anton);
 
 @tailwind base;
 @tailwind components;

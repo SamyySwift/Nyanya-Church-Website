@@ -53,7 +53,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative max-w-2xl px-6 md:px-12">
-        <h1 className="text-4xl md:text-6xl lg:text-8xl font-saol font-bold">
+        <h1 className="text-5xl md:text-6xl lg:text-8xl font-anton tracking-tight">
           Welcome
           <br />
           To Tacn
@@ -63,9 +63,14 @@ const HeroSection = () => {
           Assembly
           <br />
         </h1>
-        <p className="mt-8 text-lg md:text-xl font-karla font-light max-w-xs">
+        <p className="mt-8 text-xl md:text-2xl font-karla font-light max-w-xs">
           We are glad to see you!
         </p>
+        <a href="https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d">
+          <button className="px-8 py-4 bg-cyan-400 hover:bg-cyan-600 text-black rounded-full mt-8 font-karla text-lg">
+            Live Stream
+          </button>
+        </a>
       </div>
     </div>
   );
@@ -78,10 +83,10 @@ const WelcomeSection = () => {
       {/* Text Content */}
       <div className="w-full text-left">
         <h2 className="text-6xl lg:text-7xl xl:text-9xl  text-black">
-          <span className="font-saol font-bold">welcome </span>{" "}
-          {/* <span className="italic font-saol">Church</span> */}
+          <span className="font-anton">welcome </span>{" "}
+          <span className="italic font-saol"> to Church</span>
         </h2>
-        <p className="text-black mt-3 font-karla text-justify xl:leading-relaxed text-xl xl:text-2xl xl:max-w-2xl">
+        <p className="text-black mt-5 font-karla  text-justify xl:leading-relaxed text-xl xl:text-2xl xl:max-w-3xl">
           {
             <>
               The Apostolic Church Nigeria, Nyanya Assembly is a {""}
@@ -128,13 +133,13 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
 
       {/* Text Content */}
       <div className="w-full lg:w-1/2 xl:max-w-lg text-left lg:absolute lg:left-12 xl:left-20 lg:space-y-[200px]">
-        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-9 text-5xl md:text-6xl lg:text-[150px]  font-saol font-bold text-black">
+        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-10 text-5xl md:text-6xl lg:text-9xl font-anton tracking-tight text-black">
           {title}
         </h2>
         {/* <h3 className="md:mt-[80px] lg:mt-[150px] lg:ml-10 text-3xl md:text-5xl lg:text-7xl italic text-black font-karla">
           {subtitle}
         </h3> */}
-        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-karla lg:leading-loose text-lg lg:text-xl">
+        <p className="mt-5 text-black font-light text-justify lg:max-w-xs xl:max-w-md font-karla lg:leading-loose text-xl lg:text-2xl">
           {content}
         </p>
         <Link to={link}>
@@ -159,7 +164,7 @@ const GivingSection = () => {
       </div>
       {/* Text Content */}
       <div className="w-full text-left">
-        <h2 className="text-5xl lg:text-7xl xl:text-9xl font-saol font-bold text-black">
+        <h2 className="text-6xl lg:text-7xl xl:text-9xl font-anton text-black">
           Giving
         </h2>
         <p className="text-black mt-8 font-karla lg:leading-loose text-lg xl:text-xl text-justify ">
@@ -181,14 +186,14 @@ const WorshipWithUs = () => {
   return (
     <>
       <h1 className="text-6xl lg:text-7xl xl:text-9xl text-black">
-        <span className="font-helvetica font-bold">Join Us</span>{" "}
+        <span className="font-anton">Join Us</span>{" "}
         <span className="font-saol italic">This Sunday</span>
       </h1>
       <div className="relative w-full mt-10 md:mt-20 mb-10 h-[700px] md:h-[900px] text-white rounded-2xl">
         <ImagesSlider
           images={worshipImages}
           duration={8000}
-          opacity={40}
+          opacity={20}
           className="w-full rounded-lg shadow-lg"
         />
         {/* <h3 className="absolute inset-0 top-1/2 text-5xl md:text-8xl font-light font-vibes text-center">

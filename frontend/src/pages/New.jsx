@@ -11,8 +11,9 @@ const New = () => {
           <div className="container mx-auto px-5 flex flex-col lg:flex-row items-center gap-12">
             {/* Text Section */}
             <div className="w-full lg:w-1/2">
-              <h1 className="text-4xl sm:text-6xl text- font-alfa text-white">
-                I'm New
+              <h1 className="text-5xl sm:text-7xl text-white">
+                <span className="font-helvetica">I'm </span>
+                <span className="font-saol italic">New</span>
               </h1>
               <p className="mt-5 text-white text-lg md:text-xl max-w-xl font-karla leading-loose">
                 We're passionate about people feeling like they belong to our

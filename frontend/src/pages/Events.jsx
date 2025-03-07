@@ -21,7 +21,7 @@ const Events = () => {
         <div className="container mx-auto px-5">
           <h2 className="text-3xl mb-10 md:text-5xl">
             <span className="font-alfa">Upcoming</span>{" "}
-            <span className="font-thin italic font-karla">Events</span>
+            <span className="font-thin italic font-saol">Events</span>
           </h2>
           <p className="font-karla text-neutral-700 font-light  text-xl md:text-2xl text-justify max-w-2xl">
             Discover exciting events that will uplift your spirit and enrich
