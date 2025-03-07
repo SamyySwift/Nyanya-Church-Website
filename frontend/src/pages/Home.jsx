@@ -98,7 +98,7 @@ const WelcomeSection = () => {
           initial={{ opacity: 0, y: -200 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2, ease: "easeOut" }}
-          className="text-5xl lg:text-7xl xl:text-[110px]  text-black"
+          className="text-6xl lg:text-7xl xl:text-[110px]  text-black"
         >
           <span className="font-anton">
             Worship With <br />
