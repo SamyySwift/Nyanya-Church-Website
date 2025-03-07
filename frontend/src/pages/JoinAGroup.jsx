@@ -14,8 +14,9 @@ const JoinAGroup = () => {
       <HeroSection backgroundVideo="joinbg.mp4" svg_color="#F7F2E9" />
       <section className="bg-[#F7F2E9] py-[80px]">
         <div className="container mx-auto px-5">
-          <h2 className="text-3xl mb-5 md:text-5xl font-alfa">
-            Explore Our Teams
+          <h2 className="text-4xl mb-10 lg:text-7xl xl:text-8xl">
+            <span className="font-anton">Explore Our</span>{" "}
+            <span className="font-thin italic font-saol">Teams</span>
           </h2>
           <p className="font-karla text-neutral-700 font-light mb-[60px] text-xl text-justify max-w-2xl">
             Discover exciting groups and teams in nyanya to join that will

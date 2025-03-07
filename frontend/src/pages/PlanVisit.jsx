@@ -33,12 +33,12 @@ const PlanVisit = () => {
         </iframe>
 
         <div className="md:w-[700px]">
-          <span className="font-semibold text-3xl md:text-5xl font-karla">
+          <span className=" text-3xl md:text-5xl font-saol font-bold">
             Detailed Directions
           </span>
           <p className="mt-5 font-karla text-justify leading-loose font-light">
             <TextGenerateEffect
-              className="font-karla text-lg md:text-xl text-black md:leading-loose"
+              className="font-karla text-lg md:text-2xl text-black md:leading-loose"
               words={`
               If you're driving, simply click on the Google Map and it will direct you to our church.
               When coming from the Mararaba or Karu axis, take a car, keke, or bike if you are not driving, and stop at the A.A. Rano filling station on Karu Road. Cross to the other side of the road.
@@ -56,7 +56,7 @@ const PlanVisit = () => {
           <div className="py-[150px] lg:py-[250px] flex items-center">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-5 space-y-10 md:space-y-0">
               <div className="w-full md:w-1/4 md:pr-5">
-                <span className="font-alfa text-4xl md:text-5xl lg:text-7xl text-white">
+                <span className="font-anton text-4xl md:text-5xl lg:text-7xl text-white">
                   FAQS
                 </span>
               </div>

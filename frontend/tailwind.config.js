@@ -14,7 +14,6 @@ export const theme = {
     fontFamily: {
       karla: ["Karla", "sans-serif"],
       saol: ["SaolDisplay-Regular", "sans-serif"],
-      helvetica: ["Helvetica Now Display W05 Bold", "sans-serif"],
       anton: ["Anton", "sans-serif"],
     },
     animation: {

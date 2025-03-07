@@ -15,7 +15,7 @@ const DailyCard = ({ message }) => {
         className="w-[520px] h-[350px] object-cover"
       />
       <div className="flex flex-col items-start md:px-8 mt-5 md:mt-0 max-w-3xl">
-        <h2 className="text-xl md:text-2xl font-alfa">{message.title}</h2>
+        <h2 className="text-2xl md:text-3xl font-anton">{message.title}</h2>
 
         <p className="text-xl mt-3 font-light">
           <span className="font-normal">Preacher: </span>
@@ -52,10 +52,13 @@ const DailyRefresh = () => {
         title="Daily Word | Nyanya Assembly"
         description="page containing all church daily words"
       />
-      <HeroSection backgroundImage="images/daily.jpg" svg_color="#F7F2E9" />
+      <HeroSection backgroundImage="images/bible.webp" svg_color="#F7F2E9" />
       <div className="bg-[#F7F2E9] py-20">
         <div className="container mx-auto px-5">
-          <h2 className="text-3xl mb-5 md:text-4xl font-alfa">Daily Word</h2>
+          <h2 className="text-4xl mb-10 lg:text-7xl xl:text-8xl">
+            <span className="font-anton">Daily</span>{" "}
+            <span className="font-thin italic font-saol">Word</span>
+          </h2>
           <p className="font-karla text-neutral-700 font-light mb-[90px] text-xl text-justify max-w-2xl">
             Explore our daily word of God bullets to gain inspiration, wisdom,
             and guidance for your spiritual journey. Each day brings a new

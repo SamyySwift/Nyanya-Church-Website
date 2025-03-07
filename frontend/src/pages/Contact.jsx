@@ -17,13 +17,14 @@ const Contact = () => {
       />
       <HeroSection backgroundVideo="bg.mp4" svg_color="#E5E0D4" />
       <section className="py-20 bg-[#E5E0D4]">
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-5 text-lg md:text-xl">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* <!-- Contact Information --> */}
             <div class="flex flex-col justify-center">
-              <h3 class="text-3xl md:text-5xl text-black font-alfa">
-                Get In Touch
-              </h3>
+              <h2 className="text-4xl mb-6 lg:text-7xl xl:text-8xl">
+                <span className="font-anton">Get In</span>{" "}
+                <span className="font-thin italic font-saol">Touch</span>
+              </h2>
               <p class="mt-4 text-gray-900 font-karla">
                 We're here to answer any questions you may have. Fill out the
                 form or use one of the contact methods below.
@@ -51,7 +52,7 @@ const Contact = () => {
                 </div>
               </div>
               {/* Socials */}
-              <h1 className="mt-10 text-3xl font-semibold text-black font-karla">
+              <h1 className="mt-10 text-4xl text-black font-saol font-bold">
                 Our Socials
               </h1>
               <div className="flex gap-3 mt-3">

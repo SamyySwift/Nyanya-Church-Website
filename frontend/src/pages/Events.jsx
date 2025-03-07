@@ -19,8 +19,8 @@ const Events = () => {
       <HeroSection backgroundVideo="bg.mp4" svg_color="#E5E0D4" />
       <section className="bg-[#E5E0D4] py-[90px]">
         <div className="container mx-auto px-5">
-          <h2 className="text-3xl mb-10 md:text-5xl">
-            <span className="font-alfa">Upcoming</span>{" "}
+          <h2 className="text-4xl mb-10 lg:text-7xl xl:text-8xl">
+            <span className="font-anton">Upcoming</span>{" "}
             <span className="font-thin italic font-saol">Events</span>
           </h2>
           <p className="font-karla text-neutral-700 font-light  text-xl md:text-2xl text-justify max-w-2xl">

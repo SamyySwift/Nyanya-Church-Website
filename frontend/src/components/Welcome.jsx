@@ -14,7 +14,7 @@ export function Welcome({ title, text, imgSrc = images }) {
         }}
         className="flex flex-col justify-center md:max-w-sm xl:max-w-2xl space-y-[30px] md:space-y-[60px]"
       >
-        <h1 className="text-4xl lg:text-7xl font-alfa">{title}</h1>
+        <h1 className="text-4xl lg:text-7xl font-anton">{title}</h1>
         <div>
           <span className="font-karla font-light md:text-md lg:text-2xl leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
             {text}

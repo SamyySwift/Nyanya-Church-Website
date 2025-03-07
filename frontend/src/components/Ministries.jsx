@@ -9,8 +9,8 @@ const Ministries = ({ team, images }) => {
       <HeroSection backgroundVideo="meetbg.mp4" svg_color="#F7F2E9" />
       <section className="bg-[#F7F2E9] py-[100px]">
         <div className="container mx-auto px-5">
-          <h2 className="text-3xl mb-10 md:text-5xl font-alfa text-center">
-            Meet The {team}
+          <h2 className="text-4xl mb-10 lg:text-6xl xl:text-7xl font-anton text-center max-w-xl mx-auto">
+            Meet The <span className="font-saol italic">{team}</span>
           </h2>
 
           <InfiniteMovingCards
@@ -29,7 +29,7 @@ const Ministries = ({ team, images }) => {
           <section className="h-[1000px] container mx-auto px-5">
             <div className="w-full h-full flex flex-col items-center justify-center space-y-4">
               <h1 className="text-center">
-                <span className="text-3xl md:text-5xl font-alfa text-white">
+                <span className="text-3xl md:text-5xl lg:text-7xl font-anton text-white">
                   Join The {team}
                 </span>
               </h1>

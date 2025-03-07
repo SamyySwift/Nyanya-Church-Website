@@ -12,7 +12,7 @@ const New = () => {
             {/* Text Section */}
             <div className="w-full lg:w-1/2">
               <h1 className="text-5xl sm:text-7xl text-white">
-                <span className="font-helvetica">I'm </span>
+                <span className="font-anton">I'm </span>
                 <span className="font-saol italic">New</span>
               </h1>
               <p className="mt-5 text-white text-lg md:text-xl max-w-xl font-karla leading-loose">

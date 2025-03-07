@@ -2,6 +2,17 @@ import { Link } from "react-router-dom";
 import Transition from "../utils/transition";
 import { FlipWords } from "../components/ui/flip-words";
 import { ImagesSlider } from "../components/ui/images-slider";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 100 },
+  visible: { opacity: 1, y: 0, transition: { duration: 2, ease: "easeInOut" } },
+};
+
+const slideIn = {
+  hidden: { opacity: 0, x: 1000 },
+  visible: { opacity: 1, x: 0, transition: { duration: 2, ease: "easeInOut" } },
+};
 
 const Home = () => {
   return (
@@ -14,7 +25,7 @@ const Home = () => {
           image="images/join.jpg"
           subtitle="Our Teams"
           link="/join-a-group"
-          bgColor="#F7F2E9"
+          bgColor="#E2E3DA"
           btnName="Join a Team"
           content="Explore our diverse church teams and find your place to belong! Whether you're passionate about music, or outreach, there's a team for you."
         />
@@ -53,7 +64,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative max-w-2xl px-6 md:px-12">
-        <h1 className="text-5xl md:text-6xl lg:text-8xl font-anton tracking-tight">
+        <h1 className="text-5xl md:text-6xl lg:text-8xl font-anton">
           Welcome
           <br />
           To Tacn
@@ -63,14 +74,14 @@ const HeroSection = () => {
           Assembly
           <br />
         </h1>
-        <p className="mt-8 text-xl md:text-2xl font-karla font-light max-w-xs">
-          We are glad to see you!
+        <p className="mt-8 text-xl md:text-2xl font-karla font-light max-w-md">
+          We can't wait to meet with you!
         </p>
-        <a href="https://www.facebook.com/profile.php?id=100068068014989&mibextid=LQQJ4d">
+        <Link href="/welcome">
           <button className="px-8 py-4 bg-cyan-400 hover:bg-cyan-600 text-black rounded-full mt-8 font-karla text-lg">
-            Live Stream
+            Get Started
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -79,14 +90,26 @@ const HeroSection = () => {
 const WelcomeSection = () => {
   const words = ["vibrant", "friendly", "beautiful", "modern"];
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[150px] lg:mb-[250px] max-w-7xl mx-auto">
+    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[150px] lg:mb-[250px] max-w-7xl mx-auto">
       {/* Text Content */}
       <div className="w-full text-left">
-        <h2 className="text-6xl lg:text-7xl xl:text-9xl  text-black">
-          <span className="font-anton">welcome </span>{" "}
-          <span className="italic font-saol"> to Church</span>
-        </h2>
-        <p className="text-black mt-5 font-karla  text-justify xl:leading-relaxed text-xl xl:text-2xl xl:max-w-3xl">
+        <motion.h2
+          initial={{ opacity: 0, y: -200 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2, ease: "easeOut" }}
+          className="text-5xl lg:text-7xl xl:text-[110px]  text-black"
+        >
+          <span className="font-anton">
+            Worship With <br />
+          </span>{" "}
+          <span className="italic font-saol"> Us Today</span>
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, x: -500 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 2, ease: "easeOut" }}
+          className="text-black mt-5 font-karla  text-justify xl:leading-relaxed text-xl xl:text-2xl xl:max-w-3xl"
+        >
           {
             <>
               The Apostolic Church Nigeria, Nyanya Assembly is a {""}
@@ -98,12 +121,12 @@ const WelcomeSection = () => {
               <br />
             </>
           }
-        </p>
+        </motion.p>
         {/* <Link to="/welcome">
-            <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full mt-8 font-karla text-lg w-full">
-              Get Started
-            </button>
-          </Link> */}
+          <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-black rounded-full mt-10 font-karla text-lg w-full">
+            Get Started
+          </button>
+        </Link> */}
       </div>
       {/* Image */}
       <ImagesSlider
@@ -154,19 +177,25 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
 
 const GivingSection = () => {
   return (
-    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[200px] lg:mb-[300px] max-w-6xl mx-auto ">
+    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[200px] lg:mb-[220px] max-w-6xl mx-auto ">
       {/* Image */}
       <div className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px]">
         <img
-          src="images/hug.jpg"
+          src="images/p.jpeg"
           className="rounded-lg shadow-lg w-full h-full object-cover"
         />
       </div>
       {/* Text Content */}
       <div className="w-full text-left">
-        <h2 className="text-6xl lg:text-7xl xl:text-9xl font-anton text-black">
+        <motion.h2
+          variants={slideIn}
+          initial="hidden"
+          animate="visible"
+          viewport={{ once: true }}
+          className="text-6xl lg:text-7xl xl:text-9xl font-anton text-black"
+        >
           Giving
-        </h2>
+        </motion.h2>
         <p className="text-black mt-8 font-karla lg:leading-loose text-lg xl:text-xl text-justify ">
           We believe Jesus is a giver and not a taker. Not only has He given us
           life and breath, but by His death and resurrection, He defeated the
@@ -185,10 +214,15 @@ const GivingSection = () => {
 const WorshipWithUs = () => {
   return (
     <>
-      <h1 className="text-6xl lg:text-7xl xl:text-9xl text-black">
+      <motion.h1
+        variants={fadeInUp}
+        initial="hidden"
+        animate="visible"
+        className="text-6xl lg:text-7xl xl:text-9xl text-black"
+      >
         <span className="font-anton">Join Us</span>{" "}
         <span className="font-saol italic">This Sunday</span>
-      </h1>
+      </motion.h1>
       <div className="relative w-full mt-10 md:mt-20 mb-10 h-[700px] md:h-[900px] text-white rounded-2xl">
         <ImagesSlider
           images={worshipImages}

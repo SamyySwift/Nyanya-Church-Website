@@ -28,7 +28,7 @@ const Footer = () => {
               className="h-[100px] md:h-[150px] rounded-full"
             />
           </Link> */}
-          <h2 className="font-alfa text-2xl max-w-sm text-neutral-200">
+          <h2 className="font-anton text-2xl max-w-sm text-neutral-200">
             TACN <br /> Nyanya <br /> Assembly
           </h2>
         </div>
