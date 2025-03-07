@@ -3,6 +3,7 @@ import Transition from "../utils/transition";
 import { FlipWords } from "../components/ui/flip-words";
 import { ImagesSlider } from "../components/ui/images-slider";
 import { motion } from "framer-motion";
+import { BsFillCameraReelsFill } from "react-icons/bs";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 100 },
@@ -226,11 +227,11 @@ const WorshipWithUs = () => {
       <div className="relative w-full mt-10 md:mt-20 mb-10 h-[700px] md:h-[900px] text-white rounded-2xl">
         <ImagesSlider
           images={worshipImages}
-          duration={8000}
+          duration={7000}
           opacity={20}
           className="w-full rounded-lg shadow-lg"
         />
-        {/* <h3 className="absolute inset-0 top-1/2 text-5xl md:text-8xl font-light font-vibes text-center">
+        {/* <h3 className="absolute inset-0 top-1/2 text-5xl md:text-8xl font-light font-saol text-center">
           Worship With Us
         </h3> */}
       </div>

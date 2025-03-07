@@ -25,18 +25,18 @@ const AboutPage = () => {
       </section>
 
       {/* Church Services */}
-      {/* <section className="bg-black py-[10rem]">
-        <h3 className="container mx-auto px-5 mb-10 text-white font-alfa text-3xl md:text-4xl">
+      <section className="bg-black py-[10rem]">
+        <h3 className="container mx-auto px-5 mb-10 text-white font-anton text-3xl md:text-4xl">
           Our Church Services
         </h3>
         <ChurchServices />
-      </section> */}
+      </section>
 
       <GrainyBackground
-        bgImg="images/noise.jpg"
+        bgImg="images/noise.webp"
         content={
           <div className="relative z-10 py-[100px] md:py-[300px] flex flex-col items-center justify-center h-full text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-alfa">OUR 2025 MOTTO</h1>
+            <h1 className="text-4xl md:text-6xl font-anton">OUR 2025 MOTTO</h1>
             <p className="text-2xl md:text-4xl mt-4 md:max-w-3xl p-4 font-karla">
               Help us, oh God of our salvation, for the glory of thy name: and
               deliver us. <br />{" "}

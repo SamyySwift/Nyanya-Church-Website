@@ -45,7 +45,7 @@ const GridItem = ({ icon, title, day, time, description }) => {
           {title}
         </h3>
 
-        <p className="text-md md:text-lg text-black dark:text-neutral-400">
+        <p className="text-md md:text-lg text-black dark:text-neutral-300">
           {description}
         </p>
       </div>

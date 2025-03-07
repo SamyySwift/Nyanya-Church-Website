@@ -9,12 +9,12 @@ export function Welcome({ title, text, imgSrc = images }) {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.3,
-          duration: 1,
+          duration: 2,
           ease: "easeInOut",
         }}
         className="flex flex-col justify-center md:max-w-sm xl:max-w-2xl space-y-[30px] md:space-y-[60px]"
       >
-        <h1 className="text-4xl lg:text-7xl font-anton">{title}</h1>
+        <h1 className="text-4xl lg:text-8xl font-anton">{title}</h1>
         <div>
           <span className="font-karla font-light md:text-md lg:text-2xl leading-[30px] md:leading-[40px] lg:leading-[45px] xl:leading-[45px]">
             {text}
