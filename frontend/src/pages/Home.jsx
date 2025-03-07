@@ -227,7 +227,7 @@ const WorshipWithUs = () => {
       <div className="relative w-full mt-10 md:mt-20 mb-10 h-[700px] md:h-[900px] text-white rounded-2xl">
         <ImagesSlider
           images={worshipImages}
-          duration={7000}
+          duration={8000}
           opacity={20}
           className="w-full rounded-lg shadow-lg"
         />
