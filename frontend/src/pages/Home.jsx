@@ -10,16 +10,6 @@ const Home = () => {
         <HeroSection />
         <WelcomeSection />
         <Section
-          title="Events"
-          image="images/ue.jpg"
-          link="/welcome"
-          btnName="Explore Events"
-          bgColor="#E2E3DA"
-          subtitle="Upcoming Events"
-          content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events."
-        />
-
-        <Section
           title="Teams"
           image="images/join.jpg"
           subtitle="Our Teams"
@@ -27,6 +17,15 @@ const Home = () => {
           bgColor="#F7F2E9"
           btnName="Join a Team"
           content="Explore our diverse church teams and find your place to belong! Whether you're passionate about music, or outreach, there's a team for you."
+        />
+        <Section
+          title="Events"
+          image="images/ue.jpg"
+          link="/welcome"
+          btnName="Explore Events"
+          bgColor="#E2E3DA"
+          subtitle="Upcoming Events"
+          content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events."
         />
 
         <GivingSection />
@@ -54,7 +53,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative max-w-2xl px-6 md:px-12">
-        <h1 className="text-4xl md:text-6xl font-helvetica">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-saol font-bold">
           Welcome
           <br />
           To Tacn
@@ -78,11 +77,11 @@ const WelcomeSection = () => {
     <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[150px] lg:mb-[250px] max-w-7xl mx-auto">
       {/* Text Content */}
       <div className="w-full text-left">
-        <h2 className="text-4xl lg:text-7xl xl:text-8xl  text-black">
-          <span className="font-helvetica font-bold">welcome to </span>{" "}
-          <span className="italic font-saol">Church</span>
+        <h2 className="text-6xl lg:text-7xl xl:text-9xl  text-black">
+          <span className="font-saol font-bold">welcome </span>{" "}
+          {/* <span className="italic font-saol">Church</span> */}
         </h2>
-        <p className="text-black mt-3 font-karla text-justify font-light xl:leading-relaxed text-xl xl:text-2xl xl:max-w-2xl">
+        <p className="text-black mt-3 font-karla text-justify xl:leading-relaxed text-xl xl:text-2xl xl:max-w-2xl">
           {
             <>
               The Apostolic Church Nigeria, Nyanya Assembly is a {""}
@@ -129,17 +128,17 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
 
       {/* Text Content */}
       <div className="w-full lg:w-1/2 xl:max-w-lg text-left lg:absolute lg:left-12 xl:left-20 lg:space-y-[200px]">
-        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-9 text-5xl md:text-6xl lg:text-[150px]  font-helvetica tracking-tighter text-black">
+        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-9 text-5xl md:text-6xl lg:text-[150px]  font-saol font-bold text-black">
           {title}
         </h2>
         {/* <h3 className="md:mt-[80px] lg:mt-[150px] lg:ml-10 text-3xl md:text-5xl lg:text-7xl italic text-black font-karla">
           {subtitle}
         </h3> */}
-        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-karla font-light text-lg lg:text-xl">
+        <p className="mt-5 text-black text-justify lg:max-w-xs xl:max-w-md font-karla lg:leading-loose text-lg lg:text-xl">
           {content}
         </p>
         <Link to={link}>
-          <button className="absolute bottom-5 md:bottom-0 md:relative md:my-5 lg:my-20 md:mt-10 px-7 py-4 bg-black text-white rounded-full text-lg lg:text-xl font-karla w-50">
+          <button className="absolute bottom-5 md:bottom-0 md:relative md:my-5 lg:my-20 md:mt-10 px-7 py-4 bg-cyan-500 text-black rounded-full text-lg lg:text-xl font-karla w-50">
             {btnName}
           </button>
         </Link>
@@ -150,7 +149,7 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
 
 const GivingSection = () => {
   return (
-    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[150px] lg:mb-[300px] max-w-6xl mx-auto ">
+    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[200px] lg:mb-[300px] max-w-6xl mx-auto ">
       {/* Image */}
       <div className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px]">
         <img
@@ -160,10 +159,10 @@ const GivingSection = () => {
       </div>
       {/* Text Content */}
       <div className="w-full text-left">
-        <h2 className="text-5xl lg:text-7xl xl:text-9xl font-helvetica tracking-tighter text-black">
+        <h2 className="text-5xl lg:text-7xl xl:text-9xl font-saol font-bold text-black">
           Giving
         </h2>
-        <p className="text-black mt-8 font-karla font-light lg:leading-loose text-lg xl:text-xl text-justify ">
+        <p className="text-black mt-8 font-karla lg:leading-loose text-lg xl:text-xl text-justify ">
           We believe Jesus is a giver and not a taker. Not only has He given us
           life and breath, but by His death and resurrection, He defeated the
           sin that would rob us of both.
@@ -180,17 +179,23 @@ const GivingSection = () => {
 
 const WorshipWithUs = () => {
   return (
-    <div className="relative w-full my-[200px] md:my-[200px] h-[700px] md:h-[900px] text-white rounded-2xl">
-      <ImagesSlider
-        images={worshipImages}
-        duration={8000}
-        opacity={40}
-        className="w-full rounded-lg shadow-lg"
-      />
-      <h3 className="absolute inset-0 top-1/2 text-5xl md:text-8xl font-light font-vibes text-center">
-        Worship With Us
-      </h3>
-    </div>
+    <>
+      <h1 className="text-6xl lg:text-7xl xl:text-9xl text-black">
+        <span className="font-helvetica font-bold">Join Us</span>{" "}
+        <span className="font-saol italic">This Sunday</span>
+      </h1>
+      <div className="relative w-full mt-10 md:mt-20 mb-10 h-[700px] md:h-[900px] text-white rounded-2xl">
+        <ImagesSlider
+          images={worshipImages}
+          duration={8000}
+          opacity={40}
+          className="w-full rounded-lg shadow-lg"
+        />
+        {/* <h3 className="absolute inset-0 top-1/2 text-5xl md:text-8xl font-light font-vibes text-center">
+          Worship With Us
+        </h3> */}
+      </div>
+    </>
   );
 };
 
