@@ -228,7 +228,7 @@ const WorshipWithUs = () => {
         <ImagesSlider
           images={worshipImages}
           duration={8000}
-          opacity={20}
+          opacity={30}
           className="w-full rounded-lg shadow-lg"
         />
         {/* <h3 className="absolute inset-0 top-1/2 text-5xl md:text-8xl font-light font-saol text-center">
