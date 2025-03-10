@@ -35,7 +35,7 @@ const Events = () => {
               <span class="loader"></span>
             </div>
           ) : error ? (
-            <p className="flex justify-center  text-center text-xl  py-[150px] font-karla">
+            <p className="flex justify-center  text-center text-lg lg:text-xl  py-[150px] font-karla">
               No Events at the momemt. Try again later
             </p>
           ) : (

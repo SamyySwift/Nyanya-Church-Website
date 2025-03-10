@@ -61,7 +61,7 @@ const HeroSection = () => {
         >
           <source src="bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80  to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/65  to-black/10"></div>
       </div>
 
       <div className="relative max-w-2xl px-6 md:px-12">
@@ -78,7 +78,7 @@ const HeroSection = () => {
         <p className="mt-8 text-xl md:text-2xl font-karla font-light max-w-md">
           We can't wait to meet with you!
         </p>
-        <Link href="/welcome">
+        <Link to="/welcome">
           <button className="px-8 py-4 bg-cyan-400 hover:bg-cyan-600 text-black rounded-full mt-8 font-karla text-lg">
             Get Started
           </button>
@@ -98,7 +98,7 @@ const WelcomeSection = () => {
           initial={{ opacity: 0, y: -200 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2, ease: "easeOut" }}
-          className="text-6xl lg:text-7xl xl:text-[110px]  text-black"
+          className="text-5xl lg:text-7xl xl:text-[110px]  text-black"
         >
           <span className="font-anton">
             Worship With <br />
@@ -123,11 +123,6 @@ const WelcomeSection = () => {
             </>
           }
         </motion.p>
-        {/* <Link to="/welcome">
-          <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-black rounded-full mt-10 font-karla text-lg w-full">
-            Get Started
-          </button>
-        </Link> */}
       </div>
       {/* Image */}
       <ImagesSlider
@@ -193,7 +188,7 @@ const GivingSection = () => {
           initial="hidden"
           animate="visible"
           viewport={{ once: true }}
-          className="text-6xl lg:text-7xl xl:text-9xl font-anton text-black"
+          className="text-5xl lg:text-7xl xl:text-9xl font-anton text-black"
         >
           Giving
         </motion.h2>
@@ -219,7 +214,7 @@ const WorshipWithUs = () => {
         variants={fadeInUp}
         initial="hidden"
         animate="visible"
-        className="text-6xl lg:text-7xl xl:text-9xl text-black"
+        className="text-5xl lg:text-7xl xl:text-9xl text-black"
       >
         <span className="font-anton">Join Us</span>{" "}
         <span className="font-saol italic">This Sunday</span>
@@ -227,8 +222,8 @@ const WorshipWithUs = () => {
       <div className="relative w-full mt-10 md:mt-20 mb-10 h-[700px] md:h-[900px] text-white rounded-2xl">
         <ImagesSlider
           images={worshipImages}
-          duration={8000}
-          opacity={30}
+          duration={6000}
+          opacity={0}
           className="w-full rounded-lg shadow-lg"
         />
         {/* <h3 className="absolute inset-0 top-1/2 text-5xl md:text-8xl font-light font-saol text-center">

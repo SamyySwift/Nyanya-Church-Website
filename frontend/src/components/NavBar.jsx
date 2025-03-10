@@ -115,7 +115,7 @@ const Navbar = () => {
           </div> */}
         </Link>
         {/* Desktop Navigation with Social Icons  */}
-        <div className="hidden xl:flex items-center gap-5 text-neutral-300 font-karla text-lg lg:text-xl font-light cursor-pointer">
+        <div className="hidden xl:flex items-center gap-5 text-neutral-300 font-saol text-lg lg:text-xl font-light cursor-pointer">
           {navLinks.map((navItem, idx) =>
             location.pathname !== "/" &&
             navItem.link === "explore" ? null : navItem.scroll ? (
@@ -252,7 +252,7 @@ const Navbar = () => {
                             activeClass="active"
                             duration={500}
                             to={navItem.link}
-                            className="text-2xl lg:text-5xl font-karla font-extrabold flex items-center"
+                            className="text-2xl lg:text-5xl font-anton flex items-center"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
@@ -263,7 +263,7 @@ const Navbar = () => {
                         ) : (
                           <Link
                             to={navItem.link}
-                            className="text-2xl lg:text-5xl font-karla font-extrabold flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
+                            className="text-2xl lg:text-5xl font-anton flex items-center duration-500 xl:hover:-translate-y-1 xl:hover:scale-105"
                             onClick={toggleMenu}
                           >
                             {location.pathname === navItem.link && (
