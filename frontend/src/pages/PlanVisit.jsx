@@ -26,11 +26,11 @@ const PlanVisit = () => {
       {/* DIRECTION SECTION */}
       <div className="container mx-auto px-5 py-20 lg:py-40 flex flex-col md:flex-row justify-between pt-20 gap-10 overflow-hidden">
         <iframe
-          className="md:w-[600px] h-[600px]"
-          src="https://maps.google.com/maps?width=720&amp;height=500&amp;hl=en&amp;q=NO.%202,%20Avenue%20Nyanya%20Karu%20Road%20Opposite%20A.A.%20Rano%20Filling%20Station,%20Nyanya,%20Abuja,%20FCT+(Nyanya%20Assembly)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-        >
-          <a href="https://www.gps.ie/">gps devices</a>
-        </iframe>
+          className="w-full md:w-1/2 h-[600px]"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d492.56168774160625!2d7.5723224!3d9.018665!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0f6743ed1291%3A0xe117b8ec81d453ba!2sTHE%20APOSTOLIC%20CHURCH%20NYANYA%20OPP%20AA%20RANO!5e0!3m2!1sen!2sng!4v1741596691714!5m2!1sen!2sng"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
 
         <div className="md:w-[700px]">
           <span className=" text-3xl md:text-5xl font-saol font-bold">

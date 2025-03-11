@@ -16,7 +16,7 @@ function ReadMore() {
       bgImg="images/noise5.webp"
       content={
         <div className="flex flex-col justify-center items-center h-auto py-[100px] md:py-[200px] font-karla px-5">
-          <h1 className="text-xl md:text-3xl font-alfa text-center text-white mb-4">
+          <h1 className="text-xl md:text-4xl font-anton text-center text-white mb-4">
             {message.title}
           </h1>
           <p className="text-lg text-center text-white">
