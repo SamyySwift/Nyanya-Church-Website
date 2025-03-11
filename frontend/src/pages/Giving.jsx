@@ -51,7 +51,7 @@ const OnlineGiving = () => {
     <div className="bg-[#F7F2E9]">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl lg:max-w-4xl  py-[90px]">
         <section className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-anton mb-5">Why We Give</h2>
+          <h2 className="text-4xl md:text-7xl font-anton mb-5">Why We Give</h2>
           <p className="text-xl lg:text-2xl leading-normal lg:leading-relaxed text-justify font-karla">
             Giving is a vital part of our worship and relationship with God. It
             is a way for us to express our gratitude for the blessings we
@@ -68,7 +68,7 @@ const OnlineGiving = () => {
           </p>
         </section>
 
-        <h1 className="text-2xl md:text-3xl font-anton mt-[60px]">
+        <h1 className="text-4xl md:text-6xl font-anton mt-[60px]">
           Make A Bank Transfer
         </h1>
         <p className="text-xl lg:text-2xl leading-normal font-karla mt-5 lg:leading-relaxed ">

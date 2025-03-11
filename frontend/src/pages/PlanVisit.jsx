@@ -56,7 +56,7 @@ const PlanVisit = () => {
           <div className="py-[150px] lg:py-[250px] flex items-center">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-5 space-y-10 md:space-y-0">
               <div className="w-full md:w-1/4 md:pr-5">
-                <span className="font-anton text-4xl md:text-5xl lg:text-7xl text-white">
+                <span className="font-anton text-4xl md:text-5xl lg:text-8xl text-white">
                   FAQS
                 </span>
               </div>
