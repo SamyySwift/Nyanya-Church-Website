@@ -6,25 +6,25 @@ import { motion } from "framer-motion";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 80 },
-  visible: { opacity: 1, y: 0, transition: { duration: 2, ease: "easeInOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeInOut" } },
 };
 
 const slideInRight = {
   hidden: { opacity: 0, x: 200 },
-  visible: { opacity: 1, x: 0, transition: { duration: 2, ease: "easeInOut" } },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut" } },
 };
 
 const slideInLeft = {
   hidden: { opacity: 0, x: -200 },
-  visible: { opacity: 1, x: 0, transition: { duration: 2, ease: "easeInOut" } },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut" } },
 };
 
 const slideInUp = {
-  hidden: { opacity: 0, y: 200 },
+  hidden: { opacity: 0, x: -100 },
   visible: (index) => ({
     opacity: 1,
-    y: 0,
-    transition: { delay: 0.5 * index, duration: 1, ease: "easeInOut" },
+    x: 0,
+    transition: { delay: 0.2 * index, ease: "easeInOut" },
   }),
 };
 
@@ -37,9 +37,8 @@ const Home = () => {
         <Section
           title="Teams"
           image="images/join.jpg"
-          subtitle="Our Teams"
           link="/join-a-group"
-          bgColor="#E2E3DA"
+          bgColor="#E5E0D4"
           btnName="Join a Team"
           content="Explore our diverse church teams and find your place to belong! Whether you're passionate about music, or outreach, there's a team for you."
         />
@@ -48,8 +47,7 @@ const Home = () => {
           image="images/ue.jpg"
           link="/welcome"
           btnName="Explore Events"
-          bgColor="#E2E3DA"
-          subtitle="Upcoming Events"
+          bgColor="#E5E0D4"
           content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events."
         />
 
@@ -93,9 +91,9 @@ const HeroSection = () => {
             </motion.span>
           ))}
         </h1>
-        <p className="mt-8 text-xl md:text-2xl font-karla font-light max-w-md">
+        {/* <p className="mt-8 text-xl md:text-2xl font-karla font-light max-w-md">
           We can't wait to meet with you!
-        </p>
+        </p> */}
         <Link to="/welcome">
           <button className="px-8 py-4 bg-cyan-400 hover:bg-cyan-600 text-black rounded-full mt-8 font-karla font-light text-lg">
             Get Started
@@ -117,9 +115,9 @@ const WelcomeSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-5xl lg:text-7xl xl:text-[110px]  text-black"
+          className="text-5xl lg:text-7xl xl:text-8xl  text-black"
         >
-          <span className="font-anton">
+          <span className="font-anton tracking-tight">
             Worship With <br />
           </span>{" "}
           <span className="italic font-saol"> Us Today</span>
@@ -129,7 +127,7 @@ const WelcomeSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-black mt-5 font-karla  text-justify xl:leading-relaxed text-xl xl:text-2xl xl:max-w-3xl"
+          className="text-black mt-7 font-karla text-justify xl:leading-relaxed text-xl xl:text-2xl xl:max-w-3xl"
         >
           {
             <>
@@ -155,7 +153,15 @@ const WelcomeSection = () => {
   );
 };
 
-const Section = ({ title, content, image, link, btnName, bgColor }) => {
+const Section = ({
+  title,
+  content,
+  image,
+  link,
+  btnName,
+  bgColor,
+  subtitle,
+}) => {
   return (
     <div
       className="relative h-[650px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row-reverse px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[150px] lg:mb-[250px]"
@@ -172,17 +178,15 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
 
       {/* Text Content */}
       <div className="w-full lg:w-1/2 xl:max-w-lg text-left lg:absolute lg:left-12 xl:left-20 lg:space-y-[200px]">
-        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-10 text-5xl md:text-6xl lg:text-9xl font-anton tracking-tight text-black">
+        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-8 text-5xl md:text-6xl lg:text-8xl font-anton tracking-tight text-black">
           {title}
         </h2>
-        {/* <h3 className="md:mt-[80px] lg:mt-[150px] lg:ml-10 text-3xl md:text-5xl lg:text-7xl italic text-black font-karla">
-          {subtitle}
-        </h3> */}
-        <p className="mt-5 text-black font-light text-justify lg:max-w-xs xl:max-w-md font-karla lg:leading-relaxed text-xl lg:text-2xl">
+
+        <p className="mt-5 text-black font-light text-justify lg:max-w-xs xl:max-w-md font-karla  text-xl lg:text-2xl">
           {content}
         </p>
         <Link to={link}>
-          <button className="absolute bottom-5 md:bottom-0 md:relative md:my-5 lg:my-20 md:mt-10 px-7 py-4 bg-cyan-500 text-black rounded-full text-lg lg:text-xl font-karla w-50">
+          <button className="absolute bottom-5 font-light md:bottom-0 md:relative md:my-5 lg:my-20 md:mt-10 px-7 py-4 bg-black text-white rounded-full text-lg lg:text-xl font-karla w-50">
             {btnName}
           </button>
         </Link>
@@ -245,7 +249,7 @@ const WorshipWithUs = () => {
         <span className="font-anton">Join Us</span>{" "}
         <span className="font-saol italic">This Sunday</span>
       </motion.h1>
-      <div className="relative w-full mt-10 md:mt-20 mb-10 h-[700px] md:h-[900px] text-white rounded-2xl">
+      <div className="relative w-full mt-10 md:mt-20 mb-20 h-[700px] md:h-[900px] text-white rounded-3xl overflow-hidden">
         <ImagesSlider
           images={worshipImages}
           duration={6000}

@@ -7,7 +7,7 @@ const New = () => {
   return (
     <div className="container mx-auto px-5">
       <HeroSection words={[""]} />
-      <section className="py-[80px] max-w-6xl mx-auto">
+      <section className="mb-20 max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Text Section */}
           <div className="w-full lg:w-1/2">
