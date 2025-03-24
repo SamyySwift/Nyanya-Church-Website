@@ -53,7 +53,7 @@ const Home = () => {
         />
 
         <GivingSection />
-        {/* <ChurchServices /> */}
+        <ChurchServices />
       </div>
     </div>
   );
