@@ -4,6 +4,7 @@ import { FlipWords } from "../components/ui/flip-words";
 import { ImagesSlider } from "../components/ui/images-slider";
 import ChurchServices from "../components/ChurchServices";
 import { motion } from "framer-motion";
+import GrainyBackground from "../components/GrainyBackground";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 80 },
@@ -51,6 +52,25 @@ const Home = () => {
           bgColor="#E5E0D4"
           content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events."
         />
+        <div className="max-w-7xl mx-auto rounded-2xl overflow-hidden mb-[150px] lg:mb-[250px]">
+          <GrainyBackground
+            bgImg="images/noise.webp"
+            content={
+              <div className="py-[140px] flex flex-col items-center justify-center h-full text-center text-white">
+                <h1 className="text-4xl md:text-6xl font-anton">
+                  OUR 2025 MOTTO
+                </h1>
+                <p className="text-2xl md:text-4xl mt-4 md:max-w-3xl p-4 font-karla">
+                  Help us, oh God of our salvation, for the glory of thy name:
+                  and deliver us. <br />{" "}
+                  <span className="font-bold underline underline-offset-4">
+                    Psalm 79:9
+                  </span>
+                </p>
+              </div>
+            }
+          />
+        </div>
 
         <GivingSection />
         <ChurchServices />
@@ -189,7 +209,7 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
 
 const GivingSection = () => {
   return (
-    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[200px] max-w-6xl mx-auto ">
+    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[200px] max-w-5xl mx-auto ">
       {/* Image */}
       <div className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px]">
         <img

@@ -28,8 +28,8 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="max-w-sm px-5 py-20 font-karla antialiased md:max-w-5xl">
-      <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
+    <div className="max-w-sm py-14 font-karla antialiased md:max-w-5xl">
+      <div className="relative grid grid-cols-1 gap-10 md:gap-20 md:grid-cols-2">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
@@ -132,15 +132,15 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
           <div className="flex gap-5 pt-12 md:pt-0">
             <button
               onClick={handlePrev}
-              className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
             >
-              <GoArrowLeft className="h-10 w-10 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
+              <GoArrowLeft className="h-8 w-8 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
             </button>
             <button
               onClick={handleNext}
-              className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
             >
-              <GoArrowRight className="h-10 w-10 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
+              <GoArrowRight className="h-8 w-8 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
             </button>
           </div>
         </div>
