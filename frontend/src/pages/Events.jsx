@@ -16,9 +16,13 @@ const Events = () => {
         description="page containing all church upcoming events"
       />
 
-      <HeroSection backgroundVideo="bg.mp4" svg_color="#E5E0D4" />
+      <HeroSection
+        backgroundVideo="bg.mp4"
+        svg_color="#E5E0D4"
+        title="Upcoming Events"
+      />
       <section className="bg-[#E5E0D4] py-[90px]">
-        <div className="container mx-auto px-5">
+        {/* <div className="container mx-auto px-5">
           <h2 className="text-4xl mb-10 lg:text-7xl xl:text-8xl">
             <span className="font-anton">Upcoming</span>{" "}
             <span className="font-thin italic font-saol">Events</span>
@@ -27,7 +31,7 @@ const Events = () => {
             Discover exciting events that will uplift your spirit and enrich
             your journey. Don't miss out on our latest upcoming experiences!
           </p>
-        </div>
+        </div> */}
 
         <div>
           {loading ? (

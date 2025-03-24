@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="">
       <ScrollToTop />
-      <Navbar />
+      {/* <Navbar /> */}
 
       <HelmetProvider>
         <AnimatePresence mode="wait">

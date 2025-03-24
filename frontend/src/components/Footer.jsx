@@ -6,9 +6,9 @@ import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Footer = () => {
-  // const scrollToTop = () => {
-  //   window.scrollTo({ top: 0, behavior: "smooth" });
-  // };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const location = useLocation();
 
@@ -104,12 +104,12 @@ const Footer = () => {
           </p>
         </div> */}
         {/* Scroll to Top Button */}
-        {/* <button
+        <button
           onClick={scrollToTop}
-          className="absolute bottom-20 right-8 p-3 rounded-full bg-white text-black hover:bg-gray-700 transition duration-300"
+          className="fixed bottom-10 right-3 p-3 rounded-full bg-white text-black hover:bg-gray-700 transition duration-300"
         >
           <FaArrowUp size={20} />
-        </button> */}
+        </button>
       </div>
     </footer>
   );

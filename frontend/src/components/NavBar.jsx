@@ -97,9 +97,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-lg bg-opacity-40 transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`fixed w-full top-0 z-50 bg-black backdrop-filter backdrop-blur-lg bg-opacity-40 transition-transform duration-300`}
     >
       <div className="container mx-auto px-5 py-6 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">

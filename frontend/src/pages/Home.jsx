@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Transition from "../utils/transition";
 import { FlipWords } from "../components/ui/flip-words";
 import { ImagesSlider } from "../components/ui/images-slider";
+import ChurchServices from "../components/ChurchServices";
 import { motion } from "framer-motion";
 
 const fadeInUp = {
@@ -52,8 +53,7 @@ const Home = () => {
         />
 
         <GivingSection />
-
-        <WorshipWithUs />
+        <ChurchServices />
       </div>
     </div>
   );
@@ -115,12 +115,12 @@ const WelcomeSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-5xl lg:text-7xl xl:text-8xl  text-black"
+          className="text-5xl lg:text-7xl xl:text-9xl  text-black"
         >
           <span className="font-anton tracking-tight">
-            Worship With <br />
+            Welcome <br />
           </span>{" "}
-          <span className="italic font-saol"> Us Today</span>
+          {/* <span className="italic font-saol"> Us Today</span> */}
         </motion.h2>
         <motion.p
           variants={slideInLeft}
@@ -153,15 +153,7 @@ const WelcomeSection = () => {
   );
 };
 
-const Section = ({
-  title,
-  content,
-  image,
-  link,
-  btnName,
-  bgColor,
-  subtitle,
-}) => {
+const Section = ({ title, content, image, link, btnName, bgColor }) => {
   return (
     <div
       className="relative h-[650px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row-reverse px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[150px] lg:mb-[250px]"
@@ -197,7 +189,7 @@ const Section = ({
 
 const GivingSection = () => {
   return (
-    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[200px] lg:mb-[220px] max-w-6xl mx-auto ">
+    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[200px] max-w-6xl mx-auto ">
       {/* Image */}
       <div className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px]">
         <img
@@ -234,33 +226,6 @@ const GivingSection = () => {
         </Link>
       </div>
     </div>
-  );
-};
-
-const WorshipWithUs = () => {
-  return (
-    <>
-      <motion.h1
-        variants={fadeInUp}
-        initial="hidden"
-        animate="visible"
-        className="text-5xl lg:text-7xl xl:text-9xl text-black"
-      >
-        <span className="font-anton">Join Us</span>{" "}
-        <span className="font-saol italic">This Sunday</span>
-      </motion.h1>
-      <div className="relative w-full mt-10 md:mt-20 mb-20 h-[700px] md:h-[900px] text-white rounded-3xl overflow-hidden">
-        <ImagesSlider
-          images={worshipImages}
-          duration={6000}
-          opacity={0}
-          className="w-full rounded-lg shadow-lg"
-        />
-        {/* <h3 className="absolute inset-0 top-1/2 text-5xl md:text-8xl font-light font-saol text-center">
-          Worship With Us
-        </h3> */}
-      </div>
-    </>
   );
 };
 

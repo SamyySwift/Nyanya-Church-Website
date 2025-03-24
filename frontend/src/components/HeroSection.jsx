@@ -5,7 +5,7 @@ const HeroSection = ({
   svg_color = "",
 }) => {
   return (
-    <div className="relative h-[500px] md:h-screen">
+    <div className="relative h-[500px] md:h-[800px]">
       {/* Background */}
       <div className="w-full h-full overflow-hidden relative">
         {backgroundVideo ? (
@@ -35,8 +35,8 @@ const HeroSection = ({
         {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
 
         {/* Content */}
-        <div className="absolute w-full bottom-20 text-neutral-400">
-          <h1 className="container mx-auto px-5 text-5xl md:text-6xl lg:text-6xl font-alfa">
+        <div className="absolute inset-0 container mx-auto px-5 top-1/2 text-white">
+          <h1 className=" text-5xl md:text-6xl lg:text-7xl font-anton">
             {title}
           </h1>
         </div>
