@@ -4,7 +4,7 @@ import { AnimatedTestimonials } from "./ui/animated-testimonial";
 
 const ChurchServices = () => {
   return (
-    <div className="my-20 max-w-5xl mx-auto px-5">
+    <div className="my-20 max-w-6xl mx-auto">
       <h1 className="text-5xl md:text-6xl xl:text-7xl text-black">
         <span className="font-anton">Our Church</span>{" "}
         <span className="font-saol italic">Services</span>

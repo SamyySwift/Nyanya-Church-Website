@@ -209,7 +209,7 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
 
 const GivingSection = () => {
   return (
-    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[200px] max-w-5xl mx-auto ">
+    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[200px] max-w-6xl mx-auto ">
       {/* Image */}
       <div className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px]">
         <img
