@@ -112,7 +112,7 @@ const HeroSection = () => {
           We can't wait to meet with you!
         </p> */}
         <Link to="/welcome">
-          <button className="px-10 py-4 bg-sky-400 hover:bg-sky-500 text-black rounded-full mt-10 font-karla text-lg">
+          <button className="px-10 py-4 bg-[#E5E0D4] hover:bg-sky-500 text-black rounded-full mt-10 font-karla text-lg">
             Get Started
           </button>
         </Link>
@@ -237,7 +237,7 @@ const GivingSection = () => {
           sin that would rob us of both.
         </motion.p>
         <Link to="/giving">
-          <button className="absolute -bottom-30 md:relative px-8 py-4 bg-sky-400 hover:bg-sky-500 text-black rounded-full mt-10 font-karla text-lg w-full">
+          <button className="absolute -bottom-30 md:relative px-8 py-4 bg-[#E5E0D4] hover:bg-sky-500 text-black rounded-full mt-10 font-karla text-lg w-full">
             Give Now
           </button>
         </Link>
