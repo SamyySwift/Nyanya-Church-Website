@@ -132,11 +132,7 @@ const links = [
   },
   {
     name: "Sermons",
-    href: "/sermons",
-  },
-  {
-    name: "About us",
-    href: "/about",
+    href: "/daily-words",
   },
   {
     name: "Contact us",

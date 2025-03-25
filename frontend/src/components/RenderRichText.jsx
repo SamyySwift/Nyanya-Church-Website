@@ -4,7 +4,7 @@ export const RenderText = ({ content }) => {
       {content.map((block, index) => {
         if (block.type === "paragraph") {
           return (
-            <p key={index} className="text-lg">
+            <p key={index} className="text-xl md:text-2xl">
               {block.children.map((child, childIndex) => (
                 <span
                   key={childIndex}

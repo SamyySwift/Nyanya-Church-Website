@@ -12,27 +12,22 @@ function ReadMore() {
   }
 
   return (
-    <GrainyBackground
-      bgImg="images/noise5.webp"
-      content={
-        <div className="flex flex-col justify-center items-center h-auto py-[100px] md:py-[200px] font-karla px-5">
-          <h1 className="text-xl md:text-4xl font-anton text-center text-white mb-4">
-            {message.title}
-          </h1>
-          <p className="text-lg text-center text-white">
-            <span className="font-semibold">Preacher: </span>
-            {message.preacher}
-          </p>
-          <p className="text-lg text-center text-white">
-            <span className="font-semibold">Bible Portion: </span>
-            {message.portion}
-          </p>
-          <div className="mt-12 text-white text-xl lg:text-4xl max-w-3xl text-justify">
-            <RenderText content={message.content} />
-          </div>
-        </div>
-      }
-    />
+    <div className="container mx-auto max-w-6xl flex flex-col justify-center items-center h-auto py-[100px] md:py-[200px] font-karla px-5">
+      <h1 className="text-2xl md:text-4xl lg:text-5xl font-anton text-center text-black  mb-4">
+        {message.title}
+      </h1>
+      <p className="text-2xl text-center text-black">
+        <span className="font-semibold">Preacher: </span>
+        {message.preacher}
+      </p>
+      <p className="text-2xl text-center text-black">
+        <span className="font-semibold">Bible Portion: </span>
+        {message.portion}
+      </p>
+      <div className="mt-20  text-black text-justify ">
+        <RenderText content={message.content} />
+      </div>
+    </div>
   );
 }
 

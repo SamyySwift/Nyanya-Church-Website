@@ -56,14 +56,13 @@ const DailyRefresh = () => {
       <div className="bg-[#F7F2E9] py-20">
         <div className="container mx-auto px-5">
           <h2 className="text-4xl mb-10 lg:text-7xl xl:text-8xl">
-            <span className="font-anton">Daily</span>{" "}
-            <span className="font-thin italic font-saol">Word</span>
+            <span className="font-anton">Church</span>{" "}
+            <span className="font-thin italic font-saol">Sermons</span>
           </h2>
           <p className="font-karla text-neutral-700 font-light mb-[90px] text-xl text-justify max-w-2xl">
-            Explore our daily word of God bullets to gain inspiration, wisdom,
-            and guidance for your spiritual journey. Each day brings a new
-            opportunity to deepen your faith and connect with the teachings of
-            the Bible.
+            Explore our collection of sermons that offer spiritual guidance,
+            inspiration, and encouragement. Stay connected with our community
+            and deepen your faith through these powerful messages.
           </p>
 
           {loading ? (

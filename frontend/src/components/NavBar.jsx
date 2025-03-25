@@ -304,10 +304,10 @@ const navLinks = [
   { title: "I'm New", link: "/welcome" },
   { title: "Events", link: "/events" },
   { title: "Teams", link: "/join-a-group" },
-  { title: "Sermons", link: "/sermons" },
+  // { title: "Sermons", link: "/sermons" },
   // { title: "Explore", link: "explore", scroll: true },
   { title: "Giving", link: "/giving" },
-  { title: "Daily Word", link: "/daily-word" },
+  { title: "Sermons", link: "/daily-word" },
   { title: "Visit Us", link: "/plan-your-visit" },
 ];
 

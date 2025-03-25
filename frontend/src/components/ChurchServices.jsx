@@ -1,15 +1,14 @@
 import { FaClock } from "react-icons/fa6";
 import { GlowingEffect } from "./ui/glowing-effect";
-import { AnimatedTestimonials } from "./ui/animated-testimonial";
 
 const ChurchServices = () => {
   return (
-    <div className="my-20 max-w-6xl mx-auto">
-      <h1 className="text-5xl md:text-6xl xl:text-7xl text-black">
+    <div className="my-20 mb-20 md:mb-40">
+      <h1 className="text-5xl md:text-6xl xl:text-7xl text-black mb-10">
         <span className="font-anton">Our Church</span>{" "}
         <span className="font-saol italic">Services</span>
       </h1>
-      {/* <ul className="grid grid-cols-1 gap-6 xl:grid-cols-4 xl:max-h-[34rem]">
+      <ul className="grid grid-cols-1 gap-6 xl:grid-cols-4 xl:max-h-[34rem]">
         {services.map((service, index) => (
           <li key={index} className="flex">
             <GridItem
@@ -23,8 +22,7 @@ const ChurchServices = () => {
             />
           </li>
         ))}
-      </ul> */}
-      <AnimatedTestimonials testimonials={testimonials} />
+      </ul>
     </div>
   );
 };
@@ -68,11 +66,11 @@ const services = [
       "Join us for our Sunday worship service where we come together to praise and worship God through song, prayer, and a powerful sermon.",
   },
   {
-    title: "Meeting With The Lord",
-    time: "9:00 AM - 2:00 PM",
-    day: "FRIDAY",
+    title: "Bible Study",
+    time: "7:00 PM - 8:30 PM",
+    day: "TUESDAY",
     description:
-      "Experience God's power through prayers and prophetic sessions during our 'Meeting With The Lord'.",
+      "Deep dive into the scriptures with our midweek Bible study and get an in-depth exploration of God's word.",
   },
   {
     title: "Midweek Prayer",
@@ -81,44 +79,12 @@ const services = [
     description:
       "Join us for our mid-week online prayer sessions where we come together to pray earnestly.",
   },
-
   {
-    title: "Bible Study",
-    time: "7:00 PM - 8:30 PM",
-    day: "TUESDAY",
+    title: "Meeting With The Lord",
+    time: "9:00 AM - 2:00 PM",
+    day: "FRIDAY",
     description:
-      "Deep dive into the scriptures with our midweek Bible study and get an in-depth exploration of God's word.",
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      "Join us for our Sunday worship service where we come together to praise and worship God through song, prayer, and a powerful sermon.",
-    name: "Sunday Service",
-    designation: "SUNDAY: 9:00 AM - 11:00 AM",
-    src: "images/welcome-bg-7.webp",
-  },
-  {
-    quote:
-      "Deep dive into the scriptures with our midweek Bible study and get an in-depth exploration of God's word.",
-    name: "Bible Study",
-    designation: "TUESDAY: 7:00 PM - 8:30 PM",
-    src: "images/daily.jpg",
-  },
-  {
-    quote:
-      "Join us for our mid-week online prayer sessions where we come together to pray earnestly.",
-    name: "Mid-Week Prayers",
-    designation: "WEDNESDAY: 6:30 AM - 7:00 AM",
-    src: "images/about-bg.webp",
-  },
-  {
-    quote:
       "Experience God's power through prayers and prophetic sessions during our 'Meeting With The Lord'.",
-    name: "Meeting With The Lord",
-    designation: "FRIDAY: 9:00 AM - 2:00 PM",
-    src: "images/wsp-img-2.webp",
   },
 ];
 

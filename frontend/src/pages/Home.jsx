@@ -52,28 +52,25 @@ const Home = () => {
           bgColor="#E5E0D4"
           content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events."
         />
-        <div className="max-w-7xl mx-auto rounded-2xl overflow-hidden mb-[150px] lg:mb-[250px]">
-          <GrainyBackground
-            bgImg="images/noise.webp"
-            content={
-              <div className="py-[140px] flex flex-col items-center justify-center h-full text-center text-white">
-                <h1 className="text-4xl md:text-6xl font-anton">
-                  OUR 2025 MOTTO
-                </h1>
-                <p className="text-2xl md:text-4xl mt-4 md:max-w-3xl p-4 font-karla">
-                  Help us, oh God of our salvation, for the glory of thy name:
-                  and deliver us. <br />{" "}
-                  <span className="font-bold underline underline-offset-4">
-                    Psalm 79:9
-                  </span>
-                </p>
-              </div>
-            }
-          />
-        </div>
 
         <GivingSection />
         <ChurchServices />
+        {/* Motto */}
+        <section className="max-w-8xl mx-auto mb-40">
+          <div className="p-12 md:p-20 xl:p-28 rounded-2xl shadow-lg bg-gradient-to-r from-gray-800  to-blue-200 text-white">
+            {/* <p className="text-gray-300 text-lg">Knowing God Above All Else</p> */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-anton">
+              Our Motto
+            </h1>
+            <p className="text-2xl md:text-3xl text-gray-200 mt-8 font-saol max-w-xl">
+              Help us, oh God of our salvation, for the glory of thy name: and
+              deliver us. <br />{" "}
+              <span className="font-bold underline underline-offset-8">
+                Psalm 79:9
+              </span>
+            </p>
+          </div>
+        </section>
       </div>
     </div>
   );
@@ -93,7 +90,7 @@ const HeroSection = () => {
         >
           <source src="bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/65  to-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80  to-black/30"></div>
       </div>
 
       <div className="relative max-w-2xl px-6 md:px-12">
@@ -115,7 +112,7 @@ const HeroSection = () => {
           We can't wait to meet with you!
         </p> */}
         <Link to="/welcome">
-          <button className="px-8 py-4 bg-cyan-400 hover:bg-cyan-600 text-black rounded-full mt-8 font-karla font-light text-lg">
+          <button className="px-10 py-4 bg-sky-400 hover:bg-sky-500 text-black rounded-full mt-10 font-karla text-lg">
             Get Started
           </button>
         </Link>
@@ -127,7 +124,7 @@ const HeroSection = () => {
 const WelcomeSection = () => {
   const words = ["vibrant", "friendly", "beautiful", "modern"];
   return (
-    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[150px] lg:mb-[250px] max-w-7xl mx-auto">
+    <div className="relative flex flex-col lg:flex-row lg:items-center justify-center gap-10 xl:gap-20 mb-[150px] lg:mb-[200px] max-w-7xl mx-auto">
       {/* Text Content */}
       <div className="w-full text-left">
         <motion.h2
@@ -176,7 +173,7 @@ const WelcomeSection = () => {
 const Section = ({ title, content, image, link, btnName, bgColor }) => {
   return (
     <div
-      className="relative h-[650px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row-reverse px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[150px] lg:mb-[250px]"
+      className="relative h-[650px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row-reverse px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[150px] lg:mb-[180px]"
       style={{ backgroundColor: bgColor }}
     >
       {/* Image */}
@@ -190,7 +187,7 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
 
       {/* Text Content */}
       <div className="w-full lg:w-1/2 xl:max-w-lg text-left lg:absolute lg:left-12 xl:left-20 lg:space-y-[200px]">
-        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-8 text-5xl md:text-6xl lg:text-8xl font-anton tracking-tight text-black">
+        <h2 className="mt-7 lg:mt-0 lg:absolute lg:-top-8 text-4xl md:text-6xl lg:text-9xl font-anton tracking-tight text-black">
           {title}
         </h2>
 
@@ -198,7 +195,7 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
           {content}
         </p>
         <Link to={link}>
-          <button className="absolute bottom-5 font-light md:bottom-0 md:relative md:my-5 lg:my-20 md:mt-10 px-7 py-4 bg-black text-white rounded-full text-lg lg:text-xl font-karla w-50">
+          <button className="absolute bottom-5 md:bottom-0 md:relative md:my-5 lg:my-20 md:mt-10 px-7 py-4 bg-black text-white rounded-full text-lg lg:text-xl font-karla w-50">
             {btnName}
           </button>
         </Link>
@@ -240,7 +237,7 @@ const GivingSection = () => {
           sin that would rob us of both.
         </motion.p>
         <Link to="/giving">
-          <button className="absolute -bottom-30 md:relative px-8 py-4 bg-cyan-400 hover:bg-cyan-500 text-black rounded-full mt-10 font-karla text-lg w-full">
+          <button className="absolute -bottom-30 md:relative px-8 py-4 bg-sky-400 hover:bg-sky-500 text-black rounded-full mt-10 font-karla text-lg w-full">
             Give Now
           </button>
         </Link>
