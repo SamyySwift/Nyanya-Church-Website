@@ -9,7 +9,7 @@ const MediaTeam = () => {
         images={[
           "images/media1.webp",
           "images/media3.webp",
-          // "images/media4.webp",
+          "images/media4.jpeg",
           "images/media2.webp",
         ]}
       />
