@@ -413,7 +413,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    color: Schema.Attribute.String & Schema.Attribute.DefaultTo<'#B9B28A'>;
+    color: Schema.Attribute.String & Schema.Attribute.DefaultTo<'#E5E0D4'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

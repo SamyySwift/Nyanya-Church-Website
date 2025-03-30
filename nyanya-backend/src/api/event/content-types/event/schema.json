@@ -17,7 +17,7 @@
     },
     "color": {
       "type": "string",
-      "default": "#B9B28A",
+      "default": "#E5E0D4",
       "required": false
     },
     "date": {
