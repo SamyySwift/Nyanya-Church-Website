@@ -20,15 +20,15 @@ const Footer = () => {
     >
       <div className="container mx-auto px-5 lg:px-[100px] flex flex-col gap-10  md:flex-row md:justify-between">
         {/* LOGO */}
-        <div>
-          {/* <Link to="/">
+        <div className="flex flex-col items-start gap-2">
+          <Link to="/">
             <img
               src="images/logo.jpg"
               alt="Logo"
-              className="h-[100px] md:h-[150px] rounded-full"
+              className="h-[80px] md:h-[100px] rounded-xl"
             />
-          </Link> */}
-          <h2 className="font-anton text-2xl  md:text-3xl max-w-sm text-neutral-200">
+          </Link>
+          <h2 className="font-anton text-2xl md:text-3xl max-w-sm text-neutral-200">
             TACN <br /> Nyanya <br /> Assembly
           </h2>
         </div>
@@ -47,7 +47,7 @@ const Footer = () => {
               <FaPhone className="w-4" />
               <span>(+234) 816 725 9757</span>
             </p>
-            <p className="flex font-light gap-[6px]">
+            <p className="flex font-light gap-[6px] text-justify">
               <FaLocationDot className="w-8 mt-1" />
               <span>
                 NO. 2, Church Avenue, Nyanya Karu Road Opposite A.A. Rano
@@ -57,11 +57,11 @@ const Footer = () => {
           </div>
         </div>
         {/* Links */}
-        <div className="items-center">
+        <div className="items-center max-w-[200px]">
           <h1 className="mb-5 font-anton text-lg md:text-xl lg:text-2xl underline underline-offset-8">
             Quick Links
           </h1>
-          <div className="flex flex-col gap-2 font-light font-karla text-lg md:text-xl">
+          <div className="grid grid-cols-2 gap-0 font-light font-karla text-lg md:text-xl">
             {links.map((link) => (
               <Link
                 to={link.href}
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
 
         <div className="items-center">
-          <h1 className="mb-5 font-anton text-lg md:text-xl lg:text-2xl underline underline-offset-8">
+          <h1 className=" font-anton text-lg md:text-xl lg:text-2xl underline underline-offset-8">
             Follow Our Socials
           </h1>
           {/* Socials */}
@@ -135,16 +135,21 @@ const links = [
     href: "/daily-words",
   },
   {
-    name: "Contact us",
-    href: "/contact-us",
+    name: "Giving",
+    href: "/giving",
   },
+
   {
-    name: "Join a team",
+    name: "Teams",
     href: "/join-a-group",
   },
   {
-    name: "Plan your visit",
+    name: "Visit Us",
     href: "/plan-your-visit",
+  },
+  {
+    name: "Contact Us",
+    href: "/contact-us",
   },
 ];
 
