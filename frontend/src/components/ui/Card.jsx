@@ -63,19 +63,19 @@ const Card = ({
 
   return (
     <motion.div
-      className="h-[900px] md:h-screen flex justify-center items-center sticky top-0"
+      className="h-auto pt-[90px] md:pt-[110px] flex justify-center items-center sticky top-0"
       style={{ top: dynamicTop }}
     >
       <div
         style={{ backgroundColor: color }}
-        className="relative flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-5 h-[680px] sm:w-[1200px] sm:h-[800px] md:min-w-[700px] md:h-[500px] lg:w-[1100px] lg:h-[550px]  rounded-[40px] px-5 md:px-8 py-5"
+        className="relative flex flex-col gap-10 md:items-start md:flex-row md:mt-0 md:justify-around lg:justify-between mb-12 md:mb-0 mx-5 h-[680px] sm:w-[1200px] sm:h-[800px] md:min-w-[700px] md:h-[500px] lg:w-[1100px] lg:h-[550px] xl:w-[1200px] xl:h-[650px]  rounded-[40px] px-5 md:px-8 py-5"
       >
         {/* Column 1: Title, Description, and Button*/}
         <div className="flex flex-col justify-between max-w-3xl md:max-w-[400px] lg:max-w-[500px]">
-          <h2 className="text-2xl md:text-4xl md:mb-10 lg:mb-10 mb-5 mt-4 font-karla font-etrabold">
+          <h2 className="text-2xl md:text-4xl md:mb-10 lg:mb-10 mb-5 mt-4 font-anton tracking-wide">
             {title}
           </h2>
-          <p className="text-md md:text-lg lg:text-xl font-karla text-justify font-light leading-6 lg:leading-loose md:leading-relaxed">
+          <p className="text-md md:text-lg lg:text-xl xl:text-2xl font-karla text-justify font-light leading-6 lg:leading-loose md:leading-relaxed">
             {description}
           </p>
           <div className="md:absolute md:bottom-[145px] ">
@@ -161,7 +161,7 @@ const Card = ({
           </div>
         </div>
 
-        <div className="overflow-hidden h-full md:w-[350px] lg:w-[500px]">
+        <div className="overflow-hidden h-full md:w-[350px] lg:w-[500px] xl:w-[550px]">
           <motion.img
             src={btnType !== "event" ? src : eventImage}
             alt={title}

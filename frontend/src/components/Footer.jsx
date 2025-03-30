@@ -163,7 +163,7 @@ const socials = [
   },
   {
     title: "YouTube",
-    link: "/",
+    link: "https://www.youtube.com/@TACN_NA",
     icon: <FaYoutube size={25} className="hover:text-sky-500 rounded-full" />,
   },
 ];

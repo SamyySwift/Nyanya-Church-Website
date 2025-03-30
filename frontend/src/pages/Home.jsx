@@ -57,18 +57,19 @@ const Home = () => {
         <ChurchServices />
         {/* Motto */}
         <section className="max-w-8xl mx-auto mb-40">
-          <div className="p-12 md:p-20 xl:p-28 rounded-2xl shadow-lg bg-gradient-to-r from-gray-800  to-blue-200 text-white">
-            {/* <p className="text-gray-300 text-lg">Knowing God Above All Else</p> */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-anton">
-              Our Motto
-            </h1>
-            <p className="text-2xl md:text-3xl text-gray-200 mt-8 font-saol max-w-xl">
-              Help us, oh God of our salvation, for the glory of thy name: and
-              deliver us. <br />{" "}
-              <span className="font-bold underline underline-offset-8">
-                Psalm 79:9
-              </span>
-            </p>
+          <div className="p-6 md:p-20 xl:p-28 text-center rounded-2xl shadow-lg bg-gradient-to-r from-gray-800  to-blue-200 text-white">
+            <div className="flex flex-col items-center justify-center h-full text-center">
+              <h1 className="text-4xl md:text-6xl font-anton">
+                OUR MOTTO FOR THE YEAR
+              </h1>
+              <p className="text-2xl md:text-4xl lg:text-5xl mt-4 md:max-w-3xl p-3 font-saol">
+                Help us, oh God of our salvation, for the glory of thy name: and
+                deliver us! <br />{" "}
+                <span className="font-bold underline underline-offset-4">
+                  Psalm 79:9
+                </span>
+              </p>
+            </div>
           </div>
         </section>
       </div>
@@ -90,7 +91,7 @@ const HeroSection = () => {
         >
           <source src="bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80  to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80  to-black/0"></div>
       </div>
 
       <div className="relative max-w-2xl px-6 md:px-12">

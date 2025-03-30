@@ -35,7 +35,7 @@ const HeroSection = ({
         {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
 
         {/* Content */}
-        <div className="absolute inset-0 container mx-auto px-5 top-1/2 text-white">
+        <div className="absolute inset-0 container mx-auto px-5 text-center md:text-start top-1/2 text-white">
           <h1 className=" text-5xl md:text-6xl lg:text-7xl font-anton">
             {title}
           </h1>

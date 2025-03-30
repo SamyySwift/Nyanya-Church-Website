@@ -11,7 +11,11 @@ const GivingPage = () => {
         title="Giving | Nyanya Assembly"
         description="Chucrh giving page"
       />
-      <HeroSection backgroundVideo="/bg.mp4" svg_color="#F7F2E9" />
+      <HeroSection
+        backgroundImage="images/t.jpg"
+        svg_color="#F7F2E9"
+        title="Giving"
+      />
 
       <OnlineGiving />
     </>
