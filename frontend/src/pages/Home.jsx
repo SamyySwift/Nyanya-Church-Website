@@ -47,7 +47,7 @@ const Home = () => {
         <Section
           title="Events"
           image="images/ue.jpg"
-          link="/welcome"
+          link="/events"
           btnName="Explore Events"
           bgColor="#E5E0D4"
           content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events."

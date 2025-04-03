@@ -75,7 +75,7 @@ const Card = ({
           <h2 className="text-2xl md:text-4xl md:mb-10 lg:mb-10 mb-5 mt-4 font-anton tracking-wide">
             {title}
           </h2>
-          <p className="text-md md:text-lg lg:text-xl xl:text-2xl font-karla text-justify font-light leading-6 lg:leading-loose md:leading-relaxed">
+          <p className="text-md md:text-lg lg:text-xl font-karla text-justify font-light leading-6 lg:leading-loose md:leading-relaxed">
             {description}
           </p>
           <div className="md:absolute md:bottom-[145px] ">
