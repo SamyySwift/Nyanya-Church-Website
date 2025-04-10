@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         {/* Contact */}
         <div className="flex flex-col">
-          <h1 className="mb-8 font-anton text-lg md:text-xl lg:text-2xl underline underline-offset-8">
+          <h1 className="mb-5 font-anton text-lg md:text-xl lg:text-2xl underline underline-offset-8">
             Contact Us
           </h1>
           <div className="max-w-sm md:max-w-xs lg:max-w-sm space-y-3 font-karla text-lg  md:text-xl">
@@ -50,8 +50,8 @@ const Footer = () => {
             <p className="flex font-light gap-[6px] text-justify">
               <FaLocationDot className="w-8 mt-1" />
               <span>
-                NO. 2, Church Avenue, Nyanya Karu Road Opposite A.A. Rano
-                Filling Station, Nyanya, Abuja, FCT
+                NO. 2, Church Avenue, Nyanya Karu Road Opposite A.A. Rano Fuel
+                Station, Nyanya, Abuja, FCT
               </span>
             </p>
           </div>
@@ -80,11 +80,11 @@ const Footer = () => {
         </div>
 
         <div className="items-center">
-          <h1 className=" font-anton text-lg md:text-xl lg:text-2xl underline underline-offset-8">
+          <h1 className="mb-5 font-anton text-lg md:text-xl lg:text-2xl underline underline-offset-8">
             Follow Our Socials
           </h1>
           {/* Socials */}
-          <div className="flex gap-4 mt-10">
+          <div className="flex gap-4">
             {socials.map((social) => (
               <Link to={social.link} key={social.title}>
                 <motion.div
@@ -98,18 +98,18 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        {/* <div className="absolute  bottom-0">
+        {/* <div className="absolute bottom-0 inset-0 flex justify-center items-end py-5">
           <p className="font-karla">
-            &copy; 2024 Nyanya Assembly. All Rights Reserved.
+            &copy; 2025 Nyanya Assembly. All Rights Reserved.
           </p>
         </div> */}
         {/* Scroll to Top Button */}
-        <button
+        {/* <button
           onClick={scrollToTop}
           className="fixed bottom-10 right-3 p-3 rounded-full bg-white text-black hover:bg-gray-700 transition duration-300"
         >
           <FaArrowUp size={20} />
-        </button>
+        </button> */}
       </div>
     </footer>
   );

@@ -4,7 +4,7 @@ import { FlipWords } from "../components/ui/flip-words";
 import { ImagesSlider } from "../components/ui/images-slider";
 import ChurchServices from "../components/ChurchServices";
 import { motion } from "framer-motion";
-import GrainyBackground from "../components/GrainyBackground";
+import InfiniteMovingCards from "../components/ui/infinite-moving-cards";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 80 },
@@ -80,7 +80,7 @@ const Home = () => {
 const HeroSection = () => {
   const words = ["Welcome", "To   Tacn", "Nyanya", "Assembly"];
   return (
-    <div className="relative w-full my-[100px] md:my-[200px] h-[700px] md:h-[900px] flex items-center justify-left text-white rounded-2xl overflow-hidden">
+    <div className="relative w-full my-[100px] md:my-[200px] h-[700px] md:h-[890px] flex items-center justify-left text-white rounded-2xl overflow-hidden">
       <div className="absolute inset-0">
         <video
           autoPlay
@@ -95,7 +95,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative max-w-2xl px-6 md:px-12">
-        <h1 className="text-5xl md:text-6xl lg:text-8xl font-anton">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-anton space-y-4">
           {words.map((word, index) => (
             <motion.span
               key={index}
@@ -113,7 +113,7 @@ const HeroSection = () => {
           We can't wait to meet with you!
         </p> */}
         <Link to="/welcome">
-          <button className="px-10 py-4 bg-[#E5E0D4] hover:bg-sky-500 text-black rounded-full mt-10 font-karla text-lg">
+          <button className="px-10 py-4 bg-[#E5E0D4] hover:opacity-60 text-black rounded-full mt-12 font-karla text-lg">
             Get Started
           </button>
         </Link>
@@ -196,7 +196,7 @@ const Section = ({ title, content, image, link, btnName, bgColor }) => {
           {content}
         </p>
         <Link to={link}>
-          <button className="absolute bottom-5 md:bottom-0 md:relative md:my-5 lg:my-20 md:mt-10 px-7 py-4 bg-black text-white rounded-full text-lg lg:text-xl font-karla w-50">
+          <button className="absolute bottom-5 md:bottom-0 md:relative md:my-5 lg:my-20 md:mt-10 px-7 py-4 border border-black  text-black hover:bg-black hover:text-white rounded-full text-lg lg:text-xl font-karla w-50">
             {btnName}
           </button>
         </Link>
@@ -231,14 +231,14 @@ const GivingSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-black mt-8 font-karla lg:leading-loose text-lg xl:text-xl text-justify "
+          className="text-black mt-8 font-karla lg:leading-loose text-lg xl:text-xl text-justify font-light"
         >
           We believe Jesus is a giver and not a taker. Not only has He given us
           life and breath, but by His death and resurrection, He defeated the
           sin that would rob us of both.
         </motion.p>
         <Link to="/giving">
-          <button className="absolute -bottom-30 md:relative px-8 py-4 bg-[#E5E0D4] hover:bg-sky-500 text-black rounded-full mt-10 font-karla text-lg w-full">
+          <button className="absolute -bottom-30 md:relative px-8 py-4 bg-[#E5E0D4] hover:opacity-60 text-black rounded-full mt-10 font-karla text-xl w-full">
             Give Now
           </button>
         </Link>
@@ -249,20 +249,16 @@ const GivingSection = () => {
 
 const images = [
   "images/welcome-bg-1.webp",
+  "images/pastor.webp",
+  "images/welcome-bg-4.jpg",
   "images/welcome-bg-2.webp",
   "images/welcome-bg-3.webp",
-  "images/welcome-bg-4.webp",
-  "images/welcome-bg-5.webp",
-  "images/welcome-bg-8.webp",
-];
-
-const worshipImages = [
   "images/wsp-img-1.webp",
+  "images/welcome-bg-9.jpg",
+  "images/welcome-bg-8.webp",
   "images/wsp-img-2.webp",
-  "images/wsp-img-3.webp",
-  "images/wsp-img-4.webp",
-  "images/wsp-img-5.webp",
-  "images/wsp-img-8.webp",
+  "images/welcome-bg-5.webp",
+  // "images/welcome-bg-7.webp",
 ];
 
 export default Transition(Home);

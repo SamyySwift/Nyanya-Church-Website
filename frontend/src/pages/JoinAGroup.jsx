@@ -78,18 +78,35 @@ const SkeletonThree = () => {
     </div>
   );
 };
+// const SkeletonFour = () => {
+//   return (
+//     <div>
+//       <p className="font-bold font-karla md:text-4xl text-xl text-white">
+//         Ushering Team
+//       </p>
+//       <p className="font-normal text-base text-white"></p>
+//       <p className="font-normal font-karla text-base my-4 max-w-md text-neutral-200">
+//         Be a part of the Userring Team and make a difference in creating
+//         welcoming environments. Whether you're greeting guests or helping with
+//         logistics, your role is essential in ensuring smooth and memorable
+//         experiences for everyone.
+//       </p>
+//     </div>
+//   );
+// };
+
 const SkeletonFour = () => {
   return (
     <div>
       <p className="font-bold font-karla md:text-4xl text-xl text-white">
-        Ushering Team
+        Witness Movement
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal font-karla text-base my-4 max-w-md text-neutral-200">
-        Be a part of the Userring Team and make a difference in creating
-        welcoming environments. Whether you're greeting guests or helping with
-        logistics, your role is essential in ensuring smooth and memorable
-        experiences for everyone.
+        Join the Witness Movement and be a light in your community. From
+        outreach programs to evangelism efforts, this team is dedicated to
+        sharing the love of Christ beyond the church walls. Together, we bring
+        hope, serve with purpose, and impact lives for God's glory.
       </p>
     </div>
   );
@@ -99,11 +116,11 @@ const SkeletonFive = () => {
   return (
     <div>
       <p className="font-bold font-karla md:text-4xl text-xl text-white">
-        Classical Choir
+        Main Choir
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal font-karla text-base my-4 max-w-md text-neutral-200">
-        Join the Classical Choir and support a worthy cause through your musical
+        Join the Main Choir and support a worthy cause through your musical
         talents. Participate in events and performances that uplift and inspire!
       </p>
     </div>
@@ -136,15 +153,23 @@ const cards = [
   },
   {
     id: 4,
-    title: "Ushering Team",
+    title: "Witness Movement",
     content: <SkeletonFour />,
     className: "col-span-1",
-    thumbnail: "images/ushering.webp",
-    link: "/ushering-team",
+    thumbnail: "images/witness-1.jpeg",
+    link: "/witness",
   },
+  // {
+  //   id: 4,
+  //   title: "Ushering Team",
+  //   content: <SkeletonFour />,
+  //   className: "col-span-1",
+  //   thumbnail: "images/ushering.webp",
+  //   link: "/ushering-team",
+  // },
   {
     id: 5,
-    title: "Classical Choir",
+    title: "Main Choir",
     content: <SkeletonFive />,
     className: "md:col-span-2",
     thumbnail: "images/choir3.webp",

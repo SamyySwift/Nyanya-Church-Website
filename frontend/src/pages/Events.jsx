@@ -8,6 +8,9 @@ const Events = () => {
   const { loading, error, data } = customFetch(
     "https://nyanya-church-website-backend.onrender.com/api/events?populate=*"
   );
+  const sortedEvents = data?.data
+    ?.slice() // clone the array to avoid mutating original
+    ?.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
 
   return (
     <div>
@@ -17,9 +20,9 @@ const Events = () => {
       />
 
       <HeroSection
-        backgroundImage="images/event.jpg"
+        backgroundVideo="eventbg.mp4"
         svg_color="#FFFFFF"
-        title="Upcoming Events"
+        // title="Upcoming Events"
       />
       <section className=" py-[50px]">
         <div className="flex justify-center px-5">
@@ -41,7 +44,7 @@ const Events = () => {
           ) : (
             <div>
               {data?.data?.length > 0 ? (
-                data.data.map((event, idx) => (
+                sortedEvents.map((event, idx) => (
                   <Card
                     key={idx}
                     title={event.title}

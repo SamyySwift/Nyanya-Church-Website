@@ -1,10 +1,11 @@
 import Ministries from "../components/Ministries";
+import Transition from "../utils/transition";
 
 function ClassicalChoir() {
   return (
     <>
       <Ministries
-        team="Classical Choir"
+        team="Main Choir"
         images={[
           "images/choir3.webp",
           "images/choir5.webp",
@@ -17,4 +18,4 @@ function ClassicalChoir() {
   );
 }
 
-export default ClassicalChoir;
+export default Transition(ClassicalChoir);

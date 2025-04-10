@@ -4,7 +4,7 @@ import { FaCalendarWeek, FaClock, FaApple, FaYahoo } from "react-icons/fa6";
 import { SiGooglecalendar, SiMicrosoftoutlook } from "react-icons/si";
 
 import { Link } from "react-router-dom";
-import { google, outlook, ics, yahoo } from "calendar-link";
+import { google, outlook, yahoo } from "calendar-link";
 
 const Card = ({
   i,
@@ -27,14 +27,12 @@ const Card = ({
   const event = {
     title,
     description,
-    start: `${date} ${time} +0100`,
+    start: new Date(`${date}T${time}+01:00`).toISOString(),
     duration: [duration, "hour"],
   };
 
-  // create parameterized calendar event links
   const googleUrl = google(event);
   const outlookUrl = outlook(event);
-  const icsUrl = ics(event);
   const yahooUrl = yahoo(event);
 
   // Helper function to convert unit time to readable format
@@ -75,7 +73,7 @@ const Card = ({
           <h2 className="text-2xl md:text-4xl md:mb-10 lg:mb-10 mb-5 mt-4 font-anton tracking-wide">
             {title}
           </h2>
-          <p className="text-md md:text-lg lg:text-xl font-karla text-justify font-light leading-6 lg:leading-loose md:leading-relaxed">
+          <p className="text-md md:text-lg lg:text-xl font-karla text-justify font-light leading-6 lg:leading-loose md:leading-relaxed line-clamp-5">
             {description}
           </p>
           <div className="md:absolute md:bottom-[145px] ">

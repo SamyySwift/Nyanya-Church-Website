@@ -1,4 +1,5 @@
 import Ministries from "../components/Ministries";
+import Transition from "../utils/transition";
 
 function Ushering() {
   return (
@@ -8,4 +9,4 @@ function Ushering() {
   );
 }
 
-export default Ushering;
+export default Transition(Ushering);

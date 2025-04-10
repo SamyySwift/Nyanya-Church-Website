@@ -14,7 +14,11 @@ const PlanVisit = () => {
         description="Page contains info on how to locate church"
       />
       {/* HERO SECTION */}
-      <HeroSection backgroundVideo="bg.mp4" svg_color="#F7F2E9" />
+      <HeroSection
+        backgroundVideo="bg.mp4"
+        svg_color="#F7F2E9"
+        title="Plan A Visit"
+      />
       <div className="bg-[#F7F2E9]">
         <Welcome
           title="What's it like here"
