@@ -4,7 +4,7 @@ import { FlipWords } from "../components/ui/flip-words";
 import { ImagesSlider } from "../components/ui/images-slider";
 import ChurchServices from "../components/ChurchServices";
 import { motion } from "framer-motion";
-import InfiniteMovingCards from "../components/ui/infinite-moving-cards";
+import PageTitle from "../components/PageTitle";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 80 },
@@ -32,48 +32,54 @@ const slideInUp = {
 
 const Home = () => {
   return (
-    <div className="bg-white">
-      <div className="container mx-auto px-5">
-        <HeroSection />
-        <WelcomeSection />
-        <Section
-          title="Teams"
-          image="images/join.jpg"
-          link="/join-a-group"
-          bgColor="#E5E0D4"
-          btnName="Join a Team"
-          content="Explore our diverse church teams and find your place to belong! Whether you're passionate about music, or outreach, there's a team for you."
-        />
-        <Section
-          title="Events"
-          image="images/ue.jpg"
-          link="/events"
-          btnName="Explore Events"
-          bgColor="#E5E0D4"
-          content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events."
-        />
+    <>
+      <PageTitle
+        title="Home | Nyanya Assembly"
+        description="Nyanya Assembly Home Page "
+      />
+      <div className="bg-white">
+        <div className="container mx-auto px-5">
+          <HeroSection />
+          <WelcomeSection />
+          <Section
+            title="Teams"
+            image="images/join.jpg"
+            link="/join-a-group"
+            bgColor="#E5E0D4"
+            btnName="Join a Team"
+            content="Explore our diverse church teams and find your place to belong! Whether you're passionate about music, or outreach, there's a team for you."
+          />
+          <Section
+            title="Events"
+            image="images/ue.jpg"
+            link="/events"
+            btnName="Explore Events"
+            bgColor="#E5E0D4"
+            content="Discover exciting events that will uplift your spirit and enrich your journey. Join us for worship services, community gatherings, and special events."
+          />
 
-        <GivingSection />
-        <ChurchServices />
-        {/* Motto */}
-        <section className="max-w-8xl mx-auto mb-40">
-          <div className="p-6 md:p-20 xl:p-28 text-center rounded-2xl shadow-lg bg-gradient-to-r from-gray-800  to-blue-200 text-white">
-            <div className="flex flex-col items-center justify-center h-full text-center">
-              <h1 className="text-4xl md:text-6xl font-anton">
-                OUR MOTTO FOR THE YEAR
-              </h1>
-              <p className="text-2xl md:text-4xl lg:text-5xl mt-4 md:max-w-3xl p-3 font-saol">
-                Help us, oh God of our salvation, for the glory of thy name: and
-                deliver us! <br />{" "}
-                <span className="font-bold underline underline-offset-4">
-                  Psalm 79:9
-                </span>
-              </p>
+          <GivingSection />
+          <ChurchServices />
+          {/* Motto */}
+          <section className="max-w-8xl mx-auto mb-40">
+            <div className="p-6 md:p-20 xl:p-28 text-center rounded-2xl shadow-lg bg-gradient-to-r from-gray-800  to-blue-200 text-white">
+              <div className="flex flex-col items-center justify-center h-full text-center">
+                <h1 className="text-4xl md:text-6xl font-anton">
+                  OUR MOTTO FOR THE YEAR
+                </h1>
+                <p className="text-2xl md:text-4xl lg:text-5xl mt-4 md:max-w-3xl p-3 font-saol">
+                  Help us, oh God of our salvation, for the glory of thy name:
+                  and deliver us! <br />{" "}
+                  <span className="font-bold underline underline-offset-4">
+                    Psalm 79:9
+                  </span>
+                </p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -95,7 +101,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative max-w-2xl px-6 md:px-12">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-anton space-y-4">
+        <h1 className="text-5xl md:text-6xl lg:text-8xl font-anton space-y-2">
           {words.map((word, index) => (
             <motion.span
               key={index}
@@ -174,7 +180,7 @@ const WelcomeSection = () => {
 const Section = ({ title, content, image, link, btnName, bgColor }) => {
   return (
     <div
-      className="relative h-[650px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row-reverse px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[150px] lg:mb-[180px]"
+      className="relative h-[650px] md:h-[1000px] lg:h-[600px] max-w-7xl mx-auto flex flex-col items-start lg:flex-row-reverse px-[30px] lg:px-[50px] xl:px-[70px] rounded-2xl mb-[150px] lg:mb-[190px]"
       style={{ backgroundColor: bgColor }}
     >
       {/* Image */}
@@ -249,6 +255,7 @@ const GivingSection = () => {
 
 const images = [
   "images/welcome-bg-1.webp",
+  "images/p.jpeg",
   "images/pastor.webp",
   "images/welcome-bg-4.jpg",
   "images/welcome-bg-2.webp",

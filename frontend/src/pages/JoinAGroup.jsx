@@ -126,6 +126,22 @@ const SkeletonFive = () => {
     </div>
   );
 };
+
+const SkeletonSix = () => {
+  return (
+    <div>
+      <p className="font-bold font-karla md:text-4xl text-xl text-white">
+        Junior Choir
+      </p>
+      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal font-karla text-base my-4 max-w-md text-neutral-200">
+        Join the Junior Choir and support a worthy cause through your musical
+        talents. Participate in events and performances that uplift and inspire!
+      </p>
+    </div>
+  );
+};
+
 const cards = [
   {
     id: 1,
@@ -171,8 +187,17 @@ const cards = [
     id: 5,
     title: "Main Choir",
     content: <SkeletonFive />,
-    className: "md:col-span-2",
+    className: "md:col-span-1",
     thumbnail: "images/choir3.webp",
+    link: "/classical-choir",
+  },
+
+  {
+    id: 6,
+    title: "Junior Choir",
+    content: <SkeletonSix />,
+    className: "md:col-span-1",
+    thumbnail: "images/choir5.webp",
     link: "/classical-choir",
   },
 ];

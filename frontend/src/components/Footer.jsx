@@ -37,7 +37,7 @@ const Footer = () => {
           <h1 className="mb-5 font-anton text-lg md:text-xl lg:text-2xl underline underline-offset-8">
             Contact Us
           </h1>
-          <div className="max-w-sm md:max-w-xs lg:max-w-sm space-y-3 font-karla text-lg  md:text-xl">
+          <div className="max-w-sm md:max-w-xs lg:max-w-sm space-y-3 font-karla text-lg  md:text-xl lg:text-2xl">
             {/* <p className="">TACN Nyanya Assembly</p> */}
             <span className="flex items-center font-light gap-2">
               <MdEmail className="" />
@@ -57,11 +57,11 @@ const Footer = () => {
           </div>
         </div>
         {/* Links */}
-        <div className="items-center max-w-[200px]">
+        <div className="items-center max-w-[250px]">
           <h1 className="mb-5 font-anton text-lg md:text-xl lg:text-2xl underline underline-offset-8">
             Quick Links
           </h1>
-          <div className="grid grid-cols-2 gap-0 font-light font-karla text-lg md:text-xl">
+          <div className="grid grid-cols-2 gap-0 font-light font-karla text-lg md:text-xl lg:text-2xl">
             {links.map((link) => (
               <Link
                 to={link.href}
@@ -104,12 +104,12 @@ const Footer = () => {
           </p>
         </div> */}
         {/* Scroll to Top Button */}
-        {/* <button
+        <button
           onClick={scrollToTop}
           className="fixed bottom-10 right-3 p-3 rounded-full bg-white text-black hover:bg-gray-700 transition duration-300"
         >
           <FaArrowUp size={20} />
-        </button> */}
+        </button>
       </div>
     </footer>
   );

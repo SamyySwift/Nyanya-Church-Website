@@ -134,7 +134,7 @@ const Navbar = () => {
                 key={idx}
                 className={`hover:-translate-y-1 hover:scale-105 duration-500 ${
                   location.pathname === navItem.link
-                    ? "underline underline-offset-4 decoration-[1px]"
+                    ? "underline underline-offset-4 decoration-[0.8px]"
                     : ""
                 }`}
               >
@@ -150,7 +150,7 @@ const Navbar = () => {
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform"
+                className="hover:scale-110 transition-transform hover:text-white"
               >
                 {social.icon}
               </a>

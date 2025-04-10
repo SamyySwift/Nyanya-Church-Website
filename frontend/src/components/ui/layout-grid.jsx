@@ -67,10 +67,10 @@ const BlurImage = ({ selected, card }) => {
       />
       {!selected?.id && (
         <div
-          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 p-4 rounded-2xl shadow-md"
-          style={{ backgroundColor: "#f7f2e9" }}
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 p-6 rounded-3xl shadow-md bg-[#f7f2e9] w-60"
+          // style={{ backgroundColor: "" }}
         >
-          <h3 className="text-md text-center text-black underline underline-offset-8 font-karla">
+          <h3 className="text-md text-center text-black underline underline-offset-4 font-light decoration-[1px] font-karla">
             {card.title}
           </h3>
         </div>
@@ -111,11 +111,11 @@ const SelectedCard = ({ selected }) => {
         <Link to={selected?.link}>
           {selected?.content}
           <div
-            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 p-4 rounded-2xl shadow-md"
+            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 p-6 rounded-3xl shadow-md w-40"
             style={{ backgroundColor: "#f7f2e9" }}
           >
-            <h3 className="text-md text-center text-black underline underline-offset-8 font-karla">
-              Click to Join
+            <h3 className="text-md text-center text-black underline underline-offset-4 font-karla font-light">
+              Join
             </h3>
           </div>
         </Link>
