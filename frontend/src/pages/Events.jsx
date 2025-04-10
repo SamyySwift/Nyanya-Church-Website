@@ -50,6 +50,7 @@ const Events = () => {
                     title={event.title}
                     color={event.color}
                     description={event.description}
+                    duration={event.duration}
                     time={event.time}
                     date={event.date}
                     eventImage={event.eventImage.url}

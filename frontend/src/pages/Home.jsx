@@ -211,7 +211,7 @@ const GivingSection = () => {
       {/* Image */}
       <div className="w-full xl:max-w-xl mb-6 h-[450px] lg:h-[600px] xl:h-[700px]">
         <img
-          src="images/p.jpeg"
+          src="images/giving.jpg"
           className="rounded-lg shadow-lg w-full h-full object-cover"
         />
       </div>

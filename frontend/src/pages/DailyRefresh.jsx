@@ -12,7 +12,7 @@ const DailyCard = ({ message }) => {
       <img
         src={message.image.url}
         alt={message.title}
-        className="w-[520px] h-[350px] object-cover"
+        className="md:min-w-[300px] lg:w-[500px] h-[350px] object-cover"
       />
       <div className="flex flex-col items-start md:px-8 mt-5 md:mt-0 max-w-3xl">
         <h2 className="text-2xl md:text-3xl font-anton">{message.title}</h2>
