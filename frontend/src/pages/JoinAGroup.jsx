@@ -31,8 +31,6 @@ const JoinAGroup = () => {
   );
 };
 
-export default Transition(JoinAGroup);
-
 const SkeletonOne = () => {
   return (
     <div>
@@ -201,3 +199,5 @@ const cards = [
     link: "/classical-choir",
   },
 ];
+
+export default Transition(JoinAGroup);
