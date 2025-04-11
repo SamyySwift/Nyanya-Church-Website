@@ -119,7 +119,7 @@ const InfiniteMovingCards = ({
 
 const GridItem = ({ icon, title, day, time, description }) => {
   return (
-    <div className="relative flex flex-col w-full h-[300px] rounded-2xl border p-4 md:p-5 shadow-xs transform transition-transform duration-300 hover:scale-105">
+    <div className="relative flex flex-col w-full h-[300px] rounded-2xl border p-4 md:p-5 shadow-sm transform transition-transform duration-300 hover:scale-105">
       <GlowingEffect
         spread={40}
         glow={true}

@@ -25,6 +25,7 @@ import ReadMore from "./pages/ReadMore.jsx";
 import Ushering from "./pages/UseringTeam.jsx";
 import Home from "./pages/Home.jsx";
 import WitnessMovement from "./pages/WitnessMovement.jsx";
+import JuniorChoir from "./pages/JuniorChoir.jsx";
 
 function App() {
   const location = useLocation();
@@ -58,6 +59,7 @@ function App() {
             <Route path="/join-a-group" element={<JoinAGroup />} />
             <Route path="/youth-fellowship" element={<YouthFellowship />} />
             <Route path="/classical-choir" element={<ClassicalChoir />} />
+            <Route path="/junior-choir" element={<JuniorChoir />} />
             <Route path="/ushering-team" element={<Ushering />} />
             <Route path="/witness" element={<WitnessMovement />} />
             <Route path="/contact-us" element={<Contact />} />

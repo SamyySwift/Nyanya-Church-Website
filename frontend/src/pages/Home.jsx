@@ -254,10 +254,12 @@ const GivingSection = () => {
 };
 
 const images = [
+  "images/pastor.webp",
   "images/welcome-bg-1.webp",
   "images/p.jpeg",
-  "images/pastor.webp",
+  "images/wsp-img-5.webp",
   "images/welcome-bg-4.jpg",
+  "images/welcome11.jpeg",
   "images/welcome-bg-2.webp",
   "images/welcome-bg-3.webp",
   "images/wsp-img-1.webp",
@@ -265,7 +267,6 @@ const images = [
   "images/welcome-bg-8.webp",
   "images/wsp-img-2.webp",
   "images/welcome-bg-5.webp",
-  // "images/welcome-bg-7.webp",
 ];
 
 export default Transition(Home);

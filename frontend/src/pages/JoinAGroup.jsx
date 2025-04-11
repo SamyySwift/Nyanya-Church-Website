@@ -196,7 +196,7 @@ const cards = [
     content: <SkeletonSix />,
     className: "md:col-span-1",
     thumbnail: "images/choir5.webp",
-    link: "/classical-choir",
+    link: "/junior-choir",
   },
 ];
 
