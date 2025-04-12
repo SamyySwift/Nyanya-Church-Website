@@ -39,8 +39,8 @@ const FaqAccordion = () => {
       answer: (
         <>
           Our different church service times can be found on the{" "}
-          <Link to="/about" className="font-bold">
-            About Page.
+          <Link to="/" className="font-bold">
+            Home Page.
           </Link>{" "}
           Please visit it for detailed information.
         </>
