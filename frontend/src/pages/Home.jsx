@@ -260,6 +260,7 @@ const images = [
   "images/wsp-img-5.webp",
   "images/welcome-bg-4.jpg",
   "images/welcome11.jpeg",
+  "images/welcome-bg-10.jpg",
   "images/welcome-bg-2.webp",
   "images/welcome-bg-3.webp",
   "images/wsp-img-1.webp",
