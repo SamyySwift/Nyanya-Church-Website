@@ -113,7 +113,7 @@ const Navbar = () => {
           </div> */}
         </Link>
         {/* Desktop Navigation with Social Icons  */}
-        <div className="hidden xl:flex items-center gap-5 text-neutral-300 font-karla text-lg lg:text-xl font-light cursor-pointer">
+        <div className="hidden xl:flex items-center gap-5 text-white font-karla text-lg lg:text-xl font-light cursor-pointer">
           {navLinks.map((navItem, idx) =>
             location.pathname !== "/" &&
             navItem.link === "explore" ? null : navItem.scroll ? (

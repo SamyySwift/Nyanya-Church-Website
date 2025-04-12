@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Links */}
-        <div className="items-center max-w-[250px]">
+        <div className="items-center max-w-[180px] md:max-w-[250px]">
           <h1 className="mb-5 font-anton text-lg md:text-xl lg:text-2xl underline underline-offset-8">
             Quick Links
           </h1>
@@ -132,7 +132,7 @@ const links = [
   },
   {
     name: "Sermons",
-    href: "/daily-words",
+    href: "/daily-word",
   },
   {
     name: "Giving",
