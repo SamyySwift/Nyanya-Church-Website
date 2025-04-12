@@ -11,7 +11,7 @@ const JoinAGroup = () => {
         description="Different church groups"
       />
 
-      <HeroSection backgroundVideo="joinbg.mp4" svg_color="#F7F2E9" />
+      <HeroSection backgroundVideo="teambg.mp4" svg_color="#F7F2E9" />
       <section className="bg-[#F7F2E9] py-[80px]">
         <div className="container mx-auto px-5">
           <h2 className="text-4xl mb-10 lg:text-7xl xl:text-8xl">
