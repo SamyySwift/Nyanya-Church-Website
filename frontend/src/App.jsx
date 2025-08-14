@@ -3,6 +3,7 @@ import Navbar from "./components/NavBar.jsx";
 import { useLocation, Route, Routes } from "react-router-dom";
 import HomeScreen from "./pages/HomeScreen.jsx";
 import Events from "./pages/Events.jsx";
+import EventDetail from "./pages/EventDetail.jsx";
 import PraiseTeam from "./pages/PraiseTeam.jsx";
 import MediaTeam from "./pages/MediaTeam.jsx";
 import PlanVisit from "./pages/PlanVisit.jsx";
@@ -51,6 +52,7 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route index element={<Home />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/events/:eventId" element={<EventDetail />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/sermons" element={<Sermons />} />
             <Route path="/praise-team" element={<PraiseTeam />} />

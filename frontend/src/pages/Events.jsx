@@ -35,7 +35,7 @@ const Events = () => {
         <div>
           {loading ? (
             <div className="flex justify-center">
-              <span class="loader"></span>
+              <span className="loader"></span>
             </div>
           ) : error ? (
             <p className="flex justify-center  text-center text-lg lg:text-xl  py-[150px] font-karla">
@@ -56,6 +56,7 @@ const Events = () => {
                     eventImage={event.eventImage.url}
                     btnName="Add To Calender"
                     btnType="event"
+                    eventId={event.id} // Add this line
                     i={idx}
                   />
                 ))

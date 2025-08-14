@@ -17,37 +17,36 @@ const Contact = () => {
       />
       <HeroSection backgroundVideo="bg.mp4" svg_color="#E5E0D4" />
       <section className="py-20 bg-[#E5E0D4]">
-        <div class="container mx-auto px-5 text-lg md:text-xl">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* <!-- Contact Information --> */}
-            <div class="flex flex-col justify-center">
-              <h2 className="text-4xl mb-6 lg:text-7xl xl:text-8xl">
-                <span className="font-anton">Get In</span>{" "}
-                <span className="font-thin italic font-saol">Touch</span>
+        <div className="container mx-auto px-5 text-lg md:text-xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div className="flex flex-col justify-center">
+              <h2 className="text-3xl md:text-4xl font-anton tracking-wide mb-6">
+                Get in Touch
               </h2>
-              <p class="mt-4 text-gray-900 font-karla">
-                We're here to answer any questions you may have. Fill out the
-                form or use one of the contact methods below.
+              <p className="mt-4 text-gray-900 font-karla">
+                We'd love to hear from you! Whether you have questions about our
+                services, want to get involved, or need prayer support, don't hesitate
+                to reach out.
               </p>
-
-              <div class="mt-8 space-y-4">
-                <div class="flex items-center">
-                  <FaLocationDot />
-                  <p class="ml-3 text-gray-900 font-karla">
-                    NO. 2, Church Avenue, Nyanya Karu Road Opposite <br /> A.A.
-                    Rano Filling Station, Nyanya, Abuja, FCT
+              <div className="mt-8 space-y-4">
+                <div className="flex items-center">
+                  <FaMapMarkerAlt className="text-blue-600" size={20} />
+                  <p className="ml-3 text-gray-900 font-karla">
+                    Nyanya, Abuja, Nigeria
                   </p>
                 </div>
-                <div class="flex items-center">
-                  <FaPhone />
-                  <p class="ml-3 text-gray-900 font-karla">
-                    (+234) 816 725 9757
-                  </p>
-                </div>
-                <div class="flex items-center">
-                  <MdEmail />
-                  <p class="ml-3 text-gray-900 font-karla">
+                {/* Email */}
+                <div className="flex items-center">
+                  <FaEnvelope className="text-blue-600" size={20} />
+                  <p className="ml-3 text-gray-900 font-karla">
                     tacnna2024@gmail.com
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <FaPhone className="text-blue-600" size={20} />
+                  <p className="ml-3 text-gray-900 font-karla">
+                    +234 XXX XXX XXXX
                   </p>
                 </div>
               </div>

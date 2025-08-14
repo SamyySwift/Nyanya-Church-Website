@@ -102,7 +102,7 @@ const Navbar = () => {
       <div className="container mx-auto px-5 py-6 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
           <img
-            src="images/logo.jpg"
+            src="/images/logo.jpg"
             alt="Logo"
             className="h-8 md:h-10 rounded-full"
           />

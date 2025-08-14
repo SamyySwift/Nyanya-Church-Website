@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaCalendarWeek, FaClock, FaApple, FaYahoo } from "react-icons/fa6";
+import {
+  FaCalendarWeek,
+  FaClock,
+  FaApple,
+  FaYahoo,
+  FaShare,
+  FaArrowUpRightFromSquare,
+  FaCalendarPlus,
+  FaEnvelope,
+} from "react-icons/fa6";
 import { SiGooglecalendar, SiMicrosoftoutlook } from "react-icons/si";
 
 import { Link } from "react-router-dom";
@@ -19,6 +28,7 @@ const Card = ({
   btnType,
   eventImage,
   btnName = "Learn More",
+  eventId, // Add eventId prop
 }) => {
   // Calculate the dynamic top position based on the index i
   const dynamicTop = `calc(0% + ${i * 20}px)`;
@@ -37,23 +47,13 @@ const Card = ({
 
   // Helper function to convert unit time to readable format
   function convertTimeFormat(timeString) {
-    // Extract hours, minutes, and seconds
+    if (!timeString) return "";
     let [hours, minutes] = timeString.split(":");
-
-    // Convert hours to a number
     hours = parseInt(hours, 10);
-
-    // Determine AM/PM suffix
     const period = hours >= 12 ? "PM" : "AM";
-
-    // Convert to 12-hour format
-    hours = hours % 12 || 12; // Convert '0' or '12' to '12'
-
-    // Format hours and minutes with leading zeros if necessary
+    hours = hours % 12 || 12;
     const formattedHours = hours.toString().padStart(2, "0");
     const formattedMinutes = minutes.padEnd(2, "0");
-
-    // Combine the parts into the desired format
     return `${formattedHours}:${formattedMinutes}${period}`;
   }
 
@@ -94,66 +94,77 @@ const Card = ({
           <div className="flex gap-3 mt-5 md:absolute md:bottom-10 relative">
             {btnType === "event" ? (
               <>
-                <button
-                  onClick={() => setShowPopover(!showPopover)}
-                  className="px-3 py-4 max-w-[150px] rounded-2xl font-karla bg-white"
-                >
-                  {btnName}
-                </button>
-                {showPopover && (
-                  <motion.div
-                    className="font-karla absolute bottom-full left-0 mb-5 p-3 bg-white border border-gray-300 shadow-md rounded-3xl z-50"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5 }}
+                {/* Add to Calendar Button - Modern Design */}
+                <div className="relative">
+                  <button
+                    onClick={() => setShowPopover(!showPopover)}
+                    className="group px-6 py-3 md:px-6 md:py-3 bg-gradient-to-r from-slate-100 to-white text-gray-800 rounded-2xl font-karla hover:from-gray-800 hover:to-gray-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2"
                   >
-                    {/* <a
-                      href={icsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
+                    <FaCalendarPlus className="text-lg" />
+                    <span className="hidden sm:inline">{btnName}</span>
+                  </button>
+                  {showPopover && (
+                    <motion.div
+                      className="font-karla absolute bottom-full left-0 mb-5 p-3 bg-white border border-gray-200 shadow-2xl rounded-3xl z-50 min-w-[200px]"
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.5 }}
                     >
-                      <FaApple /> Apple Calendar
-                    </a> */}
-                    <a
-                      href={googleUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
-                    >
-                      <SiGooglecalendar /> Google Calendar
-                    </a>
-                    <a
-                      href={outlookUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
-                    >
-                      <SiMicrosoftoutlook /> Outlook Calendar
-                    </a>
-                    <a
-                      href={yahooUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 py-2 px-3 text-black hover:bg-gray-100"
-                    >
-                      <FaYahoo /> Yahoo Calendar
-                    </a>
-                  </motion.div>
+                      <a
+                        href={googleUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 py-3 px-4 text-gray-700 hover:bg-blue-50 rounded-xl transition-colors duration-200"
+                      >
+                        <SiGooglecalendar className="text-blue-600" /> Google
+                        Calendar
+                      </a>
+                      <a
+                        href={outlookUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 py-3 px-4 text-gray-700 hover:bg-blue-50 rounded-xl transition-colors duration-200"
+                      >
+                        <SiMicrosoftoutlook className="text-blue-800" /> Outlook
+                        Calendar
+                      </a>
+                      <a
+                        href={yahooUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 py-3 px-4 text-gray-700 hover:bg-purple-50 rounded-xl transition-colors duration-200"
+                      >
+                        <FaYahoo className="text-purple-600" /> Yahoo Calendar
+                      </a>
+                    </motion.div>
+                  )}
+                </div>
+
+                {/* View Details Button - Modern Design with Purple Gradient */}
+                {eventId && (
+                  <Link to={`/events/${eventId}`}>
+                    <button className="group px-6 py-3 md:px-6 md:py-3 bg-gradient-to-r from-slate-100 to-white text-gray-800 rounded-2xl font-karla hover:from-gray-800 hover:to-gray-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2">
+                      <FaArrowUpRightFromSquare className="text-lg" />
+                      <span className="hidden sm:inline">View Details</span>
+                    </button>
+                  </Link>
                 )}
               </>
             ) : (
               <Link to={link}>
-                <button className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-white hover:bg-black hover:text-white text-black">
-                  {btnName}
+                <button className="group px-4 py-3 md:px-4 md:py-3 bg-gradient-to-r from-slate-100 to-white text-gray-800 rounded-2xl font-karla hover:from-gray-800 hover:to-gray-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2 min-w-[120px] justify-center">
+                  <FaArrowUpRightFromSquare className="text-lg" />
+                  <span className="hidden sm:inline">{btnName}</span>
                 </button>
               </Link>
             )}
 
+            {/* Contact Us Button - Modern Design */}
             <Link to="mailto:tacnna2024@gmail.com">
-              <button className="px-3 py-4 max-w-[150px] rounded-2xl font-grotesque bg-black text-white">
-                Contact Us
+              <button className="group px-6 py-3 md:px-6 md:py-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white rounded-2xl font-karla hover:from-gray-800 hover:to-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2 justify-center">
+                <FaEnvelope className="text-lg" />
+                <span className="hidden sm:inline">Contact Us</span>
               </button>
             </Link>
           </div>

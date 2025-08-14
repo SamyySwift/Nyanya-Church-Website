@@ -49,8 +49,8 @@ const Sermons = () => {
         </div>
 
         {loading ? (
-          <div className="flex justify-center my-20">
-            <span class="loader"></span>
+          <div className="flex justify-center">
+            <span className="loader"></span>
           </div>
         ) : error ? (
           <p className="flex justify-center  text-center text-xl  py-[100px] font-karla">
