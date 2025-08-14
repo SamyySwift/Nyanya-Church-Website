@@ -4,6 +4,7 @@ import { useLocation, Route, Routes } from "react-router-dom";
 import HomeScreen from "./pages/HomeScreen.jsx";
 import Events from "./pages/Events.jsx";
 import EventDetail from "./pages/EventDetail.jsx";
+import SermonDetail from "./pages/SermonDetail.jsx";
 import PraiseTeam from "./pages/PraiseTeam.jsx";
 import MediaTeam from "./pages/MediaTeam.jsx";
 import PlanVisit from "./pages/PlanVisit.jsx";

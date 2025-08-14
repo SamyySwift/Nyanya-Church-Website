@@ -182,7 +182,7 @@ const EventDetail = () => {
               </motion.div>
 
               <motion.p
-                className="text-lg md:text-xl font-karla text-gray-700 leading-8 md:leading-10 mb-8 text-justify"
+                className="text-lg md:text-xl font-karla text-gray-700 leading-8 md:leading-10 mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -265,8 +265,7 @@ const EventDetail = () => {
                         rel="noopener noreferrer"
                         className="flex items-center gap-3 py-3 px-4 text-gray-700 hover:bg-purple-50 rounded-xl transition-colors duration-200"
                       >
-                        <FaFacebook className="text-blue-600 text-lg" />{" "}
-                        Facebook
+                        <FaFacebook className="text-black text-lg" /> Facebook
                       </a>
                       <a
                         href={shareUrls.twitter}
@@ -282,8 +281,7 @@ const EventDetail = () => {
                         rel="noopener noreferrer"
                         className="flex items-center gap-3 py-3 px-4 text-gray-700 hover:bg-purple-50 rounded-xl transition-colors duration-200"
                       >
-                        <FaWhatsapp className="text-emerald-500 text-lg" />{" "}
-                        WhatsApp
+                        <FaWhatsapp className="text-black text-lg" /> WhatsApp
                       </a>
                       <button
                         onClick={copyToClipboard}

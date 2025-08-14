@@ -1,12 +1,13 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Link } from "react-router-dom";
 import { cn } from "../../utils/cn";
-import { FaClock } from "react-icons/fa6";
+import { FaClock, FaShare, FaFacebook, FaTwitter, FaWhatsapp, FaCopy, FaEnvelope } from "react-icons/fa6";
 import { BsPersonCircle } from "react-icons/bs";
 
 const ITEMS_PER_PAGE = 9; // Adjust this number based on how many items you want per page
 
-export const ParallaxScroll = ({ items, className }) => {
+export const ParallaxScroll = ({ items, className, linkType = "external" }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const gridRef = useRef(null);
   const { scrollYProgress } = useScroll();
@@ -34,43 +35,139 @@ export const ParallaxScroll = ({ items, className }) => {
   const secondPart = paginatedImages.slice(third, 2 * third);
   const thirdPart = paginatedImages.slice(2 * third);
 
-  const Card = ({ imgSrc, title, preacher, date, idx, translateY }) => (
-    <motion.div
-      style={{ y: translateY }}
-      key={idx}
-      className="flex justify-center w-full"
-    >
-      <div className="max-w-xs w-full">
-        <div
-          className={cn(
-            "group w-full cursor-pointer overflow-hidden relative h-96 rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800"
-            // "hover:after:content-[''] hover:after:absolute hover:after:inset-0 hover:after:bg-black hover:after:opacity-50",
-            // "hover:scale-105 transition-all duration-500"
-          )}
-        >
-          <img
-            src={imgSrc}
-            alt={title}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-black opacity-40 transition-opacity duration-500 group-hover:opacity-50"></div>
-          <div className="text relative z-50">
-            <h1 className="font-bold font-poppins text-xl  text-gray-50 relative">
-              {title}
-            </h1>
-            <p className="flex items-center gap-2 font-normal font-karla text-base text-gray-50 relative mt-4">
-              <BsPersonCircle />
-              {preacher}
-            </p>
-            <p className="flex items-center gap-2 font-normal font-karla text-base text-gray-50 relative">
-              <FaClock />
-              {date}
-            </p>
+  const Card = ({ imgSrc, title, preacher, date, idx, translateY, id }) => {
+    const [showSharePopover, setShowSharePopover] = useState(false);
+    const [copySuccess, setCopySuccess] = useState(false);
+
+    // Share functionality
+    const currentUrl = `${window.location.origin}/sermons/${id}`;
+    const shareText = `Check out this sermon: ${title} by ${preacher}`;
+
+    const shareUrls = {
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`,
+      twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(currentUrl)}`,
+      whatsapp: `https://wa.me/?text=${encodeURIComponent(`${shareText} ${currentUrl}`)}`,
+      email: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`${shareText} ${currentUrl}`)}`
+    };
+
+    const copyToClipboard = async () => {
+      try {
+        await navigator.clipboard.writeText(currentUrl);
+        setCopySuccess(true);
+        setTimeout(() => setCopySuccess(false), 2000);
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+      }
+    };
+
+    return (
+      <motion.div
+        style={{ y: translateY }}
+        key={idx}
+        className="flex justify-center w-full"
+      >
+        <div className="max-w-xs w-full">
+          <div
+            className={cn(
+              "group w-full cursor-pointer overflow-hidden relative h-96 rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800"
+            )}
+          >
+            <img
+              src={imgSrc}
+              alt={title}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black opacity-40 transition-opacity duration-500 group-hover:opacity-50"></div>
+            
+            {/* Share Button - positioned at top right */}
+            <div className="absolute top-3 right-3 z-50">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setShowSharePopover(!showSharePopover);
+                }}
+                className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-200"
+              >
+                <FaShare className="text-white text-sm" />
+              </button>
+              
+              {/* Share Popover */}
+              {showSharePopover && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                  className="absolute top-full mt-2 right-0 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 z-50 min-w-[200px]"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="space-y-2">
+                    <a
+                      href={shareUrls.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 p-2 rounded-lg hover:bg-purple-50 transition-colors duration-200 text-gray-700 hover:text-purple-600"
+                    >
+                      <FaFacebook size={16} className="text-blue-600" />
+                      <span className="font-karla text-sm">Facebook</span>
+                    </a>
+                    <a
+                      href={shareUrls.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 p-2 rounded-lg hover:bg-purple-50 transition-colors duration-200 text-gray-700 hover:text-purple-600"
+                    >
+                      <FaTwitter size={16} className="text-sky-500" />
+                      <span className="font-karla text-sm">Twitter</span>
+                    </a>
+                    <a
+                      href={shareUrls.whatsapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 p-2 rounded-lg hover:bg-purple-50 transition-colors duration-200 text-gray-700 hover:text-purple-600"
+                    >
+                      <FaWhatsapp size={16} className="text-green-500" />
+                      <span className="font-karla text-sm">WhatsApp</span>
+                    </a>
+                    <a
+                      href={shareUrls.email}
+                      className="flex items-center gap-2 p-2 rounded-lg hover:bg-purple-50 transition-colors duration-200 text-gray-700 hover:text-purple-600"
+                    >
+                      <FaEnvelope size={16} className="text-gray-600" />
+                      <span className="font-karla text-sm">Email</span>
+                    </a>
+                    <button
+                      onClick={copyToClipboard}
+                      className="flex items-center gap-2 p-2 rounded-lg hover:bg-purple-50 transition-colors duration-200 text-gray-700 hover:text-purple-600 w-full text-left"
+                    >
+                      <FaCopy size={16} className="text-gray-600" />
+                      <span className="font-karla text-sm">
+                        {copySuccess ? "Copied!" : "Copy Link"}
+                      </span>
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+            </div>
+            
+            <div className="text relative z-40">
+              <h1 className="font-bold font-poppins text-xl text-gray-50 relative">
+                {title}
+              </h1>
+              <p className="flex items-center gap-2 font-normal font-karla text-base text-gray-50 relative mt-4">
+                <BsPersonCircle />
+                {preacher}
+              </p>
+              <p className="flex items-center gap-2 font-normal font-karla text-base text-gray-50 relative">
+                <FaClock />
+                {date}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </motion.div>
-  );
+      </motion.div>
+    );
+  };
 
   const renderPagination = () => {
     const pageNumbers = [];
@@ -117,32 +214,54 @@ export const ParallaxScroll = ({ items, className }) => {
         ref={gridRef}
       >
         <div className="flex flex-col items-center">
-          {firstPart.map((el, idx) => (
-            <a href={el.link} target="_blank" key={idx}>
+          {firstPart.map((el, idx) => {
+            const CardComponent = (
               <Card
                 imgSrc={el.image}
                 title={el.title}
                 preacher={el.preacher}
                 date={el.date}
+                id={el.id}
                 key={`grid-1-${startIndex + idx}`}
                 translateY={translateFirst}
               />
-            </a>
-          ))}
+            );
+            
+            return linkType === "internal" ? (
+              <Link to={`/sermons/${el.id}`} key={idx}>
+                {CardComponent}
+              </Link>
+            ) : (
+              <a href={el.link} target="_blank" key={idx}>
+                {CardComponent}
+              </a>
+            );
+          })}
         </div>
         <div className="flex flex-col items-center">
-          {secondPart.map((el, idx) => (
-            <a href={el.link} target="_blank" key={idx}>
+          {secondPart.map((el, idx) => {
+            const CardComponent = (
               <Card
                 imgSrc={el.image}
                 title={el.title}
                 preacher={el.preacher}
                 date={el.date}
+                id={el.id}
                 key={`grid-2-${startIndex + idx}`}
                 translateY={translateSecond}
               />
-            </a>
-          ))}
+            );
+            
+            return linkType === "internal" ? (
+              <Link to={`/sermons/${el.id}`} key={idx}>
+                {CardComponent}
+              </Link>
+            ) : (
+              <a href={el.link} target="_blank" key={idx}>
+                {CardComponent}
+              </a>
+            );
+          })}
         </div>
         <div
           className={cn(
@@ -150,18 +269,29 @@ export const ParallaxScroll = ({ items, className }) => {
             thirdPart.length <= 1 ? "mt-[300px] md:mt-0" : "mt-0"
           )}
         >
-          {thirdPart.map((el, idx) => (
-            <a href={el.link} target="_blank" key={idx}>
+          {thirdPart.map((el, idx) => {
+            const CardComponent = (
               <Card
                 imgSrc={el.image}
                 title={el.title}
                 preacher={el.preacher}
                 date={el.date}
+                id={el.id}
                 key={`grid-3-${startIndex + idx}`}
                 translateY={translateThird}
               />
-            </a>
-          ))}
+            );
+            
+            return linkType === "internal" ? (
+              <Link to={`/sermons/${el.id}`} key={idx}>
+                {CardComponent}
+              </Link>
+            ) : (
+              <a href={el.link} target="_blank" key={idx}>
+                {CardComponent}
+              </a>
+            );
+          })}
         </div>
       </div>
       <div className="flex justify-center my-10 md:my-20">

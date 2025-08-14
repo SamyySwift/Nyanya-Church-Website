@@ -11,6 +11,7 @@ const Sermons = () => {
 
   // Extracting the necessary fields from the fetched data
   const sermons = data?.data?.map((sermon) => ({
+    id: sermon.id,
     image: sermon.image.url,
     title: sermon.title,
     link: sermon.link,
@@ -28,10 +29,8 @@ const Sermons = () => {
         title="Sermons | Nyanya Assembly"
         description="Listen to inspiring sermons from Nyanya Assembly"
       />
-      {/* <Hero text="Sermons" src="images/bible.webp" mainHero={false} /> */}
-
+      
       <HeroSection
-        // title="Sermons"
         backgroundVideo="sermonbg.mp4"
         svg_color="#F7F2E9"
       />
@@ -53,11 +52,11 @@ const Sermons = () => {
             <span className="loader"></span>
           </div>
         ) : error ? (
-          <p className="flex justify-center  text-center text-xl  py-[100px] font-karla">
-            No Sermons at the momemt. Try again later
+          <p className="flex justify-center text-center text-xl py-[100px] font-karla">
+            No Sermons at the moment. Try again later
           </p>
         ) : (
-          <ParallaxScroll items={sermons} />
+          <ParallaxScroll items={sermons} linkType="internal" />
         )}
       </section>
     </>
