@@ -18,6 +18,7 @@ import { google, outlook, yahoo } from "calendar-link";
 import customFetch from "../hooks/customFetch";
 import PageTitle from "../components/PageTitle";
 import Transition from "../utils/transition";
+import { RenderText } from "../components/RenderRichText";
 
 const EventDetail = () => {
   const { eventId } = useParams();
@@ -181,14 +182,20 @@ const EventDetail = () => {
                 </span>
               </motion.div>
 
-              <motion.p
+              <motion.div
                 className="text-lg md:text-xl font-karla text-gray-700 leading-8 md:leading-10 mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                {event.description}
-              </motion.p>
+                {Array.isArray(event.description) ? (
+                  <RenderText content={event.description} />
+                ) : (
+                  <div className="whitespace-pre-line">
+                    {event.description}
+                  </div>
+                )}
+              </motion.div>
 
               {/* Action Buttons - Modern Design */}
               <motion.div
